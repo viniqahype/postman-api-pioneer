@@ -6345,13 +6345,10 @@
 					"script": {
 						"id": "9872422f-6ceb-4903-9622-04ee2398cc1d",
 						"exec": [
-							"var headerComplete = eval(pm.globals.get('setHeader'))()\r",
-							"console.log(headerComplete)\r",
-							"\r",
 							"pm.sendRequest({\r",
 							"    method: 'GET',\r",
 							"    url: 'https://api-rci-qa.bancorcibrasil.com.br/product/manager/v1/products?_expands=products',\r",
-							"    header: eval(pm.globals.get('setHeader'))()\r",
+							"    header: pm.environment.get('header')\r",
 							"}, (err, resGet) => {\r",
 							"    let id = resGet.json()[0].productId\r",
 							"    //let inexistentId = eval(pm.globals.get('generateRandomNumberWithout'))(id)\r",
@@ -6570,63 +6567,63 @@
 	],
 	"variable": [
 		{
-			"id": "1d14dbc2-2d3b-4c34-9e45-a17bfa875426",
+			"id": "192312c4-658f-4e04-8d79-466506468a1c",
 			"key": "domain",
 			"value": "/financing/offer/v1"
 		},
 		{
-			"id": "f3286bb8-87b7-473d-9401-c48b4eba3e8a",
+			"id": "85548f7b-f143-4ed9-8fad-2c6f2b071484",
 			"key": "ignore_collectionScript",
 			"value": ""
 		},
 		{
-			"id": "9613476c-8bfb-491c-b785-a52abc1dd264",
+			"id": "59081ec0-810d-4626-9f91-fb45ecc3ff46",
 			"key": "count",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "0658a135-7ce0-4ded-aebc-323aac8753a7",
+			"id": "f1072a5e-3df0-4c46-b581-8407868d4fcc",
 			"key": "controlAuth",
 			"value": ""
 		},
 		{
-			"id": "23f741ad-5573-481a-8e7e-0e942999de34",
+			"id": "63e6afad-9822-429f-aff1-6a435066aa40",
 			"key": "payloadEngine",
 			"value": ""
 		},
 		{
-			"id": "60128ee3-407c-4d90-a569-203377fdbd23",
+			"id": "a4237cc5-53e7-41a4-b9e1-5fa134587914",
 			"key": "tc_identifierPainel_fieldEngineType",
 			"value": ""
 		},
 		{
-			"id": "d70f47a7-8377-425c-b396-3fb51fcfc0fe",
+			"id": "d43ee4c3-e7f8-4f6b-9a1b-c2382b172771",
 			"key": "tc_identifierPainel_fieldLine",
 			"value": ""
 		},
 		{
-			"id": "4e72a3d5-0fb0-49b6-8cfc-3096a803a056",
+			"id": "d95da594-4b0c-491a-8bdf-3ab8dff0e5e5",
 			"key": "tc_identifierPainel_fieldStartDate",
 			"value": ""
 		},
 		{
-			"id": "e6818d6d-fffd-4451-8cfe-77ed2d8141de",
+			"id": "9fd046ad-cb46-4d14-8203-11030d861386",
 			"key": "tc_identifierPainel_fieldEndDate",
 			"value": ""
 		},
 		{
-			"id": "3190bb1f-33fd-4081-948b-31ec488a61d9",
+			"id": "282170f5-c807-4c57-9e3b-f49f52aef35c",
 			"key": "tc_identifierPainel_fieldPaymentPlanCategoryIds",
 			"value": ""
 		},
 		{
-			"id": "34a70dfb-d8a3-476c-9fca-12ca8776de0f",
+			"id": "38a01d24-9185-4ecb-9eb4-b8e804095e39",
 			"key": "tc_identifierPainel_fieldCallCondition",
 			"value": ""
 		},
 		{
-			"id": "82f2a938-d693-4e13-81b3-4482fc511ab6",
+			"id": "b63eb1a1-e737-47fb-b534-120bf4906e28",
 			"key": "tc_identifierPainel_fieldIntegrationChannelIds",
 			"value": ""
 		}
