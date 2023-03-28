@@ -5909,26 +5909,23 @@
 							"script": {
 								"id": "78b5c77b-e2cd-4a74-a896-44b42056542e",
 								"exec": [
-									"/* Declaring array variable with tests cases for Engines_MarketingPanel: Field Rbp Margin Percent */\r",
-									"pm.collectionVariables.set('marketingPanel_fieldsRbpMarginPercent', JSON.stringify([]));\r",
+									"/* Declaring array variable with tests cases for Engines_MarketingPanel: Field businessActionAmount */\r",
+									"pm.collectionVariables.set('marketingPanel_fieldsBusinessActionAmount', JSON.stringify(['floatNumber_11digits','floatNumber_12digits', 'negativeNumber', 'string', 'zero', 'only_space', 'empty', 'no_businessActionAmount', 'businessActionAmountNull', 'BusinessActionPercent_obligatory']));\r",
 									"\r",
-									"/* Declaring array variable with tests cases for Engines_MarketingPanel: Field Marketing */\r",
-									"pm.collectionVariables.set('marketingPanel_fieldsMarketing', JSON.stringify([]));\r",
+									"/* Declaring array variable with tests cases for Engines_MarketingPanel: Field businessActionPercent */\r",
+									"pm.collectionVariables.set('marketingPanel_fieldsBusinessActionPercent', JSON.stringify(['floatNumber_4digits','floatNumber_5digits', 'negativeNumber', 'string', 'zero', 'only_space', 'empty', 'no_businessActionAmount', 'businessActionAmountNull', 'BusinessActionPercent_No_obligatory']));\r",
 									"\r",
-									"/* Declaring array variable with tests cases for Engines_MarketingPanel: Field Business Action Amount */\r",
-									"pm.collectionVariables.set('marketingPanel_fieldsBusinessActionAmount', JSON.stringify([]));\r",
-									"\r",
-									"/* Declaring array variable with tests cases for Engines_MarketingPanel: Field Contract Cost Amount */\r",
-									"pm.collectionVariables.set('marketingPanel_fieldsContractCostAmount', JSON.stringify([]));\r",
+									"/* Declaring array variable with tests cases for Engines_MarketingPanel: Field ContractCostAmount */\r",
+									"pm.collectionVariables.set('marketingPanel_fieldsContractCostAmount', JSON.stringify(['floatNumber_11digits','floatNumber_12digits', 'negativeNumber', 'string', 'zero', 'only_space', 'empty', 'no_contractCostAmount', 'contractCostAmountNull']));\r",
 									"\r",
 									"/* Declaring array variable with tests cases for Engines_MarketingPanel: Field Funding Cost Percent */\r",
-									"pm.collectionVariables.set('marketingPanel_fieldsFundingCostPercent', JSON.stringify([]));\r",
+									"pm.collectionVariables.set('marketingPanel_fieldsFundingCostPercent', JSON.stringify(['floatNumber', 'negativeNumber', 'string', 'zero', 'only_space', 'empty', 'no_contractCostAmount', 'contractCostAmountNull']));\r",
 									"\r",
 									"/* Declaring array variable with tests cases for Engines_MarketingPanel: Field Operation Average Percent */\r",
-									"pm.collectionVariables.set('marketingPanel_fieldsOperationAveragePercent', JSON.stringify([]));\r",
+									"pm.collectionVariables.set('marketingPanel_fieldsOperationAveragePercent', JSON.stringify(['floatNumber', 'negativeNumber', 'string', 'zero', 'only_space', 'empty', 'no_operationAveragePercent', 'operationAveragePercentNull']));\r",
 									"\r",
 									"/* Declaring array variable with tests cases for Engines_MarketingPanel: Field Registration Fee Amount */\r",
-									"pm.collectionVariables.set('marketingPanel_fieldsRegistrationFeeAmount', JSON.stringify([]));\r",
+									"pm.collectionVariables.set('marketingPanel_fieldsRegistrationFeeAmount', JSON.stringify(['floatNumber_11digits','floatNumber_12digits', 'negativeNumber', 'string', 'zero', 'only_space', 'empty', 'no_registrationFeeAmount', 'registrationFeeAmountNull']));\r",
 									"\r",
 									"\r",
 									"\r",
@@ -7211,63 +7208,63 @@
 	],
 	"variable": [
 		{
-			"id": "2f734ed9-fc65-4ec2-a6fa-895cdc6b96bf",
+			"id": "e9ad9d72-4d15-4e7b-b7f6-7546cd97b8a5",
 			"key": "domain",
 			"value": "/financing/offer/v1"
 		},
 		{
-			"id": "b9e6bc75-f610-47ba-8a69-2b92ace95a17",
+			"id": "355702b2-baf2-49f1-a5bf-888672eb7526",
 			"key": "ignore_collectionScript",
 			"value": ""
 		},
 		{
-			"id": "184dfba4-7b25-4d83-af35-7d165d1b8c7f",
+			"id": "48c8daed-8401-4edd-9dc2-a2e7a27f2e93",
 			"key": "count",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "d3df3fbd-5ec2-4b18-b30c-f00edd9d217e",
+			"id": "989f0178-ef4e-4b03-a7a7-1382b3d41a35",
 			"key": "controlAuth",
 			"value": ""
 		},
 		{
-			"id": "f592010a-3293-4a61-8e78-d441cacb864a",
+			"id": "1acc0c9f-6795-44d3-9f4b-ce98d7f6b809",
 			"key": "payloadEngine",
 			"value": ""
 		},
 		{
-			"id": "59f416a7-7da0-4334-bcbf-77745409b3e7",
+			"id": "db657916-15ec-4f1f-8772-fc71c42e2dd0",
 			"key": "tc_identifierPainel_fieldEngineType",
 			"value": ""
 		},
 		{
-			"id": "2d84e2bc-e1b1-4b39-9473-b47bd257c2e6",
+			"id": "41285ea7-36ca-4779-b73f-17288e5298e0",
 			"key": "tc_identifierPainel_fieldLine",
 			"value": ""
 		},
 		{
-			"id": "bddae1c6-fa9f-4171-9c55-5b43b5180c6c",
+			"id": "d4dc1c8d-fbcc-4503-8d03-4cdfafccb289",
 			"key": "tc_identifierPainel_fieldStartDate",
 			"value": ""
 		},
 		{
-			"id": "f2e14d81-eb30-47b9-bbb6-4077ec6b0962",
+			"id": "acec830c-a24c-4a5a-92b7-d9b3a9521cac",
 			"key": "tc_identifierPainel_fieldEndDate",
 			"value": ""
 		},
 		{
-			"id": "4c9650ae-b89e-4c89-9bbe-10456e6c9829",
+			"id": "cf47a383-ce4c-4b1c-b7c3-bf2b0e043f90",
 			"key": "tc_identifierPainel_fieldPaymentPlanCategoryIds",
 			"value": ""
 		},
 		{
-			"id": "d2b0bea6-db5f-4c17-8827-556b8cb64e15",
+			"id": "ca3f57a6-385a-4415-a6af-a45b70943151",
 			"key": "tc_identifierPainel_fieldCallCondition",
 			"value": ""
 		},
 		{
-			"id": "b5880545-b70b-40a8-9f11-1153a10b7385",
+			"id": "93c7bd3d-25be-4e39-94ef-2f267e2eb528",
 			"key": "tc_identifierPainel_fieldIntegrationChannelIds",
 			"value": ""
 		}
