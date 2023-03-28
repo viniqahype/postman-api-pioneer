@@ -5955,11 +5955,31 @@
 							"script": {
 								"id": "5e21d776-3d27-4308-8929-07ca0b31e15b",
 								"exec": [
-									"/* Declaring array variable with tests cases for Engines_EngineReturnsPanel: Field Marketing */\r",
-									"pm.collectionVariables.set('engineReturnsPanel_fieldsMarketing', JSON.stringify([]));\r",
+									"/* Declaring array variable with tests cases for Engines_EngineReturnsPanel: Field Min Monthly Bank Rate Percent */\r",
+									"pm.collectionVariables.set('engineReturnsPanel_fieldsMinMonthlyBankRatePercent', JSON.stringify([]));\r",
 									"\r",
-									"/* Declaring array variable with tests cases for Engines_EngineReturnsPanel: Field Marketing */\r",
-									"pm.collectionVariables.set('engineReturnsPanel_fieldsMarketing', JSON.stringify([]));"
+									"/* Declaring array variable with tests cases for Engines_EngineReturnsPanel: Field Max Monthly Client Rate Percent */\r",
+									"pm.collectionVariables.set('engineReturnsPanel_fields', JSON.stringify([]));\r",
+									"\r",
+									"/* Declaring array variable with tests cases for Engines_EngineReturnsPanel: Field Increase Decrease Percent */\r",
+									"pm.collectionVariables.set('engineReturnsPanel_fieldsIncreaseDecreasePercent', JSON.stringify([]));\r",
+									"\r",
+									"/* Declaring array variable with tests cases for Engines_EngineReturnsPanel: Field Payment Plan Category */\r",
+									"pm.collectionVariables.set('engineReturnsPanel_fieldsPaymentPlanCategory', JSON.stringify([]));\r",
+									"\r",
+									"/* Declaring array variable with tests cases for Engines_EngineReturnsPanel: Field Payment Plans  */\r",
+									"pm.collectionVariables.set('engineReturnsPanel_fieldsPaymentPlans', JSON.stringify([]));\r",
+									"\r",
+									"/* Declaring array variable with tests cases for Engines_EngineReturnsPanel: Field Rbp Margin Percent */\r",
+									"pm.collectionVariables.set('engineReturnsPanel_fieldsRbpMarginPercent', JSON.stringify([]));\r",
+									"\r",
+									"/* Declaring array variable with tests cases for Engines_EngineReturnsPanel: Field Min Rbp Fee Percent */\r",
+									"pm.collectionVariables.set('engineReturnsPanel_fieldsMinRbpFeePercent', JSON.stringify([]));\r",
+									"\r",
+									"/* Declaring array variable with tests cases for Engines_EngineReturnsPanel: Field Risk Rate Percent */\r",
+									"pm.collectionVariables.set('engineReturnsPanel_fieldsRiskRatePercent', JSON.stringify([]));\r",
+									"\r",
+									""
 								],
 								"type": "text/javascript"
 							}
@@ -7208,63 +7228,63 @@
 	],
 	"variable": [
 		{
-			"id": "74d46ec4-4892-4141-b9b1-c618340df821",
+			"id": "7a18a176-6fcf-4056-b57d-c20bb07c8049",
 			"key": "domain",
 			"value": "/financing/offer/v1"
 		},
 		{
-			"id": "7385d08e-fb10-407e-8ec1-c2a21d0253f4",
+			"id": "6a4cf15f-6517-46eb-914c-9a2eb85ffc48",
 			"key": "ignore_collectionScript",
 			"value": ""
 		},
 		{
-			"id": "70c4b7f4-2bb7-46ca-934b-7ae062356af3",
+			"id": "6a911cd6-49e2-4020-bc6b-adbba85d665a",
 			"key": "count",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "099a63f4-1ae3-464b-99c1-2a8d28a2b992",
+			"id": "bc91fab9-75f6-4be9-b8c3-69be47d3fcf4",
 			"key": "controlAuth",
 			"value": ""
 		},
 		{
-			"id": "806ccb6e-6587-4067-9bbc-25fc11765307",
+			"id": "442c1dec-c3b9-49cc-80c0-5eebd5c874db",
 			"key": "payloadEngine",
 			"value": ""
 		},
 		{
-			"id": "b5d01c21-523b-4ef6-9ebe-1ac467076c28",
+			"id": "6d287acc-89b7-4c62-bd1d-f3eef4ea795d",
 			"key": "tc_identifierPainel_fieldEngineType",
 			"value": ""
 		},
 		{
-			"id": "59cc3be6-2a51-4aa5-b2fb-58a790cac40f",
+			"id": "b9ae89de-27ff-4389-b469-a516724ed867",
 			"key": "tc_identifierPainel_fieldLine",
 			"value": ""
 		},
 		{
-			"id": "af91753e-1f6c-4a2d-b4d2-f54d5297781e",
+			"id": "ae4b9134-2615-4ced-96d4-dfa7af41255d",
 			"key": "tc_identifierPainel_fieldStartDate",
 			"value": ""
 		},
 		{
-			"id": "f92605da-2b55-4420-b541-b3b27f7ea255",
+			"id": "e8d981e0-207f-4b10-94fe-ad95a39bafa8",
 			"key": "tc_identifierPainel_fieldEndDate",
 			"value": ""
 		},
 		{
-			"id": "f5868846-96cd-4e19-881d-44e49d20294b",
+			"id": "c6e13320-4e50-446d-8f1b-a588a095bd5d",
 			"key": "tc_identifierPainel_fieldPaymentPlanCategoryIds",
 			"value": ""
 		},
 		{
-			"id": "204d7bb9-2e32-4b4a-ba2d-034cd386853f",
+			"id": "667a7a96-3377-4b05-a204-7751ad2704ce",
 			"key": "tc_identifierPainel_fieldCallCondition",
 			"value": ""
 		},
 		{
-			"id": "5903ea71-93d8-4e3d-8f1d-530bfd25e980",
+			"id": "2958da86-2ffe-4251-9b26-d81cd3584ec7",
 			"key": "tc_identifierPainel_fieldIntegrationChannelIds",
 			"value": ""
 		}
