@@ -430,14 +430,10 @@
 							"    //let inexistentId = eval(pm.globals.get('generateRandomNumberWithout'))(id)\r",
 							"    pm.sendRequest({\r",
 							"        method: pm.request.method.toString(),\r",
-							"        url: pm.request.url.toString(),\r",
+							"        url: pm.request.url.toString() + `?id=${id}`,\r",
 							"        header: JSON.parse(pm.environment.get('header')),\r",
-							"        body: {\r",
-							"            mode: 'raw',\r",
-							"            raw: JSON.stringify({ key: 'this is json'})\r",
-							"        }\r",
 							"    }, (err, res) => {\r",
-							"        console.log(pm.request.body)\r",
+							"        console.log(res.json())\r",
 							"        })\r",
 							"    })\r",
 							""
@@ -531,12 +527,12 @@
 	],
 	"variable": [
 		{
-			"id": "4c6e9356-dc79-46b2-a580-d50506d8e92a",
+			"id": "41b37fde-0cc7-4e78-8e65-64d00154cc26",
 			"key": "payloadEngine",
 			"value": ""
 		},
 		{
-			"id": "022fee1c-8518-46a5-8eed-cee71fee2759",
+			"id": "fca9279f-2cf8-4589-8a3f-cd63af6ecac3",
 			"key": "payloadTest",
 			"value": ""
 		}
