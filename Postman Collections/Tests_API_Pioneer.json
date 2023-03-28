@@ -4978,17 +4978,17 @@
 							"script": {
 								"id": "2f4e0c5e-0e7a-4e3d-8e92-2a544178a2c8",
 								"exec": [
-									"/* Declaring array variable with tests cases for Engines_EligibleDealershipsPanel: Field Product Id*/\r",
-									"pm.collectionVariables.set('tc_eligibleVehiclesPanel_fieldProductId', JSON.stringify(['inexistent', 'number', 'only_space', 'empty', 'no_productId', 'productIdNull']));\r",
+									"/* Declaring array variable with tests cases for Engines_ServicesPanel: Field Product Id*/\r",
+									"pm.collectionVariables.set('tc_servicesPanel_fieldProductId', JSON.stringify(['inexistent', 'number', 'only_space', 'empty', 'no_productId', 'productIdNull']));\r",
 									"\r",
 									"/* Declaring array variable with tests cases for Engines_EligibleDealershipsPanel: Field Sub Product Id */\r",
-									"pm.collectionVariables.set('tc_eligibleVehiclesPanel_fieldSubProductId', JSON.stringify(['productId_obligatory','inexistent', 'number', 'only_space', 'empty', 'no_productId', 'productIdNull']));\r",
+									"pm.collectionVariables.set('tc_servicesPanel_fieldSubProductId', JSON.stringify(['productId_obligatory','inexistent', 'number', 'only_space', 'empty', 'no_productId', 'productIdNull']));\r",
 									"\r",
 									"/* Declaring array variable with tests cases for Engines_EligibleDealershipsPanel: Field Period In Months */\r",
-									"pm.collectionVariables.set('tc_eligibleVehiclesPanel_fieldPeriodInMonths', JSON.stringify(['inexistent', 'number', 'only_space', 'empty', 'no_periodInMonths', 'periodInMonthsNull']));\r",
+									"pm.collectionVariables.set('tc_servicesPanel_fieldPeriodInMonths', JSON.stringify(['inexistent', 'number', 'only_space', 'empty', 'no_periodInMonths', 'periodInMonthsNull']));\r",
 									"\r",
 									"/* Declaring array variable with tests cases for Engines_EligibleDealershipsPanel: Field kilometrage */\r",
-									"pm.collectionVariables.set('tc_eligibleVehiclesPanel_fieldskilometrage', JSON.stringify(['inexistent', 'number', 'only_space', 'empty', 'no_kilometrage', 'kilometrageNull']));"
+									"pm.collectionVariables.set('tc_servicesPanel_fieldskilometrage', JSON.stringify(['inexistent', 'number', 'only_space', 'empty', 'no_kilometrage', 'kilometrageNull']));"
 								],
 								"type": "text/javascript"
 							}
@@ -6612,63 +6612,63 @@
 	],
 	"variable": [
 		{
-			"id": "751332a4-2e37-466d-8bdb-641b975bb079",
+			"id": "aabf84cf-7d67-4a40-8dd8-e82cc8551f21",
 			"key": "domain",
 			"value": "/financing/offer/v1"
 		},
 		{
-			"id": "a2c0edb6-335e-46c3-b4be-ce5ceb27918f",
+			"id": "4084cca4-7d83-493c-ab0b-7c52dcdfb557",
 			"key": "ignore_collectionScript",
 			"value": ""
 		},
 		{
-			"id": "a48af6ac-a5e1-496d-bf6e-f8e03a6c844b",
+			"id": "f6e009e6-af94-4b51-a5e6-991c4b4198b1",
 			"key": "count",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "7f5478e4-2c9e-496c-8e11-80f3e5178e3d",
+			"id": "a2e43621-a0d3-4365-b782-009aa1162848",
 			"key": "controlAuth",
 			"value": ""
 		},
 		{
-			"id": "0bfede62-b5a9-479b-b31b-8afc969712cf",
+			"id": "dc9eced1-14be-4a90-a004-11cbfcedc35e",
 			"key": "payloadEngine",
 			"value": ""
 		},
 		{
-			"id": "7906fc9f-30be-4332-8888-f2ca74208bbf",
+			"id": "639a4a14-c280-4b34-abcb-c657c47b6e2c",
 			"key": "tc_identifierPainel_fieldEngineType",
 			"value": ""
 		},
 		{
-			"id": "a37c4cc3-a9fc-4ae8-b029-35e8ead3b019",
+			"id": "e6c92080-2c6a-4850-94dc-165502fb3336",
 			"key": "tc_identifierPainel_fieldLine",
 			"value": ""
 		},
 		{
-			"id": "6efcd9e3-5892-4278-a555-923a55430a6a",
+			"id": "95f02114-c878-46bb-bee0-e9770c715588",
 			"key": "tc_identifierPainel_fieldStartDate",
 			"value": ""
 		},
 		{
-			"id": "c8c7cc3b-53b4-4d9b-8f3d-3f24ed7f9d85",
+			"id": "13f88971-a8a7-44ba-93bb-817146e5c583",
 			"key": "tc_identifierPainel_fieldEndDate",
 			"value": ""
 		},
 		{
-			"id": "005145ae-9118-40fb-9fe7-76fe89345f5b",
+			"id": "ed02dd56-969a-4d47-bb6a-b970a8c4ed10",
 			"key": "tc_identifierPainel_fieldPaymentPlanCategoryIds",
 			"value": ""
 		},
 		{
-			"id": "7cd6bfa2-3125-43a7-a783-8a25611bc893",
+			"id": "112ae7d9-d98d-4ed1-8580-b02b2b511220",
 			"key": "tc_identifierPainel_fieldCallCondition",
 			"value": ""
 		},
 		{
-			"id": "a59aace8-707a-47a5-bd73-360c01c792d3",
+			"id": "db2ec35f-82a4-45aa-b02f-8d8f98b6659b",
 			"key": "tc_identifierPainel_fieldIntegrationChannelIds",
 			"value": ""
 		}
