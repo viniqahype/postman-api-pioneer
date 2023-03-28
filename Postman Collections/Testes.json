@@ -663,7 +663,16 @@
 							"var bodyChangeMoreFields = eval(pm.globals.get('bodyChangeMoreFields'))\r",
 							"var bodyChangeOneFields = eval(pm.globals.get('bodyChangeOneField'))\r",
 							"\r",
-							"bodyChangeOneFields(payloadEngine, \"engineType\",\"VME\")\r",
+							"bodyChangeMoreFields(payloadEngine, [{\r",
+							"    \"integrationChannels\": [\r",
+							"        {\r",
+							"            \"channelId\": 123\r",
+							"        },\r",
+							"        {\r",
+							"            \"channelId\": 123\r",
+							"        }\r",
+							"    ]\r",
+							"}])\r",
 							"payloadEngine.engineCriteria.rateType = 'TESTE'\r",
 							"console.log(payloadEngine)\r",
 							"\r",
@@ -770,12 +779,12 @@
 	],
 	"variable": [
 		{
-			"id": "91836610-413b-4c97-8320-457fd8488f49",
+			"id": "837b6dee-334b-40f8-b5f4-067d97576dbd",
 			"key": "payloadEngine",
 			"value": ""
 		},
 		{
-			"id": "1517fe1e-3fef-49e1-b118-3144fdef27d9",
+			"id": "f5833aba-289a-4eaa-9edf-29686e60e47a",
 			"key": "payloadTest",
 			"value": ""
 		}
