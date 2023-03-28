@@ -4510,88 +4510,6 @@
 					"id": "550949b1-3683-414d-a0cf-5b9763ce6c0f"
 				},
 				{
-					"name": "Camila - Check ineligibleVehiclesPanel_fields",
-					"event": [
-						{
-							"listen": "prerequest",
-							"script": {
-								"id": "78b5c77b-e2cd-4a74-a896-44b42056542e",
-								"exec": [
-									"/* Declaring array variable with tests cases for Engines_IneligibleDealershipsPanel: Field Brand Id */\r",
-									"pm.collectionVariables.set('tc_ineligibleVehiclesPanel_fieldBrandId', JSON.stringify(['inexistent', 'number', 'only_space', 'empty', 'no_brandId', 'brandIdNull']));\r",
-									"\r",
-									"/* Declaring array variable with tests cases for Engines_IneligibleDealershipsPanel: Field model Id */\r",
-									"pm.collectionVariables.set('tc_ineligibleVehiclesPanel_fieldModelId', JSON.stringify(['brandId_obligatory','inexistent', 'number', 'only_space', 'empty', 'no_modelId', 'modelIdNull']));\r",
-									"\r",
-									"/* Declaring array variable with tests cases for Engines_IneligibleDealershipsPanel: Field Version Id */\r",
-									"pm.collectionVariables.set('tc_ineligibleVehiclesPanel_fieldVersionId', JSON.stringify(['modelId_obligatory','inexistent', 'number', 'only_space', 'empty', 'no_versionId', 'versionIdNull']));\r",
-									"\r",
-									"/* criar caso de testes para : Somente apresentar as versões que possuam a idade dentro do intervalo definido para ano modelo e ano fabricação, caso estejam preenchidos nos critérios definidos anteriormente.*/\r",
-									"\r",
-									"/* Declaring array variable with tests cases for Engines_IneligibleDealershipsPanel: Field Situation */\r",
-									"pm.collectionVariables.set('tc_ineligibleVehiclesPanel_fieldsSituation', JSON.stringify(['inexistent', 'number', 'only_space', 'empty', 'no_situation', 'situationNull']));"
-								],
-								"type": "text/javascript"
-							}
-						},
-						{
-							"listen": "test",
-							"script": {
-								"id": "a9dedabb-0a16-4795-adf6-f502d211cdef",
-								"exec": [
-									"/* Importing variables and functions */\r",
-									"var payloadEngine = JSON.parse(pm.collectionVariables.get('payloadEngine'));\r",
-									"var i = pm.collectionVariables.get('count')\r",
-									"var changeSubFields = eval(pm.globals.get('bodyChangeSubField'))\r",
-									"var changeMoreFields = eval(pm.globals.get('bodyChangeMoreFields'))\r",
-									"var changeOneFields = eval(pm.globals.get('bodyChangeOneField'))\r",
-									"var headerComplete = eval(pm.globals.get('setHeader'))()\r",
-									"var lodash = require('lodash')\r",
-									"/* Validating positive scenarios to create an engine */\r",
-									"//Default validation: 1. Status code, 2. response header. 3. creation in database , 4. Response time\r",
-									"/* 1 */\r",
-									"pm.test('Status code 201 to create an engine', () => {\r",
-									"    pm.response.to.have.status(201);\r",
-									"})\r",
-									"/* 2 */\r",
-									"pm.test('Response header contains location with id', () => {\r",
-									"    let id = pm.response.headers.get('Location').split('/policies/')[1]\r",
-									"    pm.response.to.be.header('Location', `/policies/${id}`);\r",
-									"})\r",
-									"/* 3 */\r",
-									"let id = pm.response.headers.get('Location').split('/policies/')[1]\r",
-									"let url_get = pm.environment.get('baseUrl') + pm.collectionVariables.get('domain') + `${id}`\r",
-									"let options = {\r",
-									"    method: 'GET',\r",
-									"    url: url_get,\r",
-									"    header: headerComplete\r",
-									"}\r",
-									"pm.sendRequest(options, (err, res) => {\r",
-									"    pm.test('Engine has been created in the database'), () => {\r",
-									"       pm.expect(res).to.have.status(200)\r",
-									"        pm.expect(res.engineId).to.eql(id)\r",
-									"    }\r",
-									"})\r",
-									"/* 4 */\r",
-									"pm.test(\"Response time is less than 5000ms\", () => {\r",
-									"    pm.expect(pm.response.responseTime).to.be.below(5000);\r",
-									"});"
-								],
-								"type": "text/javascript"
-							}
-						}
-					],
-					"id": "0389a484-506d-4172-a07f-4c1c43229b62",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "POST",
-						"header": []
-					},
-					"response": []
-				},
-				{
 					"name": "Camila - Check servicesPanel_fields",
 					"event": [
 						{
@@ -6801,63 +6719,63 @@
 	],
 	"variable": [
 		{
-			"id": "365f0081-3faf-4777-be47-eeaf89f02dbb",
+			"id": "054c56f5-63d8-4e7f-bc14-72fadeb741c5",
 			"key": "domain",
 			"value": "/financing/offer/v1"
 		},
 		{
-			"id": "fb30329f-33e7-464d-829b-8293e0def865",
+			"id": "2d57cab6-5f3d-4056-b821-19a8939dd9db",
 			"key": "ignore_collectionScript",
 			"value": ""
 		},
 		{
-			"id": "1f69ebaf-0fcc-4b17-8185-3bbaa13da797",
+			"id": "9367e065-6127-4523-8bf5-6502f5c8f850",
 			"key": "count",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "4950aec4-0b13-40a3-bde7-9798bc5a2dbf",
+			"id": "8fa9ee1e-05c6-493e-9fd7-c011dd9fea97",
 			"key": "controlAuth",
 			"value": ""
 		},
 		{
-			"id": "c7e21312-5b13-4c61-aa79-6a66dcbc442e",
+			"id": "bf677cd7-e71a-4922-8a79-18d961673f25",
 			"key": "payloadEngine",
 			"value": ""
 		},
 		{
-			"id": "47388103-4119-4e42-8716-c6cdba7e3c64",
+			"id": "cbb463cd-8fc4-425d-a071-03fee8b1b993",
 			"key": "tc_identifierPainel_fieldEngineType",
 			"value": ""
 		},
 		{
-			"id": "995b3eda-9ff8-44a4-820e-2910408efe9d",
+			"id": "7ffec4da-bf72-4c79-8716-dd32fe7ca842",
 			"key": "tc_identifierPainel_fieldLine",
 			"value": ""
 		},
 		{
-			"id": "38d2c2b6-42da-41e3-b02b-87419b08905c",
+			"id": "9e7cd9ea-08ce-4b1c-9e66-59d542a8bd04",
 			"key": "tc_identifierPainel_fieldStartDate",
 			"value": ""
 		},
 		{
-			"id": "160944c8-7775-41af-89ad-c044e9e1982a",
+			"id": "05b29a74-fbe9-4b34-be82-7404a30bfe0e",
 			"key": "tc_identifierPainel_fieldEndDate",
 			"value": ""
 		},
 		{
-			"id": "d8558437-bf54-44b0-9a3e-fe9e79b5cc8f",
+			"id": "7dc8104e-8840-4e9c-96dc-638272beb753",
 			"key": "tc_identifierPainel_fieldPaymentPlanCategoryIds",
 			"value": ""
 		},
 		{
-			"id": "3211b60d-dee7-4049-962c-8542a2a5b28f",
+			"id": "f61836c2-5971-4b06-b038-d1d5b58f1613",
 			"key": "tc_identifierPainel_fieldCallCondition",
 			"value": ""
 		},
 		{
-			"id": "38a0c023-55b0-4691-8abf-5c357abb78d0",
+			"id": "dead5902-37a6-45b3-af08-94e71bb89708",
 			"key": "tc_identifierPainel_fieldIntegrationChannelIds",
 			"value": ""
 		}
