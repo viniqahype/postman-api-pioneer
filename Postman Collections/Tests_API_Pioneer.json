@@ -5067,103 +5067,103 @@
 						{
 							"listen": "prerequest",
 							"script": {
-								"id": "78b5c77b-e2cd-4a74-a896-44b42056542e",
+								"id": "621bd6bd-4596-4ca0-83b7-879a27588d33",
 								"exec": [
-									"/* Declaring array variable with tests cases for Engines_IneligibleDealershipsPanel: Field */\r",
-									"pm.collectionVariables.set('tc_eligibleVehiclesPanel_fields--', JSON.stringify([]));\r",
+									"/* Declaring array variable with tests cases for Engines_PaymentPlansPanel: Field Payment Plan Name */\r",
+									"pm.collectionVariables.set('tc_engines_PaymentPlansPanel_fieldPaymentPlanName', JSON.stringify([]));\r",
 									"\r",
-									"/* Declaring array variable with tests cases for Engines_IneligibleDealershipsPanel: Field */\r",
-									"pm.collectionVariables.set('tc_eligibleVehiclesPanel_fields--', JSON.stringify([]));\r",
+									"/* Declaring array variable with tests cases for Engines_PaymentPlansPanel: Field Down Payment */\r",
+									"pm.collectionVariables.set('tc_engines_PaymentPlansPanel_fieldDownPayment', JSON.stringify([]));\r",
 									"\r",
-									"/* Declaring array variable with tests cases for Engines_IneligibleDealershipsPanel: Field */\r",
-									"pm.collectionVariables.set('tc_eligibleVehiclesPanel_fields--', JSON.stringify([]));\r",
+									"/* Declaring array variable with tests cases for Engines_PaymentPlansPanel: Field MinDown Payment */\r",
+									"pm.collectionVariables.set('tc_engines_PaymentPlansPanel_fieldMinDownPayment', JSON.stringify([]));\r",
 									"\r",
-									"/* Declaring array variable with tests cases for Engines_IneligibleDealershipsPanel: Field */\r",
-									"pm.collectionVariables.set('tc_eligibleVehiclesPanel_fields--', JSON.stringify([]));\r",
+									"/* Declaring array variable with tests cases for Engines_PaymentPlansPanel: Field MaxDown Payment */\r",
+									"pm.collectionVariables.set('tc_engines_PaymentPlansPanel_fieldMaxDownPayment', JSON.stringify([]));\r",
 									"\r",
-									"/* Declaring array variable with tests cases for Engines_IneligibleDealershipsPanel: Field */\r",
-									"pm.collectionVariables.set('tc_eligibleVehiclesPanel_fields--', JSON.stringify([]));\r",
+									"/* Declaring array variable with tests cases for Engines_PaymentPlansPanel: Field Default Down Payment */\r",
+									"pm.collectionVariables.set('tc_engines_PaymentPlansPanel_fieldDefaultDownPayment', JSON.stringify([]));\r",
 									"\r",
-									"/* Declaring array variable with tests cases for Engines_IneligibleDealershipsPanel: Field */\r",
-									"pm.collectionVariables.set('tc_eligibleVehiclesPanel_fields--', JSON.stringify([]));\r",
+									"/* Declaring array variable with tests cases for Engines_PaymentPlansPanel: Field Occurrencies */\r",
+									"pm.collectionVariables.set('tc_engines_PaymentPlansPanel_fieldOccurrencies', JSON.stringify([]));\r",
 									"\r",
-									"/* Declaring array variable with tests cases for Engines_IneligibleDealershipsPanel: Field */\r",
-									"pm.collectionVariables.set('tc_eligibleVehiclesPanel_fields--', JSON.stringify([]));\r",
+									"/* Declaring array variable with tests cases for Engines_PaymentPlansPanel: Field Occurrence Type */\r",
+									"pm.collectionVariables.set('tc_engines_PaymentPlansPanel_fieldOccurrenceType', JSON.stringify([]));\r",
 									"\r",
-									"/* Declaring array variable with tests cases for Engines_IneligibleDealershipsPanel: Field */\r",
-									"pm.collectionVariables.set('tc_eligibleVehiclesPanel_fields--', JSON.stringify([]));\r",
+									"/* Declaring array variable with tests cases for Engines_PaymentPlansPanel: Field Installment Occurrencies */\r",
+									"pm.collectionVariables.set('tc_engines_PaymentPlansPanel_fieldInstallmentOccurrencies', JSON.stringify([]));\r",
 									"\r",
-									"/* Declaring array variable with tests cases for Engines_IneligibleDealershipsPanel: Field */\r",
-									"pm.collectionVariables.set('tc_eligibleVehiclesPanel_fields--', JSON.stringify([]));\r",
+									"/* Declaring array variable with tests cases for Engines_PaymentPlansPanel: Field Month Occurrencies */\r",
+									"pm.collectionVariables.set('tc_engines_PaymentPlansPanel_fieldMonthOccurrencies', JSON.stringify([]));\r",
 									"\r",
-									"/* Declaring array variable with tests cases for Engines_IneligibleDealershipsPanel: Field */\r",
-									"pm.collectionVariables.set('tc_eligibleVehiclesPanel_fields--', JSON.stringify([]));\r",
+									"/* Declaring array variable with tests cases for Engines_PaymentPlansPanel: Field Frequency Occurrencies */\r",
+									"pm.collectionVariables.set('tc_engines_PaymentPlansPanel_fieldFrequencyOccurrencies', JSON.stringify([]));\r",
 									"\r",
-									"/* Declaring array variable with tests cases for Engines_IneligibleDealershipsPanel: Field */\r",
-									"pm.collectionVariables.set('tc_eligibleVehiclesPanel_fields--', JSON.stringify([]));\r",
+									"/* Declaring array variable with tests cases for Engines_PaymentPlansPanel: Field Reduced Installment Amount */\r",
+									"pm.collectionVariables.set('tc_engines_PaymentPlansPanel_fieldsReducedInstallmentAmount', JSON.stringify([]));\r",
 									"\r",
-									"/* Declaring array variable with tests cases for Engines_IneligibleDealershipsPanel: Field */\r",
-									"pm.collectionVariables.set('tc_eligibleVehiclesPanel_fields--', JSON.stringify([]));\r",
+									"/* Declaring array variable with tests cases for Engines_PaymentPlansPanel: Field Installment Occurrency */\r",
+									"pm.collectionVariables.set('tc_engines_PaymentPlansPanel_fieldsInstallmentOccurrency', JSON.stringify([]));\r",
 									"\r",
-									"/* Declaring array variable with tests cases for Engines_IneligibleDealershipsPanel: Field */\r",
-									"pm.collectionVariables.set('tc_eligibleVehiclesPanel_fields--', JSON.stringify([]));\r",
+									"/* Declaring array variable with tests cases for Engines_PaymentPlansPanel: Field Min Fixed Payment */\r",
+									"pm.collectionVariables.set('tc_engines_PaymentPlansPanel_fieldsMinFixedPayment', JSON.stringify([]));\r",
 									"\r",
-									"/* Declaring array variable with tests cases for Engines_IneligibleDealershipsPanel: Field */\r",
-									"pm.collectionVariables.set('tc_eligibleVehiclesPanel_fields--', JSON.stringify([]));\r",
+									"/* Declaring array variable with tests cases for Engines_PaymentPlansPanel: Field Max Fixed Payment */\r",
+									"pm.collectionVariables.set('tc_engines_PaymentPlansPanel_fieldsMaxFixedPayment', JSON.stringify([]));\r",
 									"\r",
-									"/* Declaring array variable with tests cases for Engines_IneligibleDealershipsPanel: Field */\r",
-									"pm.collectionVariables.set('tc_eligibleVehiclesPanel_fields--', JSON.stringify([]));\r",
+									"/* Declaring array variable with tests cases for Engines_PaymentPlansPanel: Field Default Fixed Payment */\r",
+									"pm.collectionVariables.set('tc_engines_PaymentPlansPanel_fieldsDefaultFixedPayment', JSON.stringify([]));\r",
 									"\r",
-									"/* Declaring array variable with tests cases for Engines_IneligibleDealershipsPanel: Field */\r",
-									"pm.collectionVariables.set('tc_eligibleVehiclesPanel_fields--', JSON.stringify([]));\r",
+									"/* Declaring array variable with tests cases for Engines_PaymentPlansPanel: Field Balloon Payment */\r",
+									"pm.collectionVariables.set('tc_engines_PaymentPlansPanel_fieldsBalloonPayment', JSON.stringify([]));\r",
 									"\r",
-									"/* Declaring array variable with tests cases for Engines_IneligibleDealershipsPanel: Field */\r",
-									"pm.collectionVariables.set('tc_eligibleVehiclesPanel_fields--', JSON.stringify([]));\r",
+									"/* Declaring array variable with tests cases for Engines_PaymentPlansPanel: Field Balloon Payment Type */\r",
+									"pm.collectionVariables.set('tc_engines_PaymentPlansPanel_fieldssBalloonPaymentType', JSON.stringify([]));\r",
 									"\r",
-									"/* Declaring array variable with tests cases for Engines_IneligibleDealershipsPanel: Field */\r",
-									"pm.collectionVariables.set('tc_eligibleVehiclesPanel_fields--', JSON.stringify([]));\r",
+									"/* Declaring array variable with tests cases for Engines_PaymentPlansPanel_fields: Field Min Balloon Payment */\r",
+									"pm.collectionVariables.set('tc_engines_PaymentPlansPanel_fieldsMinBalloonPayment', JSON.stringify([]));\r",
 									"\r",
-									"/* Declaring array variable with tests cases for Engines_IneligibleDealershipsPanel: Field */\r",
-									"pm.collectionVariables.set('tc_eligibleVehiclesPanel_fields--', JSON.stringify([]));\r",
+									"/* Declaring array variable with tests cases for Engines_PaymentPlansPanel: Field Max Balloon Payment */\r",
+									"pm.collectionVariables.set('tc_engines_PaymentPlansPanel_fieldsMaxBalloonPayment', JSON.stringify([]));\r",
 									"\r",
-									"/* Declaring array variable with tests cases for Engines_IneligibleDealershipsPanel: Field */\r",
-									"pm.collectionVariables.set('tc_eligibleVehiclesPanel_fields--', JSON.stringify([]));\r",
+									"/* Declaring array variable with tests cases for Engines_PaymentPlansPanel: Field Default Balloon Payment */\r",
+									"pm.collectionVariables.set('tc_engines_PaymentPlansPanel_fieldsDefaultBalloonPayment', JSON.stringify([]));\r",
 									"\r",
-									"/* Declaring array variable with tests cases for Engines_IneligibleDealershipsPanel: Field */\r",
-									"pm.collectionVariables.set('tc_eligibleVehiclesPanel_fields--', JSON.stringify([]));\r",
+									"/* Declaring array variable with tests cases for Engines_PaymentPlansPanel: Field  Increase Decrease Installment*/\r",
+									"pm.collectionVariables.set('tc_engines_PaymentPlansPanel_fieldsIncreaseDecreaseInstallment', JSON.stringify([]));\r",
 									"\r",
-									"/* Declaring array variable with tests cases for Engines_IneligibleDealershipsPanel: Field */\r",
-									"pm.collectionVariables.set('tc_eligibleVehiclesPanel_fields--', JSON.stringify([]));\r",
+									"/* Declaring array variable with tests cases for Engines_PaymentPlansPanel: Field Installment Type */\r",
+									"pm.collectionVariables.set('tc_engines_PaymentPlansPanel_fieldsInstallmentType', JSON.stringify([]));\r",
 									"\r",
-									"/* Declaring array variable with tests cases for Engines_IneligibleDealershipsPanel: Field */\r",
-									"pm.collectionVariables.set('tc_eligibleVehiclesPanel_fields--', JSON.stringify([]));\r",
+									"/* Declaring array variable with tests cases for Engines_PaymentPlansPanel: Field Increase Decreaseinstallment Percent */\r",
+									"pm.collectionVariables.set('tc_engines_PaymentPlansPanel_fieldsIncreaseDecreaseinstallmentPercent', JSON.stringify([]));\r",
 									"\r",
-									"/* Declaring array variable with tests cases for Engines_IneligibleDealershipsPanel: Field */\r",
-									"pm.collectionVariables.set('tc_eligibleVehiclesPanel_fields--', JSON.stringify([]));\r",
+									"/* Declaring array variable with tests cases for Engines_PaymentPlansPanel: Field */\r",
+									"pm.collectionVariables.set('tc_engines_PaymentPlansPanel_fields--', JSON.stringify([]));\r",
 									"\r",
-									"/* Declaring array variable with tests cases for Engines_IneligibleDealershipsPanel: Field */\r",
-									"pm.collectionVariables.set('tc_eligibleVehiclesPanel_fields--', JSON.stringify([]));\r",
+									"/* Declaring array variable with tests cases for Engines_PaymentPlansPanel: Field */\r",
+									"pm.collectionVariables.set('tc_engines_PaymentPlansPanel_fields--', JSON.stringify([]));\r",
 									"\r",
-									"/* Declaring array variable with tests cases for Engines_IneligibleDealershipsPanel: Field */\r",
-									"pm.collectionVariables.set('tc_eligibleVehiclesPanel_fields--', JSON.stringify([]));\r",
+									"/* Declaring array variable with tests cases for Engines_PaymentPlansPanel: Field */\r",
+									"pm.collectionVariables.set('tc_engines_PaymentPlansPanel_fields--', JSON.stringify([]));\r",
 									"\r",
-									"/* Declaring array variable with tests cases for Engines_IneligibleDealershipsPanel: Field */\r",
-									"pm.collectionVariables.set('tc_eligibleVehiclesPanel_fields--', JSON.stringify([]));\r",
+									"/* Declaring array variable with tests cases for Engines_PaymentPlansPanel: Field */\r",
+									"pm.collectionVariables.set('tc_engines_PaymentPlansPanel_fields--', JSON.stringify([]));\r",
 									"\r",
-									"/* Declaring array variable with tests cases for Engines_IneligibleDealershipsPanel: Field */\r",
-									"pm.collectionVariables.set('tc_eligibleVehiclesPanel_fields--', JSON.stringify([]));\r",
+									"/* Declaring array variable with tests cases for Engines_PaymentPlansPanel: Field */\r",
+									"pm.collectionVariables.set('tc_engines_PaymentPlansPanel_fields--', JSON.stringify([]));\r",
 									"\r",
-									"/* Declaring array variable with tests cases for Engines_IneligibleDealershipsPanel: Field */\r",
-									"pm.collectionVariables.set('tc_eligibleVehiclesPanel_fields--', JSON.stringify([]));\r",
+									"/* Declaring array variable with tests cases for Engines_PaymentPlansPanel: Field */\r",
+									"pm.collectionVariables.set('tc_engines_PaymentPlansPanel_fields--', JSON.stringify([]));\r",
 									"\r",
-									"/* Declaring array variable with tests cases for Engines_IneligibleDealershipsPanel: Field */\r",
-									"pm.collectionVariables.set('tc_eligibleVehiclesPanel_fields--', JSON.stringify([]));\r",
+									"/* Declaring array variable with tests cases for Engines_PaymentPlansPanel: Field */\r",
+									"pm.collectionVariables.set('tc_engines_PaymentPlansPanel_fields--', JSON.stringify([]));\r",
 									"\r",
-									"/* Declaring array variable with tests cases for Engines_IneligibleDealershipsPanel: Field */\r",
-									"pm.collectionVariables.set('tc_eligibleVehiclesPanel_fields--', JSON.stringify([]));\r",
+									"/* Declaring array variable with tests cases for Engines_PaymentPlansPanel: Field */\r",
+									"pm.collectionVariables.set('tc_engines_PaymentPlansPanel_fields--', JSON.stringify([]));\r",
 									"\r",
-									"/* Declaring array variable with tests cases for Engines_IneligibleDealershipsPanel: Field */\r",
-									"pm.collectionVariables.set('tc_eligibleVehiclesPanel_fields--', JSON.stringify([]));\r",
+									"/* Declaring array variable with tests cases for Engines_PaymentPlansPanel: Field */\r",
+									"pm.collectionVariables.set('tc_engines_PaymentPlansPanel_fields--', JSON.stringify([]));\r",
 									"\r",
 									"\r",
 									"\r",
@@ -6408,124 +6408,6 @@
 				}
 			},
 			"response": []
-		},
-		{
-			"name": "[Test] Consulta Criterios de Taxa Copy",
-			"event": [
-				{
-					"listen": "prerequest",
-					"script": {
-						"id": "a0490116-b7fa-4f69-bf8f-8818fea37372",
-						"exec": [
-							"pm.variables.set(\"ignore_collectionScript\", true);\r",
-							"\r",
-							"/* var payloadEngine = JSON.parse(pm.collectionVariables.get('payloadEngine'))\r",
-							"var RandomNumberWithout = eval(pm.globals.get('generateRandomNumberWithout'))\r",
-							"var bodyChangeSubField = eval(pm.globals.get('bodyChangeSubField'))\r",
-							"var bodyChangeMoreFields = eval(pm.globals.get('bodyChangeMoreFields'))\r",
-							"let id = RandomNumberWithout(12) */\r",
-							"\r",
-							"let headerComplete = eval(pm.globals.get('setHeader'))()\r",
-							"pm.request.headers.add(headerComplete)\r",
-							"console.log(pm.request.headers)\r",
-							"\r",
-							""
-						],
-						"type": "text/javascript"
-					}
-				},
-				{
-					"listen": "test",
-					"script": {
-						"id": "9872422f-6ceb-4903-9622-04ee2398cc1d",
-						"exec": [
-							"pm.sendRequest({\r",
-							"    method: 'GET',\r",
-							"    url: 'https://api-rci-qa.bancorcibrasil.com.br/product/manager/v1/products?_expands=products',\r",
-							"    header: JSON.parse(pm.environment.get('header'))\r",
-							"}, (err, resGet) => {\r",
-							"    let id = resGet.json()[0].productId\r",
-							"    //let inexistentId = eval(pm.globals.get('generateRandomNumberWithout'))(id)\r",
-							"    pm.sendRequest({\r",
-							"        method: pm.request.method.toString(),\r",
-							"        url: pm.request.url.toString(),\r",
-							"        headers: JSON.parse(pm.environment.get('header')),\r",
-							"        body: {\r",
-							"            mode: 'raw',\r",
-							"            raw: JSON.stringify({ 'key': id})\r",
-							"        }\r",
-							"    }, (err, res) => {\r",
-							"        console.log(pm.request.body)\r",
-							"        console.log(res.json())\r",
-							"        })\r",
-							"    })\r",
-							""
-						],
-						"type": "text/javascript"
-					}
-				}
-			],
-			"id": "8e442943-c90a-4f52-9ccd-ed446899b2b9",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
-			"request": {
-				"method": "GET",
-				"header": [
-					{
-						"key": "client_id",
-						"value": "{{client_id}}",
-						"type": "text",
-						"disabled": true
-					},
-					{
-						"key": "access_token",
-						"value": "{{access_token}}",
-						"type": "text",
-						"disabled": true
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "https://api-rci-qa.bancorcibrasil.com.br/product/financing-offer/v1/financing-offers?_offset=0&_limit=100&_sort=description",
-					"protocol": "https",
-					"host": [
-						"api-rci-qa",
-						"bancorcibrasil",
-						"com",
-						"br"
-					],
-					"path": [
-						"product",
-						"financing-offer",
-						"v1",
-						"financing-offers"
-					],
-					"query": [
-						{
-							"key": "_offset",
-							"value": "0"
-						},
-						{
-							"key": "_limit",
-							"value": "100"
-						},
-						{
-							"key": "_sort",
-							"value": "description"
-						}
-					]
-				}
-			},
-			"response": []
 		}
 	],
 	"event": [
@@ -6661,63 +6543,63 @@
 	],
 	"variable": [
 		{
-			"id": "e9ffc62b-be7b-4089-992e-8ae423592b74",
+			"id": "1274eba1-4cfa-4fd5-96ec-ab9f6218dc4a",
 			"key": "domain",
 			"value": "/financing/offer/v1"
 		},
 		{
-			"id": "13612b73-6f0a-44fc-9229-6ce423ee8fd5",
+			"id": "30a276c2-218a-4c1e-aa16-7aa77b43f6ce",
 			"key": "ignore_collectionScript",
 			"value": ""
 		},
 		{
-			"id": "92b1be05-d159-4b63-b14b-58a4ff8f4940",
+			"id": "09f8fb6c-d38d-4297-a7b6-1875adb628cb",
 			"key": "count",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "76f398fa-00a3-4ae0-a86b-e92cfba8b6b0",
+			"id": "3b9956cf-27cf-4e90-b41d-43ac7ce4460c",
 			"key": "controlAuth",
 			"value": ""
 		},
 		{
-			"id": "0bd8b575-3ca2-4632-bac7-4e89287776f1",
+			"id": "f466feef-095e-4a4c-a7eb-0b53e40ac010",
 			"key": "payloadEngine",
 			"value": ""
 		},
 		{
-			"id": "c273d929-7bee-450b-9d13-31648201c84f",
+			"id": "8b07a6b7-d83b-44e2-ba40-c72f0a4020a8",
 			"key": "tc_identifierPainel_fieldEngineType",
 			"value": ""
 		},
 		{
-			"id": "0a604f5c-5223-4c92-ad3e-02dac0de953e",
+			"id": "08ba7b6c-be6e-4041-bb09-f866ecc8658d",
 			"key": "tc_identifierPainel_fieldLine",
 			"value": ""
 		},
 		{
-			"id": "d5ba1b21-6b13-49c5-b3ec-64fe130e7c50",
+			"id": "1bf05f39-2b92-4ea7-9780-fd1a0d2e7498",
 			"key": "tc_identifierPainel_fieldStartDate",
 			"value": ""
 		},
 		{
-			"id": "68e35d08-fbe5-49f5-a26d-7dbfd9ec7701",
+			"id": "4978217c-7ca2-4a10-8863-49b2776a91f8",
 			"key": "tc_identifierPainel_fieldEndDate",
 			"value": ""
 		},
 		{
-			"id": "944033c8-aede-4ad6-8425-55761de833fe",
+			"id": "ef862098-a5a7-42e2-9a42-8c568fa09f5d",
 			"key": "tc_identifierPainel_fieldPaymentPlanCategoryIds",
 			"value": ""
 		},
 		{
-			"id": "bc7fbd3e-5a85-4f34-9e04-0e7a91e194d9",
+			"id": "64791cc7-b963-4093-9bf7-1357cf8c4e0e",
 			"key": "tc_identifierPainel_fieldCallCondition",
 			"value": ""
 		},
 		{
-			"id": "8d8f3e3d-cdd5-46fa-8571-eb8e4d6055a3",
+			"id": "01864d21-2335-49df-8c0c-ecd4d016c21b",
 			"key": "tc_identifierPainel_fieldIntegrationChannelIds",
 			"value": ""
 		}
