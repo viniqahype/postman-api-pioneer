@@ -662,7 +662,9 @@
 							"var bodyChangeSubField = eval(pm.globals.get('bodyChangeSubField'))\r",
 							"var bodyChangeMoreFields = eval(pm.globals.get('bodyChangeMoreFields'))\r",
 							"\r",
-							"bodyChangeSubField(payloadEngine, \"engineCriteria\", \"rateType\", pm.variables.replaceIn('{{$randomWord}}'))\r",
+							"bodyChangeOneFields(payloadEngine, \"engineType\",\"VME\")\r",
+							"payloadEngine.engineCriteria.rateType = 'TESTE'\r",
+							"console.log(payloadEngine)\r",
 							"\r",
 							"console.log(payloadEngine)\r",
 							"\r",
@@ -767,12 +769,12 @@
 	],
 	"variable": [
 		{
-			"id": "79aece81-6b07-4e70-b439-bd071e24561d",
+			"id": "b6916a32-e581-4fa0-a465-88a79d9d9daf",
 			"key": "payloadEngine",
 			"value": ""
 		},
 		{
-			"id": "bb7d84c2-56c7-4540-a8f9-60c82fde4dc3",
+			"id": "6069f7e4-bc25-40fc-8141-ba5841850722",
 			"key": "payloadTest",
 			"value": ""
 		}
