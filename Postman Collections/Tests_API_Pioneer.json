@@ -3797,7 +3797,7 @@
 									"\r",
 									"    case 'empty':\r",
 									"\r",
-									"    case 'no_Remunerations':\r",
+									"    case 'no_remunerations':\r",
 									"\r",
 									"    case 'RemunerationsNull':\r",
 									"\r",
@@ -4454,19 +4454,17 @@
 							"script": {
 								"id": "1f968dde-121e-4a63-a7e1-092f883ce726",
 								"exec": [
-									"/* 1 Declaring array variable with tests cases for Engines_GeneralCriteriaPanel: Field Person Type */\r",
-									"pm.collectionVariables.set('tc_generalCriteriaPanel_fieldPersonType', JSON.stringify(['inexistent', 'number', 'only_space', 'empty', 'no_PersonType', 'PersonTypeNull']));\r",
+									"/* Declaring array variable with tests cases for Engines_GeneralCriteriaPanel: Field Person Type */\r",
+									"pm.collectionVariables.set('tc_generalCriteriaPanel_fieldPersonType', JSON.stringify(['inexistent', 'number', 'only_space', 'empty', 'no_PersonType', 'personTypeNull','multiplesOptions']));\r",
 									"\r",
 									"/* Declaring array variable with tests cases for Engines_GeneralCriteriaPanel: Field saleTypes */\r",
-									"pm.collectionVariables.set('tc_generalCriteriaPanel_fieldSaleTypes', JSON.stringify(['inexistent', 'number', 'only_space', 'empty', 'no_saleTypes', 'saleTypesNull', 'multiplesOptions'\r",
-									"]));\r",
+									"pm.collectionVariables.set('tc_generalCriteriaPanel_fieldSaleTypes', JSON.stringify(['inexistentId', 'string', 'only_space', 'empty', 'no_saleTypes', 'saleTypesNull', 'inactiveId','repeatedMultiplesOptions', 'multiplesOptions']));\r",
 									"\r",
-									"/* 2 Declaring array variable with tests cases for Engines_GeneralCriteriaPanel: Field SaleSubtypes */\r",
-									"pm.collectionVariables.set('tc_generalCriteriaPanel_fieldSaleSubtypes', JSON.stringify(['inexistent', 'number', 'only_space', 'empty', 'no_SalesSubtype', 'SalesSubtypeNull', 'multiplesOptions'\r",
-									"]));\r",
+									"/* Declaring array variable with tests cases for Engines_GeneralCriteriaPanel: Field SaleSubtypes */\r",
+									"pm.collectionVariables.set('tc_generalCriteriaPanel_fieldSaleSubtypes', JSON.stringify(['inexistentId', 'string', 'only_space', 'empty', 'subtypeFromAnotherType', 'subtypeWithoutType', 'no_salesSubtype', 'salesSubtypeNull', 'inactiveId', 'repeatedMultiplesOptions', 'multiplesOptions']));\r",
 									"\r",
-									"/* 3 Declaring array variable with tests cases for Engines_GeneralCriteriaPanel: Field FinancialBrands*/\r",
-									"pm.collectionVariables.set('tc_generalCriteriaPanel_fieldFinancialBrands', JSON.stringify(['inexistent', 'number', 'only_space', 'empty', 'no_FinancialBrands', 'FinancialBrandsNull', 'multiplesOptions']));\r",
+									"/* Declaring array variable with tests cases for Engines_GeneralCriteriaPanel: Field FinancialBrands*/\r",
+									"pm.collectionVariables.set('tc_generalCriteriaPanel_fieldFinancialBrands', JSON.stringify(['inexistentId', 'string', 'only_space', 'empty', 'no_saleTypes', 'saleTypesNull', 'inactiveId','repeatedMultiplesOptions', 'multiplesOptions']));\r",
 									"\r",
 									"/* 4 Declaring array variable with tests cases for Engines_GeneralCriteriaPanel: Field FactorySubsidy*/\r",
 									"pm.collectionVariables.set('tc_generalCriteriaPanel_fieldFactorySubsidy', JSON.stringify(['inexistent', 'number', 'only_space', 'empty', 'no_FactorySubsidy', 'FactorySubsidyNull']));\r",
@@ -7197,63 +7195,63 @@
 	],
 	"variable": [
 		{
-			"id": "c632df61-bb7f-488d-90b2-93348200b3e4",
+			"id": "633d061f-7160-4146-8fcd-67933e826208",
 			"key": "domain",
 			"value": "/financing/offer/v1"
 		},
 		{
-			"id": "3044009b-2b0a-4bc1-9503-36b85b662b30",
+			"id": "870968bf-2de1-4f3b-9463-2cefc7d93da6",
 			"key": "ignore_collectionScript",
 			"value": ""
 		},
 		{
-			"id": "8295a941-8f09-4299-80a5-66bca6136ea9",
+			"id": "433350b7-77a7-491e-aed3-d0692ff1cef1",
 			"key": "count",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "449385f9-cd21-40b5-bf4b-3379a0002d59",
+			"id": "db3ab918-6eaf-4470-8031-0819a5eba8b4",
 			"key": "controlAuth",
 			"value": ""
 		},
 		{
-			"id": "ad37c682-056d-4a6b-b64a-a8b572af75bb",
+			"id": "6233ae9c-16fa-42b5-8961-fcf66b1d2100",
 			"key": "payloadEngine",
 			"value": ""
 		},
 		{
-			"id": "86898e26-1105-409f-a4f5-52afec002b4e",
+			"id": "98230bf1-f310-4d63-a213-36d7f417f969",
 			"key": "tc_identifierPainel_fieldEngineType",
 			"value": ""
 		},
 		{
-			"id": "bf588839-6bdf-402c-9d9b-57405b9bc737",
+			"id": "a547dfea-37e7-4c9f-8733-46ffa75cd562",
 			"key": "tc_identifierPainel_fieldLine",
 			"value": ""
 		},
 		{
-			"id": "f2582ba0-b6db-44d4-a68a-740acfadbc3d",
+			"id": "a16acda0-049e-4a1d-a18f-6a3c6195a75b",
 			"key": "tc_identifierPainel_fieldStartDate",
 			"value": ""
 		},
 		{
-			"id": "daa66b84-9d34-4477-b946-595280a8061f",
+			"id": "c1ef4aa0-c513-461f-9678-36081b383fb9",
 			"key": "tc_identifierPainel_fieldEndDate",
 			"value": ""
 		},
 		{
-			"id": "df233e91-0a7f-43e7-9fcd-531a2266aa3d",
+			"id": "4b84314b-fe11-40ce-9807-c2ae8384f037",
 			"key": "tc_identifierPainel_fieldPaymentPlanCategoryIds",
 			"value": ""
 		},
 		{
-			"id": "38086c39-59b2-4a12-b956-cd28dcd0dc32",
+			"id": "9debfb96-1ddd-4d90-8295-1a048e6ce7b3",
 			"key": "tc_identifierPainel_fieldCallCondition",
 			"value": ""
 		},
 		{
-			"id": "7c342609-1d16-4e41-9c51-f8422c42f852",
+			"id": "577521e7-b02f-4d6a-93d8-e5f181036ddb",
 			"key": "tc_identifierPainel_fieldIntegrationChannelIds",
 			"value": ""
 		}
