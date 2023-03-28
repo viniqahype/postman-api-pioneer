@@ -4893,6 +4893,31 @@
 								],
 								"type": "text/javascript"
 							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"id": "dfacc6bc-7629-4889-a793-7be6d3360485",
+								"exec": [
+									"/* Declaring array variable with tests cases for Engines_EligibleVehiclesPanel: Field Dealership Bond Type */\r",
+									"pm.collectionVariables.set('tc_eligibleVehiclesPanel_fieldDealershipBondType', JSON.stringify(['inexistent', 'number', 'only_space', 'empty', 'no_dealershipBondType', 'dealershipBondTypeNull']));\r",
+									"\r",
+									"/* Declaring array variable with tests cases for Engines_EligibleVehiclesPanel: Field Dealership Id */\r",
+									"pm.collectionVariables.set('tc_eligibleVehiclesPanel_fieldDealership', JSON.stringify(['dealershipBondType_obligatory','inexistent', 'number', 'only_space', 'empty', 'no_dealership', 'dealershipNull', ]));\r",
+									"\r",
+									"/* Declaring array variable with tests cases for Engines_EligibleVehiclesPanel: Field Dealership Group Id */\r",
+									"pm.collectionVariables.set('tc_eligibleVehiclesPanel_fieldDealershipGroupId', JSON.stringify(['inexistent', 'number', 'only_space', 'empty', 'no_DealershipGroupId', 'DealershipGroupIdNull' , 'Dealership_obligatory'\r",
+									"]));\r",
+									"\r",
+									"/* Criar testes para: Somente apresentar as versões que possuam a idade dentro do intervalo definido para ano modelo e ano fabricação, caso estejam preenchidos nos critérios definidos anteriormente.*/\r",
+									"\r",
+									"/* Declaring array variable with tests cases for Engines_EligibleVehiclesPanel: Field situation */\r",
+									"pm.collectionVariables.set('tc_eligibleVehiclesPanel_fieldSituation', JSON.stringify(['inexistent', 'number', 'only_space', 'empty', 'no_situation', 'situationNull' , \r",
+									"]));\r",
+									""
+								],
+								"type": "text/javascript"
+							}
 						}
 					],
 					"id": "6a78e81e-7eaa-43cf-a631-0404f44d3a78",
@@ -6622,63 +6647,63 @@
 	],
 	"variable": [
 		{
-			"id": "34f143ca-c7ca-44b9-865f-b159eb503056",
+			"id": "c3056822-fca9-4e56-bcd5-a475ba41ac6c",
 			"key": "domain",
 			"value": "/financing/offer/v1"
 		},
 		{
-			"id": "5fbcf268-f0fc-4fdd-9cab-946409f24041",
+			"id": "6837a3a5-e349-47f6-ab27-162cf7d6dfd8",
 			"key": "ignore_collectionScript",
 			"value": ""
 		},
 		{
-			"id": "9cc384d5-df7f-43b2-b4e9-f916fe680b11",
+			"id": "cd639b85-957e-490d-bd2f-79810217afdf",
 			"key": "count",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "f42aa197-9f0e-4a51-b648-356bafaacc32",
+			"id": "33d66b61-7083-42b0-a23e-f77d30e584c9",
 			"key": "controlAuth",
 			"value": ""
 		},
 		{
-			"id": "9ec02387-5bee-4092-83cb-d69f01de4e28",
+			"id": "bfa77f8a-49df-4049-83e5-951519fd14ad",
 			"key": "payloadEngine",
 			"value": ""
 		},
 		{
-			"id": "9458c862-1c59-4c79-83ec-3235089d423f",
+			"id": "013d3611-78fb-4e97-9a2e-9bb66fbba375",
 			"key": "tc_identifierPainel_fieldEngineType",
 			"value": ""
 		},
 		{
-			"id": "fd2bbeba-22a1-456b-bf39-0ebd0b1e0df3",
+			"id": "e3cc99fa-a51c-40b3-9e29-e9ee583b5ec6",
 			"key": "tc_identifierPainel_fieldLine",
 			"value": ""
 		},
 		{
-			"id": "556ecd56-a72a-4c32-9847-7f8e533954cb",
+			"id": "d6dbc8ea-7f61-47ca-966f-bd80ca457eb2",
 			"key": "tc_identifierPainel_fieldStartDate",
 			"value": ""
 		},
 		{
-			"id": "2f9fb5fd-0b49-4942-a684-0981939d38c2",
+			"id": "2edec61c-9fdb-4980-a880-ba77e26ab01f",
 			"key": "tc_identifierPainel_fieldEndDate",
 			"value": ""
 		},
 		{
-			"id": "a8eeb79a-3896-4a93-ae15-64546e12732e",
+			"id": "b3938a2f-ae40-4ec8-81b8-8c1b0b12eb56",
 			"key": "tc_identifierPainel_fieldPaymentPlanCategoryIds",
 			"value": ""
 		},
 		{
-			"id": "a7541a6a-f7b8-4818-94c4-f33ed1b58a0d",
+			"id": "2d6bb27f-b6d6-4e57-9326-a71e8457a4e7",
 			"key": "tc_identifierPainel_fieldCallCondition",
 			"value": ""
 		},
 		{
-			"id": "8563f7d2-1818-4b3d-ab48-968a2f6df5ac",
+			"id": "227a8e13-cb08-4d18-985c-d667a26ffaa8",
 			"key": "tc_identifierPainel_fieldIntegrationChannelIds",
 			"value": ""
 		}
