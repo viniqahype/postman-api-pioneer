@@ -1528,12 +1528,64 @@
 									"\r",
 									"switch (tc_fieldPersonType[i]) {\r",
 									"    case 'inexistent':\r",
+									"            pm.sendRequest({\r",
+									"            method: pm.request.method.toString(),\r",
+									"            url: pm.request.url.toString(),\r",
+									"            headers: headerComplete,\r",
+									"            body: changeOneFields(payloadEngine, \"PersonType\", pm.variables.replaceIn('{{$randomWord}}'))\r",
+									"        }, (err, res) => {\r",
+									"            pm.test('Status 400 for inexistent PersonType', () => {\r",
+									"                pm.expect(res).to.be.equal(400);\r",
+									"                //VALIDAR MENSAGEM\r",
+									"            })\r",
+									"        })\r",
+									"        i++;\r",
+									"        pm.collectionVariables.set('count', i);\r",
 									"\r",
 									"    case 'number':\r",
+									"            pm.sendRequest({\r",
+									"            method: pm.request.method.toString(),\r",
+									"            url: pm.request.url.toString(),\r",
+									"            headers: headerComplete,\r",
+									"            body: changeOneFields(payloadEngine, \"PersonType\", parseInt(pm.variables.replaceIn('{{$randomInt}}')))\r",
+									"        }, (err, res) => {\r",
+									"            pm.test('Status 400 for PersonType number type', () => {\r",
+									"                pm.expect(res).to.be.equal(400);\r",
+									"                //VALIDAR MENSAGEM\r",
+									"            })\r",
+									"        })\r",
+									"        i++;\r",
+									"        pm.collectionVariables.set('count', i);\r",
 									"\r",
 									"    case 'only_space':\r",
+									"    pm.sendRequest({\r",
+									"            method: pm.request.method.toString(),\r",
+									"            url: pm.request.url.toString(),\r",
+									"            headers: headerComplete,\r",
+									"            body: changeOneFields(payloadEngine, \"PersonType\", \"  \")\r",
+									"        }, (err, res) => {\r",
+									"            pm.test('Status 400 for PersonType with only_space', () => {\r",
+									"                pm.expect(res).to.be.equal(400);\r",
+									"                //VALIDAR MENSAGEM\r",
+									"            })\r",
+									"        })\r",
+									"        i++;\r",
+									"        pm.collectionVariables.set('count', i);\r",
 									"\r",
 									"    case 'empty':\r",
+									"    pm.sendRequest({\r",
+									"            method: pm.request.method.toString(),\r",
+									"            url: pm.request.url.toString(),\r",
+									"            headers: headerComplete,\r",
+									"            body: changeOneFields(payloadEngine, \"PersonType\", \"\")\r",
+									"        }, (err, res) => {\r",
+									"            pm.test('Status 400 for empty PersonType', () => {\r",
+									"                pm.expect(res).to.be.equal(400);\r",
+									"                //VALIDAR MENSAGEM\r",
+									"            })\r",
+									"        })\r",
+									"        i++;\r",
+									"        pm.collectionVariables.set('count', i);\r",
 									"\r",
 									"    case 'no_PersonType':\r",
 									"\r",
@@ -5201,63 +5253,63 @@
 	],
 	"variable": [
 		{
-			"id": "f83c5f27-47ea-48df-b371-170c7363ae23",
+			"id": "cb1343fe-0dea-4559-bf42-504d91fe20eb",
 			"key": "domain",
 			"value": "/financing/offer/v1"
 		},
 		{
-			"id": "018e8e2d-f9f0-4cf4-aa19-ba4edcf573ea",
+			"id": "b6a6b34c-9f04-4d01-8549-b71a65b1e5d1",
 			"key": "ignore_collectionScript",
 			"value": ""
 		},
 		{
-			"id": "6771273e-8bfb-4095-b176-45c61813a80f",
+			"id": "d64f3c3a-bfe2-4fcc-9f36-83853accdfa8",
 			"key": "count",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "88c4ac79-37c2-4f83-b624-7a238cc2a939",
+			"id": "9cebdb17-e4cc-4835-ac84-fbc08b7503ce",
 			"key": "controlAuth",
 			"value": ""
 		},
 		{
-			"id": "42bbc342-4944-4995-8b2d-5bc241eab2f4",
+			"id": "1991999c-3f81-4029-91e1-60bab5ade93f",
 			"key": "payloadEngine",
 			"value": ""
 		},
 		{
-			"id": "99eb8397-87fb-4892-929f-b833d8ae3105",
+			"id": "88dd2f5b-8475-485a-ab25-fb9c77e022b4",
 			"key": "tc_identifierPainel_fieldEngineType",
 			"value": ""
 		},
 		{
-			"id": "d6cad2ae-f14c-456c-af64-842494912ac3",
+			"id": "c4e33fad-cf7d-4dfd-8f27-f39c034e6adc",
 			"key": "tc_identifierPainel_fieldLine",
 			"value": ""
 		},
 		{
-			"id": "cb9258a4-bdc0-4b53-8299-868ada0018b4",
+			"id": "124f733f-4124-4211-81a6-5c43ff5096b8",
 			"key": "tc_identifierPainel_fieldStartDate",
 			"value": ""
 		},
 		{
-			"id": "12bc424f-5726-4e40-951d-a819a83c58d5",
+			"id": "030143d2-8f65-4d16-94d0-63ff2ec7643d",
 			"key": "tc_identifierPainel_fieldEndDate",
 			"value": ""
 		},
 		{
-			"id": "8fd63d23-b8ac-4994-a82b-2f5e7761942b",
+			"id": "c415de0d-fba3-4692-8084-3364f633ea46",
 			"key": "tc_identifierPainel_fieldPaymentPlanCategoryIds",
 			"value": ""
 		},
 		{
-			"id": "f339e035-fca7-4d13-85cf-26d996189c4e",
+			"id": "acbfac2e-0399-451a-81b4-492a1cf2b121",
 			"key": "tc_identifierPainel_fieldCallCondition",
 			"value": ""
 		},
 		{
-			"id": "00ed4658-4c95-4d69-add4-ea98b8784944",
+			"id": "afaf0132-de0f-44ed-876d-67116d070301",
 			"key": "tc_identifierPainel_fieldIntegrationChannelIds",
 			"value": ""
 		}
