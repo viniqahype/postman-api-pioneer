@@ -6241,8 +6241,7 @@
 							"var bodyChangeMoreFields = eval(pm.globals.get('bodyChangeMoreFields'))\r",
 							"let id = RandomNumberWithout(12)\r",
 							"\r",
-							"let floatNumber = _.random(0, 10, true).toFixed(2)\r",
-							"console.log(floatNumber)"
+							""
 						],
 						"type": "text/javascript"
 					}
@@ -6252,6 +6251,26 @@
 					"script": {
 						"id": "9872422f-6ceb-4903-9622-04ee2398cc1d",
 						"exec": [
+							"pm.sendRequest({\r",
+							"    method: 'GET',\r",
+							"    url: 'https://api-rci-qa.bancorcibrasil.com.br/product/manager/v1/products?_expands=products',\r",
+							"    header: headerComplete\r",
+							"}, (err, resGet) => {\r",
+							"    let id = resGet.json()[0].productId\r",
+							"    //let inexistentId = eval(pm.globals.get('generateRandomNumberWithout'))(id)\r",
+							"    pm.sendRequest({\r",
+							"        method: pm.request.method.toString(),\r",
+							"        url: pm.request.url.toString(),\r",
+							"        headers: headerComplete,\r",
+							"        body: {\r",
+							"            mode: 'raw',\r",
+							"            raw: JSON.stringify({ 'key': id})\r",
+							"        }\r",
+							"    }, (err, res) => {\r",
+							"        console.log(pm.request.body)\r",
+							"        console.log(res.json())\r",
+							"        })\r",
+							"    })\r",
 							""
 						],
 						"type": "text/javascript"
@@ -6454,63 +6473,63 @@
 	],
 	"variable": [
 		{
-			"id": "bb6e0174-e38a-4813-9774-116bd034de0a",
+			"id": "efe36c8d-64ea-4be5-a5ad-03d5288cbea0",
 			"key": "domain",
 			"value": "/financing/offer/v1"
 		},
 		{
-			"id": "e44fcb13-9049-41c1-a5da-3909e8a9b8bb",
+			"id": "bf2e265a-1091-4115-9d8a-879ed805b552",
 			"key": "ignore_collectionScript",
 			"value": ""
 		},
 		{
-			"id": "73d3bffe-4331-49b8-8b47-b2bc319535f5",
+			"id": "db860341-cf65-4680-9769-05bf1cd9396e",
 			"key": "count",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "eb7d94a6-f9dc-44e2-82aa-48e4035b0516",
+			"id": "96c0b9a6-7cea-4224-ae34-6c43c1d0f649",
 			"key": "controlAuth",
 			"value": ""
 		},
 		{
-			"id": "cd5fc6df-374f-4345-9aac-d211afff63ba",
+			"id": "3621513b-9a1e-45f0-bb58-68318214e309",
 			"key": "payloadEngine",
 			"value": ""
 		},
 		{
-			"id": "b44b52bd-2b70-452b-84e0-5045e5d06c8c",
+			"id": "86f9143c-09ef-463c-89c1-a0c8dd9c05c1",
 			"key": "tc_identifierPainel_fieldEngineType",
 			"value": ""
 		},
 		{
-			"id": "146f1bb8-9c0e-4d03-b1eb-5e2f318a16c1",
+			"id": "05f7b0f6-0e5a-42aa-924b-8c1224ba4a9b",
 			"key": "tc_identifierPainel_fieldLine",
 			"value": ""
 		},
 		{
-			"id": "deee37d1-58d4-4644-bcf5-9534616f92af",
+			"id": "ef46dbe3-8978-49d5-9fc2-7bd57fe81f21",
 			"key": "tc_identifierPainel_fieldStartDate",
 			"value": ""
 		},
 		{
-			"id": "9462bb3c-1500-48a6-82cd-133769b7c0ed",
+			"id": "8552acc2-a37f-49fa-84af-f0105b95b7ff",
 			"key": "tc_identifierPainel_fieldEndDate",
 			"value": ""
 		},
 		{
-			"id": "6d6eb921-7509-4f71-88e8-a362fe2d7cd7",
+			"id": "4bd2bffb-642f-4f54-bb2c-cfb24083fc84",
 			"key": "tc_identifierPainel_fieldPaymentPlanCategoryIds",
 			"value": ""
 		},
 		{
-			"id": "1b4d55af-5836-413a-bb7c-1561aee73855",
+			"id": "a5ee7e7e-fd10-4e48-ae11-759e7335c0e8",
 			"key": "tc_identifierPainel_fieldCallCondition",
 			"value": ""
 		},
 		{
-			"id": "858a855d-acb4-488c-9201-a6f1e08b75f5",
+			"id": "15f40ef2-d58c-4b50-b6b6-ec67fb88cf0d",
 			"key": "tc_identifierPainel_fieldIntegrationChannelIds",
 			"value": ""
 		}
