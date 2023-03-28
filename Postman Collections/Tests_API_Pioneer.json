@@ -6187,6 +6187,52 @@
 								],
 								"type": "text/javascript"
 							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"id": "d32cc98a-4fed-4e73-a622-6e35e612eda1",
+								"exec": [
+									"/* Importing variables and functions */\r",
+									"var payloadEngine = JSON.parse(pm.collectionVariables.get('payloadEngine'));\r",
+									"var i = pm.collectionVariables.get('count')\r",
+									"var changeSubFields = eval(pm.globals.get('bodyChangeSubField'))\r",
+									"var changeMoreFields = eval(pm.globals.get('bodyChangeMoreFields'))\r",
+									"var changeOneFields = eval(pm.globals.get('bodyChangeOneField'))\r",
+									"var headerComplete = eval(pm.globals.get('setHeader'))()\r",
+									"var lodash = require('lodash')\r",
+									"/* Validating positive scenarios to create an engine */\r",
+									"//Default validation: 1. Status code, 2. response header. 3. creation in database , 4. Response time\r",
+									"/* 1 */\r",
+									"pm.test('Status code 201 to create an engine', () => {\r",
+									"    pm.response.to.have.status(201);\r",
+									"})\r",
+									"/* 2 */\r",
+									"pm.test('Response header contains location with id', () => {\r",
+									"    let id = pm.response.headers.get('Location').split('/policies/')[1]\r",
+									"    pm.response.to.be.header('Location', `/policies/${id}`);\r",
+									"})\r",
+									"/* 3 */\r",
+									"let id = pm.response.headers.get('Location').split('/policies/')[1]\r",
+									"let url_get = pm.environment.get('baseUrl') + pm.collectionVariables.get('domain') + `${id}`\r",
+									"let options = {\r",
+									"    method: 'GET',\r",
+									"    url: url_get,\r",
+									"    header: headerComplete\r",
+									"}\r",
+									"pm.sendRequest(options, (err, res) => {\r",
+									"    pm.test('Engine has been created in the database'), () => {\r",
+									"       pm.expect(res).to.have.status(200)\r",
+									"        pm.expect(res.engineId).to.eql(id)\r",
+									"    }\r",
+									"})\r",
+									"/* 4 */\r",
+									"pm.test(\"Response time is less than 5000ms\", () => {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(5000);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
 						}
 					],
 					"id": "4f8326b5-3f2d-4e19-9f29-8e5000523a23",
@@ -7597,63 +7643,63 @@
 	],
 	"variable": [
 		{
-			"id": "9b62a2cc-8931-4172-96fb-dd40df50d39a",
+			"id": "987a1177-8acd-4e00-bf15-ef1de27ad65f",
 			"key": "domain",
 			"value": "/financing/offer/v1"
 		},
 		{
-			"id": "b91abfc8-fd52-4a90-a58e-de912cff85a5",
+			"id": "01543e41-96d7-4551-beb9-4b6ada476f3b",
 			"key": "ignore_collectionScript",
 			"value": ""
 		},
 		{
-			"id": "6d578f23-0749-43f0-b5cc-b121e08c07ae",
+			"id": "dcd96c07-8a8b-45e1-aab3-e11cb1eeb6d6",
 			"key": "count",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "9a27d6b4-1afc-4511-a747-a8a39046cf2a",
+			"id": "53ebbda4-5498-4245-94df-f6694ca21fda",
 			"key": "controlAuth",
 			"value": ""
 		},
 		{
-			"id": "5db1fa7d-0327-4e0d-a7f7-09c0fb22089e",
+			"id": "03cb8a8f-fdee-458b-90b1-4191e7f685ba",
 			"key": "payloadEngine",
 			"value": ""
 		},
 		{
-			"id": "a5c5f0ff-d5e3-47ca-a4e3-0b53fd695088",
+			"id": "3ba89208-d9cc-423c-84f3-d9d8ebb40f1d",
 			"key": "tc_identifierPainel_fieldEngineType",
 			"value": ""
 		},
 		{
-			"id": "29f1a8a4-c43d-4004-a3d9-dfdde84163db",
+			"id": "07e521c8-7d99-490e-a124-9b6ed7cba86e",
 			"key": "tc_identifierPainel_fieldLine",
 			"value": ""
 		},
 		{
-			"id": "4f273569-71fc-40bc-b88f-68cd29d37cce",
+			"id": "c1a6efc0-3da5-46bc-ba50-144ec7befc50",
 			"key": "tc_identifierPainel_fieldStartDate",
 			"value": ""
 		},
 		{
-			"id": "936db12b-9d24-4415-8405-c427a94f5ca7",
+			"id": "6fb5f94b-082b-4ef2-8eb6-6e4fbf48d461",
 			"key": "tc_identifierPainel_fieldEndDate",
 			"value": ""
 		},
 		{
-			"id": "65b2a275-2b0c-4db2-8982-b83270ed4131",
+			"id": "b7480949-7398-4294-a490-22460e9801f5",
 			"key": "tc_identifierPainel_fieldPaymentPlanCategoryIds",
 			"value": ""
 		},
 		{
-			"id": "dd063030-7d19-407d-9ad6-1ea9708cbde1",
+			"id": "78825e82-bae7-4274-8b2a-0483911e1612",
 			"key": "tc_identifierPainel_fieldCallCondition",
 			"value": ""
 		},
 		{
-			"id": "40a251aa-6f60-4369-8931-dfa84472c6df",
+			"id": "fd0d5d52-f211-474a-a6d6-24af1e1a8bbc",
 			"key": "tc_identifierPainel_fieldIntegrationChannelIds",
 			"value": ""
 		}
