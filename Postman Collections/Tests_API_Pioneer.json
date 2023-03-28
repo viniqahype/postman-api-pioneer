@@ -2442,8 +2442,8 @@
 									"/* 7  Declaring array variable with tests cases for Engines_GeneralCriteriaPanel: Field Remunerations */\r",
 									"pm.collectionVariables.set('tc_generalCriteriaPanel_fieldRemunerations', JSON.stringify(['difEngineRemunerations','inexistent', 'number', 'only_space', 'empty', 'no_Remunerations', 'RemunerationsNull', 'engineRemunerations', 'multiplesOptions']));\r",
 									"\r",
-									"/* 8 Declaring array variable with tests cases for Engines_GeneralCriteriaPanel: Field lack - NÃO ENCONTREI CARENCIA NO PAYLOAD */\r",
-									"pm.collectionVariables.set('tc_generalCriteriaPanel_fieldLack', JSON.stringify(['difEngineLack','inexistent', 'number', 'only_space', 'empty', 'no_Lack', 'LackNull', 'engineLack',  'multiplesOptions'\r",
+									"/* 8 Declaring array variable with tests cases for Engines_GeneralCriteriaPanel: Field delays - NÃO ENCONTREI CARENCIA NO PAYLOAD */\r",
+									"pm.collectionVariables.set('tc_generalCriteriaPanel_fielddelays', JSON.stringify(['difEnginedelays','inexistent', 'number', 'only_space', 'empty', 'no_delays', 'delaysNull', 'enginedelays',  'multiplesOptions'\r",
 									"]));\r",
 									"\r",
 									"/* 9 Declaring array variable with tests cases for Engines_GeneralCriteriaPanel: Field MinDownPaymentPercent*/\r",
@@ -2459,14 +2459,14 @@
 									"]));\r",
 									"\r",
 									"/* 12 Declaring array variable with tests cases for Engines_GeneralCriteriaPanel: Field MaxLoanAmount */\r",
-									"pm.collectionVariables.set('tc_generalCriteriaPanel_fieldMaxLoanAmount', JSON.stringify(['floatNumber_11digits', 'negativeNumber', 'string', 'zero', 'only_space', 'empty', 'no_MaxLoanAmount', 'MaxLoanAmountNull', 'bigNumber', 'MaxLoanAmount_obligatory'\r",
+									"pm.collectionVariables.set('tc_generalCriteriaPanel_fieldMaxLoanAmount', JSON.stringify(['floatNumber_11digits', 'floatNumber_12digits' 'negativeNumber', 'string', 'zero', 'only_space', 'empty', 'no_MaxLoanAmount', 'MaxLoanAmountNull', 'bigNumber', 'MaxLoanAmount_obligatory'\r",
 									"]));\r",
 									"\r",
 									"/* 13 Declaring array variable with tests cases for Engines_GeneralCriteriaPanel: Field MinModelRate*/\r",
 									"pm.collectionVariables.set('tc_generalCriteriaPanel_fieldMinModelRate', JSON.stringify(['number_2digits', 'negativeNumber', 'string', 'zero', 'only_space', 'empty', 'no_minModelRate', 'minModelRateNull', 'bigNumber', 'minModelRate_obligatory' ]));\r",
 									"\r",
 									"/* 14 Declaring array variable with tests cases for Engines_GeneralCriteriaPanel: Field MaxModelRate*/\r",
-									"pm.collectionVariables.set('tc_generalCriteriaPanel_fieldMaxModelRate', JSON.stringify(['number_2digits', 'negativeNumber', 'string', 'zero', 'only_space', 'empty', 'no_maxModelRate', 'maxModelRateNull', 'bigNumber', 'maxModelRate_obligatory' ]));\r",
+									"pm.collectionVariables.set('tc_generalCriteriaPanel_fieldMaxModelRate', JSON.stringify(['number_3digits', 'negativeNumber', 'string', 'zero', 'only_space', 'empty', 'no_maxModelRate', 'maxModelRateNull', 'bigNumber', 'maxModelRate_obligatory' ]));\r",
 									"\r",
 									"/* 15 Declaring array variable with tests cases for Engines_GeneralCriteriaPanel: Field min6Or7CpfDigits*/\r",
 									"pm.collectionVariables.set('tc_generalCriteriaPanel_fieldMin6Or7CpfDigits', JSON.stringify(['number_2digits', 'negativeNumber', 'string', 'zero', 'only_space', 'empty', 'no_min6Or7CpfDigits', 'min6Or7CpfDigitsNull', 'bigNumber', 'min6Or7CpfDigits_obligatory' ]));\r",
@@ -6622,63 +6622,63 @@
 	],
 	"variable": [
 		{
-			"id": "4b40b1b0-5934-4a14-ac4d-60764fd40da5",
+			"id": "34f143ca-c7ca-44b9-865f-b159eb503056",
 			"key": "domain",
 			"value": "/financing/offer/v1"
 		},
 		{
-			"id": "2c1da561-70ee-4223-b20e-b198472f80a3",
+			"id": "5fbcf268-f0fc-4fdd-9cab-946409f24041",
 			"key": "ignore_collectionScript",
 			"value": ""
 		},
 		{
-			"id": "f6ea34cf-db7f-400c-8f42-072b381b4e91",
+			"id": "9cc384d5-df7f-43b2-b4e9-f916fe680b11",
 			"key": "count",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "602ec372-73aa-49ce-b0c2-1067d6e2b417",
+			"id": "f42aa197-9f0e-4a51-b648-356bafaacc32",
 			"key": "controlAuth",
 			"value": ""
 		},
 		{
-			"id": "8567ee58-8fd9-41b8-888e-0b6f0dd49889",
+			"id": "9ec02387-5bee-4092-83cb-d69f01de4e28",
 			"key": "payloadEngine",
 			"value": ""
 		},
 		{
-			"id": "ff1a20a4-d8af-47a3-9a03-553ba6738e0d",
+			"id": "9458c862-1c59-4c79-83ec-3235089d423f",
 			"key": "tc_identifierPainel_fieldEngineType",
 			"value": ""
 		},
 		{
-			"id": "03a7b18a-6b35-41f8-bd8e-437183837022",
+			"id": "fd2bbeba-22a1-456b-bf39-0ebd0b1e0df3",
 			"key": "tc_identifierPainel_fieldLine",
 			"value": ""
 		},
 		{
-			"id": "325e8d1c-b1bd-42f0-b91b-861815e8bd53",
+			"id": "556ecd56-a72a-4c32-9847-7f8e533954cb",
 			"key": "tc_identifierPainel_fieldStartDate",
 			"value": ""
 		},
 		{
-			"id": "aabfe459-7ef2-40b7-886f-c5b1d59e3d48",
+			"id": "2f9fb5fd-0b49-4942-a684-0981939d38c2",
 			"key": "tc_identifierPainel_fieldEndDate",
 			"value": ""
 		},
 		{
-			"id": "2cafa89d-ff22-43d7-aae4-ea423e0ad3a0",
+			"id": "a8eeb79a-3896-4a93-ae15-64546e12732e",
 			"key": "tc_identifierPainel_fieldPaymentPlanCategoryIds",
 			"value": ""
 		},
 		{
-			"id": "f9763d8e-d850-4220-a3fe-7ff8dcb7f454",
+			"id": "a7541a6a-f7b8-4818-94c4-f33ed1b58a0d",
 			"key": "tc_identifierPainel_fieldCallCondition",
 			"value": ""
 		},
 		{
-			"id": "a52efbf4-ea21-4f27-8ba9-22b5710f5f6e",
+			"id": "8563f7d2-1818-4b3d-ab48-968a2f6df5ac",
 			"key": "tc_identifierPainel_fieldIntegrationChannelIds",
 			"value": ""
 		}
