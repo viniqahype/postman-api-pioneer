@@ -1,0 +1,434 @@
+{
+	"info": {
+		"_postman_id": "b0581985-c882-4294-a194-690a2a552ae4",
+		"name": "Utils",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Global Function to Edit Payloads",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "1d8bdb3e-6c85-4565-958d-7e31242ae7cf",
+						"exec": [
+							"/* muda o payload alterando somente 1 valor */\r",
+							"var bodyChangeOneField = (json, key, value) => {\r",
+							"    let payload = json;\r",
+							"    payload[key] = value\r",
+							"    return payload \r",
+							"}\r",
+							"\r",
+							"/* muda o payload alterando objetos dentro de objetos */\r",
+							"var bodyChangeSubField = (json,keyFather,keyChild,value) => {\r",
+							"    let payload = json;\r",
+							"    payload[keyFather][keyChild] = value\r",
+							"    return payload\r",
+							"}\r",
+							"\r",
+							"/* muda o payload alterando objetos dentro de objetos que estão dentro de objetos */\r",
+							"var bodyChangeSubSubFields = (json,keyFather,keyChild1,keyChild2,value) => {\r",
+							"    let payload = json;\r",
+							"    payload[keyFather][keyChild1][keyChild2] = value\r",
+							"    return payload    \r",
+							"}\r",
+							"\r",
+							"/* muda o payload alterando mais de valor ao mesmo tempo - Não está funcionando no posmtan */\r",
+							"var bodyChangeMoreFields = (json, arrOfObjects) => {\r",
+							"    let payload = json;\r",
+							"    arrOfObjects.map((element) => {\r",
+							"        payload[Object.keys(element)[0]] = Object.values(element)[0]\r",
+							"    })\r",
+							"    return payload\r",
+							"}\r",
+							"\r",
+							"pm.globals.set('bodyChangeOneField', bodyChangeOneField.toString());\r",
+							"pm.globals.set('bodyChangeSubField', bodyChangeSubField.toString());\r",
+							"pm.globals.set('bodyChangeSubSubFields', bodyChangeSubSubFields.toString());\r",
+							"pm.globals.set('bodyChangeMoreFields', bodyChangeMoreFields.toString());"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "70785c0e-1e62-4e2e-81d5-124e766cd5ac",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"_postman_id": "d778270e-2a03-4fed-9cbd-6ee2d348241f",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "client_id",
+						"value": "{{client_id}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"32458031099\",\r\n    \"password\": \"Blade@123\",\r\n    \"remember\": null\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{baseUrl}}/core/authentication/v1/login"
+			},
+			"response": []
+		},
+		{
+			"name": "Global Function for Get Token",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "1d8bdb3e-6c85-4565-958d-7e31242ae7cf",
+						"exec": [
+							"/* Creating a global function that returns the token to use in other scripts */\r",
+							"var getToken = () => {\r",
+							"    console.info('Getting and saving token');\r",
+							"    let options = {\r",
+							"        url: pm.environment.get(\"baseUrl\") + \"/core/authentication/v1/login\",\r",
+							"        method: 'POST',\r",
+							"        header: {\r",
+							"            'client_id': pm.environment.get('client_id'),\r",
+							"            'Content-Type': 'application/json'\r",
+							"        },\r",
+							"        body: {\r",
+							"            mode: 'raw',\r",
+							"            raw: JSON.stringify({ username: \"32458031099\", password: \"Blade@123\" })\r",
+							"        },\r",
+							"    }\r",
+							"    pm.sendRequest(options,\r",
+							"        (err, res) => {\r",
+							"            if (err){\r",
+							"                console.error('Error in function getToken')\r",
+							"                }\r",
+							"            /* Record token in environment variable access_token */\r",
+							"            pm.environment.set(\"access_token\", res.json().access_token);\r",
+							"        })\r",
+							"\r",
+							"    return pm.environment.get('access_token')\r",
+							"}\r",
+							"\r",
+							"pm.globals.set(\"getToken\", getToken.toString());\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "70785c0e-1e62-4e2e-81d5-124e766cd5ac",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"_postman_id": "87c53518-9bf8-4d6d-92e8-92e485ecfa27",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "client_id",
+						"value": "{{client_id}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"32458031099\",\r\n    \"password\": \"Blade@123\",\r\n    \"remember\": null\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{baseUrl}}/core/authentication/v1/login"
+			},
+			"response": []
+		},
+		{
+			"name": "Global Function for Set Headers",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "1d8bdb3e-6c85-4565-958d-7e31242ae7cf",
+						"exec": [
+							"var setHeader = () => {\r",
+							"\r",
+							"    /* Environment variable 'header' will be used as a parameter in pm.sendRequest */\r",
+							"    eval(pm.globals.get(\"getToken\"))()\r",
+							"\r",
+							"    /* Wait getToken() to create a header */\r",
+							"    setTimeout(() => { pm.environment.set(\"header\", JSON.stringify({ access_token: pm.environment.get('access_token'), client_id: pm.environment.get('client_id') })) }, 2000);\r",
+							"\r",
+							"    return JSON.parse(pm.environment.get('header'));\r",
+							"}\r",
+							"\r",
+							"pm.globals.set('setHeader', setHeader.toString());\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "70785c0e-1e62-4e2e-81d5-124e766cd5ac",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"_postman_id": "cdd5783e-1014-4b25-8a7e-f99271a3a075",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "client_id",
+						"value": "{{client_id}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"32458031099\",\r\n    \"password\": \"Blade@123\",\r\n    \"remember\": null\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{baseUrl}}/core/authentication/v1/login"
+			},
+			"response": []
+		},
+		{
+			"name": "Global Function for RandomNumberWithout",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "1d8bdb3e-6c85-4565-958d-7e31242ae7cf",
+						"exec": [
+							"var generateRandomNumberWithout = (number) => {\r",
+							"\r",
+							"    let random = _.random(1, 1000000); // gera um número aleatório entre 1 e 100\r",
+							"\r",
+							"    while (random === number) { // loop até gerar um número diferente do número especificado\r",
+							"        random = _.random(1, 1000000);\r",
+							"    }\r",
+							"    return random;\r",
+							"}\r",
+							"\r",
+							"pm.globals.set('generateRandomNumberWithout', generateRandomNumberWithout.toString());\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "70785c0e-1e62-4e2e-81d5-124e766cd5ac",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"_postman_id": "c926e386-f4ac-4444-b987-7ee8e92ab60e",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "client_id",
+						"value": "{{client_id}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"32458031099\",\r\n    \"password\": \"Blade@123\",\r\n    \"remember\": null\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{baseUrl}}/core/authentication/v1/login"
+			},
+			"response": []
+		},
+		{
+			"name": "[Test] Generate Payloads",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "a0581c3d-5333-4444-ae1b-a540350af915",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "afb9b652-a33e-4d7e-830a-8a9aed21603f",
+						"exec": [
+							"pm.collectionVariables.set('payloadTest', JSON.stringify(\r",
+							"    {\r",
+							"        \"productName\": 123,\r",
+							"        \"subproductName\": \"\",\r",
+							"        \"productActive\": true,\r",
+							"        \"productDscription\": \"\",\r",
+							"        \"productAcronym\": \"\",\r",
+							"        \"acronym\": \"\",\r",
+							"        \"codPartner\": \"\",\r",
+							"        \"iof\": \"\"\r",
+							"    }\r",
+							"))\r",
+							"\r",
+							"var payloadTest = JSON.parse(pm.collectionVariables.get('payloadTest'))\r",
+							"\r",
+							"var changeMoreFields = eval(pm.globals.get(\"bodyChangeMoreFields\"))\r",
+							"var array = [{\r",
+							"    \"productName\": \"QWE\"\r",
+							"}, {\r",
+							"    \"subproductName\": \"QWE\"\r",
+							"}, {\r",
+							"    \"productActive\": \"QWE\"\r",
+							"}, {\r",
+							"    \"productDscription\": \"QWE\"\r",
+							"}, {\r",
+							"    \"productAcronym\": \"QWE\"\r",
+							"}, {\r",
+							"    \"acronym\": \"QWE\"\r",
+							"}, {\r",
+							"    \"codPartner\": \"QWE\"\r",
+							"}, {\r",
+							"    \"iof\": \"QWE\"\r",
+							"}\r",
+							"]\r",
+							"changeMoreFields(payloadTest, array);\r",
+							"\r",
+							"setTimeout(() => {console.log(payloadTest)}, 5000) \r",
+							"\r",
+							"\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"_postman_id": "a55930d3-872e-4e3f-b0a8-90a12744f68f",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "client_id",
+						"value": "{{client_id}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"32458031099\",\r\n    \"password\": \"Blade@123\",\r\n    \"remember\": null\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{baseUrl}}/core/authentication/v1/login"
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "d61b3ac8-0056-4e33-968d-6c4905284185",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "5c82a37e-9bab-451e-8e5d-0ed19926ed7f",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "e56ba47e-1498-4c0f-bac7-505b40e65b0b",
+			"key": "payloadEngine",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"id": "223571d0-2bf9-41c7-a4a0-00de367aecf3",
+			"key": "payloadTest",
+			"value": "",
+			"type": "string"
+		}
+	]
+}
