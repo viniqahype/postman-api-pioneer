@@ -426,6 +426,7 @@
 							"    header: JSON.parse(pm.environment.get('header'))\r",
 							"}, (err, resGet) => {\r",
 							"    let id = resGet.json()[0].productId\r",
+							"    console.log(id);\r",
 							"    //let inexistentId = eval(pm.globals.get('generateRandomNumberWithout'))(id)\r",
 							"    pm.sendRequest({\r",
 							"        method: pm.request.method.toString(),\r",
@@ -531,12 +532,12 @@
 	],
 	"variable": [
 		{
-			"id": "beb890eb-8b0a-44e0-8966-f0c497152407",
+			"id": "732f38e6-bb15-4a4a-b17f-8808256889de",
 			"key": "payloadEngine",
 			"value": ""
 		},
 		{
-			"id": "6bcae3e1-b0cc-4e99-9b0f-2fbab5256a5f",
+			"id": "d5d31f6d-8267-4cea-8380-52156b0ac007",
 			"key": "payloadTest",
 			"value": ""
 		}
