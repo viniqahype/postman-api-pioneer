@@ -62,7 +62,7 @@
 					}
 				}
 			],
-			"_postman_id": "d778270e-2a03-4fed-9cbd-6ee2d348241f",
+			"id": "d778270e-2a03-4fed-9cbd-6ee2d348241f",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -143,7 +143,7 @@
 					}
 				}
 			],
-			"_postman_id": "87c53518-9bf8-4d6d-92e8-92e485ecfa27",
+			"id": "87c53518-9bf8-4d6d-92e8-92e485ecfa27",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -208,7 +208,7 @@
 					}
 				}
 			],
-			"_postman_id": "cdd5783e-1014-4b25-8a7e-f99271a3a075",
+			"id": "cdd5783e-1014-4b25-8a7e-f99271a3a075",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -272,7 +272,7 @@
 					}
 				}
 			],
-			"_postman_id": "c926e386-f4ac-4444-b987-7ee8e92ab60e",
+			"id": "c926e386-f4ac-4444-b987-7ee8e92ab60e",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -365,7 +365,7 @@
 					}
 				}
 			],
-			"_postman_id": "a55930d3-872e-4e3f-b0a8-90a12744f68f",
+			"id": "a55930d3-872e-4e3f-b0a8-90a12744f68f",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -391,6 +391,118 @@
 					}
 				},
 				"url": "{{baseUrl}}/core/authentication/v1/login"
+			},
+			"response": []
+		},
+		{
+			"name": "[Test] Consulta Criterios de Taxa Copy",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "a0490116-b7fa-4f69-bf8f-8818fea37372",
+						"exec": [
+							"pm.variables.set(\"ignore_collectionScript\", true);\r",
+							"\r",
+							"/* var payloadEngine = JSON.parse(pm.collectionVariables.get('payloadEngine'))\r",
+							"var RandomNumberWithout = eval(pm.globals.get('generateRandomNumberWithout'))\r",
+							"var bodyChangeSubField = eval(pm.globals.get('bodyChangeSubField'))\r",
+							"var bodyChangeMoreFields = eval(pm.globals.get('bodyChangeMoreFields'))\r",
+							"let id = RandomNumberWithout(12) */\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "9872422f-6ceb-4903-9622-04ee2398cc1d",
+						"exec": [
+							"pm.sendRequest({\r",
+							"    method: 'GET',\r",
+							"    url: 'https://api-rci-qa.bancorcibrasil.com.br/product/manager/v1/products?_expands=products',\r",
+							"    header: JSON.parse(pm.environment.get('header'))\r",
+							"}, (err, resGet) => {\r",
+							"    let id = resGet.json()[0].productId\r",
+							"    //let inexistentId = eval(pm.globals.get('generateRandomNumberWithout'))(id)\r",
+							"    pm.sendRequest({\r",
+							"        method: pm.request.method.toString(),\r",
+							"        url: pm.request.url.toString(),\r",
+							"        header: JSON.parse(pm.environment.get('header')),\r",
+							"        body: {\r",
+							"            mode: 'raw',\r",
+							"            raw: JSON.stringify({ 'key': 123})\r",
+							"        }\r",
+							"    }, (err, res) => {\r",
+							"        console.log(pm.request.body)\r",
+							"        console.log(res.json())\r",
+							"        })\r",
+							"    })\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"id": "8e442943-c90a-4f52-9ccd-ed446899b2b9",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "client_id",
+						"value": "{{client_id}}",
+						"type": "text"
+					},
+					{
+						"key": "access_token",
+						"value": "{{access_token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api-rci-qa.bancorcibrasil.com.br/product/financing-offer/v1/financing-offers?_offset=0&_limit=100&_sort=description",
+					"protocol": "https",
+					"host": [
+						"api-rci-qa",
+						"bancorcibrasil",
+						"com",
+						"br"
+					],
+					"path": [
+						"product",
+						"financing-offer",
+						"v1",
+						"financing-offers"
+					],
+					"query": [
+						{
+							"key": "_offset",
+							"value": "0"
+						},
+						{
+							"key": "_limit",
+							"value": "100"
+						},
+						{
+							"key": "_sort",
+							"value": "description"
+						}
+					]
+				}
 			},
 			"response": []
 		}
@@ -419,16 +531,14 @@
 	],
 	"variable": [
 		{
-			"id": "e56ba47e-1498-4c0f-bac7-505b40e65b0b",
+			"id": "3a374b28-acaf-4153-b717-da4d0f1eb38b",
 			"key": "payloadEngine",
-			"value": "",
-			"type": "string"
+			"value": ""
 		},
 		{
-			"id": "223571d0-2bf9-41c7-a4a0-00de367aecf3",
+			"id": "d0f3bb69-6842-477d-aa3f-5a4a8dbbe774",
 			"key": "payloadTest",
-			"value": "",
-			"type": "string"
+			"value": ""
 		}
 	]
 }
