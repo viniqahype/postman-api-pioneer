@@ -3253,9 +3253,9 @@
 									"            method: pm.request.method.toString(),\r",
 									"            url: pm.request.url.toString(),\r",
 									"            headers: headerComplete,\r",
-									"            body: changeOneFields(payloadEngine, \"no_vendorSubsidy\", null)\r",
+									"            body: changeOneFields(payloadEngine, \"vendorSubsidy\", null)\r",
 									"        }, (err, res) => {\r",
-									"            pm.test('Status 400 for null no_vendorSubsidy', () => {\r",
+									"            pm.test('Status 400 for null vendorSubsidy', () => {\r",
 									"                pm.expect(res).to.be.equal(400);\r",
 									"                //VALIDAR MENSAGEM\r",
 									"            })\r",
@@ -3352,14 +3352,27 @@
 									"\r",
 									"\r",
 									"    case 'thirdPartiesSubsidyNull':\r",
+									"        pm.sendRequest({\r",
+									"            method: pm.request.method.toString(),\r",
+									"            url: pm.request.url.toString(),\r",
+									"            headers: headerComplete,\r",
+									"            body: changeOneFields(payloadEngine, \"thirdPartiesSubsidy\", null)\r",
+									"        }, (err, res) => {\r",
+									"            pm.test('Status 400 for null thirdPartiesSubsidy', () => {\r",
+									"                pm.expect(res).to.be.equal(400);\r",
+									"                //VALIDAR MENSAGEM\r",
+									"            })\r",
+									"        })\r",
+									"        i = 0;\r",
+									"        pm.collectionVariables.set('count', i);\r",
 									"\r",
 									"    default:\r",
-									"        console.error('Error in TEST script - ThirdPartiesSubsidy');\r",
+									"        console.error('Error in TEST script - thirdPartiesSubsidy');\r",
 									"        break;    \r",
 									"    \r",
 									"}\r",
 									"\r",
-									"/* 7 Validating GeneralCriteriaPanel.fieldRemunerations */\r",
+									"/* Validating GeneralCriteriaPanel.fieldRemunerations */\r",
 									"var tc_fieldRemunerations= JSON.parse(pm.collectionVariables.get('tc_generalCriteriaPanel_fieldRemunerations'))\r",
 									"/*difEngineRemunerations','inexistent', 'number', 'only_space', 'empty', 'no_Remunerations', 'RemunerationsNull', 'engineRemunerations', 'multiplesOptions' */\r",
 									"\r",
@@ -6762,63 +6775,63 @@
 	],
 	"variable": [
 		{
-			"id": "327d595c-06ce-4881-b9f8-c74b4353a901",
+			"id": "e99e22a5-cc61-4611-a214-7de5f2ca0d85",
 			"key": "domain",
 			"value": "/financing/offer/v1"
 		},
 		{
-			"id": "74ede964-5513-4c36-bfda-112c84ead6ce",
+			"id": "22ba2275-48bc-4060-8f8c-b6e963be8f6a",
 			"key": "ignore_collectionScript",
 			"value": ""
 		},
 		{
-			"id": "92aa97eb-3c2a-496c-95e5-ce2b37bd8c60",
+			"id": "264645b0-cc48-48c8-9433-e4746e0e71d7",
 			"key": "count",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "2acca58e-92e8-4d7f-ad29-3d813cfb7874",
+			"id": "17873ca2-96d1-45ec-9e30-f5390309845c",
 			"key": "controlAuth",
 			"value": ""
 		},
 		{
-			"id": "f360a561-d7f3-48a1-baa8-d1a15b40d4d4",
+			"id": "49e3c1df-2c71-4fa6-8367-8a8ddecf534b",
 			"key": "payloadEngine",
 			"value": ""
 		},
 		{
-			"id": "78584172-3faf-4fa1-bc73-0e6606aa10bd",
+			"id": "79173503-5d34-4192-ae0b-c9e0bbb0c8b0",
 			"key": "tc_identifierPainel_fieldEngineType",
 			"value": ""
 		},
 		{
-			"id": "03df7536-11c2-432f-90ce-8a31d714b9f1",
+			"id": "b0858703-e6fb-4a78-9e5c-84f8c6aeccca",
 			"key": "tc_identifierPainel_fieldLine",
 			"value": ""
 		},
 		{
-			"id": "1efaf2c3-621b-4ed3-9466-6f5a56c0e777",
+			"id": "79339738-a0cd-48a0-a321-764203ccf322",
 			"key": "tc_identifierPainel_fieldStartDate",
 			"value": ""
 		},
 		{
-			"id": "a50ab48d-329f-4dd7-96d7-b687bd20c434",
+			"id": "6b7ee951-00ec-49c4-afc1-8d504b387a25",
 			"key": "tc_identifierPainel_fieldEndDate",
 			"value": ""
 		},
 		{
-			"id": "71fd68e8-9c99-4deb-b58d-2a00c6638218",
+			"id": "a1d9b614-dd64-4bb0-a016-47349013f550",
 			"key": "tc_identifierPainel_fieldPaymentPlanCategoryIds",
 			"value": ""
 		},
 		{
-			"id": "d565dab3-1daf-423c-854d-b2c42bdb110d",
+			"id": "694c3373-816a-4a02-aae3-34d97e947351",
 			"key": "tc_identifierPainel_fieldCallCondition",
 			"value": ""
 		},
 		{
-			"id": "1815f82d-d9cf-4f49-a932-46ce95016158",
+			"id": "655caf12-8315-4779-9579-e04878d259ce",
 			"key": "tc_identifierPainel_fieldIntegrationChannelIds",
 			"value": ""
 		}
