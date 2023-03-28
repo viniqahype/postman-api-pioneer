@@ -2616,7 +2616,7 @@
 									"\r",
 									"switch (tc_fieldPersonType[i]) {\r",
 									"    case 'inexistent':\r",
-									"            pm.sendRequest({\r",
+									"        pm.sendRequest({\r",
 									"            method: pm.request.method.toString(),\r",
 									"            url: pm.request.url.toString(),\r",
 									"            headers: headerComplete,\r",
@@ -2631,7 +2631,7 @@
 									"        pm.collectionVariables.set('count', i);\r",
 									"\r",
 									"    case 'number':\r",
-									"            pm.sendRequest({\r",
+									"        pm.sendRequest({\r",
 									"            method: pm.request.method.toString(),\r",
 									"            url: pm.request.url.toString(),\r",
 									"            headers: headerComplete,\r",
@@ -2676,7 +2676,7 @@
 									"        pm.collectionVariables.set('count', i);\r",
 									"\r",
 									"    case 'no_PersonType':\r",
-									"            delete payloadEngine.startDate\r",
+									"        delete payloadEngine.startDate\r",
 									"        pm.sendRequest({\r",
 									"            method: pm.request.method.toString(),\r",
 									"            url: pm.request.url.toString(),\r",
@@ -2692,7 +2692,7 @@
 									"        pm.collectionVariables.set('count', i);\t\r",
 									"\r",
 									"    case 'PersonTypeNull':\r",
-									"            pm.sendRequest({\r",
+									"        pm.sendRequest({\r",
 									"            method: pm.request.method.toString(),\r",
 									"            url: pm.request.url.toString(),\r",
 									"            headers: headerComplete,\r",
@@ -2718,7 +2718,7 @@
 									"\r",
 									"switch (tc_fieldSaleTypes[i]) {\r",
 									"    case 'inexistent':\r",
-									"            pm.sendRequest({\r",
+									"        pm.sendRequest({\r",
 									"            method: pm.request.method.toString(),\r",
 									"            url: pm.request.url.toString(),\r",
 									"            headers: headerComplete,\r",
@@ -2733,7 +2733,7 @@
 									"        pm.collectionVariables.set('count', i);\r",
 									"\r",
 									"    case 'number':\r",
-									"            pm.sendRequest({\r",
+									"        pm.sendRequest({\r",
 									"            method: pm.request.method.toString(),\r",
 									"            url: pm.request.url.toString(),\r",
 									"            headers: headerComplete,\r",
@@ -2748,7 +2748,7 @@
 									"        pm.collectionVariables.set('count', i);\r",
 									"\r",
 									"    case 'only_space':\r",
-									"            pm.sendRequest({\r",
+									"        pm.sendRequest({\r",
 									"            method: pm.request.method.toString(),\r",
 									"            url: pm.request.url.toString(),\r",
 									"            headers: headerComplete,\r",
@@ -2763,7 +2763,7 @@
 									"        pm.collectionVariables.set('count', i);\r",
 									"\r",
 									"    case 'empty':\r",
-									"            pm.sendRequest({\r",
+									"        pm.sendRequest({\r",
 									"            method: pm.request.method.toString(),\r",
 									"            url: pm.request.url.toString(),\r",
 									"            headers: headerComplete,\r",
@@ -2778,8 +2778,8 @@
 									"        pm.collectionVariables.set('count', i);\r",
 									"\r",
 									"    case 'no_saleTypes':\r",
-									"            delete payloadEngine.startDate\r",
-									"            pm.sendRequest({\r",
+									"        delete payloadEngine.startDate\r",
+									"        pm.sendRequest({\r",
 									"            method: pm.request.method.toString(),\r",
 									"            url: pm.request.url.toString(),\r",
 									"            headers: headerComplete,\r",
@@ -2794,7 +2794,7 @@
 									"        pm.collectionVariables.set('count', i);\t\r",
 									"\r",
 									"    case 'saleTypesNull':\r",
-									"            pm.sendRequest({\r",
+									"        pm.sendRequest({\r",
 									"            method: pm.request.method.toString(),\r",
 									"            url: pm.request.url.toString(),\r",
 									"            headers: headerComplete,\r",
@@ -2810,7 +2810,7 @@
 									"    \r",
 									"\r",
 									"    case 'multiplesOptions':\r",
-									"            pm.sendRequest({\r",
+									"        pm.sendRequest({\r",
 									"            method: pm.request.method.toString(),\r",
 									"            url: pm.request.url.toString(),\r",
 									"            headers: headerComplete,\r",
@@ -2836,7 +2836,7 @@
 									"\r",
 									"switch (tc_fieldSaleSubtypes[i]) {\r",
 									"    case 'inexistent':\r",
-									"            pm.sendRequest({\r",
+									"        pm.sendRequest({\r",
 									"            method: pm.request.method.toString(),\r",
 									"            url: pm.request.url.toString(),\r",
 									"            headers: headerComplete,\r",
@@ -2851,7 +2851,7 @@
 									"        pm.collectionVariables.set('count', i);\r",
 									"\r",
 									"    case 'number':\r",
-									"            pm.sendRequest({\r",
+									"        pm.sendRequest({\r",
 									"            method: pm.request.method.toString(),\r",
 									"            url: pm.request.url.toString(),\r",
 									"            headers: headerComplete,\r",
@@ -2866,7 +2866,7 @@
 									"        pm.collectionVariables.set('count', i);\r",
 									"\r",
 									"    case 'only_space':\r",
-									"            pm.sendRequest({\r",
+									"        pm.sendRequest({\r",
 									"            method: pm.request.method.toString(),\r",
 									"            url: pm.request.url.toString(),\r",
 									"            headers: headerComplete,\r",
@@ -2882,7 +2882,7 @@
 									"\r",
 									"\r",
 									"    case 'empty':\r",
-									"            pm.sendRequest({\r",
+									"        pm.sendRequest({\r",
 									"            method: pm.request.method.toString(),\r",
 									"            url: pm.request.url.toString(),\r",
 									"            headers: headerComplete,\r",
@@ -2897,8 +2897,8 @@
 									"        pm.collectionVariables.set('count', i);\r",
 									"\r",
 									"    case 'no_SalesSubtype':\r",
-									"            delete payloadEngine.startDate\r",
-									"            pm.sendRequest({\r",
+									"        delete payloadEngine.startDate\r",
+									"        pm.sendRequest({\r",
 									"            method: pm.request.method.toString(),\r",
 									"            url: pm.request.url.toString(),\r",
 									"            headers: headerComplete,\r",
@@ -2913,7 +2913,7 @@
 									"        pm.collectionVariables.set('count', i);\t\r",
 									"\r",
 									"    case 'SalesSubtypeNull':\r",
-									"            pm.sendRequest({\r",
+									"        pm.sendRequest({\r",
 									"            method: pm.request.method.toString(),\r",
 									"            url: pm.request.url.toString(),\r",
 									"            headers: headerComplete,\r",
@@ -2928,7 +2928,7 @@
 									"        pm.collectionVariables.set('count', i);\t\r",
 									"\r",
 									"    case 'multiplesOptions':        \r",
-									"            pm.sendRequest({\r",
+									"        pm.sendRequest({\r",
 									"            method: pm.request.method.toString(),\r",
 									"            url: pm.request.url.toString(),\r",
 									"            headers: headerComplete,\r",
@@ -2954,7 +2954,7 @@
 									"\r",
 									"switch (tc_fieldFinancialBrands[i]) {\r",
 									"    case 'inexistent':\r",
-									"            pm.sendRequest({\r",
+									"        pm.sendRequest({\r",
 									"            method: pm.request.method.toString(),\r",
 									"            url: pm.request.url.toString(),\r",
 									"            headers: headerComplete,\r",
@@ -2968,7 +2968,7 @@
 									"        i++;\r",
 									"        pm.collectionVariables.set('count', i);\r",
 									"    case 'number':\r",
-									"            pm.sendRequest({\r",
+									"        pm.sendRequest({\r",
 									"            method: pm.request.method.toString(),\r",
 									"            url: pm.request.url.toString(),\r",
 									"            headers: headerComplete,\r",
@@ -4943,15 +4943,15 @@
 					"response": []
 				},
 				{
-					"name": "Check lackPanel_fields",
+					"name": "Camila - Check lackPanel_fields",
 					"event": [
 						{
 							"listen": "prerequest",
 							"script": {
 								"id": "78b5c77b-e2cd-4a74-a896-44b42056542e",
 								"exec": [
-									"/* Declaring array variable with tests cases for Engines_IneligibleDealershipsPanel: Field */\r",
-									"pm.collectionVariables.set('tc_eligibleVehiclesPanel_fields--', JSON.stringify([]));\r",
+									"/* Declaring array variable with tests cases for Engines_IneligibleDealershipsPanel: Field Delays */\r",
+									"pm.collectionVariables.set('tc_eligibleVehiclesPanel_fieldDelays--', JSON.stringify([]));\r",
 									"\r",
 									""
 								],
@@ -6592,63 +6592,63 @@
 	],
 	"variable": [
 		{
-			"id": "4eb52cac-a61c-47ca-be67-360358536712",
+			"id": "9928b0b9-e8f6-4e0d-9d2a-3f4320806135",
 			"key": "domain",
 			"value": "/financing/offer/v1"
 		},
 		{
-			"id": "cf5d2d0f-42b9-4b54-aab5-0ed40146913d",
+			"id": "ca8838d9-3ba8-4ef4-9411-d16276d8c38e",
 			"key": "ignore_collectionScript",
 			"value": ""
 		},
 		{
-			"id": "c8b95329-da8f-49f4-abfa-fd484e4478ef",
+			"id": "edd0e8d3-2802-46f0-9330-dccea70cfb75",
 			"key": "count",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "9a4594ec-e447-48c8-bfeb-3b0c57d1352a",
+			"id": "8287cac6-7357-49ea-a51a-267aa71d74f9",
 			"key": "controlAuth",
 			"value": ""
 		},
 		{
-			"id": "f324ed50-5f74-4707-828c-a5c92db12229",
+			"id": "e6415e6b-3d03-411c-beaf-dbd92cea4648",
 			"key": "payloadEngine",
 			"value": ""
 		},
 		{
-			"id": "7f0ac8e3-110d-40c8-9af2-d35f1ec18c34",
+			"id": "9f52ad1e-feb1-4ec5-a45e-0b212d6cb68d",
 			"key": "tc_identifierPainel_fieldEngineType",
 			"value": ""
 		},
 		{
-			"id": "c76a3067-8fa6-46fc-8505-f738940ad925",
+			"id": "dd97ecb2-8329-4174-972b-e7a244631491",
 			"key": "tc_identifierPainel_fieldLine",
 			"value": ""
 		},
 		{
-			"id": "d221ea23-dbaa-4485-93b6-f73cd6d4ee2d",
+			"id": "b70656f9-e893-48b6-a05b-453e7b14dced",
 			"key": "tc_identifierPainel_fieldStartDate",
 			"value": ""
 		},
 		{
-			"id": "37b95f4f-1b61-4a66-8331-05f8accfc0fb",
+			"id": "28302ef6-84ba-4c6b-a7e6-9047128c9f63",
 			"key": "tc_identifierPainel_fieldEndDate",
 			"value": ""
 		},
 		{
-			"id": "a260c2c5-4f3b-42d9-be9f-f996f11673fd",
+			"id": "727314cb-28f7-4cdb-bbc2-75fb8f3a34b8",
 			"key": "tc_identifierPainel_fieldPaymentPlanCategoryIds",
 			"value": ""
 		},
 		{
-			"id": "f803a6d1-7f9c-4214-ab9d-1c3a405a43e1",
+			"id": "93038377-521c-41ac-ab70-31a995b2a0e3",
 			"key": "tc_identifierPainel_fieldCallCondition",
 			"value": ""
 		},
 		{
-			"id": "f7cf9d8c-e9aa-42cb-900b-f5ac0dcc148b",
+			"id": "59226f62-f73d-4fd9-bab5-48bbabd31543",
 			"key": "tc_identifierPainel_fieldIntegrationChannelIds",
 			"value": ""
 		}
