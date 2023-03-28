@@ -4397,16 +4397,16 @@
 									"script": {
 										"id": "5b9a5d0f-c8fe-45f8-9864-3ccde424a968",
 										"exec": [
-											"/* Declaring array variable with tests cases for Engines_EligibleVehiclesPanel: Attribute FilterCategory */\r",
+											"/* Declaring array variable with tests cases for Engines_DealershipPanel: Attribute FilterCategory */\r",
 											"pm.collectionVariables.set('tc_dealershipsPanel_attributeFilterCategory', JSON.stringify(['inexistent', 'number', 'specialCharacter', 'only_space', 'empty', 'no_filteCategory', 'filteCategoryNull', 'multiplesOptions']));\r",
 											"\r",
-											"/* Declaring array variable with tests cases for Engines_EligibleVehiclesPanel: Field DealershipBondType */\r",
+											"/* Declaring array variable with tests cases for Engines_DealershipPanel: Field DealershipBondType */\r",
 											"pm.collectionVariables.set('tc_dealershipsPanel_fieldDealershipBondType', JSON.stringify(['inexistent', 'number', 'specialCharacter', 'only_space', 'empty', 'no_dealershipBondType', 'dealershipBondTypeNull', 'multiplesOptions']));\r",
 											"\r",
-											"/* Declaring array variable with tests cases for Engines_EligibleVehiclesPanel: Field DealershipId */\r",
+											"/* Declaring array variable with tests cases for Engines_DealershipPanel: Field DealershipId */\r",
 											"pm.collectionVariables.set('tc_dealershipsPanel_fieldDealershipId', JSON.stringify(['inexistentId', 'string', 'only_space', 'empty', 'no_dealershipIdForBondDealership', 'dealershipIdNullForBondDealership', 'inactiveId', 'dealershipIdForBondGroup', 'multiplesOptions']));\r",
 											"\r",
-											"/* Declaring array variable with tests cases for Engines_EligibleVehiclesPanel: Field DealershipGroupId */\r",
+											"/* Declaring array variable with tests cases for Engines_DealershipPanel: Field DealershipGroupId */\r",
 											"pm.collectionVariables.set('tc_dealershipsPanel_fieldDealershipGroupId', JSON.stringify(['inexistentId', 'string', 'only_space', 'empty', 'no_groupIdForBondGroup', 'groupIdNullForBondGroup', 'inactiveId', 'groupIdForBondDealership', 'multiplesOptions']));\r",
 											""
 										],
@@ -6719,63 +6719,63 @@
 	],
 	"variable": [
 		{
-			"id": "2fe01e17-4230-4942-ab2e-f338c2ed355e",
+			"id": "46a2e2c0-fb6a-4190-96f6-86635360a015",
 			"key": "domain",
 			"value": "/financing/offer/v1"
 		},
 		{
-			"id": "2f8e3534-9ce1-416b-b06f-295475330933",
+			"id": "864c4b5c-3fdf-464b-9c43-4c6f75211a73",
 			"key": "ignore_collectionScript",
 			"value": ""
 		},
 		{
-			"id": "913af286-692b-4a2c-8a0f-757b3c9378b1",
+			"id": "62c3ab70-11b4-4cdf-b783-a64903ee3075",
 			"key": "count",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "9b2d65e2-6d4a-4096-a47a-30b53dbcd2b3",
+			"id": "f3ed98f4-1b83-4983-bfca-40aee3af57c7",
 			"key": "controlAuth",
 			"value": ""
 		},
 		{
-			"id": "e7bc77cc-aadd-42cc-8174-29977d68f349",
+			"id": "e8a8c684-047a-4b48-87fd-48a9942a3daa",
 			"key": "payloadEngine",
 			"value": ""
 		},
 		{
-			"id": "a42cf4d9-2d03-452a-99da-60edb83b875e",
+			"id": "920c15b7-b69a-4f1f-bfd3-f51512e879c1",
 			"key": "tc_identifierPainel_fieldEngineType",
 			"value": ""
 		},
 		{
-			"id": "c2c1cf0e-dfb6-4266-9c4b-d4e04e7d006f",
+			"id": "498aa78c-001b-459f-b7cf-c2948c531875",
 			"key": "tc_identifierPainel_fieldLine",
 			"value": ""
 		},
 		{
-			"id": "6358b2e6-bad8-4bca-abbf-07a310213596",
+			"id": "979abe3f-edb2-4426-935b-12109eebbb18",
 			"key": "tc_identifierPainel_fieldStartDate",
 			"value": ""
 		},
 		{
-			"id": "550224de-4a3c-438b-81f6-e4d127d0b693",
+			"id": "5662be4d-a64a-4834-bdcb-f261891119d0",
 			"key": "tc_identifierPainel_fieldEndDate",
 			"value": ""
 		},
 		{
-			"id": "1b8dae81-1bed-4d5c-a366-f93b17253f8a",
+			"id": "dbfdf60f-88e2-4fae-a4d5-06df98d640a6",
 			"key": "tc_identifierPainel_fieldPaymentPlanCategoryIds",
 			"value": ""
 		},
 		{
-			"id": "927ab212-e3ab-4b51-a9aa-8ec6d6686ab6",
+			"id": "d16ac93f-867c-45bf-858d-fff21a039d30",
 			"key": "tc_identifierPainel_fieldCallCondition",
 			"value": ""
 		},
 		{
-			"id": "79a34695-6ae2-4869-8968-48972a10c78c",
+			"id": "b07c9961-d348-43c2-8086-3cfbed0b79b4",
 			"key": "tc_identifierPainel_fieldIntegrationChannelIds",
 			"value": ""
 		}
