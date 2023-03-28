@@ -6260,10 +6260,22 @@
 									"pm.collectionVariables.set('tc_vmePanel_fieldsFactorySubsidy', JSON.stringify(['engineVME','floatNumber_11digits','floatNumber_12digits', 'negativeNumber', 'string', 'zero', 'only_space', 'empty', 'no_factorySubsidy', 'factorySubsidyNull']));\r",
 									"\r",
 									"/* Declaring array variable with tests cases for Engines_VmePanel: Field Vendor Subsidy */\r",
-									"pm.collectionVariables.set('tc_vmePanel_fieldsVendorSubsidy', JSON.stringify([]));\r",
+									"pm.collectionVariables.set('tc_vmePanel_fieldsVendorSubsidy', JSON.stringify(['engineVME','floatNumber_4digits','floatNumber_5digits', 'negativeNumber', 'string', 'zero', 'only_space', 'empty', 'no_subsidy', 'subsidyNull']));\r",
 									"\r",
 									"/* Declaring array variable with tests cases for Engines_VmePanel: Field Third Party Subsidy */\r",
-									"pm.collectionVariables.set('tc_vmePanel_fieldsThirdPartySubsidy', JSON.stringify([]));\r",
+									"pm.collectionVariables.set('tc_vmePanel_fieldsThirdPartySubsidy', JSON.stringify(['engineVME','floatNumber_11digits','floatNumber_12digits', 'negativeNumber', 'string', 'zero', 'only_space', 'empty', 'no_subsidy', 'subsidyNull']));\r",
+									"\r",
+									"\r",
+									"/* Declaring array variable with tests cases for Engines_VmePanel: Field Third Party Subsidy */\r",
+									"pm.collectionVariables.set('tc_vmePanel_fieldsThirdPartySubsidy', JSON.stringify(['engineVME','floatNumber_4digits','floatNumber_5digits', 'negativeNumber', 'string', 'zero', 'only_space', 'empty', 'no_subsidy', 'subsidyNull']));\r",
+									"\r",
+									"\r",
+									"/* Declaring array variable with tests cases for Engines_VmePanel: Field Third Party Subsidy */\r",
+									"pm.collectionVariables.set('tc_vmePanel_fieldsThirdPartySubsidy', JSON.stringify(['engineVME','floatNumber_11digits','floatNumber_12digits', 'negativeNumber', 'string', 'zero', 'only_space', 'empty', 'no_subsidy', 'subsidyNull']));\r",
+									"\r",
+									"\r",
+									"/* Declaring array variable with tests cases for Engines_VmePanel: Field Third Party Subsidy */\r",
+									"pm.collectionVariables.set('tc_vmePanel_fieldsThirdPartySubsidy', JSON.stringify(['engineVME','floatNumber_4digits','floatNumber_5digits', 'negativeNumber', 'string', 'zero', 'only_space', 'empty', 'no_subsidy', 'subsidyNull']));\r",
 									""
 								],
 								"type": "text/javascript"
@@ -7781,63 +7793,63 @@
 	],
 	"variable": [
 		{
-			"id": "be8d493e-79f2-42ef-932f-eddf76000a6a",
+			"id": "25425b2e-910c-49dc-a4c0-930c60fd5857",
 			"key": "domain",
 			"value": "/financing/offer/v1"
 		},
 		{
-			"id": "62ee0b77-57e9-4c94-a79a-90bdef6da8e1",
+			"id": "5a9d3974-c5db-4627-ae13-8a7030bedac0",
 			"key": "ignore_collectionScript",
 			"value": ""
 		},
 		{
-			"id": "6c601ca4-6dc6-45df-8f19-db8e6004a6a8",
+			"id": "507cd784-45e7-4b24-98d7-ba2031942977",
 			"key": "count",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "b5053351-af65-4df3-983e-185ad29dc007",
+			"id": "4f3d40b2-6cc2-45c2-abce-a974a458f58c",
 			"key": "controlAuth",
 			"value": ""
 		},
 		{
-			"id": "14513fd4-4d09-464e-a924-8dc4d8fbd222",
+			"id": "cb7f2e8e-2fa0-4264-9e66-795e6fcdad76",
 			"key": "payloadEngine",
 			"value": ""
 		},
 		{
-			"id": "a7774365-1888-439c-8f21-44508a99920f",
+			"id": "b9226709-2849-4284-ad2b-08842c41ca72",
 			"key": "tc_identifierPainel_fieldEngineType",
 			"value": ""
 		},
 		{
-			"id": "6ca85f87-6ed3-4e9e-810e-a460b7cbada8",
+			"id": "8221779f-04a8-498d-9cc6-0f7aeb00f7d7",
 			"key": "tc_identifierPainel_fieldLine",
 			"value": ""
 		},
 		{
-			"id": "4ce11698-5789-4daa-8ab7-39ca9631942b",
+			"id": "96834273-ef7e-4a30-aae9-379a7a1b712f",
 			"key": "tc_identifierPainel_fieldStartDate",
 			"value": ""
 		},
 		{
-			"id": "ea6d8c8c-7432-4683-96ba-cd1a57dae0e8",
+			"id": "0ae1ba3a-e0ac-4d1e-88df-7450569852c9",
 			"key": "tc_identifierPainel_fieldEndDate",
 			"value": ""
 		},
 		{
-			"id": "97e2b58c-f0d6-4526-b493-e57923a6ccc4",
+			"id": "f2289b93-453c-4256-bb31-ae216ef8ca9d",
 			"key": "tc_identifierPainel_fieldPaymentPlanCategoryIds",
 			"value": ""
 		},
 		{
-			"id": "e9b31e8a-5836-436e-bacb-86fd7f2bfaa7",
+			"id": "a20c8cf0-e239-4913-8dcb-b1d6c31ee42c",
 			"key": "tc_identifierPainel_fieldCallCondition",
 			"value": ""
 		},
 		{
-			"id": "3303d2a1-a55b-40e2-8a9c-adb70e129cff",
+			"id": "b2b737a4-bc12-48b0-993f-6686e1e5baa9",
 			"key": "tc_identifierPainel_fieldIntegrationChannelIds",
 			"value": ""
 		}
