@@ -2912,14 +2912,14 @@
 									"        i++;\r",
 									"        pm.collectionVariables.set('count', i);\t\r",
 									"\r",
-									"    case 'SalesSubtypeNull':\r",
+									"    case 'salesSubtypeNull':\r",
 									"        pm.sendRequest({\r",
 									"            method: pm.request.method.toString(),\r",
 									"            url: pm.request.url.toString(),\r",
 									"            headers: headerComplete,\r",
-									"            body: changeOneFields(payloadEngine, \"SalesSubtype\", null)\r",
+									"            body: changeOneFields(payloadEngine, \"saleSubtypes\", null)\r",
 									"        }, (err, res) => {\r",
-									"            pm.test('Status 400 for null SalesSubtype', () => {\r",
+									"            pm.test('Status 400 for null saleSubtypes', () => {\r",
 									"                pm.expect(res).to.be.equal(400);\r",
 									"                //VALIDAR MENSAGEM\r",
 									"            })\r",
@@ -2932,9 +2932,9 @@
 									"            method: pm.request.method.toString(),\r",
 									"            url: pm.request.url.toString(),\r",
 									"            headers: headerComplete,\r",
-									"            body: changeOneFields(payloadEngine, \"SalesSubtype\", ['XXX', 'XXX'])\r",
+									"            body: changeOneFields(payloadEngine, \"saleSubtypes\", ['XXX', 'XXX'])\r",
 									"        }, (err, res) => {\r",
-									"            pm.test('Status 400 for multiplesOptions SalesSubtype', () => {\r",
+									"            pm.test('Status 400 for multiplesOptions saleSubtypes', () => {\r",
 									"                pm.expect(res).to.be.equal(400);\r",
 									"                //VALIDAR MENSAGEM\r",
 									"            })\r",
@@ -2943,12 +2943,12 @@
 									"        pm.collectionVariables.set('count', i);\r",
 									"\r",
 									"    default:\r",
-									"        console.error('Error in TEST script - SalesSubtype');\r",
+									"        console.error('Error in TEST script - saleSubtypes');\r",
 									"        break;     \r",
 									"    \r",
 									"}\r",
 									"\r",
-									"/* 3 Validating GeneralCriteriaPanel.fieldPersonType */\r",
+									"/* Validating GeneralCriteriaPanel.fieldFinancialbrands */\r",
 									"var tc_fieldFinancialBrands = JSON.parse(pm.collectionVariables.get('tc_generalCriteriaPanel_fieldFinancialBrands'))\r",
 									"/*inexistent', 'number', 'only_space', 'empty', 'no_FinancialBrands', 'FinancialBrandsNull', 'multiplesOptions*/\r",
 									"\r",
@@ -2958,15 +2958,16 @@
 									"            method: pm.request.method.toString(),\r",
 									"            url: pm.request.url.toString(),\r",
 									"            headers: headerComplete,\r",
-									"            body: changeOneFields(payloadEngine, \"FinancialBrands\", pm.variables.replaceIn('{{$randomWord}}'))\r",
+									"            body: changeOneFields(payloadEngine, \"financialBrands\", pm.variables.replaceIn('{{$randomWord}}'))\r",
 									"        }, (err, res) => {\r",
-									"            pm.test('Status 400 for inexistent FinancialBrands', () => {\r",
+									"            pm.test('Status 400 for inexistent financialBrands', () => {\r",
 									"                pm.expect(res).to.be.equal(400);\r",
 									"                //VALIDAR MENSAGEM\r",
 									"            })\r",
 									"        })\r",
 									"        i++;\r",
 									"        pm.collectionVariables.set('count', i);\r",
+									"        \r",
 									"    case 'number':\r",
 									"        pm.sendRequest({\r",
 									"            method: pm.request.method.toString(),\r",
@@ -6612,63 +6613,63 @@
 	],
 	"variable": [
 		{
-			"id": "aabf84cf-7d67-4a40-8dd8-e82cc8551f21",
+			"id": "11c5e72f-d344-4d18-b54a-f8fa74ebd963",
 			"key": "domain",
 			"value": "/financing/offer/v1"
 		},
 		{
-			"id": "4084cca4-7d83-493c-ab0b-7c52dcdfb557",
+			"id": "f3346140-498d-4bcf-b971-a017a1493fd5",
 			"key": "ignore_collectionScript",
 			"value": ""
 		},
 		{
-			"id": "f6e009e6-af94-4b51-a5e6-991c4b4198b1",
+			"id": "dc5575f4-9135-42e5-b367-047bfa077045",
 			"key": "count",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "a2e43621-a0d3-4365-b782-009aa1162848",
+			"id": "179f9761-f73a-4ed3-8b86-ca0ff4db3887",
 			"key": "controlAuth",
 			"value": ""
 		},
 		{
-			"id": "dc9eced1-14be-4a90-a004-11cbfcedc35e",
+			"id": "636733d9-1d08-4bc9-b8d4-45fe0ae620df",
 			"key": "payloadEngine",
 			"value": ""
 		},
 		{
-			"id": "639a4a14-c280-4b34-abcb-c657c47b6e2c",
+			"id": "5ada222c-9cba-415d-8c10-d7a1f0fbc292",
 			"key": "tc_identifierPainel_fieldEngineType",
 			"value": ""
 		},
 		{
-			"id": "e6c92080-2c6a-4850-94dc-165502fb3336",
+			"id": "1ee2ac66-1d5a-4cb5-895f-61b0429b300a",
 			"key": "tc_identifierPainel_fieldLine",
 			"value": ""
 		},
 		{
-			"id": "95f02114-c878-46bb-bee0-e9770c715588",
+			"id": "3c09472a-66f7-48cf-ac67-77c0b79fb8f9",
 			"key": "tc_identifierPainel_fieldStartDate",
 			"value": ""
 		},
 		{
-			"id": "13f88971-a8a7-44ba-93bb-817146e5c583",
+			"id": "232e0521-0f5d-4d44-8b7d-17517a47691c",
 			"key": "tc_identifierPainel_fieldEndDate",
 			"value": ""
 		},
 		{
-			"id": "ed02dd56-969a-4d47-bb6a-b970a8c4ed10",
+			"id": "07802433-56f2-46f7-9bea-f5c10b9152bf",
 			"key": "tc_identifierPainel_fieldPaymentPlanCategoryIds",
 			"value": ""
 		},
 		{
-			"id": "112ae7d9-d98d-4ed1-8580-b02b2b511220",
+			"id": "e16ad362-0cfe-49c3-9f71-2d8bd162e6a7",
 			"key": "tc_identifierPainel_fieldCallCondition",
 			"value": ""
 		},
 		{
-			"id": "db2ec35f-82a4-45aa-b02f-8d8f98b6659b",
+			"id": "bf11b615-48d1-4360-90c6-62b6e43608d7",
 			"key": "tc_identifierPainel_fieldIntegrationChannelIds",
 			"value": ""
 		}
