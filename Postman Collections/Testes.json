@@ -404,11 +404,13 @@
 						"exec": [
 							"//pm.variables.set(\"ignore_collectionScript\", true);\r",
 							"\r",
-							"/* var payloadEngine = JSON.parse(pm.collectionVariables.get('payloadEngine'))\r",
-							"var RandomNumberWithout = eval(pm.globals.get('generateRandomNumberWithout'))\r",
+							"var payloadEngine = JSON.parse(pm.collectionVariables.get('payloadEngine'))\r",
 							"var bodyChangeSubField = eval(pm.globals.get('bodyChangeSubField'))\r",
 							"var bodyChangeMoreFields = eval(pm.globals.get('bodyChangeMoreFields'))\r",
-							"let id = RandomNumberWithout(12) */\r",
+							"\r",
+							"bodyChangeSubField(payloadEngine, \"engineCriteria\", \"rateType\", pm.variables.replaceIn('{{$randomWord}}'))\r",
+							"\r",
+							"console.log(payloadEngine)\r",
 							"\r",
 							""
 						],
@@ -420,22 +422,6 @@
 					"script": {
 						"id": "9872422f-6ceb-4903-9622-04ee2398cc1d",
 						"exec": [
-							"pm.sendRequest({\r",
-							"    method: 'GET',\r",
-							"    url: 'https://api-rci-qa.bancorcibrasil.com.br/product/manager/v1/products?_expands=products',\r",
-							"    header: JSON.parse(pm.environment.get('header'))\r",
-							"}, (err, resGet) => {\r",
-							"    let id = resGet.json()[0].productId\r",
-							"    console.log(id);\r",
-							"    //let inexistentId = eval(pm.globals.get('generateRandomNumberWithout'))(id)\r",
-							"    pm.sendRequest({\r",
-							"        method: pm.request.method.toString(),\r",
-							"        url: pm.request.url.toString() + `?id=${id}`,\r",
-							"        header: JSON.parse(pm.environment.get('header')),\r",
-							"    }, (err, res) => {\r",
-							"        console.log(res.json())\r",
-							"        })\r",
-							"    })\r",
 							""
 						],
 						"type": "text/javascript"
@@ -527,12 +513,12 @@
 	],
 	"variable": [
 		{
-			"id": "41b37fde-0cc7-4e78-8e65-64d00154cc26",
+			"id": "44660463-2563-45a5-a158-8e11d18e7897",
 			"key": "payloadEngine",
 			"value": ""
 		},
 		{
-			"id": "fca9279f-2cf8-4589-8a3f-cd63af6ecac3",
+			"id": "b91d820e-5dff-47c6-86b0-fc3db07515b4",
 			"key": "payloadTest",
 			"value": ""
 		}
