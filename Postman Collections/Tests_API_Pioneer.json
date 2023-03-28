@@ -4880,16 +4880,20 @@
 								"id": "78b5c77b-e2cd-4a74-a896-44b42056542e",
 								"exec": [
 									"/* Declaring array variable with tests cases for Engines_EligibleDealershipsPanel: Field Brand Id */\r",
-									"pm.collectionVariables.set('tc_eligibleVehiclesPanel_fieldBrandId', JSON.stringify([]));\r",
+									"pm.collectionVariables.set('tc_eligibleVehiclesPanel_fieldBrandId', JSON.stringify(['inexistent', 'number', 'only_space', 'empty', 'no_brandId', 'brandIdNull']));\r",
 									"\r",
 									"/* Declaring array variable with tests cases for Engines_EligibleDealershipsPanel: Field model Id */\r",
-									"pm.collectionVariables.set('tc_eligibleVehiclesPanel_fieldModelId', JSON.stringify([]));\r",
+									"pm.collectionVariables.set('tc_eligibleVehiclesPanel_fieldModelId', JSON.stringify(['brandId_obligatory','inexistent', 'number', 'only_space', 'empty', 'no_modelId', 'modelIdNull']));\r",
 									"\r",
 									"/* Declaring array variable with tests cases for Engines_EligibleDealershipsPanel: Field version Id */\r",
-									"pm.collectionVariables.set('tc_eligibleVehiclesPanel_fieldVersionId', JSON.stringify([]));\r",
+									"pm.collectionVariables.set('tc_eligibleVehiclesPanel_fieldVersionId', JSON.stringify(['modelId_obligatory','inexistent', 'number', 'only_space', 'empty', 'no_versionId', 'versionIdNull']));\r",
 									"\r",
 									"/* Declaring array variable with tests cases for Engines_EligibleDealershipsPanel: Field Situation */\r",
-									"pm.collectionVariables.set('tc_eligibleVehiclesPanel_fieldSituation', JSON.stringify([]));"
+									"pm.collectionVariables.set('tc_eligibleVehiclesPanel_fieldSituation', JSON.stringify(['inexistent', 'number', 'only_space', 'empty', 'no_situation', 'situationNull']));\r",
+									"\r",
+									"\r",
+									"\r",
+									"/* criar caso de testes para : Somente apresentar as versões que possuam a idade dentro do intervalo definido para ano modelo e ano fabricação, caso estejam preenchidos nos critérios definidos anteriormente.*/"
 								],
 								"type": "text/javascript"
 							}
@@ -6649,63 +6653,63 @@
 	],
 	"variable": [
 		{
-			"id": "f8181595-1e67-4eb8-b8e3-8949e0cc2b9d",
+			"id": "74ed09e3-1b06-4322-a911-8f981074f761",
 			"key": "domain",
 			"value": "/financing/offer/v1"
 		},
 		{
-			"id": "fc98d3a2-15f3-4db9-b071-3603f2c7244d",
+			"id": "b038b58f-5110-47a5-907e-29d7f55c1eaa",
 			"key": "ignore_collectionScript",
 			"value": ""
 		},
 		{
-			"id": "9db67713-eca1-4f78-8a06-9b2f4d520563",
+			"id": "85df2942-536b-4052-849c-6fb67de98034",
 			"key": "count",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "1238eebb-d2ce-4e55-833a-c9789a572f74",
+			"id": "e5f5367e-bb9c-44e4-a78e-d4ade98859a5",
 			"key": "controlAuth",
 			"value": ""
 		},
 		{
-			"id": "ca5704ee-f0d0-4577-988a-f2a43d79c1ed",
+			"id": "68e5a329-2446-427b-ac63-60f7d2224656",
 			"key": "payloadEngine",
 			"value": ""
 		},
 		{
-			"id": "f328514b-310f-4218-8980-aa91f7088d3d",
+			"id": "b1918948-b54c-49a0-b8a3-b01c474d59f8",
 			"key": "tc_identifierPainel_fieldEngineType",
 			"value": ""
 		},
 		{
-			"id": "0640b126-a9ae-4c49-9244-99f5044280a6",
+			"id": "9d55e28a-9ebb-466a-ac4e-e84884549825",
 			"key": "tc_identifierPainel_fieldLine",
 			"value": ""
 		},
 		{
-			"id": "d4905a24-4226-4af8-bd36-d7f366d11d72",
+			"id": "da5c6009-265b-49ea-b24f-3807ea50d3a4",
 			"key": "tc_identifierPainel_fieldStartDate",
 			"value": ""
 		},
 		{
-			"id": "163a504d-b29c-4585-93b9-5bc9ec38fa22",
+			"id": "6f81e14e-bc0a-41cf-8ff7-09871988bf11",
 			"key": "tc_identifierPainel_fieldEndDate",
 			"value": ""
 		},
 		{
-			"id": "f54363ec-48a8-43b9-90fa-1458ad2be8b3",
+			"id": "80cf6c3b-777d-410d-b024-40f80bda0806",
 			"key": "tc_identifierPainel_fieldPaymentPlanCategoryIds",
 			"value": ""
 		},
 		{
-			"id": "bed75db8-115c-45d4-ba0d-80ecde642587",
+			"id": "24be3108-b4b4-432b-8dc2-8eaf66814d1d",
 			"key": "tc_identifierPainel_fieldCallCondition",
 			"value": ""
 		},
 		{
-			"id": "225ab326-3404-4a00-8987-c4b7714e1e89",
+			"id": "16493eed-c32b-487d-b5ff-1506df469f66",
 			"key": "tc_identifierPainel_fieldIntegrationChannelIds",
 			"value": ""
 		}
