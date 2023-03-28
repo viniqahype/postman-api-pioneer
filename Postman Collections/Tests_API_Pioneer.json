@@ -5683,25 +5683,25 @@
 									"pm.collectionVariables.set('tc_vmePanel_fieldsVmeReturnType', JSON.stringify(['floatNumber', 'negativeNumber', 'string','only_space', 'empty', 'no_vmeReturnType', 'vmeReturnTypeNull']));\r",
 									"\r",
 									"/* Declaring array variable with tests cases for Engines_VmePanel: Field Factory Subsidy */\r",
-									"pm.collectionVariables.set('tc_vmePanel_fieldsFactorySubsidy', JSON.stringify(['engineVME','floatNumber_11digits','floatNumber_12digits', 'negativeNumber', 'string', 'zero', 'only_space', 'empty', 'no_factorySubsidy', 'factorySubsidyNull']));\r",
+									"pm.collectionVariables.set('tc_vmePanel_fieldsFactorySubsidy', JSON.stringify(['engineVME','floatNumber_12digits', 'negativeNumber', 'string', 'zero', 'only_space', 'empty', 'no_factorySubsidy', 'factorySubsidyNull']));\r",
 									"\r",
 									"/* Declaring array variable with tests cases for Engines_VmePanel: Field Vendor Subsidy */\r",
-									"pm.collectionVariables.set('tc_vmePanel_fieldsVendorSubsidy', JSON.stringify(['engineVME','floatNumber_4digits','floatNumber_5digits', 'negativeNumber', 'string', 'zero', 'only_space', 'empty', 'no_subsidy', 'subsidyNull']));\r",
+									"pm.collectionVariables.set('tc_vmePanel_fieldsVendorSubsidy', JSON.stringify(['engineVME','floatNumber_5digits', 'negativeNumber', 'string', 'zero', 'only_space', 'empty', 'no_subsidy', 'subsidyNull']));\r",
 									"\r",
 									"/* Declaring array variable with tests cases for Engines_VmePanel: Field Third Party Subsidy */\r",
-									"pm.collectionVariables.set('tc_vmePanel_fieldsThirdPartySubsidy', JSON.stringify(['engineVME','floatNumber_11digits','floatNumber_12digits', 'negativeNumber', 'string', 'zero', 'only_space', 'empty', 'no_subsidy', 'subsidyNull']));\r",
-									"\r",
-									"\r",
-									"/* Declaring array variable with tests cases for Engines_VmePanel: Field Third Party Subsidy */\r",
-									"pm.collectionVariables.set('tc_vmePanel_fieldsThirdPartySubsidy', JSON.stringify(['engineVME','floatNumber_4digits','floatNumber_5digits', 'negativeNumber', 'string', 'zero', 'only_space', 'empty', 'no_subsidy', 'subsidyNull']));\r",
+									"pm.collectionVariables.set('tc_vmePanel_fieldsThirdPartySubsidy', JSON.stringify(['engineVME','floatNumber_12digits', 'negativeNumber', 'string', 'zero', 'only_space', 'empty', 'no_subsidy', 'subsidyNull']));\r",
 									"\r",
 									"\r",
 									"/* Declaring array variable with tests cases for Engines_VmePanel: Field Third Party Subsidy */\r",
-									"pm.collectionVariables.set('tc_vmePanel_fieldsThirdPartySubsidy', JSON.stringify(['engineVME','floatNumber_11digits','floatNumber_12digits', 'negativeNumber', 'string', 'zero', 'only_space', 'empty', 'no_subsidy', 'subsidyNull']));\r",
+									"pm.collectionVariables.set('tc_vmePanel_fieldsThirdPartySubsidy', JSON.stringify(['engineVME',,'floatNumber_5digits', 'negativeNumber', 'string', 'zero', 'only_space', 'empty', 'no_subsidy', 'subsidyNull']));\r",
 									"\r",
 									"\r",
 									"/* Declaring array variable with tests cases for Engines_VmePanel: Field Third Party Subsidy */\r",
-									"pm.collectionVariables.set('tc_vmePanel_fieldsThirdPartySubsidy', JSON.stringify(['engineVME','floatNumber_4digits','floatNumber_5digits', 'negativeNumber', 'string', 'zero', 'only_space', 'empty', 'no_subsidy', 'subsidyNull']));\r",
+									"pm.collectionVariables.set('tc_vmePanel_fieldsThirdPartySubsidy', JSON.stringify(['engineVME','floatNumber_12digits', 'negativeNumber', 'string', 'zero', 'only_space', 'empty', 'no_subsidy', 'subsidyNull']));\r",
+									"\r",
+									"\r",
+									"/* Declaring array variable with tests cases for Engines_VmePanel: Field Third Party Subsidy */\r",
+									"pm.collectionVariables.set('tc_vmePanel_fieldsThirdPartySubsidy', JSON.stringify(['engineVME','floatNumber_5digits', 'negativeNumber', 'string', 'zero', 'only_space', 'empty', 'no_subsidy', 'subsidyNull']));\r",
 									""
 								],
 								"type": "text/javascript"
@@ -7219,63 +7219,63 @@
 	],
 	"variable": [
 		{
-			"id": "9fe57de5-0aa6-4940-ab3c-a928a500ebd5",
+			"id": "94cdfef3-fa88-4b53-84dd-2b15b7b5808b",
 			"key": "domain",
 			"value": "/financing/offer/v1"
 		},
 		{
-			"id": "df17aa67-9753-4089-b484-8b86adb8cb06",
+			"id": "26c37898-3a3a-4808-bf7b-c1459b7d3524",
 			"key": "ignore_collectionScript",
 			"value": ""
 		},
 		{
-			"id": "bef326f7-580d-46bb-94f8-d4925f799255",
+			"id": "702183a4-d53a-425e-9611-b6d86bd94630",
 			"key": "count",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "1c95a515-95cf-43ff-8560-2cc87c0a1425",
+			"id": "2df1f4cd-bb6c-40e4-87df-ffaa4f9162b4",
 			"key": "controlAuth",
 			"value": ""
 		},
 		{
-			"id": "76899ed4-4350-413b-ae5c-adf357213171",
+			"id": "1849b8ca-d829-4236-a30e-8a871079a5b3",
 			"key": "payloadEngine",
 			"value": ""
 		},
 		{
-			"id": "3600f99b-09a7-44d0-be76-89c320922bff",
+			"id": "d1dc699d-6e50-4a59-a6b7-212c7e6fc77b",
 			"key": "tc_identifierPainel_fieldEngineType",
 			"value": ""
 		},
 		{
-			"id": "1f53dc54-e88a-45fd-bd2e-81833ca49a9f",
+			"id": "46854117-fb1f-4118-974e-8950c3cc0813",
 			"key": "tc_identifierPainel_fieldLine",
 			"value": ""
 		},
 		{
-			"id": "ee3ede99-f930-4354-9e20-1f0f82ce977d",
+			"id": "35fcdd52-134c-4ba1-a854-8d992589f117",
 			"key": "tc_identifierPainel_fieldStartDate",
 			"value": ""
 		},
 		{
-			"id": "6114f634-db3e-40c4-8e89-4a2bbda558dd",
+			"id": "eff03093-cedb-4d14-ac52-32efef10db8f",
 			"key": "tc_identifierPainel_fieldEndDate",
 			"value": ""
 		},
 		{
-			"id": "5dd0cc49-a980-46c5-8414-a15dbdb68c56",
+			"id": "79bf9f9e-382c-46d2-948f-a3ceeaca0a53",
 			"key": "tc_identifierPainel_fieldPaymentPlanCategoryIds",
 			"value": ""
 		},
 		{
-			"id": "deb053ae-6559-460d-8a54-100f07a6601f",
+			"id": "b0edc9ec-9fdc-4589-8e85-4813635fe582",
 			"key": "tc_identifierPainel_fieldCallCondition",
 			"value": ""
 		},
 		{
-			"id": "53e37fca-2d69-406e-905f-8a4b6c41787c",
+			"id": "2f90ec78-7033-4dc5-8f29-7f0c14445ad9",
 			"key": "tc_identifierPainel_fieldIntegrationChannelIds",
 			"value": ""
 		}
