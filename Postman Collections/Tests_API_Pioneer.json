@@ -2954,8 +2954,33 @@
 									"\r",
 									"switch (tc_fieldFinancialBrands[i]) {\r",
 									"    case 'inexistent':\r",
-									"    \r",
+									"            pm.sendRequest({\r",
+									"            method: pm.request.method.toString(),\r",
+									"            url: pm.request.url.toString(),\r",
+									"            headers: headerComplete,\r",
+									"            body: changeOneFields(payloadEngine, \"FinancialBrands\", pm.variables.replaceIn('{{$randomWord}}'))\r",
+									"        }, (err, res) => {\r",
+									"            pm.test('Status 400 for inexistent FinancialBrands', () => {\r",
+									"                pm.expect(res).to.be.equal(400);\r",
+									"                //VALIDAR MENSAGEM\r",
+									"            })\r",
+									"        })\r",
+									"        i++;\r",
+									"        pm.collectionVariables.set('count', i);\r",
 									"    case 'number':\r",
+									"            pm.sendRequest({\r",
+									"            method: pm.request.method.toString(),\r",
+									"            url: pm.request.url.toString(),\r",
+									"            headers: headerComplete,\r",
+									"            body: changeOneFields(payloadEngine, \"FinancialBrands\", parseInt(pm.variables.replaceIn('{{$randomInt}}')))\r",
+									"        }, (err, res) => {\r",
+									"            pm.test('Status 400 for FinancialBrands number type', () => {\r",
+									"                pm.expect(res).to.be.equal(400);\r",
+									"                //VALIDAR MENSAGEM\r",
+									"            })\r",
+									"        })\r",
+									"        i++;\r",
+									"        pm.collectionVariables.set('count', i);\r",
 									"\r",
 									"    case 'only_space':\r",
 									"\r",
@@ -6567,63 +6592,63 @@
 	],
 	"variable": [
 		{
-			"id": "d2b0382f-254f-43c1-8d80-41da719b43d5",
+			"id": "c89ab1ff-8d54-480a-9ba8-55e2edd834f2",
 			"key": "domain",
 			"value": "/financing/offer/v1"
 		},
 		{
-			"id": "e5515bf2-0830-4c65-8c64-e696a8d466a0",
+			"id": "c28e0010-985f-4bee-b203-e31a52f77905",
 			"key": "ignore_collectionScript",
 			"value": ""
 		},
 		{
-			"id": "5486adc4-9f34-493e-a1c0-697f244ff1fb",
+			"id": "5b935438-93fd-4ade-836c-88abcaacf4f4",
 			"key": "count",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "605d8f4d-0387-4811-be20-11fb03de2bcf",
+			"id": "4fc4185d-3be8-4e71-9d04-c9ef8702db2b",
 			"key": "controlAuth",
 			"value": ""
 		},
 		{
-			"id": "4d376f7a-9515-4c1f-809a-9296ee9b7544",
+			"id": "364b2b0f-403d-4b63-b109-a5ae91cc3584",
 			"key": "payloadEngine",
 			"value": ""
 		},
 		{
-			"id": "ecee112a-2af2-484b-ac61-f1683f099c22",
+			"id": "d6787ac3-84d2-474a-a4e8-68a619a91dcd",
 			"key": "tc_identifierPainel_fieldEngineType",
 			"value": ""
 		},
 		{
-			"id": "f4f3911f-838e-4239-b425-60032ec4d591",
+			"id": "9bb31d6c-25c7-4851-aea2-b877ca716fb3",
 			"key": "tc_identifierPainel_fieldLine",
 			"value": ""
 		},
 		{
-			"id": "a84d2523-5f84-49ef-855f-e711dee93908",
+			"id": "b9e0ec82-ba19-48b8-9010-8ea2c36ad9a9",
 			"key": "tc_identifierPainel_fieldStartDate",
 			"value": ""
 		},
 		{
-			"id": "0966780d-c71e-4ed8-a771-4d843644cfda",
+			"id": "3acbb6c5-8926-4064-9824-3be1b527c5e8",
 			"key": "tc_identifierPainel_fieldEndDate",
 			"value": ""
 		},
 		{
-			"id": "4a3205ca-6f87-441f-90f5-ed5ce4530a9b",
+			"id": "af8ad0bf-1520-46f0-8f20-ac97371fe160",
 			"key": "tc_identifierPainel_fieldPaymentPlanCategoryIds",
 			"value": ""
 		},
 		{
-			"id": "72fe608e-27bb-45fa-8116-d8af28407d4f",
+			"id": "5c51ddcb-7757-44c8-85fd-3c1c6a9b4261",
 			"key": "tc_identifierPainel_fieldCallCondition",
 			"value": ""
 		},
 		{
-			"id": "9a40b3b4-b4b3-4436-a383-187727f813cf",
+			"id": "dca55e03-d18c-47a9-aa38-81e5e0f00ceb",
 			"key": "tc_identifierPainel_fieldIntegrationChannelIds",
 			"value": ""
 		}
