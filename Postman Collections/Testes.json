@@ -661,6 +661,7 @@
 							"var payloadEngine = JSON.parse(pm.collectionVariables.get('payloadEngine'))\r",
 							"var bodyChangeSubField = eval(pm.globals.get('bodyChangeSubField'))\r",
 							"var bodyChangeMoreFields = eval(pm.globals.get('bodyChangeMoreFields'))\r",
+							"var bodyChangeOneFields = eval(pm.globals.get('bodyChangeOneField'))\r",
 							"\r",
 							"bodyChangeOneFields(payloadEngine, \"engineType\",\"VME\")\r",
 							"payloadEngine.engineCriteria.rateType = 'TESTE'\r",
@@ -769,12 +770,12 @@
 	],
 	"variable": [
 		{
-			"id": "b6916a32-e581-4fa0-a465-88a79d9d9daf",
+			"id": "16d9361d-0910-4617-b620-422967ceebb4",
 			"key": "payloadEngine",
 			"value": ""
 		},
 		{
-			"id": "6069f7e4-bc25-40fc-8141-ba5841850722",
+			"id": "2bc20c39-2c60-44e0-b5c2-d5a596258b0b",
 			"key": "payloadTest",
 			"value": ""
 		}
