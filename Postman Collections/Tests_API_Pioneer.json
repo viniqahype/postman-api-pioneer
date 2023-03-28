@@ -5668,8 +5668,8 @@
 							"script": {
 								"id": "78b5c77b-e2cd-4a74-a896-44b42056542e",
 								"exec": [
-									"/* Declaring array variable with tests cases for Engines_EligibleDealershipsPanel: Field terms */\r",
-									"pm.collectionVariables.set('tc_eligibleVehiclesPanel_fieldTerms--', JSON.stringify([]));\r",
+									"/* Declaring array variable with tests cases for Engines_termPanel: Field terms */\r",
+									"pm.collectionVariables.set('tc_termsPanel_fieldTerms--', JSON.stringify([]));\r",
 									"\r",
 									""
 								],
@@ -7185,63 +7185,63 @@
 	],
 	"variable": [
 		{
-			"id": "8a5d1a53-7e87-44fe-8aad-652a9e89eb60",
+			"id": "2a7eaeb1-c5bf-4e37-b325-bd9d4584f5a2",
 			"key": "domain",
 			"value": "/financing/offer/v1"
 		},
 		{
-			"id": "1c47b799-9ac4-4956-a3d6-7c3b313824f4",
+			"id": "6e7e7997-1189-4f0a-a477-73eed691c1bc",
 			"key": "ignore_collectionScript",
 			"value": ""
 		},
 		{
-			"id": "348b9176-419e-4140-b16e-56d2bac536c7",
+			"id": "17e80a3d-6243-4929-a19a-ac7daa61d60f",
 			"key": "count",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "ad1f331c-a95a-4486-80fd-13aa8c3e5f12",
+			"id": "5e16fb34-4779-4341-90a1-33701670c396",
 			"key": "controlAuth",
 			"value": ""
 		},
 		{
-			"id": "b1823587-392a-47a7-a449-9222879915cc",
+			"id": "78adf005-ee70-4197-b976-9458b5d14602",
 			"key": "payloadEngine",
 			"value": ""
 		},
 		{
-			"id": "3dad82ce-6c5b-4898-a4e9-2768a788a185",
+			"id": "baacfad6-1854-49ad-ae35-c770ec2696cb",
 			"key": "tc_identifierPainel_fieldEngineType",
 			"value": ""
 		},
 		{
-			"id": "e5eff6b0-8893-4353-b53a-7a6cceec62cb",
+			"id": "6af61846-4ed1-47c0-9645-eead71cb880e",
 			"key": "tc_identifierPainel_fieldLine",
 			"value": ""
 		},
 		{
-			"id": "37bd4099-e4a9-49f1-ab7c-069a3928a4d0",
+			"id": "ec7ad635-83dd-490b-9c49-d1186f666c11",
 			"key": "tc_identifierPainel_fieldStartDate",
 			"value": ""
 		},
 		{
-			"id": "41cb5bb7-5a6f-4a65-860c-946b61437ad0",
+			"id": "c880196f-2e72-4fd5-8042-d40c6d24de82",
 			"key": "tc_identifierPainel_fieldEndDate",
 			"value": ""
 		},
 		{
-			"id": "0767fe81-79bc-4568-939c-295acc7edbcf",
+			"id": "96b0d85a-f9cc-4516-9a6e-f1920c727fa7",
 			"key": "tc_identifierPainel_fieldPaymentPlanCategoryIds",
 			"value": ""
 		},
 		{
-			"id": "288307b0-bc1e-4f5d-8197-10b444c749db",
+			"id": "9bea4e55-284b-47d4-9d37-3cbf96f9cec7",
 			"key": "tc_identifierPainel_fieldCallCondition",
 			"value": ""
 		},
 		{
-			"id": "aa675b54-3d00-4da1-8ea9-168d5dd94d33",
+			"id": "7433cd7c-3037-43a7-bd89-2946819cfaf8",
 			"key": "tc_identifierPainel_fieldIntegrationChannelIds",
 			"value": ""
 		}
