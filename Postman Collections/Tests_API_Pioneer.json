@@ -4577,7 +4577,13 @@
 								"url": "{{baseUrl}}{{domain}}/policies"
 							},
 							"response": []
-						},
+						}
+					],
+					"id": "ba17796b-d376-4a4f-aeaa-103b123b5580"
+				},
+				{
+					"name": "Reviewing Pre-requests",
+					"item": [
 						{
 							"name": "Check eligibleDealershipsPanel_fields",
 							"event": [
@@ -5421,77 +5427,72 @@
 								"url": "{{baseUrl}}{{domain}}/policies"
 							},
 							"response": []
-						}
-					],
-					"id": "ba17796b-d376-4a4f-aeaa-103b123b5580"
-				},
-				{
-					"name": "Reviewing Pre-requests",
-					"item": [],
-					"id": "550949b1-3683-414d-a0cf-5b9763ce6c0f"
-				},
-				{
-					"name": "Check eligibleVehiclesPanel_fields",
-					"event": [
-						{
-							"listen": "prerequest",
-							"script": {
-								"id": "78b5c77b-e2cd-4a74-a896-44b42056542e",
-								"exec": [
-									"/* Declaring array variable with tests cases for Engines_EligibleDealershipsPanel: Field Brand Id */\r",
-									"pm.collectionVariables.set('tc_eligibleVehiclesPanel_fieldBrandId', JSON.stringify(['inexistent', 'number', 'only_space', 'empty', 'no_brandId', 'brandIdNull']));\r",
-									"\r",
-									"/* Declaring array variable with tests cases for Engines_EligibleDealershipsPanel: Field model Id */\r",
-									"pm.collectionVariables.set('tc_eligibleVehiclesPanel_fieldModelId', JSON.stringify(['brandId_obligatory','inexistent', 'number', 'only_space', 'empty', 'no_modelId', 'modelIdNull']));\r",
-									"\r",
-									"/* Declaring array variable with tests cases for Engines_EligibleDealershipsPanel: Field version Id */\r",
-									"pm.collectionVariables.set('tc_eligibleVehiclesPanel_fieldVersionId', JSON.stringify(['modelId_obligatory','inexistent', 'number', 'only_space', 'empty', 'no_versionId', 'versionIdNull']));\r",
-									"\r",
-									"/* Declaring array variable with tests cases for Engines_EligibleDealershipsPanel: Field Situation */\r",
-									"pm.collectionVariables.set('tc_eligibleVehiclesPanel_fieldSituation', JSON.stringify(['inexistent', 'number', 'only_space', 'empty', 'no_situation', 'situationNull']));\r",
-									"\r",
-									"\r",
-									"\r",
-									"/* criar caso de testes para : Somente apresentar as versões que possuam a idade dentro do intervalo definido para ano modelo e ano fabricação, caso estejam preenchidos nos critérios definidos anteriormente.*/"
-								],
-								"type": "text/javascript"
-							}
 						},
 						{
-							"listen": "test",
-							"script": {
-								"id": "dfacc6bc-7629-4889-a793-7be6d3360485",
-								"exec": [
-									"/* Declaring array variable with tests cases for Engines_EligibleVehiclesPanel: Field Dealership Bond Type */\r",
-									"pm.collectionVariables.set('tc_eligibleVehiclesPanel_fieldDealershipBondType', JSON.stringify(['inexistent', 'number', 'only_space', 'empty', 'no_dealershipBondType', 'dealershipBondTypeNull']));\r",
-									"\r",
-									"/* Declaring array variable with tests cases for Engines_EligibleVehiclesPanel: Field Dealership Id */\r",
-									"pm.collectionVariables.set('tc_eligibleVehiclesPanel_fieldDealership', JSON.stringify(['dealershipBondType_obligatory','inexistent', 'number', 'only_space', 'empty', 'no_dealership', 'dealershipNull' ]));\r",
-									"\r",
-									"/* Declaring array variable with tests cases for Engines_EligibleVehiclesPanel: Field Dealership Group Id */\r",
-									"pm.collectionVariables.set('tc_eligibleVehiclesPanel_fieldDealershipGroupId', JSON.stringify(['inexistent', 'number', 'only_space', 'empty', 'no_DealershipGroupId', 'DealershipGroupIdNull' , 'Dealership_obligatory'\r",
-									"]));\r",
-									"\r",
-									"/* Criar testes para: Somente apresentar as versões que possuam a idade dentro do intervalo definido para ano modelo e ano fabricação, caso estejam preenchidos nos critérios definidos anteriormente.*/\r",
-									"\r",
-									"/* Declaring array variable with tests cases for Engines_EligibleVehiclesPanel: Field situation */\r",
-									"pm.collectionVariables.set('tc_eligibleVehiclesPanel_fieldSituation', JSON.stringify(['inexistent', 'number', 'only_space', 'empty', 'no_situation', 'situationNull' , \r",
-									"]));\r",
-									""
-								],
-								"type": "text/javascript"
-							}
+							"name": "Check eligibleVehiclesPanel_fields",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "78b5c77b-e2cd-4a74-a896-44b42056542e",
+										"exec": [
+											"/* Declaring array variable with tests cases for Engines_EligibleDealershipsPanel: Field Brand Id */\r",
+											"pm.collectionVariables.set('tc_eligibleVehiclesPanel_fieldBrandId', JSON.stringify(['inexistent', 'number', 'only_space', 'empty', 'no_brandId', 'brandIdNull']));\r",
+											"\r",
+											"/* Declaring array variable with tests cases for Engines_EligibleDealershipsPanel: Field model Id */\r",
+											"pm.collectionVariables.set('tc_eligibleVehiclesPanel_fieldModelId', JSON.stringify(['brandId_obligatory','inexistent', 'number', 'only_space', 'empty', 'no_modelId', 'modelIdNull']));\r",
+											"\r",
+											"/* Declaring array variable with tests cases for Engines_EligibleDealershipsPanel: Field version Id */\r",
+											"pm.collectionVariables.set('tc_eligibleVehiclesPanel_fieldVersionId', JSON.stringify(['modelId_obligatory','inexistent', 'number', 'only_space', 'empty', 'no_versionId', 'versionIdNull']));\r",
+											"\r",
+											"/* Declaring array variable with tests cases for Engines_EligibleDealershipsPanel: Field Situation */\r",
+											"pm.collectionVariables.set('tc_eligibleVehiclesPanel_fieldSituation', JSON.stringify(['inexistent', 'number', 'only_space', 'empty', 'no_situation', 'situationNull']));\r",
+											"\r",
+											"\r",
+											"\r",
+											"/* criar caso de testes para : Somente apresentar as versões que possuam a idade dentro do intervalo definido para ano modelo e ano fabricação, caso estejam preenchidos nos critérios definidos anteriormente.*/"
+										],
+										"type": "text/javascript"
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"id": "dfacc6bc-7629-4889-a793-7be6d3360485",
+										"exec": [
+											"/* Declaring array variable with tests cases for Engines_EligibleVehiclesPanel: Field Dealership Bond Type */\r",
+											"pm.collectionVariables.set('tc_eligibleVehiclesPanel_fieldDealershipBondType', JSON.stringify(['inexistent', 'number', 'only_space', 'empty', 'no_dealershipBondType', 'dealershipBondTypeNull']));\r",
+											"\r",
+											"/* Declaring array variable with tests cases for Engines_EligibleVehiclesPanel: Field Dealership Id */\r",
+											"pm.collectionVariables.set('tc_eligibleVehiclesPanel_fieldDealership', JSON.stringify(['dealershipBondType_obligatory','inexistent', 'number', 'only_space', 'empty', 'no_dealership', 'dealershipNull' ]));\r",
+											"\r",
+											"/* Declaring array variable with tests cases for Engines_EligibleVehiclesPanel: Field Dealership Group Id */\r",
+											"pm.collectionVariables.set('tc_eligibleVehiclesPanel_fieldDealershipGroupId', JSON.stringify(['inexistent', 'number', 'only_space', 'empty', 'no_DealershipGroupId', 'DealershipGroupIdNull' , 'Dealership_obligatory'\r",
+											"]));\r",
+											"\r",
+											"/* Criar testes para: Somente apresentar as versões que possuam a idade dentro do intervalo definido para ano modelo e ano fabricação, caso estejam preenchidos nos critérios definidos anteriormente.*/\r",
+											"\r",
+											"/* Declaring array variable with tests cases for Engines_EligibleVehiclesPanel: Field situation */\r",
+											"pm.collectionVariables.set('tc_eligibleVehiclesPanel_fieldSituation', JSON.stringify(['inexistent', 'number', 'only_space', 'empty', 'no_situation', 'situationNull' , \r",
+											"]));\r",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"id": "6a78e81e-7eaa-43cf-a631-0404f44d3a78",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": []
+							},
+							"response": []
 						}
 					],
-					"id": "6a78e81e-7eaa-43cf-a631-0404f44d3a78",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "POST",
-						"header": []
-					},
-					"response": []
+					"id": "550949b1-3683-414d-a0cf-5b9763ce6c0f"
 				},
 				{
 					"name": "Camila - Check ineligibleVehiclesPanel_fields",
@@ -6374,13 +6375,13 @@
 								"id": "78b5c77b-e2cd-4a74-a896-44b42056542e",
 								"exec": [
 									"/* Declaring array variable with tests cases for Engines_MarketingPanel: Field businessActionAmount */\r",
-									"pm.collectionVariables.set('marketingPanel_fieldsBusinessActionAmount', JSON.stringify(['floatNumber_11digits','floatNumber_12digits', 'negativeNumber', 'string', 'zero', 'only_space', 'empty', 'no_businessActionAmount', 'businessActionAmountNull', 'BusinessActionPercent_obligatory']));\r",
+									"pm.collectionVariables.set('marketingPanel_fieldsBusinessActionAmount', JSON.stringify(['floatNumber_12digits', 'negativeNumber', 'string', 'zero', 'only_space', 'empty', 'no_businessActionAmount', 'businessActionAmountNull', 'BusinessActionPercent_obligatory']));\r",
 									"\r",
 									"/* Declaring array variable with tests cases for Engines_MarketingPanel: Field businessActionPercent */\r",
-									"pm.collectionVariables.set('marketingPanel_fieldsBusinessActionPercent', JSON.stringify(['floatNumber_4digits','floatNumber_5digits', 'negativeNumber', 'string', 'zero', 'only_space', 'empty', 'no_businessActionAmount', 'businessActionAmountNull', 'BusinessActionPercent_No_obligatory']));\r",
+									"pm.collectionVariables.set('marketingPanel_fieldsBusinessActionPercent', JSON.stringify(['floatNumber_5digits', 'negativeNumber', 'string', 'zero', 'only_space', 'empty', 'no_businessActionAmount', 'businessActionAmountNull', 'BusinessActionPercent_No_obligatory']));\r",
 									"\r",
 									"/* Declaring array variable with tests cases for Engines_MarketingPanel: Field ContractCostAmount */\r",
-									"pm.collectionVariables.set('marketingPanel_fieldsContractCostAmount', JSON.stringify(['floatNumber_11digits','floatNumber_12digits', 'negativeNumber', 'string', 'zero', 'only_space', 'empty', 'no_contractCostAmount', 'contractCostAmountNull']));\r",
+									"pm.collectionVariables.set('marketingPanel_fieldsContractCostAmount', JSON.stringify(['floatNumber_12digits', 'negativeNumber', 'string', 'zero', 'only_space', 'empty', 'no_contractCostAmount', 'contractCostAmountNull']));\r",
 									"\r",
 									"/* Declaring array variable with tests cases for Engines_MarketingPanel: Field Funding Cost Percent */\r",
 									"pm.collectionVariables.set('marketingPanel_fieldsFundingCostPercent', JSON.stringify(['floatNumber', 'negativeNumber', 'string', 'zero', 'only_space', 'empty', 'no_contractCostAmount', 'contractCostAmountNull']));\r",
@@ -6389,7 +6390,7 @@
 									"pm.collectionVariables.set('marketingPanel_fieldsOperationAveragePercent', JSON.stringify(['floatNumber', 'negativeNumber', 'string', 'zero', 'only_space', 'empty', 'no_operationAveragePercent', 'operationAveragePercentNull']));\r",
 									"\r",
 									"/* Declaring array variable with tests cases for Engines_MarketingPanel: Field Registration Fee Amount */\r",
-									"pm.collectionVariables.set('marketingPanel_fieldsRegistrationFeeAmount', JSON.stringify(['floatNumber_11digits','floatNumber_12digits', 'negativeNumber', 'string', 'zero', 'only_space', 'empty', 'no_registrationFeeAmount', 'registrationFeeAmountNull']));\r",
+									"pm.collectionVariables.set('marketingPanel_fieldsRegistrationFeeAmount', JSON.stringify(['floatNumber_12digits', 'negativeNumber', 'string', 'zero', 'only_space', 'empty', 'no_registrationFeeAmount', 'registrationFeeAmountNull']));\r",
 									"\r",
 									"\r",
 									"\r",
@@ -7784,63 +7785,63 @@
 	],
 	"variable": [
 		{
-			"id": "00765e5b-00bf-416f-83f3-9debc4f88f7c",
+			"id": "4d5cd38f-a560-4f92-9058-0d897a519257",
 			"key": "domain",
 			"value": "/financing/offer/v1"
 		},
 		{
-			"id": "90858de7-0d7f-40fd-b854-16f1b9863275",
+			"id": "f5a84984-67f4-4ad2-a035-75309d15aa3f",
 			"key": "ignore_collectionScript",
 			"value": ""
 		},
 		{
-			"id": "61d1c73d-963e-477e-be0c-145051550982",
+			"id": "db952616-6189-45e4-b07d-bd409cfcbb1f",
 			"key": "count",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "7865d7d1-42bb-4db8-a720-f56aabdd8e17",
+			"id": "4093c3d6-117c-42b7-96d3-07e8cb837433",
 			"key": "controlAuth",
 			"value": ""
 		},
 		{
-			"id": "43e66d2d-44ee-4eb4-a6c0-a491a4cd4067",
+			"id": "4f9c8b44-ce43-4c90-8012-38fba5ff6eed",
 			"key": "payloadEngine",
 			"value": ""
 		},
 		{
-			"id": "b13d8974-0da9-44c3-be16-798401d5f407",
+			"id": "a5f12c2b-9437-4806-a64e-ce62769e85f0",
 			"key": "tc_identifierPainel_fieldEngineType",
 			"value": ""
 		},
 		{
-			"id": "332cb4fb-ad7a-4b97-b3cd-6621b7141b75",
+			"id": "3ad2e1fb-2628-410d-9409-5334366243fb",
 			"key": "tc_identifierPainel_fieldLine",
 			"value": ""
 		},
 		{
-			"id": "97702e92-0b67-4676-aebd-a8891bbd550e",
+			"id": "dbc63caf-1307-4c61-83c7-625118f9c52f",
 			"key": "tc_identifierPainel_fieldStartDate",
 			"value": ""
 		},
 		{
-			"id": "6f3b9541-018a-4d8b-9ee4-00cb4fe0b0fa",
+			"id": "55114609-4ce1-4231-8c48-ff91bd274f7a",
 			"key": "tc_identifierPainel_fieldEndDate",
 			"value": ""
 		},
 		{
-			"id": "562e0d6a-9477-4c34-b77a-1196dc0d9221",
+			"id": "21af2c33-1caf-49e6-8a28-d4c9bff61863",
 			"key": "tc_identifierPainel_fieldPaymentPlanCategoryIds",
 			"value": ""
 		},
 		{
-			"id": "8ed375cd-647f-4bd4-8d1f-76cf9f8a2d36",
+			"id": "92c9a877-0e25-49ec-850d-21b75d21ff7e",
 			"key": "tc_identifierPainel_fieldCallCondition",
 			"value": ""
 		},
 		{
-			"id": "33419a8b-9baa-4f4c-b721-27547ee12ba4",
+			"id": "bd08e870-f1a6-4ed4-9200-a4787cf77a3a",
 			"key": "tc_identifierPainel_fieldIntegrationChannelIds",
 			"value": ""
 		}
