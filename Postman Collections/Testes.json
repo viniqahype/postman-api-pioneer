@@ -434,7 +434,7 @@
 							"        header: JSON.parse(pm.environment.get('header')),\r",
 							"        body: {\r",
 							"            mode: 'raw',\r",
-							"            raw: JSON.stringify({ 'key': id})\r",
+							"            raw: JSON.stringify({ teste: id})\r",
 							"        }\r",
 							"    }, (err, res) => {\r",
 							"        console.log(pm.request.body)\r",
@@ -532,12 +532,12 @@
 	],
 	"variable": [
 		{
-			"id": "732f38e6-bb15-4a4a-b17f-8808256889de",
+			"id": "0239d816-7947-4c44-9305-a1639cfc4a0b",
 			"key": "payloadEngine",
 			"value": ""
 		},
 		{
-			"id": "d5d31f6d-8267-4cea-8380-52156b0ac007",
+			"id": "8394c745-f724-4f74-9b84-bee94bc05e0b",
 			"key": "payloadTest",
 			"value": ""
 		}
