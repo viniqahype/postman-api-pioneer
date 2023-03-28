@@ -673,9 +673,6 @@
 							"        }\r",
 							"    ]\r",
 							"}])\r",
-							"payloadEngine.engineCriteria.rateType = 'TESTE'\r",
-							"console.log(payloadEngine)\r",
-							"\r",
 							"console.log(payloadEngine)\r",
 							"\r",
 							""
@@ -779,12 +776,12 @@
 	],
 	"variable": [
 		{
-			"id": "c48149c6-10b5-4f19-adb6-c86edd1ad19d",
+			"id": "f0d9f98f-a411-43b5-b7dc-718aeb3741e9",
 			"key": "payloadEngine",
 			"value": ""
 		},
 		{
-			"id": "9a0ef304-30ef-47be-890e-3b5b9b09f120",
+			"id": "76929209-3006-4487-ac6e-217876607b40",
 			"key": "payloadTest",
 			"value": ""
 		}
