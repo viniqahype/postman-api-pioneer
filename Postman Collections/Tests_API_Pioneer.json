@@ -4531,20 +4531,36 @@
 											"       pm.collectionVariables.set('count', i);\r",
 											"\r",
 											"    case 'no_remunerationsId':\r",
-											"       let floatNumber = _.random(0, 10, true).toFixed(2)\r",
+											"       delete payloadEngine.engineCriteria.rateType\r",
 											"       pm.sendRequest({\r",
 											"           method: pm.request.method.toString(),\r",
 											"           url: pm.request.url.toString(),\r",
 											"           headers: headerComplete,\r",
-											"           body: changeOneFields(payloadEngine, \"remunerationsId\", parseFloat(floatNumber))\r",
+											"           body: payloadEngine\r",
 											"       }, (err, res) => {\r",
-											"           pm.test('Status 400 for float number remunerationsId', () => {\r",
+											"           pm.test('Status 400 for no_remunerationsId', () => {\r",
 											"               pm.expect(res).to.be.equal(400);\r",
 											"               //VALIDAR MENSAGEM\r",
 											"           })\r",
 											"       })\r",
 											"       i++;\r",
 											"       pm.collectionVariables.set('count', i);\r",
+											"\r",
+											"    case 'remunerationsIdNull':\r",
+											"       pm.sendRequest({\r",
+											"            method: pm.request.method.toString(),\r",
+											"            url: pm.request.url.toString(),\r",
+											"            headers: headerComplete,\r",
+											"            body: changeOneFields(payloadEngine, \"remunerationsId\",null)\r",
+											"        }, (err, res) => {\r",
+											"            pm.test('Status 400 for empty remunerationsId', () => {\r",
+											"                pm.expect(res).to.be.equal(400);\r",
+											"                //VALIDAR MENSAGEM\r",
+											"            })\r",
+											"        })\r",
+											"        i++;\r",
+											"        pm.collectionVariables.set('count', i); \r",
+											"\r",
 											"}\r",
 											"\r",
 											""
@@ -6898,63 +6914,63 @@
 	],
 	"variable": [
 		{
-			"id": "a14c757b-683b-4f2d-8c22-c6416132a81d",
+			"id": "82dd62ef-43c1-4a27-945f-c337c3be533d",
 			"key": "domain",
 			"value": "/financing/offer/v1"
 		},
 		{
-			"id": "b4d17e2a-ae58-4f90-a096-a4c4f94dab8e",
+			"id": "e4708f4b-4e26-41fa-8ed7-01e2357fb7f7",
 			"key": "ignore_collectionScript",
 			"value": ""
 		},
 		{
-			"id": "2d828b7d-8b6e-4583-9282-cedd53f35695",
+			"id": "20668b58-041f-432c-8c07-8f51790283ea",
 			"key": "count",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "e51b0977-be22-4e71-9a83-f04b5ccf9eff",
+			"id": "928b029a-390b-42e2-b0db-529c3cb1579b",
 			"key": "controlAuth",
 			"value": ""
 		},
 		{
-			"id": "edb4f2de-43b4-4399-adc9-d9efe97b5536",
+			"id": "6e0cb663-c314-4982-be92-e0a056b6a8a4",
 			"key": "payloadEngine",
 			"value": ""
 		},
 		{
-			"id": "efef4c01-3927-4f4b-96bd-54536b9ff306",
+			"id": "dd883221-49e3-448b-b362-b6c1f86f205b",
 			"key": "tc_identifierPainel_fieldEngineType",
 			"value": ""
 		},
 		{
-			"id": "2b51c35b-8446-4a1a-989a-362706e91fe8",
+			"id": "ec9d4f10-1445-4c78-ba42-643b574e96b2",
 			"key": "tc_identifierPainel_fieldLine",
 			"value": ""
 		},
 		{
-			"id": "350edba8-1acc-4d1a-95f9-ebd289502dd8",
+			"id": "56f4c815-aab0-429d-97b4-9d885f4fe204",
 			"key": "tc_identifierPainel_fieldStartDate",
 			"value": ""
 		},
 		{
-			"id": "de270d69-8264-4484-8278-0726ac1b5fa5",
+			"id": "8eea0945-3ccd-4849-a53f-63e449385617",
 			"key": "tc_identifierPainel_fieldEndDate",
 			"value": ""
 		},
 		{
-			"id": "52e5f9f6-577f-465d-af1d-806a079f577a",
+			"id": "43271a9a-8c2c-4334-a1f0-f1edb5e6fcd0",
 			"key": "tc_identifierPainel_fieldPaymentPlanCategoryIds",
 			"value": ""
 		},
 		{
-			"id": "5755c30e-9a22-4473-be4a-5d7beff43e3a",
+			"id": "1739eae2-aff3-4988-8c8d-4305d1ed9212",
 			"key": "tc_identifierPainel_fieldCallCondition",
 			"value": ""
 		},
 		{
-			"id": "582f810a-84d8-4b80-9122-4a9ecc480f8c",
+			"id": "08a12f0d-2e22-4739-be94-13d04db6c491",
 			"key": "tc_identifierPainel_fieldIntegrationChannelIds",
 			"value": ""
 		}
