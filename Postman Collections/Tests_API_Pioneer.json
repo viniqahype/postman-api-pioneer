@@ -4657,13 +4657,7 @@
 								"header": []
 							},
 							"response": []
-						}
-					],
-					"id": "ba17796b-d376-4a4f-aeaa-103b123b5580"
-				},
-				{
-					"name": "Reviewing Pre-requests",
-					"item": [
+						},
 						{
 							"name": "Check crmListPanel_fields",
 							"event": [
@@ -4740,6 +4734,11 @@
 							"response": []
 						}
 					],
+					"id": "ba17796b-d376-4a4f-aeaa-103b123b5580"
+				},
+				{
+					"name": "Reviewing Pre-requests",
+					"item": [],
 					"id": "550949b1-3683-414d-a0cf-5b9763ce6c0f"
 				},
 				{
@@ -4750,8 +4749,8 @@
 							"script": {
 								"id": "78b5c77b-e2cd-4a74-a896-44b42056542e",
 								"exec": [
-									"/* Declaring array variable with tests cases for Engines_CrmListPanel: Field CpfCnpj */\r",
-									"pm.collectionVariables.set('tc_crmListPanel_fieldCpfCnpj', JSON.stringify(['invalidExtension','no_crmList', 'crmListNull']));\r",
+									"/* Declaring array variable with tests cases for Engines_RenovationPanel: Field Renovation */\r",
+									"pm.collectionVariables.set('tc_renovationPanel_fieldRenovaction', JSON.stringify(['string', 'number', 'specialCharacter', 'only_space', 'empty', 'no_renovation', 'renovationNull']));\r",
 									""
 								],
 								"type": "text/javascript"
@@ -6793,63 +6792,63 @@
 	],
 	"variable": [
 		{
-			"id": "500bf2e1-fd3e-4839-9aa8-61caed17d88e",
+			"id": "529085fa-b0b1-414b-9a56-8af6a860d9ff",
 			"key": "domain",
 			"value": "/financing/offer/v1"
 		},
 		{
-			"id": "e15b4d0d-f316-47f3-8244-1c9102bada28",
+			"id": "798fe10d-37cb-450a-b6bd-b67774bff8bb",
 			"key": "ignore_collectionScript",
 			"value": ""
 		},
 		{
-			"id": "ce41dd2f-a02b-4122-ac85-a7c09e369e8f",
+			"id": "9c445436-3ffb-4582-b5ff-3c6c01e93a2f",
 			"key": "count",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "942033ad-cfad-4196-b260-f11bf4d5f51a",
+			"id": "4a0eaf0e-346e-44a8-a11e-9a421221c413",
 			"key": "controlAuth",
 			"value": ""
 		},
 		{
-			"id": "c2c03385-1052-46cd-9077-1b14487163d7",
+			"id": "967397a5-8734-4367-b87c-db0b8ebc6e05",
 			"key": "payloadEngine",
 			"value": ""
 		},
 		{
-			"id": "f6322edd-a138-4b0c-b9f0-129035c3f6c7",
+			"id": "08d4c843-67c2-452f-be7a-9733502bbdc4",
 			"key": "tc_identifierPainel_fieldEngineType",
 			"value": ""
 		},
 		{
-			"id": "1b7eff31-fc1c-4b2c-9fd9-8b25cce78bd0",
+			"id": "6c3236c6-49df-4944-b470-8d8eb53d03a2",
 			"key": "tc_identifierPainel_fieldLine",
 			"value": ""
 		},
 		{
-			"id": "2ac7b9fc-7667-4247-972a-9858361edab3",
+			"id": "b7e33614-0364-4b00-9708-5d7828580dd6",
 			"key": "tc_identifierPainel_fieldStartDate",
 			"value": ""
 		},
 		{
-			"id": "bcacbd3f-3e96-4a5d-b406-df20e7b212c9",
+			"id": "10f14036-0a18-414c-b695-23e1ce267207",
 			"key": "tc_identifierPainel_fieldEndDate",
 			"value": ""
 		},
 		{
-			"id": "711f8f24-df91-44c6-b382-da22b60166c1",
+			"id": "5de8943c-d9d7-4a17-9c5d-cd0b06b5d1a1",
 			"key": "tc_identifierPainel_fieldPaymentPlanCategoryIds",
 			"value": ""
 		},
 		{
-			"id": "28b77dc9-fa9d-48f8-a17c-c1f5ad3f9bc0",
+			"id": "76dffff2-c6f1-46c5-975e-147a10981340",
 			"key": "tc_identifierPainel_fieldCallCondition",
 			"value": ""
 		},
 		{
-			"id": "fcc3f3fa-eed1-40ae-8553-f499b18ae41d",
+			"id": "3b88df6c-72be-44bc-8eb5-294eeccd3a6b",
 			"key": "tc_identifierPainel_fieldIntegrationChannelIds",
 			"value": ""
 		}
