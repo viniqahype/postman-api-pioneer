@@ -2876,19 +2876,19 @@
 											"pm.collectionVariables.set('tc_generalCriteriaPanel_fieldMaxLoanAmount', JSON.stringify(['intNumber', 'floatNumber_3digits', 'floatNumber_1digit', 'negativeNumber', 'string', 'zero', 'only_space', 'empty', 'limit', '>999.999.999,99', 'only_max', 'maxLoanAmountNull']));\r",
 											"\r",
 											"/* Declaring array variable with tests cases for Engines_GeneralCriteriaPanel: Field MinModelRate */\r",
-											"pm.collectionVariables.set('tc_generalCriteriaPanel_fieldMinModelRate', JSON.stringify(['number_3digits', 'floatNumber', 'negativeNumber', 'string', 'zero', 'only_space', 'empty', 'biggerThenMaxModelRate', 'no_min_no_max', 'only_min', 'minModelRateNull', 'min_max_equal']));\r",
+											"pm.collectionVariables.set('tc_generalCriteriaPanel_fieldMinModelRate', JSON.stringify(['number_3digits', 'floatNumber', 'negativeNumber', 'string', 'zero', 'only_space', 'empty', 'limit', 'biggerThenMaxModelRate', 'no_min_no_max', 'only_min', 'minModelRateNull', 'min_max_equal']));\r",
 											"\r",
 											"/* Declaring array variable with tests cases for Engines_GeneralCriteriaPanel: Field MaxModelRate */\r",
 											"pm.collectionVariables.set('tc_generalCriteriaPanel_fieldMaxModelRate', JSON.stringify(['number_3digits', 'floatNumber', 'negativeNumber', 'string', 'zero', 'only_space', 'empty', 'only_max', 'maxModelRateNull']));\r",
 											"\r",
 											"/* Declaring array variable with tests cases for Engines_GeneralCriteriaPanel: Field Min6Or7CpfDigits */\r",
-											"pm.collectionVariables.set('tc_generalCriteriaPanel_fieldMin6Or7CpfDigits', JSON.stringify(['number_3digits', 'flotNumber', 'negativeNumber', 'string', 'zero', 'only_space', 'empty', 'biggerThenMax6Or7CpfDigits', 'no_min_no_max', 'only_min', 'min6Or7CpfDigitsNull', 'min_max_equal']));\r",
+											"pm.collectionVariables.set('tc_generalCriteriaPanel_fieldMin6Or7CpfDigits', JSON.stringify(['number_3digits', 'flotNumber', 'negativeNumber', 'string', 'zero', 'only_space', 'empty', 'limit', 'biggerThenMax6Or7CpfDigits', 'no_min_no_max', 'only_min', 'min6Or7CpfDigitsNull', 'min_max_equal']));\r",
 											"\r",
 											"/* Declaring array variable with tests cases for Engines_GeneralCriteriaPanel: Field Max6Or7CpfDigits */\r",
 											"pm.collectionVariables.set('tc_generalCriteriaPanel_fieldMax6Or7CpfDigits', JSON.stringify(['number_3digits', 'flotNumber', 'negativeNumber', 'string', 'zero', 'only_space', 'empty', 'only_max', 'max6Or7CpfDigitsNull']));\r",
 											"\r",
 											"/* Declaring array variable with tests cases for Engines_GeneralCriteriaPanel: Field MinTerm */\r",
-											"pm.collectionVariables.set('tc_generalCriteriaPanel_fieldMinTerm', JSON.stringify(['number_3digits', 'floatNumber', 'negativeNumber', 'string', 'zero', 'only_space', 'empty', 'biggerThenMaxTerm', 'no_min_no_max', 'only_min', 'minTermNull', 'min_max_equal']));\r",
+											"pm.collectionVariables.set('tc_generalCriteriaPanel_fieldMinTerm', JSON.stringify(['number_3digits', 'floatNumber', 'negativeNumber', 'string', 'zero', 'only_space', 'empty', 'limit','biggerThenMaxTerm', 'no_min_no_max', 'only_min', 'minTermNull', 'min_max_equal']));\r",
 											"\r",
 											"/* Declaring array variable with tests cases for Engines_GeneralCriteriaPanel: Field MaxTerm */\r",
 											"pm.collectionVariables.set('tc_generalCriteriaPanel_fieldMaxTerm', JSON.stringify(['number_3digits', 'floatNumber', 'negativeNumber', 'string', 'zero', 'only_space', 'empty', 'only_max', 'maxTermNull']));\r",
@@ -2900,13 +2900,13 @@
 											"pm.collectionVariables.set('tc_generalCriteriaPanel_fieldMaxVehiclePrice', JSON.stringify(['intNumber', 'floatNumber_3digits', 'floatNumber_1digit', 'negativeNumber', 'string', 'zero', 'only_space', 'empty', 'limit', '>999.999.999,99', 'only_max', 'maxVehiclePriceNull']));\r",
 											"\r",
 											"/* Declaring array variable with tests cases for Engines_GeneralCriteriaPanel: Field MinManufactoryVehicleAge */\r",
-											"pm.collectionVariables.set('tc_generalCriteriaPanel_fieldMinManufactoryVehicleAges', JSON.stringify(['number_3digits', 'floatNumber', 'negativeNumber', 'string', 'zero', 'only_space', 'empty', 'biggerThenMaxManufactoryVehicleAge', 'no_min_no_max', 'only_min', 'minManufactoryVehicleAgeNull', 'min_max_equal']));\r",
+											"pm.collectionVariables.set('tc_generalCriteriaPanel_fieldMinManufactoryVehicleAges', JSON.stringify(['number_3digits', 'floatNumber', 'negativeNumber', 'string', 'zero', 'only_space', 'empty', 'limit','biggerThenMaxManufactoryVehicleAge', 'no_min_no_max', 'only_min', 'minManufactoryVehicleAgeNull', 'min_max_equal']));\r",
 											"\r",
 											"/* Declaring array variable with tests cases for Engines_GeneralCriteriaPanel: Field MaxManufactoryVehicleAge */\r",
 											"pm.collectionVariables.set('tc_generalCriteriaPanel_fieldManufactoryVehicleAge', JSON.stringify(['number_3digits', 'floatNumber', 'negativeNumber', 'string', 'zero', 'only_space', 'empty',  'only_max', 'maxManufactoryVehicleAgeNull']));\r",
 											"\r",
 											"/* Declaring array variable with tests cases for Engines_GeneralCriteriaPanel: Field MinModelVehicleAge */\r",
-											"pm.collectionVariables.set('tc_generalCriteriaPanel_fieldMinModelVehicleAge', JSON.stringify(['number_3digits', 'floatNumber', 'negativeNumber', 'string', 'zero', 'only_space', 'empty', 'biggerThenMaxModelVehicleAge', 'no_min_no_max', 'only_min', 'minModelVehicleAgeNull', 'min_max_equal']));\r",
+											"pm.collectionVariables.set('tc_generalCriteriaPanel_fieldMinModelVehicleAge', JSON.stringify(['number_3digits', 'floatNumber', 'negativeNumber', 'string', 'zero', 'only_space', 'empty', 'limit','biggerThenMaxModelVehicleAge', 'no_min_no_max', 'only_min', 'minModelVehicleAgeNull', 'min_max_equal']));\r",
 											"\r",
 											"/* Declaring array variable with tests cases for Engines_GeneralCriteriaPanel: Field MaxModelVehicleAge */\r",
 											"pm.collectionVariables.set('tc_generalCriteriaPanel_fieldMaxModelVehicleAge', JSON.stringify(['number_3digits', 'floatNumber', 'negativeNumber', 'string', 'zero', 'only_space', 'empty', 'only_max', 'maxModelVehicleAgeNull']));\r",
@@ -6740,63 +6740,63 @@
 	],
 	"variable": [
 		{
-			"id": "152abb4f-6214-4856-881f-e2d26fafc044",
+			"id": "fc6828a9-1992-477a-9238-9390f51856fc",
 			"key": "domain",
 			"value": "/financing/offer/v1"
 		},
 		{
-			"id": "5f82a0d8-1833-48ae-a83d-f96009519ac7",
+			"id": "43fad2c9-7621-437d-ae55-bde696ab4acb",
 			"key": "ignore_collectionScript",
 			"value": ""
 		},
 		{
-			"id": "84edf39f-b032-41a6-abaa-5a39b5a89072",
+			"id": "9f0b2bdf-08cf-4ec9-8b31-2d917d02d503",
 			"key": "count",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "39aebcf5-e5e1-4e5c-92b8-64283189b18e",
+			"id": "a932b051-4500-42bb-9495-bf7b6dc5fd02",
 			"key": "controlAuth",
 			"value": ""
 		},
 		{
-			"id": "054000d2-d86d-4d0e-8cc9-bc626abcd974",
+			"id": "e3e9da1c-8de0-425d-aaf5-575ca7c829a8",
 			"key": "payloadEngine",
 			"value": ""
 		},
 		{
-			"id": "42245511-f908-45bf-8db5-245405596ac4",
+			"id": "c2d75173-0052-4995-8189-bb2534ccc446",
 			"key": "tc_identifierPainel_fieldEngineType",
 			"value": ""
 		},
 		{
-			"id": "1828594d-c02f-4a59-a962-bba4f7caddb9",
+			"id": "4660127e-b931-40bf-92c8-88492491ba2c",
 			"key": "tc_identifierPainel_fieldLine",
 			"value": ""
 		},
 		{
-			"id": "0a8e28f7-03df-40c1-bb54-aea7bcf7ebda",
+			"id": "dcce3a9b-a949-4436-a372-18baf694f68e",
 			"key": "tc_identifierPainel_fieldStartDate",
 			"value": ""
 		},
 		{
-			"id": "26982ffb-4818-41fe-b4a9-f22e77b0451d",
+			"id": "79842beb-3180-496f-8631-d56d2f9d503f",
 			"key": "tc_identifierPainel_fieldEndDate",
 			"value": ""
 		},
 		{
-			"id": "8f84ce77-1d48-4c39-8a2e-e3014be3edab",
+			"id": "e43b86c8-f8cf-4d03-a197-7f66ad8bf644",
 			"key": "tc_identifierPainel_fieldPaymentPlanCategoryIds",
 			"value": ""
 		},
 		{
-			"id": "b0bb0983-53f8-40a7-b2b5-4bbf41175143",
+			"id": "2c538e5c-1713-4364-b5e7-c9f0fb34fb2a",
 			"key": "tc_identifierPainel_fieldCallCondition",
 			"value": ""
 		},
 		{
-			"id": "c749291e-f3a7-4332-9551-00c53c975fc3",
+			"id": "d18a1b00-a951-40f6-afbd-b10ddfd423c1",
 			"key": "tc_identifierPainel_fieldIntegrationChannelIds",
 			"value": ""
 		}
