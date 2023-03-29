@@ -5077,13 +5077,7 @@
 								"header": []
 							},
 							"response": []
-						}
-					],
-					"id": "ba17796b-d376-4a4f-aeaa-103b123b5580"
-				},
-				{
-					"name": "Reviewing Pre-requests",
-					"item": [
+						},
 						{
 							"name": "Check vmePanel_fields",
 							"event": [
@@ -5132,127 +5126,126 @@
 							"response": []
 						}
 					],
-					"id": "550949b1-3683-414d-a0cf-5b9763ce6c0f"
+					"id": "ba17796b-d376-4a4f-aeaa-103b123b5580"
 				},
 				{
-					"name": "Check cddPanel_fields",
-					"event": [
+					"name": "Reviewing Pre-requests",
+					"item": [
 						{
-							"listen": "prerequest",
-							"script": {
-								"id": "78b5c77b-e2cd-4a74-a896-44b42056542e",
-								"exec": [
-									"/* Declaring array variable with tests cases for Engines_CddPanel_fieldsPanel: Field Bonus */\r",
-									"pm.collectionVariables.set('tc_cddPanel_fieldsBonus', JSON.stringify(['inexistent', 'number', 'only_space', 'empty', 'no_bonus', 'bonusNull'\r",
-									"]));\r",
-									"\r",
-									"/* Declaring array variable with tests cases for Engines_CddPanel_fieldsPanel: Field Percent */\r",
-									"pm.collectionVariables.set('tc_cddPanel_fieldsPercent', JSON.stringify(['floatNumber', 'negativeNumber', 'string','only_space', 'empty', 'no_percent', 'percentNull']));\r",
-									"\r",
-									"\r",
-									"\r",
-									"\r",
-									"\r",
-									"\r",
-									""
-								],
-								"type": "text/javascript"
-							}
-						},
-						{
-							"listen": "test",
-							"script": {
-								"id": "a5b144ed-72c0-4788-9e45-0298b2c119ad",
-								"exec": [
-									"/* Importing variables and functions */\r",
-									"var payloadEngine = JSON.parse(pm.collectionVariables.get('payloadEngine'));\r",
-									"var i = pm.collectionVariables.get('count')\r",
-									"var changeSubFields = eval(pm.globals.get('bodyChangeSubField'))\r",
-									"var changeMoreFields = eval(pm.globals.get('bodyChangeMoreFields'))\r",
-									"var changeOneFields = eval(pm.globals.get('bodyChangeOneField'))\r",
-									"var headerComplete = eval(pm.globals.get('setHeader'))()\r",
-									"var lodash = require('lodash')\r",
-									"/* Validating positive scenarios to create an engine */\r",
-									"//Default validation: 1. Status code, 2. response header. 3. creation in database , 4. Response time\r",
-									"/* 1 */\r",
-									"pm.test('Status code 201 to create an engine', () => {\r",
-									"    pm.response.to.have.status(201);\r",
-									"})\r",
-									"/* 2 */\r",
-									"pm.test('Response header contains location with id', () => {\r",
-									"    let id = pm.response.headers.get('Location').split('/policies/')[1]\r",
-									"    pm.response.to.be.header('Location', `/policies/${id}`);\r",
-									"})\r",
-									"/* 3 */\r",
-									"let id = pm.response.headers.get('Location').split('/policies/')[1]\r",
-									"let url_get = pm.environment.get('baseUrl') + pm.collectionVariables.get('domain') + `${id}`\r",
-									"let options = {\r",
-									"    method: 'GET',\r",
-									"    url: url_get,\r",
-									"    header: headerComplete\r",
-									"}\r",
-									"pm.sendRequest(options, (err, res) => {\r",
-									"    pm.test('Engine has been created in the database'), () => {\r",
-									"       pm.expect(res).to.have.status(200)\r",
-									"        pm.expect(res.engineId).to.eql(id)\r",
-									"    }\r",
-									"})\r",
-									"/* 4 */\r",
-									"pm.test(\"Response time is less than 5000ms\", () => {\r",
-									"    pm.expect(pm.response.responseTime).to.be.below(5000);\r",
-									"});\r",
-									"\r",
-									"/* Validating cddPanel.bonus */\r",
-									"\r",
-									"var tc_fieldBonus = JSON.parse(pm.collectionVariables.get('tc_cddPanel_fieldBonus'))\r",
-									"\r",
-									"/* 'inexistent', 'number', 'only_space', 'empty', 'no_bonus', 'bonusNull' */\r",
-									"\r",
-									"switch (tc_fieldBonus[i]) {\r",
-									"\r",
-									"    case 'inexistent':\r",
-									"    case 'number' :\r",
-									"    case 'only_space' :\r",
-									"    case 'empty' :\r",
-									"    case 'no_bonus' :\r",
-									"    case 'bonusNull' :\r",
-									"\r",
-									"\r",
-									"}\r",
-									"\r",
-									"/* Validating cddPanel.percent */\r",
-									"\r",
-									"var tc_fieldPercent = JSON.parse(pm.collectionVariables.get('tc_cddPanel_fieldPercent'))\r",
-									"\r",
-									"/* 'floatNumber', 'negativeNumber', 'string','only_space', 'empty', 'no_percent', 'percentNull' */\r",
-									"\r",
-									"switch (tc_fieldPercent[i]) {\r",
-									"\r",
-									"    case 'floatNumber':\r",
-									"    case 'negativeNumber' :\r",
-									"    case 'string' :\r",
-									"    case 'only_space' :\r",
-									"    case 'empty' :\r",
-									"    case 'no_percent' :\r",
-									"    case 'percentNull' :\r",
-									"\r",
-									"\r",
-									"}\r",
-									""
-								],
-								"type": "text/javascript"
-							}
+							"name": "Check cddPanel_fields",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "78b5c77b-e2cd-4a74-a896-44b42056542e",
+										"exec": [
+											"/* Declaring array variable with tests cases for Engines_CddPanel: Field Bonus */\r",
+											"pm.collectionVariables.set('tc_cddPanel_fieldBonus', JSON.stringify(['inexistent', 'number', 'only_space', 'empty', 'no_bonus', 'bonusNull', 'inactive', 'difEngineCDD'\r",
+											"]));\r",
+											"\r",
+											"/* Declaring array variable with tests cases for Engines_CddPanel: Field Percent */\r",
+											"pm.collectionVariables.set('tc_cddPanel_fieldPercent', JSON.stringify(['intNumber', 'floatNumber_3digits', 'negativeNumber', 'string', 'zero', 'only_space', 'empty', 'no_percent', 'percentNull', 'difEngineCDD']));"
+										],
+										"type": "text/javascript"
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"id": "a5b144ed-72c0-4788-9e45-0298b2c119ad",
+										"exec": [
+											"/* Importing variables and functions */\r",
+											"var payloadEngine = JSON.parse(pm.collectionVariables.get('payloadEngine'));\r",
+											"var i = pm.collectionVariables.get('count')\r",
+											"var changeSubFields = eval(pm.globals.get('bodyChangeSubField'))\r",
+											"var changeMoreFields = eval(pm.globals.get('bodyChangeMoreFields'))\r",
+											"var changeOneFields = eval(pm.globals.get('bodyChangeOneField'))\r",
+											"var headerComplete = eval(pm.globals.get('setHeader'))()\r",
+											"var lodash = require('lodash')\r",
+											"/* Validating positive scenarios to create an engine */\r",
+											"//Default validation: 1. Status code, 2. response header. 3. creation in database , 4. Response time\r",
+											"/* 1 */\r",
+											"pm.test('Status code 201 to create an engine', () => {\r",
+											"    pm.response.to.have.status(201);\r",
+											"})\r",
+											"/* 2 */\r",
+											"pm.test('Response header contains location with id', () => {\r",
+											"    let id = pm.response.headers.get('Location').split('/policies/')[1]\r",
+											"    pm.response.to.be.header('Location', `/policies/${id}`);\r",
+											"})\r",
+											"/* 3 */\r",
+											"let id = pm.response.headers.get('Location').split('/policies/')[1]\r",
+											"let url_get = pm.environment.get('baseUrl') + pm.collectionVariables.get('domain') + `${id}`\r",
+											"let options = {\r",
+											"    method: 'GET',\r",
+											"    url: url_get,\r",
+											"    header: headerComplete\r",
+											"}\r",
+											"pm.sendRequest(options, (err, res) => {\r",
+											"    pm.test('Engine has been created in the database'), () => {\r",
+											"       pm.expect(res).to.have.status(200)\r",
+											"        pm.expect(res.engineId).to.eql(id)\r",
+											"    }\r",
+											"})\r",
+											"/* 4 */\r",
+											"pm.test(\"Response time is less than 5000ms\", () => {\r",
+											"    pm.expect(pm.response.responseTime).to.be.below(5000);\r",
+											"});\r",
+											"\r",
+											"/* Validating cddPanel.bonus */\r",
+											"\r",
+											"var tc_fieldBonus = JSON.parse(pm.collectionVariables.get('tc_cddPanel_fieldBonus'))\r",
+											"\r",
+											"/* 'inexistent', 'number', 'only_space', 'empty', 'no_bonus', 'bonusNull' */\r",
+											"\r",
+											"switch (tc_fieldBonus[i]) {\r",
+											"\r",
+											"    case 'inexistent':\r",
+											"    case 'number' :\r",
+											"    case 'only_space' :\r",
+											"    case 'empty' :\r",
+											"    case 'no_bonus' :\r",
+											"    case 'bonusNull' :\r",
+											"\r",
+											"\r",
+											"}\r",
+											"\r",
+											"/* Validating cddPanel.percent */\r",
+											"\r",
+											"var tc_fieldPercent = JSON.parse(pm.collectionVariables.get('tc_cddPanel_fieldPercent'))\r",
+											"\r",
+											"/* 'floatNumber', 'negativeNumber', 'string','only_space', 'empty', 'no_percent', 'percentNull' */\r",
+											"\r",
+											"switch (tc_fieldPercent[i]) {\r",
+											"\r",
+											"    case 'floatNumber':\r",
+											"    case 'negativeNumber' :\r",
+											"    case 'string' :\r",
+											"    case 'only_space' :\r",
+											"    case 'empty' :\r",
+											"    case 'no_percent' :\r",
+											"    case 'percentNull' :\r",
+											"\r",
+											"\r",
+											"}\r",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"id": "cf9f67ff-aa02-43cb-9e7d-c25ef16e6f8a",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": []
+							},
+							"response": []
 						}
 					],
-					"id": "cf9f67ff-aa02-43cb-9e7d-c25ef16e6f8a",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "POST",
-						"header": []
-					},
-					"response": []
+					"id": "550949b1-3683-414d-a0cf-5b9763ce6c0f"
 				},
 				{
 					"name": "Check paymentPlansPanel_fields",
@@ -6717,63 +6710,63 @@
 	],
 	"variable": [
 		{
-			"id": "8e1684f1-cf50-47c6-96f7-4e639dfa151b",
+			"id": "ff03edec-63ec-419e-a872-b79fba32e696",
 			"key": "domain",
 			"value": "/financing/offer/v1"
 		},
 		{
-			"id": "70f6ad1d-eaf2-426d-b5a6-99471b33a990",
+			"id": "90dc654f-04a9-4c0d-8db0-30826563833a",
 			"key": "ignore_collectionScript",
 			"value": ""
 		},
 		{
-			"id": "4670bde0-907c-409f-873f-8e83752e429e",
+			"id": "73e16638-25bc-4b65-869a-c7e296d7b332",
 			"key": "count",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "217b675f-3093-4dbd-b5de-102d7bba3355",
+			"id": "31182adf-c906-4875-9e9c-9c2e071b989b",
 			"key": "controlAuth",
 			"value": ""
 		},
 		{
-			"id": "c3257937-b595-4bb2-bcff-44afb55759f8",
+			"id": "2e397b97-e07b-405e-9862-d3d970a3e36a",
 			"key": "payloadEngine",
 			"value": ""
 		},
 		{
-			"id": "fee57412-634b-4edf-8e09-38d2a9f85991",
+			"id": "fdf76a68-8fca-404c-8512-16d2c0a03ec9",
 			"key": "tc_identifierPainel_fieldEngineType",
 			"value": ""
 		},
 		{
-			"id": "1d1d704f-74fa-44b1-92ff-a64633d36d74",
+			"id": "b18d1432-8906-4fa5-8264-400192548d5f",
 			"key": "tc_identifierPainel_fieldLine",
 			"value": ""
 		},
 		{
-			"id": "c0665332-9c49-49c6-89de-3e2831889f06",
+			"id": "8d33be8f-ffd3-4439-ae5d-b45b9fc6d26c",
 			"key": "tc_identifierPainel_fieldStartDate",
 			"value": ""
 		},
 		{
-			"id": "3a62c5bd-4350-47d7-b4c9-5a94e06985e7",
+			"id": "44d52200-37a1-4391-8831-a15cee803388",
 			"key": "tc_identifierPainel_fieldEndDate",
 			"value": ""
 		},
 		{
-			"id": "b407444f-2cfc-4d5a-8fdf-f5e37077dc7b",
+			"id": "4430df13-7818-4335-8b2a-0e5fe056eefb",
 			"key": "tc_identifierPainel_fieldPaymentPlanCategoryIds",
 			"value": ""
 		},
 		{
-			"id": "f3289ec6-ece5-4f37-861f-2dae717298ca",
+			"id": "349e8130-6622-470f-9416-295c8260bfe2",
 			"key": "tc_identifierPainel_fieldCallCondition",
 			"value": ""
 		},
 		{
-			"id": "1febc094-3487-45ee-8b4e-a64c4b1b9626",
+			"id": "92272969-f38c-4ef8-90c0-538ff2a9c795",
 			"key": "tc_identifierPainel_fieldIntegrationChannelIds",
 			"value": ""
 		}
