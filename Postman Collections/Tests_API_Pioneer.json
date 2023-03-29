@@ -4427,10 +4427,10 @@
 											"]));\r",
 											"\r",
 											"/* Declaring array variable with tests cases for Engines_EngineReturnsPanel: Field MinMonthlyBankRatePercent */\r",
-											"pm.collectionVariables.set('engineReturnsPanel_fieldMinMonthlyBankRatePercent', JSON.stringify(['intNumber', 'floatNumber_5digits', 'negativeNumber', 'string', 'zero', 'only_space', 'empty', 'no_minMonthlyBank', 'minMonthlyBankNull', 'difEngineMinBankRate']));\r",
+											"pm.collectionVariables.set('engineReturnsPanel_fieldMinMonthlyBankRatePercent', JSON.stringify(['intNumber', 'floatNumber_5digits', 'negativeNumber', 'string', 'zero', 'only_space', 'empty', 'limit', 'no_minMonthlyBank', 'minMonthlyBankNull', 'difEngineMinBankRate']));\r",
 											"\r",
 											"/* Declaring array variable with tests cases for Engines_EngineReturnsPanel: Field MaxMonthlyClientRatePercent */\r",
-											"pm.collectionVariables.set('engineReturnsPanel_fieldMaxMonthlyClientRatePercent', JSON.stringify(['intNumber', 'floatNumber_5digits', 'negativeNumber', 'string', 'zero', 'only_space', 'empty', 'no_maxMonthlyClient', 'maxMonthlyClientNull', 'difEngineMaxClientRate']));\r",
+											"pm.collectionVariables.set('engineReturnsPanel_fieldMaxMonthlyClientRatePercent', JSON.stringify(['intNumber', 'floatNumber_5digits', 'negativeNumber', 'string', 'zero', 'only_space', 'empty', 'limit', 'no_maxMonthlyClient', 'maxMonthlyClientNull', 'difEngineMaxClientRate']));\r",
 											"\r",
 											"/* Declaring array variable with tests cases for Engines_EngineReturnsPanel: Field IncreaseDecreasePercent */\r",
 											"pm.collectionVariables.set('engineReturnsPanel_fieldIncreaseDecreasePercent', JSON.stringify(['intNumber', 'floatNumber_5digits', 'negativeNumber', 'bigNUmber', 'string', 'zero', 'only_space', 'empty', 'no_IncreaseDecrease', 'IncreaseDecreaseNull', 'difEngineIncreaseDecrease']));\r",
@@ -4439,13 +4439,13 @@
 											"pm.collectionVariables.set('engineReturnsPanel_fieldPaymentPlanCategory', JSON.stringify(['inexistentId', 'string', 'only_space', 'empty', 'no_paymentPlanCategory', 'paymentPlanCategoryNull', '', 'inactiveId', 'multiplesOptions', 'difEnginepaymentPlanCategory']));\r",
 											"\r",
 											"/* Declaring array variable with tests cases for Engines_EngineReturnsPanel: Field RbpMarginPercent */\r",
-											"pm.collectionVariables.set('engineReturnsPanel_fieldRbpMarginPercent', JSON.stringify(['intNumber', 'floatNumber_5digits', 'negativeNumber', 'string', 'zero', 'only_space', 'empty', 'no_rbpMargin', 'rbpMarginNull', 'difEngineRbpMargin']));\r",
+											"pm.collectionVariables.set('engineReturnsPanel_fieldRbpMarginPercent', JSON.stringify(['intNumber', 'floatNumber_5digits', 'negativeNumber', 'string', 'zero', 'only_space', 'empty', 'limit', 'no_rbpMargin', 'rbpMarginNull', 'difEngineRbpMargin']));\r",
 											"\r",
 											"/* Declaring array variable with tests cases for Engines_EngineReturnsPanel: Field MinRbpFeePercent */\r",
-											"pm.collectionVariables.set('engineReturnsPanel_fieldMinRbpFeePercent', JSON.stringify(['intNumber', 'floatNumber_5digits', 'negativeNumber', 'string', 'zero', 'only_space', 'empty', 'no_RbpFee', 'RbpFeeNull', 'difEngineMinRbpRate']));\r",
+											"pm.collectionVariables.set('engineReturnsPanel_fieldMinRbpFeePercent', JSON.stringify(['intNumber', 'floatNumber_5digits', 'negativeNumber', 'string', 'zero', 'only_space', 'empty', 'limit', 'no_RbpFee', 'RbpFeeNull', 'difEngineMinRbpRate']));\r",
 											"\r",
 											"/* Declaring array variable with tests cases for Engines_EngineReturnsPanel: Field RiskRatePercent */\r",
-											"pm.collectionVariables.set('engineReturnsPanel_fieldRiskRatePercent', JSON.stringify(['intNumber', 'floatNumber_5digits', 'negativeNumber', 'string', 'zero', 'only_space', 'empty', 'no_riskRate', 'riskRateNull', 'difEngineRisk']));"
+											"pm.collectionVariables.set('engineReturnsPanel_fieldRiskRatePercent', JSON.stringify(['intNumber', 'floatNumber_5digits', 'negativeNumber', 'string', 'zero', 'only_space', 'empty', 'limit', 'no_riskRate', 'riskRateNull', 'difEngineRisk']));"
 										],
 										"type": "text/javascript"
 									}
@@ -6739,63 +6739,63 @@
 	],
 	"variable": [
 		{
-			"id": "c2048c9a-9ffc-4bac-9276-df5cc7db837c",
+			"id": "c0bc7f90-6747-49c1-af03-d443005d6e9c",
 			"key": "domain",
 			"value": "/financing/offer/v1"
 		},
 		{
-			"id": "bfd83a8a-dfd2-4243-9ac1-36bfc0dda86a",
+			"id": "b93b0e62-1283-425a-b194-63dcf91b5dcd",
 			"key": "ignore_collectionScript",
 			"value": ""
 		},
 		{
-			"id": "919c3978-d7a1-4422-b08a-1d15ead20e53",
+			"id": "69594997-94e8-4643-9875-1e1a3f0c1ee8",
 			"key": "count",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "aef15744-8506-4081-a57b-c9a46a5afc2e",
+			"id": "b6687004-fd19-430c-9e14-3b2ce05da1f5",
 			"key": "controlAuth",
 			"value": ""
 		},
 		{
-			"id": "afc78c3a-062b-4e28-80d2-9f585de278b6",
+			"id": "541f91b9-00c3-4360-9c65-ab2afdd5e00e",
 			"key": "payloadEngine",
 			"value": ""
 		},
 		{
-			"id": "da8cfb83-280d-4658-8d24-77d4b4084ce5",
+			"id": "73c447e4-df56-4922-9e1a-0a2b36a5ac5e",
 			"key": "tc_identifierPainel_fieldEngineType",
 			"value": ""
 		},
 		{
-			"id": "946dd8c0-a2bf-4e62-afda-e3df01aa2262",
+			"id": "3c34bae4-2918-4bc5-8bbb-312bff7cf237",
 			"key": "tc_identifierPainel_fieldLine",
 			"value": ""
 		},
 		{
-			"id": "b30c4251-296c-4617-8a66-56cb2fcc40a9",
+			"id": "54ff82f0-532e-4b16-970c-b4a99521931c",
 			"key": "tc_identifierPainel_fieldStartDate",
 			"value": ""
 		},
 		{
-			"id": "c1da6739-5f1b-4377-a35b-6b77a54de7a0",
+			"id": "b566d58e-9607-472e-b933-c34b65341245",
 			"key": "tc_identifierPainel_fieldEndDate",
 			"value": ""
 		},
 		{
-			"id": "6badb945-4b2a-4606-ab1c-9dc8b30d7009",
+			"id": "0447c995-2a2a-4e2f-975e-3464c08df4d3",
 			"key": "tc_identifierPainel_fieldPaymentPlanCategoryIds",
 			"value": ""
 		},
 		{
-			"id": "35273fe6-35d1-4dc4-a387-f32bb2d8e4d2",
+			"id": "2da0692f-a797-464e-9abb-d49c7cffe734",
 			"key": "tc_identifierPainel_fieldCallCondition",
 			"value": ""
 		},
 		{
-			"id": "83691459-6718-48b0-95cc-36f463733b2a",
+			"id": "22232ba4-17fc-4cd3-b162-d7046b326a97",
 			"key": "tc_identifierPainel_fieldIntegrationChannelIds",
 			"value": ""
 		}
