@@ -4840,8 +4840,8 @@
 									"script": {
 										"id": "78b5c77b-e2cd-4a74-a896-44b42056542e",
 										"exec": [
-											"/* Declaring array variable with tests cases for Engines_RenovationPanel: Field Renovation */\r",
-											"pm.collectionVariables.set('tc_renovationPanel_fieldRenovaction', JSON.stringify(['string', 'number', 'specialCharacter', 'only_space', 'empty', 'no_renovation', 'renovationNull']));\r",
+											"/* Declaring array variable with tests cases for Engines_RenovationPanel: Field Remunerationsn */\r",
+											"pm.collectionVariables.set('tc_renovationPanel_fieldRemunerationsId', JSON.stringify(['string', 'number', 'specialCharacter', 'only_space', 'empty', 'no_remunerationsId', 'remunerationsIdNull']));\r",
 											""
 										],
 										"type": "text/javascript"
@@ -4888,7 +4888,42 @@
 											"/* 4 */\r",
 											"pm.test(\"Response time is less than 5000ms\", () => {\r",
 											"    pm.expect(pm.response.responseTime).to.be.below(5000);\r",
-											"});"
+											"});\r",
+											"\r",
+											"/* Validating renovationPanel.renovation */\r",
+											"var tc_fieldRenovation = JSON.parse(pm.collectionVariables.get('tc_renovationPanel_fieldRenovation'))\r",
+											"/* string', 'number', 'specialCharacter', 'only_space', 'empty', 'no_renovation', 'renovationNull*/\r",
+											"switch (tc_fieldRenovation[i]) {\r",
+											"    case 'string':\r",
+											"       pm.sendRequest({\r",
+											"            method: pm.request.method.toString(),\r",
+											"            url: pm.request.url.toString(),\r",
+											"            headers: headerComplete,\r",
+											"            body: changeOneFields(payloadEngine, \"renovation\", pm.variables.replaceIn('{{$randomWord}}'))\r",
+											"        }, (err, res) => {\r",
+											"            pm.test('Status 400 for string line', () => {\r",
+											"                pm.expect(res).to.be.equal(400);\r",
+											"                //VALIDAR MENSAGEM\r",
+											"            })\r",
+											"        })\r",
+											"        i++;\r",
+											"        pm.collectionVariables.set('count', i);\r",
+											"\r",
+											"    case 'number':\r",
+											"       pm.sendRequest({\r",
+											"            method: pm.request.method.toString(),\r",
+											"            url: pm.request.url.toString(),\r",
+											"            headers: headerComplete,\r",
+											"            body: changeOneFields(payloadEngine, \"renovation\", pm.variables.replaceIn('{{$randomWord}}'))\r",
+											"        }, (err, res) => {\r",
+											"            pm.test('Status 400 for string line', () => {\r",
+											"                pm.expect(res).to.be.equal(400);\r",
+											"                //VALIDAR MENSAGEM\r",
+											"            })\r",
+											"        })\r",
+											"        i++;\r",
+											"        pm.collectionVariables.set('count', i);    \r",
+											"}"
 										],
 										"type": "text/javascript"
 									}
@@ -6709,63 +6744,63 @@
 	],
 	"variable": [
 		{
-			"id": "3611f4ae-fdc8-4ca0-a1ce-54e302e5b044",
+			"id": "506c567a-32c5-4ce5-8db6-22c20f977b9e",
 			"key": "domain",
 			"value": "/financing/offer/v1"
 		},
 		{
-			"id": "0214e720-883a-4bb0-a001-ea8486679fa1",
+			"id": "a60b605e-e703-4789-bd88-307a09347039",
 			"key": "ignore_collectionScript",
 			"value": ""
 		},
 		{
-			"id": "27466f4e-5b6d-4a55-8484-9c1edb6fac9f",
+			"id": "f3af3ae9-52c6-4210-8254-6ef732df3eb1",
 			"key": "count",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "0aa0fd19-217b-4df6-b850-23af8889b94b",
+			"id": "a4db9ff4-8a27-488a-9ae7-a3d2cc8b15eb",
 			"key": "controlAuth",
 			"value": ""
 		},
 		{
-			"id": "bb29fed3-af19-4532-a6b4-477dfbaed48e",
+			"id": "b1e012cb-2d61-4ff9-8565-0ca3dee0f986",
 			"key": "payloadEngine",
 			"value": ""
 		},
 		{
-			"id": "1ca2568d-706d-45d8-bfd9-d9cdb097cf0f",
+			"id": "0781b10e-64eb-4de7-93f7-5ceabf96a7a6",
 			"key": "tc_identifierPainel_fieldEngineType",
 			"value": ""
 		},
 		{
-			"id": "e2dabc88-e66d-41e5-a585-0597f9d55d7f",
+			"id": "bac819a4-e9b4-4571-b16e-2922c5e98075",
 			"key": "tc_identifierPainel_fieldLine",
 			"value": ""
 		},
 		{
-			"id": "8a6a7c8a-3526-42e5-8d61-4d5d19b3042b",
+			"id": "3c89e4f0-a414-4ee2-87c1-8997563811e5",
 			"key": "tc_identifierPainel_fieldStartDate",
 			"value": ""
 		},
 		{
-			"id": "0f0dbdc3-026b-409d-90e4-b5d44b76112f",
+			"id": "624bcccc-c66e-4f35-ac2f-e6ba34906db4",
 			"key": "tc_identifierPainel_fieldEndDate",
 			"value": ""
 		},
 		{
-			"id": "905138f1-507a-4b30-9c9c-d9cb3043cd46",
+			"id": "996d7515-0fd6-4020-8640-86e252a8dfe9",
 			"key": "tc_identifierPainel_fieldPaymentPlanCategoryIds",
 			"value": ""
 		},
 		{
-			"id": "60358035-c426-4850-ae31-d37a2df8ca01",
+			"id": "75ed9b20-6f47-4fc4-8283-9db2befad634",
 			"key": "tc_identifierPainel_fieldCallCondition",
 			"value": ""
 		},
 		{
-			"id": "31394d3e-4f43-4931-b38f-31ad93233cc5",
+			"id": "bdd1d19f-9da2-458a-8f88-15f817906479",
 			"key": "tc_identifierPainel_fieldIntegrationChannelIds",
 			"value": ""
 		}
