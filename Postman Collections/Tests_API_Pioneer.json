@@ -4659,7 +4659,7 @@
 							"response": []
 						},
 						{
-							"name": "Check crmListPanel_fields",
+							"name": "Camila - Check crmListPanel_fields",
 							"event": [
 								{
 									"listen": "prerequest",
@@ -4984,8 +4984,176 @@
 				},
 				{
 					"name": "Reviewing Pre-requests",
-					"item": [],
+					"item": [
+						{
+							"name": "Check vmePanel_fields",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "78b5c77b-e2cd-4a74-a896-44b42056542e",
+										"exec": [
+											"/* Declaring array variable with tests cases for Engines_VmePanel: Field Vme ReturnType */\r",
+											"pm.collectionVariables.set('tc_vmePanel_fieldsVmeReturnType', JSON.stringify(['floatNumber', 'negativeNumber', 'string','only_space', 'empty', 'no_vmeReturnType', 'vmeReturnTypeNull']));\r",
+											"\r",
+											"/* Declaring array variable with tests cases for Engines_VmePanel: Field Factory Subsidy */\r",
+											"pm.collectionVariables.set('tc_vmePanel_fieldsFactorySubsidy', JSON.stringify(['engineVME','floatNumber_12digits', 'negativeNumber', 'string', 'zero', 'only_space', 'empty', 'no_factorySubsidy', 'factorySubsidyNull']));\r",
+											"\r",
+											"/* Declaring array variable with tests cases for Engines_VmePanel: Field Vendor Subsidy */\r",
+											"pm.collectionVariables.set('tc_vmePanel_fieldsVendorSubsidy', JSON.stringify(['engineVME','floatNumber_5digits', 'negativeNumber', 'string', 'zero', 'only_space', 'empty', 'no_subsidy', 'subsidyNull']));\r",
+											"\r",
+											"/* Declaring array variable with tests cases for Engines_VmePanel: Field Third Party Subsidy */\r",
+											"pm.collectionVariables.set('tc_vmePanel_fieldsThirdPartySubsidy', JSON.stringify(['engineVME','floatNumber_12digits', 'negativeNumber', 'string', 'zero', 'only_space', 'empty', 'no_subsidy', 'subsidyNull']));\r",
+											"\r",
+											"\r",
+											"/* Declaring array variable with tests cases for Engines_VmePanel: Field Third Party Subsidy */\r",
+											"pm.collectionVariables.set('tc_vmePanel_fieldsThirdPartySubsidy', JSON.stringify(['engineVME',,'floatNumber_5digits', 'negativeNumber', 'string', 'zero', 'only_space', 'empty', 'no_subsidy', 'subsidyNull']));\r",
+											"\r",
+											"\r",
+											"/* Declaring array variable with tests cases for Engines_VmePanel: Field Third Party Subsidy */\r",
+											"pm.collectionVariables.set('tc_vmePanel_fieldsThirdPartySubsidy', JSON.stringify(['engineVME','floatNumber_12digits', 'negativeNumber', 'string', 'zero', 'only_space', 'empty', 'no_subsidy', 'subsidyNull']));\r",
+											"\r",
+											"\r",
+											"/* Declaring array variable with tests cases for Engines_VmePanel: Field Third Party Subsidy */\r",
+											"pm.collectionVariables.set('tc_vmePanel_fieldsThirdPartySubsidy', JSON.stringify(['engineVME','floatNumber_5digits', 'negativeNumber', 'string', 'zero', 'only_space', 'empty', 'no_subsidy', 'subsidyNull']));\r",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"id": "e326e90d-4d59-4996-b515-9c828f92b6cf",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": []
+							},
+							"response": []
+						}
+					],
 					"id": "550949b1-3683-414d-a0cf-5b9763ce6c0f"
+				},
+				{
+					"name": "Check cddPanel_fields",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "78b5c77b-e2cd-4a74-a896-44b42056542e",
+								"exec": [
+									"/* Declaring array variable with tests cases for Engines_CddPanel_fieldsPanel: Field Bonus */\r",
+									"pm.collectionVariables.set('tc_cddPanel_fieldsBonus', JSON.stringify(['inexistent', 'number', 'only_space', 'empty', 'no_bonus', 'bonusNull'\r",
+									"]));\r",
+									"\r",
+									"/* Declaring array variable with tests cases for Engines_CddPanel_fieldsPanel: Field Percent */\r",
+									"pm.collectionVariables.set('tc_cddPanel_fieldsPercent', JSON.stringify(['floatNumber', 'negativeNumber', 'string','only_space', 'empty', 'no_percent', 'percentNull']));\r",
+									"\r",
+									"\r",
+									"\r",
+									"\r",
+									"\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"id": "a5b144ed-72c0-4788-9e45-0298b2c119ad",
+								"exec": [
+									"/* Importing variables and functions */\r",
+									"var payloadEngine = JSON.parse(pm.collectionVariables.get('payloadEngine'));\r",
+									"var i = pm.collectionVariables.get('count')\r",
+									"var changeSubFields = eval(pm.globals.get('bodyChangeSubField'))\r",
+									"var changeMoreFields = eval(pm.globals.get('bodyChangeMoreFields'))\r",
+									"var changeOneFields = eval(pm.globals.get('bodyChangeOneField'))\r",
+									"var headerComplete = eval(pm.globals.get('setHeader'))()\r",
+									"var lodash = require('lodash')\r",
+									"/* Validating positive scenarios to create an engine */\r",
+									"//Default validation: 1. Status code, 2. response header. 3. creation in database , 4. Response time\r",
+									"/* 1 */\r",
+									"pm.test('Status code 201 to create an engine', () => {\r",
+									"    pm.response.to.have.status(201);\r",
+									"})\r",
+									"/* 2 */\r",
+									"pm.test('Response header contains location with id', () => {\r",
+									"    let id = pm.response.headers.get('Location').split('/policies/')[1]\r",
+									"    pm.response.to.be.header('Location', `/policies/${id}`);\r",
+									"})\r",
+									"/* 3 */\r",
+									"let id = pm.response.headers.get('Location').split('/policies/')[1]\r",
+									"let url_get = pm.environment.get('baseUrl') + pm.collectionVariables.get('domain') + `${id}`\r",
+									"let options = {\r",
+									"    method: 'GET',\r",
+									"    url: url_get,\r",
+									"    header: headerComplete\r",
+									"}\r",
+									"pm.sendRequest(options, (err, res) => {\r",
+									"    pm.test('Engine has been created in the database'), () => {\r",
+									"       pm.expect(res).to.have.status(200)\r",
+									"        pm.expect(res.engineId).to.eql(id)\r",
+									"    }\r",
+									"})\r",
+									"/* 4 */\r",
+									"pm.test(\"Response time is less than 5000ms\", () => {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(5000);\r",
+									"});\r",
+									"\r",
+									"/* Validating cddPanel.bonus */\r",
+									"\r",
+									"var tc_fieldBonus = JSON.parse(pm.collectionVariables.get('tc_cddPanel_fieldBonus'))\r",
+									"\r",
+									"/* 'inexistent', 'number', 'only_space', 'empty', 'no_bonus', 'bonusNull' */\r",
+									"\r",
+									"switch (tc_fieldBonus[i]) {\r",
+									"\r",
+									"    case 'inexistent':\r",
+									"    case 'number' :\r",
+									"    case 'only_space' :\r",
+									"    case 'empty' :\r",
+									"    case 'no_bonus' :\r",
+									"    case 'bonusNull' :\r",
+									"\r",
+									"\r",
+									"}\r",
+									"\r",
+									"/* Validating cddPanel.percent */\r",
+									"\r",
+									"var tc_fieldPercent = JSON.parse(pm.collectionVariables.get('tc_cddPanel_fieldPercent'))\r",
+									"\r",
+									"/* 'floatNumber', 'negativeNumber', 'string','only_space', 'empty', 'no_percent', 'percentNull' */\r",
+									"\r",
+									"switch (tc_fieldPercent[i]) {\r",
+									"\r",
+									"    case 'floatNumber':\r",
+									"    case 'negativeNumber' :\r",
+									"    case 'string' :\r",
+									"    case 'only_space' :\r",
+									"    case 'empty' :\r",
+									"    case 'no_percent' :\r",
+									"    case 'percentNull' :\r",
+									"\r",
+									"\r",
+									"}\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"id": "cf9f67ff-aa02-43cb-9e7d-c25ef16e6f8a",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": []
+					},
+					"response": []
 				},
 				{
 					"name": "Check paymentPlansPanel_fields",
@@ -5116,173 +5284,6 @@
 						}
 					],
 					"id": "4f8326b5-3f2d-4e19-9f29-8e5000523a23",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "POST",
-						"header": []
-					},
-					"response": []
-				},
-				{
-					"name": "Check vmePanel_fields",
-					"event": [
-						{
-							"listen": "prerequest",
-							"script": {
-								"id": "78b5c77b-e2cd-4a74-a896-44b42056542e",
-								"exec": [
-									"/* Declaring array variable with tests cases for Engines_VmePanel: Field Vme ReturnType */\r",
-									"pm.collectionVariables.set('tc_vmePanel_fieldsVmeReturnType', JSON.stringify(['floatNumber', 'negativeNumber', 'string','only_space', 'empty', 'no_vmeReturnType', 'vmeReturnTypeNull']));\r",
-									"\r",
-									"/* Declaring array variable with tests cases for Engines_VmePanel: Field Factory Subsidy */\r",
-									"pm.collectionVariables.set('tc_vmePanel_fieldsFactorySubsidy', JSON.stringify(['engineVME','floatNumber_12digits', 'negativeNumber', 'string', 'zero', 'only_space', 'empty', 'no_factorySubsidy', 'factorySubsidyNull']));\r",
-									"\r",
-									"/* Declaring array variable with tests cases for Engines_VmePanel: Field Vendor Subsidy */\r",
-									"pm.collectionVariables.set('tc_vmePanel_fieldsVendorSubsidy', JSON.stringify(['engineVME','floatNumber_5digits', 'negativeNumber', 'string', 'zero', 'only_space', 'empty', 'no_subsidy', 'subsidyNull']));\r",
-									"\r",
-									"/* Declaring array variable with tests cases for Engines_VmePanel: Field Third Party Subsidy */\r",
-									"pm.collectionVariables.set('tc_vmePanel_fieldsThirdPartySubsidy', JSON.stringify(['engineVME','floatNumber_12digits', 'negativeNumber', 'string', 'zero', 'only_space', 'empty', 'no_subsidy', 'subsidyNull']));\r",
-									"\r",
-									"\r",
-									"/* Declaring array variable with tests cases for Engines_VmePanel: Field Third Party Subsidy */\r",
-									"pm.collectionVariables.set('tc_vmePanel_fieldsThirdPartySubsidy', JSON.stringify(['engineVME',,'floatNumber_5digits', 'negativeNumber', 'string', 'zero', 'only_space', 'empty', 'no_subsidy', 'subsidyNull']));\r",
-									"\r",
-									"\r",
-									"/* Declaring array variable with tests cases for Engines_VmePanel: Field Third Party Subsidy */\r",
-									"pm.collectionVariables.set('tc_vmePanel_fieldsThirdPartySubsidy', JSON.stringify(['engineVME','floatNumber_12digits', 'negativeNumber', 'string', 'zero', 'only_space', 'empty', 'no_subsidy', 'subsidyNull']));\r",
-									"\r",
-									"\r",
-									"/* Declaring array variable with tests cases for Engines_VmePanel: Field Third Party Subsidy */\r",
-									"pm.collectionVariables.set('tc_vmePanel_fieldsThirdPartySubsidy', JSON.stringify(['engineVME','floatNumber_5digits', 'negativeNumber', 'string', 'zero', 'only_space', 'empty', 'no_subsidy', 'subsidyNull']));\r",
-									""
-								],
-								"type": "text/javascript"
-							}
-						}
-					],
-					"id": "e326e90d-4d59-4996-b515-9c828f92b6cf",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "POST",
-						"header": []
-					},
-					"response": []
-				},
-				{
-					"name": "Check cddPanel_fields",
-					"event": [
-						{
-							"listen": "prerequest",
-							"script": {
-								"id": "78b5c77b-e2cd-4a74-a896-44b42056542e",
-								"exec": [
-									"/* Declaring array variable with tests cases for Engines_CddPanel_fieldsPanel: Field Bonus */\r",
-									"pm.collectionVariables.set('tc_cddPanel_fieldsBonus', JSON.stringify(['inexistent', 'number', 'only_space', 'empty', 'no_bonus', 'bonusNull'\r",
-									"]));\r",
-									"\r",
-									"/* Declaring array variable with tests cases for Engines_CddPanel_fieldsPanel: Field Percent */\r",
-									"pm.collectionVariables.set('tc_cddPanel_fieldsPercent', JSON.stringify(['floatNumber', 'negativeNumber', 'string','only_space', 'empty', 'no_percent', 'percentNull']));\r",
-									"\r",
-									"\r",
-									"\r",
-									"\r",
-									"\r",
-									"\r",
-									""
-								],
-								"type": "text/javascript"
-							}
-						},
-						{
-							"listen": "test",
-							"script": {
-								"id": "a5b144ed-72c0-4788-9e45-0298b2c119ad",
-								"exec": [
-									"/* Importing variables and functions */\r",
-									"var payloadEngine = JSON.parse(pm.collectionVariables.get('payloadEngine'));\r",
-									"var i = pm.collectionVariables.get('count')\r",
-									"var changeSubFields = eval(pm.globals.get('bodyChangeSubField'))\r",
-									"var changeMoreFields = eval(pm.globals.get('bodyChangeMoreFields'))\r",
-									"var changeOneFields = eval(pm.globals.get('bodyChangeOneField'))\r",
-									"var headerComplete = eval(pm.globals.get('setHeader'))()\r",
-									"var lodash = require('lodash')\r",
-									"/* Validating positive scenarios to create an engine */\r",
-									"//Default validation: 1. Status code, 2. response header. 3. creation in database , 4. Response time\r",
-									"/* 1 */\r",
-									"pm.test('Status code 201 to create an engine', () => {\r",
-									"    pm.response.to.have.status(201);\r",
-									"})\r",
-									"/* 2 */\r",
-									"pm.test('Response header contains location with id', () => {\r",
-									"    let id = pm.response.headers.get('Location').split('/policies/')[1]\r",
-									"    pm.response.to.be.header('Location', `/policies/${id}`);\r",
-									"})\r",
-									"/* 3 */\r",
-									"let id = pm.response.headers.get('Location').split('/policies/')[1]\r",
-									"let url_get = pm.environment.get('baseUrl') + pm.collectionVariables.get('domain') + `${id}`\r",
-									"let options = {\r",
-									"    method: 'GET',\r",
-									"    url: url_get,\r",
-									"    header: headerComplete\r",
-									"}\r",
-									"pm.sendRequest(options, (err, res) => {\r",
-									"    pm.test('Engine has been created in the database'), () => {\r",
-									"       pm.expect(res).to.have.status(200)\r",
-									"        pm.expect(res.engineId).to.eql(id)\r",
-									"    }\r",
-									"})\r",
-									"/* 4 */\r",
-									"pm.test(\"Response time is less than 5000ms\", () => {\r",
-									"    pm.expect(pm.response.responseTime).to.be.below(5000);\r",
-									"});\r",
-									"\r",
-									"/* Validating cddPanel.bonus */\r",
-									"\r",
-									"var tc_fieldBonus = JSON.parse(pm.collectionVariables.get('tc_cddPanel_fieldBonus'))\r",
-									"\r",
-									"/* 'inexistent', 'number', 'only_space', 'empty', 'no_bonus', 'bonusNull' */\r",
-									"\r",
-									"switch (tc_fieldBonus[i]) {\r",
-									"\r",
-									"    case 'inexistent':\r",
-									"    case 'number' :\r",
-									"    case 'only_space' :\r",
-									"    case 'empty' :\r",
-									"    case 'no_bonus' :\r",
-									"    case 'bonusNull' :\r",
-									"\r",
-									"\r",
-									"}\r",
-									"\r",
-									"/* Validating cddPanel.percent */\r",
-									"\r",
-									"var tc_fieldPercent = JSON.parse(pm.collectionVariables.get('tc_cddPanel_fieldPercent'))\r",
-									"\r",
-									"/* 'floatNumber', 'negativeNumber', 'string','only_space', 'empty', 'no_percent', 'percentNull' */\r",
-									"\r",
-									"switch (tc_fieldPercent[i]) {\r",
-									"\r",
-									"    case 'floatNumber':\r",
-									"    case 'negativeNumber' :\r",
-									"    case 'string' :\r",
-									"    case 'only_space' :\r",
-									"    case 'empty' :\r",
-									"    case 'no_percent' :\r",
-									"    case 'percentNull' :\r",
-									"\r",
-									"\r",
-									"}\r",
-									""
-								],
-								"type": "text/javascript"
-							}
-						}
-					],
-					"id": "cf9f67ff-aa02-43cb-9e7d-c25ef16e6f8a",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -6617,63 +6618,63 @@
 	],
 	"variable": [
 		{
-			"id": "dd86a106-fa8e-4989-8d8b-9f8b7ecd048d",
+			"id": "31eaeb87-fddc-48cc-87e7-39028f55a8a3",
 			"key": "domain",
 			"value": "/financing/offer/v1"
 		},
 		{
-			"id": "c8ad3a2e-e91c-4c17-9ebc-3a0902b2e105",
+			"id": "05ead0b1-8869-4a06-ba52-670e7cec687b",
 			"key": "ignore_collectionScript",
 			"value": ""
 		},
 		{
-			"id": "2823ea6f-834a-437d-bd86-ed46d584136c",
+			"id": "988a3445-6cb9-4b47-8b02-ea34297e246a",
 			"key": "count",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "262c469c-4a6d-4c30-b739-8a8390a0c8b9",
+			"id": "a1c1fb42-b45d-4da7-8c2d-947d045d2a93",
 			"key": "controlAuth",
 			"value": ""
 		},
 		{
-			"id": "fcd739f8-59c6-4045-a80a-7d289ff61d52",
+			"id": "ed88ddf2-9cb0-4410-8237-0243a6e9bb08",
 			"key": "payloadEngine",
 			"value": ""
 		},
 		{
-			"id": "dd8b6cc6-2f2b-4d66-b7c9-d3bc35411484",
+			"id": "838cb1b3-3484-4e66-800b-a5e5242a35fa",
 			"key": "tc_identifierPainel_fieldEngineType",
 			"value": ""
 		},
 		{
-			"id": "abff796f-1700-426d-8a10-83d35eae5fe0",
+			"id": "bd86b1be-e3c1-4812-9888-44f7643c2cec",
 			"key": "tc_identifierPainel_fieldLine",
 			"value": ""
 		},
 		{
-			"id": "7eacbaec-0481-46c8-bf34-9714ffbcecd9",
+			"id": "89e39b43-e33a-4da2-bb9b-980b5f5d758c",
 			"key": "tc_identifierPainel_fieldStartDate",
 			"value": ""
 		},
 		{
-			"id": "e3bf992f-1235-4e2e-a2c9-ba49afef451a",
+			"id": "f6b53b0e-05f0-418c-b173-0f928ef1c962",
 			"key": "tc_identifierPainel_fieldEndDate",
 			"value": ""
 		},
 		{
-			"id": "5a346c7e-b0c8-4ab4-9316-a6befbeb1286",
+			"id": "06f8bcbd-590c-4b0b-b2da-d1a0ba0f8cd3",
 			"key": "tc_identifierPainel_fieldPaymentPlanCategoryIds",
 			"value": ""
 		},
 		{
-			"id": "404bd0b4-1320-43bd-9fd1-1a3de9277e4e",
+			"id": "632a137b-9530-4e07-9794-09be00457496",
 			"key": "tc_identifierPainel_fieldCallCondition",
 			"value": ""
 		},
 		{
-			"id": "b4fad5a4-ee41-446b-b57f-2392bd9d10ca",
+			"id": "a310ace4-b1db-4abe-9396-bf762265f479",
 			"key": "tc_identifierPainel_fieldIntegrationChannelIds",
 			"value": ""
 		}
