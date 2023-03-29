@@ -4013,6 +4013,501 @@
 							"response": []
 						},
 						{
+							"name": "Check vehiclesPanel_fields",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "78b5c77b-e2cd-4a74-a896-44b42056542e",
+										"exec": [
+											"/* Declaring array variable with tests cases for Engines_VehiclesPanel: Attribute FilterCategory */\r",
+											"pm.collectionVariables.set('tc_vehiclesPanel_attributeFilterCategory', JSON.stringify(['inexistent', 'number', 'specialCharacter', 'only_space', 'empty', 'no_filteCategory', 'filteCategoryNull', 'multiplesOptions']));\r",
+											"\r",
+											"/* Declaring array variable with tests cases for Engines_VehiclesPanel: Field BrandId */\r",
+											"pm.collectionVariables.set('tc_vehiclesPanel_fieldBrandId', JSON.stringify(['inexistentId', 'string', 'only_space', 'empty', 'no_brandId', 'brandIdNull', 'inactiveId', 'multiplesOptions']));\r",
+											"\r",
+											"/* Declaring array variable with tests cases for Engines_VehiclesPanel: Field ModelId */\r",
+											"pm.collectionVariables.set('tc_vehiclesPanel_fieldModelId', JSON.stringify(['inexistentId', 'string', 'only_space', 'empty', 'noModel_noBrand', 'noModel_withBrand', 'modelNull_BrandNull', 'modelNull_withBrand', 'only_model', 'modelFromAnotherBrand', 'inactiveId', 'multiplesOptions']));\r",
+											"\r",
+											"/* Declaring array variable with tests cases for Engines_VehiclesPanel: Field VersionId */\r",
+											"pm.collectionVariables.set('tc_vehiclesPanel_fieldVersionId', JSON.stringify(['inexistentId', 'string', 'only_space', 'empty', 'noVersion_noModel', 'noVersion_withModel', 'versionNull_modelNull', 'versionNull_withModel', 'version_noModel_withBrand', 'only_version', 'versionFromAnotherModel', 'inactiveId', 'multiplesOptions']));\r",
+											"\r",
+											"/* Declaring array variable with tests cases for Engines_VehiclesPanel: Field Situation */\r",
+											"pm.collectionVariables.set('tc_vehiclesPanel_fieldSituation', JSON.stringify(['inexistent', 'number', 'only_space', 'empty', 'no_situation', 'situationNull', 'multiplesOptions']));\r",
+											""
+										],
+										"type": "text/javascript"
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"id": "dfacc6bc-7629-4889-a793-7be6d3360485",
+										"exec": [
+											"/* Declaring array variable with tests cases for Engines_EligibleVehiclesPanel: Field Dealership Bond Type */\r",
+											"pm.collectionVariables.set('tc_eligibleVehiclesPanel_fieldDealershipBondType', JSON.stringify(['inexistent', 'number', 'only_space', 'empty', 'no_dealershipBondType', 'dealershipBondTypeNull']));\r",
+											"\r",
+											"/* Declaring array variable with tests cases for Engines_EligibleVehiclesPanel: Field Dealership Id */\r",
+											"pm.collectionVariables.set('tc_eligibleVehiclesPanel_fieldDealership', JSON.stringify(['dealershipBondType_obligatory','inexistent', 'number', 'only_space', 'empty', 'no_dealership', 'dealershipNull' ]));\r",
+											"\r",
+											"/* Declaring array variable with tests cases for Engines_EligibleVehiclesPanel: Field Dealership Group Id */\r",
+											"pm.collectionVariables.set('tc_eligibleVehiclesPanel_fieldDealershipGroupId', JSON.stringify(['inexistent', 'number', 'only_space', 'empty', 'no_DealershipGroupId', 'DealershipGroupIdNull' , 'Dealership_obligatory'\r",
+											"]));\r",
+											"\r",
+											"/* Criar testes para: Somente apresentar as versões que possuam a idade dentro do intervalo definido para ano modelo e ano fabricação, caso estejam preenchidos nos critérios definidos anteriormente.*/\r",
+											"\r",
+											"/* Declaring array variable with tests cases for Engines_EligibleVehiclesPanel: Field situation */\r",
+											"pm.collectionVariables.set('tc_eligibleVehiclesPanel_fieldSituation', JSON.stringify(['inexistent', 'number', 'only_space', 'empty', 'no_situation', 'situationNull' , \r",
+											"]));\r",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"id": "6a78e81e-7eaa-43cf-a631-0404f44d3a78",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": []
+							},
+							"response": []
+						},
+						{
+							"name": "Check servicesPanel_fields",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "2f4e0c5e-0e7a-4e3d-8e92-2a544178a2c8",
+										"exec": [
+											"/* Declaring array variable with tests cases for Engines_ServicesPanel: Field ProductId*/\r",
+											"pm.collectionVariables.set('tc_servicesPanel_fieldProductId', JSON.stringify(['inexistentId', 'string', 'only_space', 'empty', 'no_productId', 'productIdNull', 'inactiveId', 'multiplesOptions']));\r",
+											"\r",
+											"/* Declaring array variable with tests cases for Engines_ServicesPanel: Field SubProductId */\r",
+											"pm.collectionVariables.set('tc_servicesPanel_fieldSubProductId', JSON.stringify(['inexistentId', 'string', 'only_space', 'empty', 'no_subProduct', 'subProductNull', 'only_subProduct', 'subProductFromAnotherProduct', 'inactiveId', 'multiplesOptions']));\r",
+											"\r",
+											"/* Declaring array variable with tests cases for Engines_ServicesPanel: Field PeriodInMonths */\r",
+											"pm.collectionVariables.set('tc_servicesPanel_fieldPeriodInMonths', JSON.stringify(['inexistent', 'string', 'only_space', 'empty', 'no_periodInMonths', 'periodInMonthsNull', 'periodFromAnotherSubproduct', 'periodFromAnotherProduct', 'only_period', 'multiplesOptions']));\r",
+											"\r",
+											"/* Declaring array variable with tests cases for Engines_ServicesPanel: Field Kilometrage */\r",
+											"pm.collectionVariables.set('tc_servicesPanel_fieldskilometrage', JSON.stringify(['inexistent', 'string', 'only_space', 'empty', 'no_kilometrage', 'kilometrageNull', 'kmFromAnotherSubproduct', 'kmFromAnotherProduct', 'only_km', 'multiplesOptions']));"
+										],
+										"type": "text/javascript"
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"id": "5895470b-2617-489a-95e3-c9de27963d0c",
+										"exec": [
+											"/* Importing variables and functions */\r",
+											"var payloadEngine = JSON.parse(pm.collectionVariables.get('payloadEngine'));\r",
+											"var i = pm.collectionVariables.get('count')\r",
+											"var changeSubFields = eval(pm.globals.get('bodyChangeSubField'))\r",
+											"var changeMoreFields = eval(pm.globals.get('bodyChangeMoreFields'))\r",
+											"var changeOneFields = eval(pm.globals.get('bodyChangeOneField'))\r",
+											"var headerComplete = eval(pm.globals.get('setHeader'))()\r",
+											"var lodash = require('lodash')\r",
+											"/* Validating positive scenarios to create an engine */\r",
+											"//Default validation: 1. Status code, 2. response header. 3. creation in database , 4. Response time\r",
+											"/* 1 */\r",
+											"pm.test('Status code 201 to create an engine', () => {\r",
+											"    pm.response.to.have.status(201);\r",
+											"})\r",
+											"/* 2 */\r",
+											"pm.test('Response header contains location with id', () => {\r",
+											"    let id = pm.response.headers.get('Location').split('/policies/')[1]\r",
+											"    pm.response.to.be.header('Location', `/policies/${id}`);\r",
+											"})\r",
+											"/* 3 */\r",
+											"let id = pm.response.headers.get('Location').split('/policies/')[1]\r",
+											"let url_get = pm.environment.get('baseUrl') + pm.collectionVariables.get('domain') + `${id}`\r",
+											"let options = {\r",
+											"    method: 'GET',\r",
+											"    url: url_get,\r",
+											"    header: headerComplete\r",
+											"}\r",
+											"pm.sendRequest(options, (err, res) => {\r",
+											"    pm.test('Engine has been created in the database'), () => {\r",
+											"       pm.expect(res).to.have.status(200)\r",
+											"        pm.expect(res.engineId).to.eql(id)\r",
+											"    }\r",
+											"})\r",
+											"/* 4 */\r",
+											"pm.test(\"Response time is less than 5000ms\", () => {\r",
+											"    pm.expect(pm.response.responseTime).to.be.below(5000);\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"id": "c9cc868d-2cab-458c-a5c5-e634129bdd75",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": []
+							},
+							"response": []
+						},
+						{
+							"name": "Camila - Check insurancePanel_fields",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "78b5c77b-e2cd-4a74-a896-44b42056542e",
+										"exec": [
+											"/* Declaring array variable with tests cases for Engines_InsurancePanel: Field ProductId*/\r",
+											"pm.collectionVariables.set('tc_insurancePanel_fieldProductId', JSON.stringify(['inexistentId', 'string', 'empty', 'only_space', 'no_productId', 'productIdNull', 'inactiveId', 'multiplesOptions']));\r",
+											"\r",
+											"/* Declaring array variable with tests cases for Engines_InsurancePanel: Field SubProductId */\r",
+											"pm.collectionVariables.set('tc_insurancePanel_fieldSubProductId', JSON.stringify(['inexistentId', 'string', 'only_space', 'empty', 'no_subProduct', 'subProductNull', 'only_subProduct', 'subProductFromAnotherProduct', 'inactiveId', 'multiplesOptions']));\r",
+											"\r",
+											"/* Declaring array variable with tests cases for Engines_InsurancePanel: Field PeriodInMonths */\r",
+											"pm.collectionVariables.set('tc_insurancePanel_fieldPeriodInMonths', JSON.stringify(['inexistent', 'string', 'only_space', 'empty', 'no_periodInMonths', 'periodInMonthsNull', 'periodFromAnotherSubproduct', 'periodFromAnotherProduct', 'only_period', 'multiplesOptions']));\r",
+											""
+										],
+										"type": "text/javascript"
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"id": "202a9979-25da-4ce8-8b0d-12ce4a8f5901",
+										"exec": [
+											"/* Importing variables and functions */\r",
+											"var payloadEngine = JSON.parse(pm.collectionVariables.get('payloadEngine'));\r",
+											"var i = pm.collectionVariables.get('count')\r",
+											"var changeSubFields = eval(pm.globals.get('bodyChangeSubField'))\r",
+											"var changeMoreFields = eval(pm.globals.get('bodyChangeMoreFields'))\r",
+											"var changeOneFields = eval(pm.globals.get('bodyChangeOneField'))\r",
+											"var headerComplete = eval(pm.globals.get('setHeader'))()\r",
+											"var lodash = require('lodash')\r",
+											"/* Validating positive scenarios to create an engine */\r",
+											"//Default validation: 1. Status code, 2. response header. 3. creation in database , 4. Response time\r",
+											"/* 1 */\r",
+											"pm.test('Status code 201 to create an engine', () => {\r",
+											"    pm.response.to.have.status(201);\r",
+											"})\r",
+											"/* 2 */\r",
+											"pm.test('Response header contains location with id', () => {\r",
+											"    let id = pm.response.headers.get('Location').split('/policies/')[1]\r",
+											"    pm.response.to.be.header('Location', `/policies/${id}`);\r",
+											"})\r",
+											"/* 3 */\r",
+											"let id = pm.response.headers.get('Location').split('/policies/')[1]\r",
+											"let url_get = pm.environment.get('baseUrl') + pm.collectionVariables.get('domain') + `${id}`\r",
+											"let options = {\r",
+											"    method: 'GET',\r",
+											"    url: url_get,\r",
+											"    header: headerComplete\r",
+											"}\r",
+											"pm.sendRequest(options, (err, res) => {\r",
+											"    pm.test('Engine has been created in the database'), () => {\r",
+											"       pm.expect(res).to.have.status(200)\r",
+											"        pm.expect(res.engineId).to.eql(id)\r",
+											"    }\r",
+											"})\r",
+											"/* 4 */\r",
+											"pm.test(\"Response time is less than 5000ms\", () => {\r",
+											"    pm.expect(pm.response.responseTime).to.be.below(5000);\r",
+											"});\r",
+											"\r",
+											"\r",
+											"/* Validating insurancePanel.productId */\r",
+											"\r",
+											"var tc_fieldProductId = JSON.parse(pm.collectionVariables.get('tc_insurancePanel_fieldProductId'))\r",
+											"\r",
+											"/* 'inexistentId', 'string', 'empty', 'only_space', 'no_productId', 'productIdNull', 'inactiveId', 'multiplesOptions' */\r",
+											"\r",
+											"switch (tc_fieldProductId[i]) {\r",
+											"\r",
+											"    case 'inexistentId':\r",
+											"    case 'string' :\r",
+											"    case 'empty' :\r",
+											"    case 'only_space' :\r",
+											"    case 'no_productId' :\r",
+											"    case 'productIdNull' :\r",
+											"    case 'inactiveId' :\r",
+											"    case 'multiplesOptions' :\r",
+											"\r",
+											"\r",
+											"}\r",
+											"\r",
+											"/* Validating insurancePanel.subProductId */\r",
+											"\r",
+											"var tc_fieldSubProductId = JSON.parse(pm.collectionVariables.get('tc_insurancePanel_fieldSubProductId'))\r",
+											"\r",
+											"/* 'inexistentId', 'string', 'only_space', 'empty', 'no_subProduct', 'subProductNull', 'only_subProduct', 'subProductFromAnotherProduct', 'inactiveId', 'multiplesOptions' */\r",
+											"\r",
+											"switch (tc_fieldProductId[i]) {\r",
+											"\r",
+											"    case 'inexistentId':\r",
+											"    case 'string':\r",
+											"    case 'only_space':\r",
+											"    case 'empty':\r",
+											"    case 'no_productId':\r",
+											"    case 'subProductNull':\r",
+											"    case 'only_subProduct':\r",
+											"    case 'subProductFromAnotherProduct':\r",
+											"    case 'inactiveId':\r",
+											"    case 'multiplesOptions':\r",
+											"\r",
+											"\r",
+											"}\r",
+											"\r",
+											"/* Validating insurancePanel.periodInMonths */\r",
+											"\r",
+											"var tc_fieldPeriodInMonths = JSON.parse(pm.collectionVariables.get('tc_insurancePanel_fieldPeriodInMonths'))\r",
+											"\r",
+											"/* 'inexistent', 'string', 'only_space', 'empty', 'no_periodInMonths', 'periodInMonthsNull', 'periodFromAnotherSubproduct', 'periodFromAnotherProduct', 'only_period', 'multiplesOptions' */\r",
+											"\r",
+											"switch (tc_fieldProductId[i]) {\r",
+											"\r",
+											"    case 'inexistent':\r",
+											"    case 'string':\r",
+											"    case 'only_space':\r",
+											"    case 'empty':\r",
+											"    case 'no_periodInMonths':\r",
+											"    case 'periodInMonthsNull':\r",
+											"    case 'periodFromAnotherSubproduct':\r",
+											"    case 'periodFromAnotherProduct':\r",
+											"    case 'only_period':\r",
+											"    case 'multiplesOptions':\r",
+											"\r",
+											"\r",
+											"}"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"id": "4b9c7412-4621-481a-aab8-b49ea922c3be",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": []
+							},
+							"response": []
+						},
+						{
+							"name": "Ana - Check remunerationsPanel_fields",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "78b5c77b-e2cd-4a74-a896-44b42056542e",
+										"exec": [
+											"/* Declaring array variable with tests cases for Engines_RenovationPanel: Field Remunerationsn */\r",
+											"pm.collectionVariables.set('tc_renovationPanel_fieldRemunerationsId', JSON.stringify(['string', 'number', 'specialCharacter', 'only_space', 'empty', 'no_remunerationsId', 'remunerationsIdNull']));\r",
+											""
+										],
+										"type": "text/javascript"
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"id": "d14b4aba-20f1-41aa-b49d-4afa8425f2fe",
+										"exec": [
+											"/* Importing variables and functions */\r",
+											"var payloadEngine = JSON.parse(pm.collectionVariables.get('payloadEngine'));\r",
+											"var i = pm.collectionVariables.get('count')\r",
+											"var changeSubFields = eval(pm.globals.get('bodyChangeSubField'))\r",
+											"var changeMoreFields = eval(pm.globals.get('bodyChangeMoreFields'))\r",
+											"var changeOneFields = eval(pm.globals.get('bodyChangeOneField'))\r",
+											"var headerComplete = eval(pm.globals.get('setHeader'))()\r",
+											"var lodash = require('lodash')\r",
+											"/* Validating positive scenarios to create an engine */\r",
+											"//Default validation: 1. Status code, 2. response header. 3. creation in database , 4. Response time\r",
+											"/* 1 */\r",
+											"pm.test('Status code 201 to create an engine', () => {\r",
+											"    pm.response.to.have.status(201);\r",
+											"})\r",
+											"/* 2 */\r",
+											"pm.test('Response header contains location with id', () => {\r",
+											"    let id = pm.response.headers.get('Location').split('/policies/')[1]\r",
+											"    pm.response.to.be.header('Location', `/policies/${id}`);\r",
+											"})\r",
+											"/* 3 */\r",
+											"let id = pm.response.headers.get('Location').split('/policies/')[1]\r",
+											"let url_get = pm.environment.get('baseUrl') + pm.collectionVariables.get('domain') + `${id}`\r",
+											"let options = {\r",
+											"    method: 'GET',\r",
+											"    url: url_get,\r",
+											"    header: headerComplete\r",
+											"}\r",
+											"pm.sendRequest(options, (err, res) => {\r",
+											"    pm.test('Engine has been created in the database'), () => {\r",
+											"       pm.expect(res).to.have.status(200)\r",
+											"        pm.expect(res.engineId).to.eql(id)\r",
+											"    }\r",
+											"})\r",
+											"/* 4 */\r",
+											"pm.test(\"Response time is less than 5000ms\", () => {\r",
+											"    pm.expect(pm.response.responseTime).to.be.below(5000);\r",
+											"});\r",
+											"\r",
+											"/* Validating renovationPanel.renovation */\r",
+											"var tc_fieldRenovation = JSON.parse(pm.collectionVariables.get('tc_renovationPanel_fieldRenovation'))\r",
+											"/* string', 'number', 'specialCharacter', 'only_space', 'empty', 'no_renovation', 'renovationNull*/\r",
+											"switch (tc_fieldRenovation[i]) {\r",
+											"    case 'string':\r",
+											"       pm.sendRequest({\r",
+											"            method: pm.request.method.toString(),\r",
+											"            url: pm.request.url.toString(),\r",
+											"            headers: headerComplete,\r",
+											"            body: changeOneFields(payloadEngine, \"renovation\", pm.variables.replaceIn('{{$randomWord}}'))\r",
+											"        }, (err, res) => {\r",
+											"            pm.test('Status 400 for string line', () => {\r",
+											"                pm.expect(res).to.be.equal(400);\r",
+											"                //VALIDAR MENSAGEM\r",
+											"            })\r",
+											"        })\r",
+											"        i++;\r",
+											"        pm.collectionVariables.set('count', i);\r",
+											"\r",
+											"    case 'number':\r",
+											"       pm.sendRequest({\r",
+											"            method: pm.request.method.toString(),\r",
+											"            url: pm.request.url.toString(),\r",
+											"            headers: headerComplete,\r",
+											"            body: changeOneFields(payloadEngine, \"renovation\", pm.variables.replaceIn('{{$randomWord}}'))\r",
+											"        }, (err, res) => {\r",
+											"            pm.test('Status 400 for string line', () => {\r",
+											"                pm.expect(res).to.be.equal(400);\r",
+											"                //VALIDAR MENSAGEM\r",
+											"            })\r",
+											"        })\r",
+											"        i++;\r",
+											"        pm.collectionVariables.set('count', i);    \r",
+											"}"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"id": "bf04c6fb-4e37-4a51-ae58-20388c3d4c0d",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": []
+							},
+							"response": []
+						},
+						{
+							"name": "Check engineReturnsPanel_fields",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "5e21d776-3d27-4308-8929-07ca0b31e15b",
+										"exec": [
+											"/* Declaring array variable with tests cases for Engines_termPanel: Field terms */\r",
+											"pm.collectionVariables.set('tc_termsPanel_fieldTerms', JSON.stringify(['negativeNumber', 'floatNumber', 'zero', 'string', 'only_space', 'empty', 'no_terms', 'termsNull', 'difEngineTerm']));\r",
+											"\r",
+											"/* Declaring array variable with tests cases for Engines_DelaysPanel: Field Delays */\r",
+											"pm.collectionVariables.set('tc_delaysPanel_fieldDelays', JSON.stringify(['negativeNumber', 'floatNumber', 'zero', 'string', 'only_space', 'empty', 'no_delays', 'delaysNull', 'difEngineDelays']));\r",
+											"\r",
+											"/* Declaring array variable with tests cases for Engines_CommissionsPanel: Field CommissionId */\r",
+											"pm.collectionVariables.set('tc_commissionsPanel_fieldCommissionId', JSON.stringify(['inexistentId', 'string', 'only_space', 'empty', 'no_commissionId', 'commissionIdNull', 'inactiveId', 'multiplesOptions', 'difEngineReturn']));\r",
+											"\r",
+											"/* Declaring array variable with tests cases for Engines_RemunerationsPanel: Field RemunerationId */\r",
+											"pm.collectionVariables.set('tc_remunerationsPanel_fieldRemunerationId', JSON.stringify(['inexistentId', 'string', 'only_space', 'empty', 'no_remunerationId', 'remunerationIdNull', 'inactiveId', 'multiplesOptions', 'difEngineRemuneration'\r",
+											"]));\r",
+											"\r",
+											"/* Declaring array variable with tests cases for Engines_EngineReturnsPanel: Field MinMonthlyBankRatePercent */\r",
+											"pm.collectionVariables.set('engineReturnsPanel_fieldMinMonthlyBankRatePercent', JSON.stringify(['intNumber', 'floatNumber_5digits', 'negativeNumber', 'string', 'zero', 'only_space', 'empty', 'no_minMonthlyBank', 'minMonthlyBankNull', 'difEngineMinBankRate']));\r",
+											"\r",
+											"/* Declaring array variable with tests cases for Engines_EngineReturnsPanel: Field MaxMonthlyClientRatePercent */\r",
+											"pm.collectionVariables.set('engineReturnsPanel_fieldMaxMonthlyClientRatePercent', JSON.stringify(['intNumber', 'floatNumber_5digits', 'negativeNumber', 'string', 'zero', 'only_space', 'empty', 'no_maxMonthlyClient', 'maxMonthlyClientNull', 'difEngineMaxClientRate']));\r",
+											"\r",
+											"/* Declaring array variable with tests cases for Engines_EngineReturnsPanel: Field IncreaseDecreasePercent */\r",
+											"pm.collectionVariables.set('engineReturnsPanel_fieldIncreaseDecreasePercent', JSON.stringify(['intNumber', 'floatNumber_5digits', 'negativeNumber', 'bigNUmber', 'string', 'zero', 'only_space', 'empty', 'no_IncreaseDecrease', 'IncreaseDecreaseNull', 'difEngineIncreaseDecrease']));\r",
+											"\r",
+											"/* Declaring array variable with tests cases for Engines_EngineReturnsPanel: Field PaymentPlanCategory */\r",
+											"pm.collectionVariables.set('engineReturnsPanel_fieldPaymentPlanCategory', JSON.stringify(['inexistentId', 'string', 'only_space', 'empty', 'no_paymentPlanCategory', 'paymentPlanCategoryNull', '', 'inactiveId', 'multiplesOptions', 'difEnginepaymentPlanCategory']));\r",
+											"\r",
+											"/* Declaring array variable with tests cases for Engines_EngineReturnsPanel: Field RbpMarginPercent */\r",
+											"pm.collectionVariables.set('engineReturnsPanel_fieldRbpMarginPercent', JSON.stringify(['intNumber', 'floatNumber_5digits', 'negativeNumber', 'string', 'zero', 'only_space', 'empty', 'no_rbpMargin', 'rbpMarginNull', 'difEngineRbpMargin']));\r",
+											"\r",
+											"/* Declaring array variable with tests cases for Engines_EngineReturnsPanel: Field MinRbpFeePercent */\r",
+											"pm.collectionVariables.set('engineReturnsPanel_fieldMinRbpFeePercent', JSON.stringify(['intNumber', 'floatNumber_5digits', 'negativeNumber', 'string', 'zero', 'only_space', 'empty', 'no_RbpFee', 'RbpFeeNull', 'difEngineMinRbpRate']));\r",
+											"\r",
+											"/* Declaring array variable with tests cases for Engines_EngineReturnsPanel: Field RiskRatePercent */\r",
+											"pm.collectionVariables.set('engineReturnsPanel_fieldRiskRatePercent', JSON.stringify(['intNumber', 'floatNumber_5digits', 'negativeNumber', 'string', 'zero', 'only_space', 'empty', 'no_riskRate', 'riskRateNull', 'difEngineRisk']));"
+										],
+										"type": "text/javascript"
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"id": "4b4fec25-897d-4a3f-818d-ba18fcf68ce1",
+										"exec": [
+											"/* Importing variables and functions */\r",
+											"var payloadEngine = JSON.parse(pm.collectionVariables.get('payloadEngine'));\r",
+											"var i = pm.collectionVariables.get('count')\r",
+											"var changeSubFields = eval(pm.globals.get('bodyChangeSubField'))\r",
+											"var changeMoreFields = eval(pm.globals.get('bodyChangeMoreFields'))\r",
+											"var changeOneFields = eval(pm.globals.get('bodyChangeOneField'))\r",
+											"var headerComplete = eval(pm.globals.get('setHeader'))()\r",
+											"var lodash = require('lodash')\r",
+											"/* Validating positive scenarios to create an engine */\r",
+											"//Default validation: 1. Status code, 2. response header. 3. creation in database , 4. Response time\r",
+											"/* 1 */\r",
+											"pm.test('Status code 201 to create an engine', () => {\r",
+											"    pm.response.to.have.status(201);\r",
+											"})\r",
+											"/* 2 */\r",
+											"pm.test('Response header contains location with id', () => {\r",
+											"    let id = pm.response.headers.get('Location').split('/policies/')[1]\r",
+											"    pm.response.to.be.header('Location', `/policies/${id}`);\r",
+											"})\r",
+											"/* 3 */\r",
+											"let id = pm.response.headers.get('Location').split('/policies/')[1]\r",
+											"let url_get = pm.environment.get('baseUrl') + pm.collectionVariables.get('domain') + `${id}`\r",
+											"let options = {\r",
+											"    method: 'GET',\r",
+											"    url: url_get,\r",
+											"    header: headerComplete\r",
+											"}\r",
+											"pm.sendRequest(options, (err, res) => {\r",
+											"    pm.test('Engine has been created in the database'), () => {\r",
+											"       pm.expect(res).to.have.status(200)\r",
+											"        pm.expect(res.engineId).to.eql(id)\r",
+											"    }\r",
+											"})\r",
+											"/* 4 */\r",
+											"pm.test(\"Response time is less than 5000ms\", () => {\r",
+											"    pm.expect(pm.response.responseTime).to.be.below(5000);\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"id": "49222343-d216-41e5-9b9b-0c24b7fad9a2",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": []
+							},
+							"response": []
+						},
+						{
 							"name": "Check dealershipsPanel_fields",
 							"event": [
 								{
@@ -4438,28 +4933,15 @@
 							"response": []
 						},
 						{
-							"name": "Check vehiclesPanel_fields",
+							"name": "Check classifiersPanel_fields",
 							"event": [
 								{
 									"listen": "prerequest",
 									"script": {
 										"id": "78b5c77b-e2cd-4a74-a896-44b42056542e",
 										"exec": [
-											"/* Declaring array variable with tests cases for Engines_VehiclesPanel: Attribute FilterCategory */\r",
-											"pm.collectionVariables.set('tc_vehiclesPanel_attributeFilterCategory', JSON.stringify(['inexistent', 'number', 'specialCharacter', 'only_space', 'empty', 'no_filteCategory', 'filteCategoryNull', 'multiplesOptions']));\r",
-											"\r",
-											"/* Declaring array variable with tests cases for Engines_VehiclesPanel: Field BrandId */\r",
-											"pm.collectionVariables.set('tc_vehiclesPanel_fieldBrandId', JSON.stringify(['inexistentId', 'string', 'only_space', 'empty', 'no_brandId', 'brandIdNull', 'inactiveId', 'multiplesOptions']));\r",
-											"\r",
-											"/* Declaring array variable with tests cases for Engines_VehiclesPanel: Field ModelId */\r",
-											"pm.collectionVariables.set('tc_vehiclesPanel_fieldModelId', JSON.stringify(['inexistentId', 'string', 'only_space', 'empty', 'noModel_noBrand', 'noModel_withBrand', 'modelNull_BrandNull', 'modelNull_withBrand', 'only_model', 'modelFromAnotherBrand', 'inactiveId', 'multiplesOptions']));\r",
-											"\r",
-											"/* Declaring array variable with tests cases for Engines_VehiclesPanel: Field VersionId */\r",
-											"pm.collectionVariables.set('tc_vehiclesPanel_fieldVersionId', JSON.stringify(['inexistentId', 'string', 'only_space', 'empty', 'noVersion_noModel', 'noVersion_withModel', 'versionNull_modelNull', 'versionNull_withModel', 'version_noModel_withBrand', 'only_version', 'versionFromAnotherModel', 'inactiveId', 'multiplesOptions']));\r",
-											"\r",
-											"/* Declaring array variable with tests cases for Engines_VehiclesPanel: Field Situation */\r",
-											"pm.collectionVariables.set('tc_vehiclesPanel_fieldSituation', JSON.stringify(['inexistent', 'number', 'only_space', 'empty', 'no_situation', 'situationNull', 'multiplesOptions']));\r",
-											""
+											"/* Declaring array variable with tests cases for Engines_ClassifiersPanel: Field ClassifierId */\r",
+											"pm.collectionVariables.set('tc_classifiersPanel_fieldClassifierId', JSON.stringify(['inexistentId', 'string', 'only_space', 'empty', 'no_classifierId', 'classifierIdNull', 'inactiveId', 'multiplesOptions']));"
 										],
 										"type": "text/javascript"
 									}
@@ -4467,66 +4949,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "dfacc6bc-7629-4889-a793-7be6d3360485",
-										"exec": [
-											"/* Declaring array variable with tests cases for Engines_EligibleVehiclesPanel: Field Dealership Bond Type */\r",
-											"pm.collectionVariables.set('tc_eligibleVehiclesPanel_fieldDealershipBondType', JSON.stringify(['inexistent', 'number', 'only_space', 'empty', 'no_dealershipBondType', 'dealershipBondTypeNull']));\r",
-											"\r",
-											"/* Declaring array variable with tests cases for Engines_EligibleVehiclesPanel: Field Dealership Id */\r",
-											"pm.collectionVariables.set('tc_eligibleVehiclesPanel_fieldDealership', JSON.stringify(['dealershipBondType_obligatory','inexistent', 'number', 'only_space', 'empty', 'no_dealership', 'dealershipNull' ]));\r",
-											"\r",
-											"/* Declaring array variable with tests cases for Engines_EligibleVehiclesPanel: Field Dealership Group Id */\r",
-											"pm.collectionVariables.set('tc_eligibleVehiclesPanel_fieldDealershipGroupId', JSON.stringify(['inexistent', 'number', 'only_space', 'empty', 'no_DealershipGroupId', 'DealershipGroupIdNull' , 'Dealership_obligatory'\r",
-											"]));\r",
-											"\r",
-											"/* Criar testes para: Somente apresentar as versões que possuam a idade dentro do intervalo definido para ano modelo e ano fabricação, caso estejam preenchidos nos critérios definidos anteriormente.*/\r",
-											"\r",
-											"/* Declaring array variable with tests cases for Engines_EligibleVehiclesPanel: Field situation */\r",
-											"pm.collectionVariables.set('tc_eligibleVehiclesPanel_fieldSituation', JSON.stringify(['inexistent', 'number', 'only_space', 'empty', 'no_situation', 'situationNull' , \r",
-											"]));\r",
-											""
-										],
-										"type": "text/javascript"
-									}
-								}
-							],
-							"id": "6a78e81e-7eaa-43cf-a631-0404f44d3a78",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"method": "POST",
-								"header": []
-							},
-							"response": []
-						},
-						{
-							"name": "Check servicesPanel_fields",
-							"event": [
-								{
-									"listen": "prerequest",
-									"script": {
-										"id": "2f4e0c5e-0e7a-4e3d-8e92-2a544178a2c8",
-										"exec": [
-											"/* Declaring array variable with tests cases for Engines_ServicesPanel: Field ProductId*/\r",
-											"pm.collectionVariables.set('tc_servicesPanel_fieldProductId', JSON.stringify(['inexistentId', 'string', 'only_space', 'empty', 'no_productId', 'productIdNull', 'inactiveId', 'multiplesOptions']));\r",
-											"\r",
-											"/* Declaring array variable with tests cases for Engines_ServicesPanel: Field SubProductId */\r",
-											"pm.collectionVariables.set('tc_servicesPanel_fieldSubProductId', JSON.stringify(['inexistentId', 'string', 'only_space', 'empty', 'no_subProduct', 'subProductNull', 'only_subProduct', 'subProductFromAnotherProduct', 'inactiveId', 'multiplesOptions']));\r",
-											"\r",
-											"/* Declaring array variable with tests cases for Engines_ServicesPanel: Field PeriodInMonths */\r",
-											"pm.collectionVariables.set('tc_servicesPanel_fieldPeriodInMonths', JSON.stringify(['inexistent', 'string', 'only_space', 'empty', 'no_periodInMonths', 'periodInMonthsNull', 'periodFromAnotherSubproduct', 'periodFromAnotherProduct', 'only_period', 'multiplesOptions']));\r",
-											"\r",
-											"/* Declaring array variable with tests cases for Engines_ServicesPanel: Field Kilometrage */\r",
-											"pm.collectionVariables.set('tc_servicesPanel_fieldskilometrage', JSON.stringify(['inexistent', 'string', 'only_space', 'empty', 'no_kilometrage', 'kilometrageNull', 'kmFromAnotherSubproduct', 'kmFromAnotherProduct', 'only_km', 'multiplesOptions']));"
-										],
-										"type": "text/javascript"
-									}
-								},
-								{
-									"listen": "test",
-									"script": {
-										"id": "5895470b-2617-489a-95e3-c9de27963d0c",
+										"id": "84ced646-deb9-435b-bd9d-78036014fe66",
 										"exec": [
 											"/* Importing variables and functions */\r",
 											"var payloadEngine = JSON.parse(pm.collectionVariables.get('payloadEngine'));\r",
@@ -4570,150 +4993,7 @@
 									}
 								}
 							],
-							"id": "c9cc868d-2cab-458c-a5c5-e634129bdd75",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"method": "POST",
-								"header": []
-							},
-							"response": []
-						},
-						{
-							"name": "Camila - Check insurancePanel_fields",
-							"event": [
-								{
-									"listen": "prerequest",
-									"script": {
-										"id": "78b5c77b-e2cd-4a74-a896-44b42056542e",
-										"exec": [
-											"/* Declaring array variable with tests cases for Engines_InsurancePanel: Field ProductId*/\r",
-											"pm.collectionVariables.set('tc_insurancePanel_fieldProductId', JSON.stringify(['inexistentId', 'string', 'empty', 'only_space', 'no_productId', 'productIdNull', 'inactiveId', 'multiplesOptions']));\r",
-											"\r",
-											"/* Declaring array variable with tests cases for Engines_InsurancePanel: Field SubProductId */\r",
-											"pm.collectionVariables.set('tc_insurancePanel_fieldSubProductId', JSON.stringify(['inexistentId', 'string', 'only_space', 'empty', 'no_subProduct', 'subProductNull', 'only_subProduct', 'subProductFromAnotherProduct', 'inactiveId', 'multiplesOptions']));\r",
-											"\r",
-											"/* Declaring array variable with tests cases for Engines_InsurancePanel: Field PeriodInMonths */\r",
-											"pm.collectionVariables.set('tc_insurancePanel_fieldPeriodInMonths', JSON.stringify(['inexistent', 'string', 'only_space', 'empty', 'no_periodInMonths', 'periodInMonthsNull', 'periodFromAnotherSubproduct', 'periodFromAnotherProduct', 'only_period', 'multiplesOptions']));\r",
-											""
-										],
-										"type": "text/javascript"
-									}
-								},
-								{
-									"listen": "test",
-									"script": {
-										"id": "202a9979-25da-4ce8-8b0d-12ce4a8f5901",
-										"exec": [
-											"/* Importing variables and functions */\r",
-											"var payloadEngine = JSON.parse(pm.collectionVariables.get('payloadEngine'));\r",
-											"var i = pm.collectionVariables.get('count')\r",
-											"var changeSubFields = eval(pm.globals.get('bodyChangeSubField'))\r",
-											"var changeMoreFields = eval(pm.globals.get('bodyChangeMoreFields'))\r",
-											"var changeOneFields = eval(pm.globals.get('bodyChangeOneField'))\r",
-											"var headerComplete = eval(pm.globals.get('setHeader'))()\r",
-											"var lodash = require('lodash')\r",
-											"/* Validating positive scenarios to create an engine */\r",
-											"//Default validation: 1. Status code, 2. response header. 3. creation in database , 4. Response time\r",
-											"/* 1 */\r",
-											"pm.test('Status code 201 to create an engine', () => {\r",
-											"    pm.response.to.have.status(201);\r",
-											"})\r",
-											"/* 2 */\r",
-											"pm.test('Response header contains location with id', () => {\r",
-											"    let id = pm.response.headers.get('Location').split('/policies/')[1]\r",
-											"    pm.response.to.be.header('Location', `/policies/${id}`);\r",
-											"})\r",
-											"/* 3 */\r",
-											"let id = pm.response.headers.get('Location').split('/policies/')[1]\r",
-											"let url_get = pm.environment.get('baseUrl') + pm.collectionVariables.get('domain') + `${id}`\r",
-											"let options = {\r",
-											"    method: 'GET',\r",
-											"    url: url_get,\r",
-											"    header: headerComplete\r",
-											"}\r",
-											"pm.sendRequest(options, (err, res) => {\r",
-											"    pm.test('Engine has been created in the database'), () => {\r",
-											"       pm.expect(res).to.have.status(200)\r",
-											"        pm.expect(res.engineId).to.eql(id)\r",
-											"    }\r",
-											"})\r",
-											"/* 4 */\r",
-											"pm.test(\"Response time is less than 5000ms\", () => {\r",
-											"    pm.expect(pm.response.responseTime).to.be.below(5000);\r",
-											"});\r",
-											"\r",
-											"\r",
-											"/* Validating insurancePanel.productId */\r",
-											"\r",
-											"var tc_fieldProductId = JSON.parse(pm.collectionVariables.get('tc_insurancePanel_fieldProductId'))\r",
-											"\r",
-											"/* 'inexistentId', 'string', 'empty', 'only_space', 'no_productId', 'productIdNull', 'inactiveId', 'multiplesOptions' */\r",
-											"\r",
-											"switch (tc_fieldProductId[i]) {\r",
-											"\r",
-											"    case 'inexistentId':\r",
-											"    case 'string' :\r",
-											"    case 'empty' :\r",
-											"    case 'only_space' :\r",
-											"    case 'no_productId' :\r",
-											"    case 'productIdNull' :\r",
-											"    case 'inactiveId' :\r",
-											"    case 'multiplesOptions' :\r",
-											"\r",
-											"\r",
-											"}\r",
-											"\r",
-											"/* Validating insurancePanel.subProductId */\r",
-											"\r",
-											"var tc_fieldSubProductId = JSON.parse(pm.collectionVariables.get('tc_insurancePanel_fieldSubProductId'))\r",
-											"\r",
-											"/* 'inexistentId', 'string', 'only_space', 'empty', 'no_subProduct', 'subProductNull', 'only_subProduct', 'subProductFromAnotherProduct', 'inactiveId', 'multiplesOptions' */\r",
-											"\r",
-											"switch (tc_fieldProductId[i]) {\r",
-											"\r",
-											"    case 'inexistentId':\r",
-											"    case 'string':\r",
-											"    case 'only_space':\r",
-											"    case 'empty':\r",
-											"    case 'no_productId':\r",
-											"    case 'subProductNull':\r",
-											"    case 'only_subProduct':\r",
-											"    case 'subProductFromAnotherProduct':\r",
-											"    case 'inactiveId':\r",
-											"    case 'multiplesOptions':\r",
-											"\r",
-											"\r",
-											"}\r",
-											"\r",
-											"/* Validating insurancePanel.periodInMonths */\r",
-											"\r",
-											"var tc_fieldPeriodInMonths = JSON.parse(pm.collectionVariables.get('tc_insurancePanel_fieldPeriodInMonths'))\r",
-											"\r",
-											"/* 'inexistent', 'string', 'only_space', 'empty', 'no_periodInMonths', 'periodInMonthsNull', 'periodFromAnotherSubproduct', 'periodFromAnotherProduct', 'only_period', 'multiplesOptions' */\r",
-											"\r",
-											"switch (tc_fieldProductId[i]) {\r",
-											"\r",
-											"    case 'inexistent':\r",
-											"    case 'string':\r",
-											"    case 'only_space':\r",
-											"    case 'empty':\r",
-											"    case 'no_periodInMonths':\r",
-											"    case 'periodInMonthsNull':\r",
-											"    case 'periodFromAnotherSubproduct':\r",
-											"    case 'periodFromAnotherProduct':\r",
-											"    case 'only_period':\r",
-											"    case 'multiplesOptions':\r",
-											"\r",
-											"\r",
-											"}"
-										],
-										"type": "text/javascript"
-									}
-								}
-							],
-							"id": "4b9c7412-4621-481a-aab8-b49ea922c3be",
+							"id": "dcb9fcb8-24f4-433b-8f87-34562841af1f",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -4833,286 +5113,6 @@
 							"response": []
 						},
 						{
-							"name": "Ana - Check remunerationsPanel_fields",
-							"event": [
-								{
-									"listen": "prerequest",
-									"script": {
-										"id": "78b5c77b-e2cd-4a74-a896-44b42056542e",
-										"exec": [
-											"/* Declaring array variable with tests cases for Engines_RenovationPanel: Field Remunerationsn */\r",
-											"pm.collectionVariables.set('tc_renovationPanel_fieldRemunerationsId', JSON.stringify(['string', 'number', 'specialCharacter', 'only_space', 'empty', 'no_remunerationsId', 'remunerationsIdNull']));\r",
-											""
-										],
-										"type": "text/javascript"
-									}
-								},
-								{
-									"listen": "test",
-									"script": {
-										"id": "d14b4aba-20f1-41aa-b49d-4afa8425f2fe",
-										"exec": [
-											"/* Importing variables and functions */\r",
-											"var payloadEngine = JSON.parse(pm.collectionVariables.get('payloadEngine'));\r",
-											"var i = pm.collectionVariables.get('count')\r",
-											"var changeSubFields = eval(pm.globals.get('bodyChangeSubField'))\r",
-											"var changeMoreFields = eval(pm.globals.get('bodyChangeMoreFields'))\r",
-											"var changeOneFields = eval(pm.globals.get('bodyChangeOneField'))\r",
-											"var headerComplete = eval(pm.globals.get('setHeader'))()\r",
-											"var lodash = require('lodash')\r",
-											"/* Validating positive scenarios to create an engine */\r",
-											"//Default validation: 1. Status code, 2. response header. 3. creation in database , 4. Response time\r",
-											"/* 1 */\r",
-											"pm.test('Status code 201 to create an engine', () => {\r",
-											"    pm.response.to.have.status(201);\r",
-											"})\r",
-											"/* 2 */\r",
-											"pm.test('Response header contains location with id', () => {\r",
-											"    let id = pm.response.headers.get('Location').split('/policies/')[1]\r",
-											"    pm.response.to.be.header('Location', `/policies/${id}`);\r",
-											"})\r",
-											"/* 3 */\r",
-											"let id = pm.response.headers.get('Location').split('/policies/')[1]\r",
-											"let url_get = pm.environment.get('baseUrl') + pm.collectionVariables.get('domain') + `${id}`\r",
-											"let options = {\r",
-											"    method: 'GET',\r",
-											"    url: url_get,\r",
-											"    header: headerComplete\r",
-											"}\r",
-											"pm.sendRequest(options, (err, res) => {\r",
-											"    pm.test('Engine has been created in the database'), () => {\r",
-											"       pm.expect(res).to.have.status(200)\r",
-											"        pm.expect(res.engineId).to.eql(id)\r",
-											"    }\r",
-											"})\r",
-											"/* 4 */\r",
-											"pm.test(\"Response time is less than 5000ms\", () => {\r",
-											"    pm.expect(pm.response.responseTime).to.be.below(5000);\r",
-											"});\r",
-											"\r",
-											"/* Validating renovationPanel.renovation */\r",
-											"var tc_fieldRenovation = JSON.parse(pm.collectionVariables.get('tc_renovationPanel_fieldRenovation'))\r",
-											"/* string', 'number', 'specialCharacter', 'only_space', 'empty', 'no_renovation', 'renovationNull*/\r",
-											"switch (tc_fieldRenovation[i]) {\r",
-											"    case 'string':\r",
-											"       pm.sendRequest({\r",
-											"            method: pm.request.method.toString(),\r",
-											"            url: pm.request.url.toString(),\r",
-											"            headers: headerComplete,\r",
-											"            body: changeOneFields(payloadEngine, \"renovation\", pm.variables.replaceIn('{{$randomWord}}'))\r",
-											"        }, (err, res) => {\r",
-											"            pm.test('Status 400 for string line', () => {\r",
-											"                pm.expect(res).to.be.equal(400);\r",
-											"                //VALIDAR MENSAGEM\r",
-											"            })\r",
-											"        })\r",
-											"        i++;\r",
-											"        pm.collectionVariables.set('count', i);\r",
-											"\r",
-											"    case 'number':\r",
-											"       pm.sendRequest({\r",
-											"            method: pm.request.method.toString(),\r",
-											"            url: pm.request.url.toString(),\r",
-											"            headers: headerComplete,\r",
-											"            body: changeOneFields(payloadEngine, \"renovation\", pm.variables.replaceIn('{{$randomWord}}'))\r",
-											"        }, (err, res) => {\r",
-											"            pm.test('Status 400 for string line', () => {\r",
-											"                pm.expect(res).to.be.equal(400);\r",
-											"                //VALIDAR MENSAGEM\r",
-											"            })\r",
-											"        })\r",
-											"        i++;\r",
-											"        pm.collectionVariables.set('count', i);    \r",
-											"}"
-										],
-										"type": "text/javascript"
-									}
-								}
-							],
-							"id": "bf04c6fb-4e37-4a51-ae58-20388c3d4c0d",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"method": "POST",
-								"header": []
-							},
-							"response": []
-						},
-						{
-							"name": "Check classifiersPanel_fields",
-							"event": [
-								{
-									"listen": "prerequest",
-									"script": {
-										"id": "78b5c77b-e2cd-4a74-a896-44b42056542e",
-										"exec": [
-											"/* Declaring array variable with tests cases for Engines_ClassifiersPanel: Field ClassifierId */\r",
-											"pm.collectionVariables.set('tc_classifiersPanel_fieldClassifierId', JSON.stringify(['inexistentId', 'string', 'only_space', 'empty', 'no_classifierId', 'classifierIdNull', 'inactiveId', 'multiplesOptions']));"
-										],
-										"type": "text/javascript"
-									}
-								},
-								{
-									"listen": "test",
-									"script": {
-										"id": "84ced646-deb9-435b-bd9d-78036014fe66",
-										"exec": [
-											"/* Importing variables and functions */\r",
-											"var payloadEngine = JSON.parse(pm.collectionVariables.get('payloadEngine'));\r",
-											"var i = pm.collectionVariables.get('count')\r",
-											"var changeSubFields = eval(pm.globals.get('bodyChangeSubField'))\r",
-											"var changeMoreFields = eval(pm.globals.get('bodyChangeMoreFields'))\r",
-											"var changeOneFields = eval(pm.globals.get('bodyChangeOneField'))\r",
-											"var headerComplete = eval(pm.globals.get('setHeader'))()\r",
-											"var lodash = require('lodash')\r",
-											"/* Validating positive scenarios to create an engine */\r",
-											"//Default validation: 1. Status code, 2. response header. 3. creation in database , 4. Response time\r",
-											"/* 1 */\r",
-											"pm.test('Status code 201 to create an engine', () => {\r",
-											"    pm.response.to.have.status(201);\r",
-											"})\r",
-											"/* 2 */\r",
-											"pm.test('Response header contains location with id', () => {\r",
-											"    let id = pm.response.headers.get('Location').split('/policies/')[1]\r",
-											"    pm.response.to.be.header('Location', `/policies/${id}`);\r",
-											"})\r",
-											"/* 3 */\r",
-											"let id = pm.response.headers.get('Location').split('/policies/')[1]\r",
-											"let url_get = pm.environment.get('baseUrl') + pm.collectionVariables.get('domain') + `${id}`\r",
-											"let options = {\r",
-											"    method: 'GET',\r",
-											"    url: url_get,\r",
-											"    header: headerComplete\r",
-											"}\r",
-											"pm.sendRequest(options, (err, res) => {\r",
-											"    pm.test('Engine has been created in the database'), () => {\r",
-											"       pm.expect(res).to.have.status(200)\r",
-											"        pm.expect(res.engineId).to.eql(id)\r",
-											"    }\r",
-											"})\r",
-											"/* 4 */\r",
-											"pm.test(\"Response time is less than 5000ms\", () => {\r",
-											"    pm.expect(pm.response.responseTime).to.be.below(5000);\r",
-											"});"
-										],
-										"type": "text/javascript"
-									}
-								}
-							],
-							"id": "dcb9fcb8-24f4-433b-8f87-34562841af1f",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"method": "POST",
-								"header": []
-							},
-							"response": []
-						},
-						{
-							"name": "Check engineReturnsPanel_fields",
-							"event": [
-								{
-									"listen": "prerequest",
-									"script": {
-										"id": "5e21d776-3d27-4308-8929-07ca0b31e15b",
-										"exec": [
-											"/* Declaring array variable with tests cases for Engines_termPanel: Field terms */\r",
-											"pm.collectionVariables.set('tc_termsPanel_fieldTerms', JSON.stringify(['negativeNumber', 'floatNumber', 'zero', 'string', 'only_space', 'empty', 'no_terms', 'termsNull', 'difEngineTerm']));\r",
-											"\r",
-											"/* Declaring array variable with tests cases for Engines_DelaysPanel: Field Delays */\r",
-											"pm.collectionVariables.set('tc_delaysPanel_fieldDelays', JSON.stringify(['negativeNumber', 'floatNumber', 'zero', 'string', 'only_space', 'empty', 'no_delays', 'delaysNull', 'difEngineDelays']));\r",
-											"\r",
-											"/* Declaring array variable with tests cases for Engines_CommissionsPanel: Field CommissionId */\r",
-											"pm.collectionVariables.set('tc_commissionsPanel_fieldCommissionId', JSON.stringify(['inexistentId', 'string', 'only_space', 'empty', 'no_commissionId', 'commissionIdNull', 'inactiveId', 'multiplesOptions', 'difEngineReturn']));\r",
-											"\r",
-											"/* Declaring array variable with tests cases for Engines_RemunerationsPanel: Field RemunerationId */\r",
-											"pm.collectionVariables.set('tc_remunerationsPanel_fieldRemunerationId', JSON.stringify(['inexistentId', 'string', 'only_space', 'empty', 'no_remunerationId', 'remunerationIdNull', 'inactiveId', 'multiplesOptions', 'difEngineRemuneration'\r",
-											"]));\r",
-											"\r",
-											"/* Declaring array variable with tests cases for Engines_EngineReturnsPanel: Field MinMonthlyBankRatePercent */\r",
-											"pm.collectionVariables.set('engineReturnsPanel_fieldMinMonthlyBankRatePercent', JSON.stringify(['intNumber', 'floatNumber_5digits', 'negativeNumber', 'string', 'zero', 'only_space', 'empty', 'no_minMonthlyBank', 'minMonthlyBankNull', 'difEngineMinBankRate']));\r",
-											"\r",
-											"/* Declaring array variable with tests cases for Engines_EngineReturnsPanel: Field MaxMonthlyClientRatePercent */\r",
-											"pm.collectionVariables.set('engineReturnsPanel_fieldMaxMonthlyClientRatePercent', JSON.stringify(['intNumber', 'floatNumber_5digits', 'negativeNumber', 'string', 'zero', 'only_space', 'empty', 'no_maxMonthlyClient', 'maxMonthlyClientNull', 'difEngineMaxClientRate']));\r",
-											"\r",
-											"/* Declaring array variable with tests cases for Engines_EngineReturnsPanel: Field IncreaseDecreasePercent */\r",
-											"pm.collectionVariables.set('engineReturnsPanel_fieldIncreaseDecreasePercent', JSON.stringify(['intNumber', 'floatNumber_5digits', 'negativeNumber', 'bigNUmber', 'string', 'zero', 'only_space', 'empty', 'no_IncreaseDecrease', 'IncreaseDecreaseNull', 'difEngineIncreaseDecrease']));\r",
-											"\r",
-											"/* Declaring array variable with tests cases for Engines_EngineReturnsPanel: Field PaymentPlanCategory */\r",
-											"pm.collectionVariables.set('engineReturnsPanel_fieldPaymentPlanCategory', JSON.stringify(['inexistentId', 'string', 'only_space', 'empty', 'no_paymentPlanCategory', 'paymentPlanCategoryNull', '', 'inactiveId', 'multiplesOptions', 'difEnginepaymentPlanCategory']));\r",
-											"\r",
-											"/* Declaring array variable with tests cases for Engines_EngineReturnsPanel: Field RbpMarginPercent */\r",
-											"pm.collectionVariables.set('engineReturnsPanel_fieldRbpMarginPercent', JSON.stringify(['intNumber', 'floatNumber_5digits', 'negativeNumber', 'string', 'zero', 'only_space', 'empty', 'no_rbpMargin', 'rbpMarginNull', 'difEngineRbpMargin']));\r",
-											"\r",
-											"/* Declaring array variable with tests cases for Engines_EngineReturnsPanel: Field MinRbpFeePercent */\r",
-											"pm.collectionVariables.set('engineReturnsPanel_fieldMinRbpFeePercent', JSON.stringify(['intNumber', 'floatNumber_5digits', 'negativeNumber', 'string', 'zero', 'only_space', 'empty', 'no_RbpFee', 'RbpFeeNull', 'difEngineMinRbpRate']));\r",
-											"\r",
-											"/* Declaring array variable with tests cases for Engines_EngineReturnsPanel: Field RiskRatePercent */\r",
-											"pm.collectionVariables.set('engineReturnsPanel_fieldRiskRatePercent', JSON.stringify(['intNumber', 'floatNumber_5digits', 'negativeNumber', 'string', 'zero', 'only_space', 'empty', 'no_riskRate', 'riskRateNull', 'difEngineRisk']));"
-										],
-										"type": "text/javascript"
-									}
-								},
-								{
-									"listen": "test",
-									"script": {
-										"id": "4b4fec25-897d-4a3f-818d-ba18fcf68ce1",
-										"exec": [
-											"/* Importing variables and functions */\r",
-											"var payloadEngine = JSON.parse(pm.collectionVariables.get('payloadEngine'));\r",
-											"var i = pm.collectionVariables.get('count')\r",
-											"var changeSubFields = eval(pm.globals.get('bodyChangeSubField'))\r",
-											"var changeMoreFields = eval(pm.globals.get('bodyChangeMoreFields'))\r",
-											"var changeOneFields = eval(pm.globals.get('bodyChangeOneField'))\r",
-											"var headerComplete = eval(pm.globals.get('setHeader'))()\r",
-											"var lodash = require('lodash')\r",
-											"/* Validating positive scenarios to create an engine */\r",
-											"//Default validation: 1. Status code, 2. response header. 3. creation in database , 4. Response time\r",
-											"/* 1 */\r",
-											"pm.test('Status code 201 to create an engine', () => {\r",
-											"    pm.response.to.have.status(201);\r",
-											"})\r",
-											"/* 2 */\r",
-											"pm.test('Response header contains location with id', () => {\r",
-											"    let id = pm.response.headers.get('Location').split('/policies/')[1]\r",
-											"    pm.response.to.be.header('Location', `/policies/${id}`);\r",
-											"})\r",
-											"/* 3 */\r",
-											"let id = pm.response.headers.get('Location').split('/policies/')[1]\r",
-											"let url_get = pm.environment.get('baseUrl') + pm.collectionVariables.get('domain') + `${id}`\r",
-											"let options = {\r",
-											"    method: 'GET',\r",
-											"    url: url_get,\r",
-											"    header: headerComplete\r",
-											"}\r",
-											"pm.sendRequest(options, (err, res) => {\r",
-											"    pm.test('Engine has been created in the database'), () => {\r",
-											"       pm.expect(res).to.have.status(200)\r",
-											"        pm.expect(res.engineId).to.eql(id)\r",
-											"    }\r",
-											"})\r",
-											"/* 4 */\r",
-											"pm.test(\"Response time is less than 5000ms\", () => {\r",
-											"    pm.expect(pm.response.responseTime).to.be.below(5000);\r",
-											"});"
-										],
-										"type": "text/javascript"
-									}
-								}
-							],
-							"id": "49222343-d216-41e5-9b9b-0c24b7fad9a2",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"method": "POST",
-								"header": []
-							},
-							"response": []
-						},
-						{
 							"name": "Check vmePanel_fields",
 							"event": [
 								{
@@ -5172,7 +5172,8 @@
 											"]));\r",
 											"\r",
 											"/* Declaring array variable with tests cases for Engines_CddPanel: Field Percent */\r",
-											"pm.collectionVariables.set('tc_cddPanel_fieldPercent', JSON.stringify(['intNumber', 'floatNumber_3digits', 'negativeNumber', 'string', 'zero', 'only_space', 'empty', 'no_percent', 'percentNull', 'difEngineCDD']));"
+											"pm.collectionVariables.set('tc_cddPanel_fieldPercent', JSON.stringify(['intNumber', 'floatNumber_3digits', 'negativeNumber', 'string', 'zero', 'only_space', 'empty', 'limit', 'no_percent', 'percentNull', 'difEngineCDD']));\r",
+											""
 										],
 										"type": "text/javascript"
 									}
@@ -5271,13 +5272,7 @@
 								"header": []
 							},
 							"response": []
-						}
-					],
-					"id": "ba17796b-d376-4a4f-aeaa-103b123b5580"
-				},
-				{
-					"name": "Reviewing Pre-requests",
-					"item": [
+						},
 						{
 							"name": "Check marketingPanel_fields",
 							"event": [
@@ -5366,6 +5361,11 @@
 							"response": []
 						}
 					],
+					"id": "ba17796b-d376-4a4f-aeaa-103b123b5580"
+				},
+				{
+					"name": "Reviewing Pre-requests",
+					"item": [],
 					"id": "550949b1-3683-414d-a0cf-5b9763ce6c0f"
 				},
 				{
@@ -6739,63 +6739,63 @@
 	],
 	"variable": [
 		{
-			"id": "07275700-ec9f-48ad-b3ed-bf730ef2215d",
+			"id": "ab2a261e-45c6-49a5-b5d9-c8108b47ca3c",
 			"key": "domain",
 			"value": "/financing/offer/v1"
 		},
 		{
-			"id": "4f5f898d-51ee-4607-b2b8-c47b7898d293",
+			"id": "dc9c89f2-bf95-43e3-8fc5-677bd4626697",
 			"key": "ignore_collectionScript",
 			"value": ""
 		},
 		{
-			"id": "2cbc8a67-abf1-4f72-a876-32a2d0137c02",
+			"id": "81c3423d-bf62-4661-a04c-014be587f663",
 			"key": "count",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "d9a45e35-cd8c-4653-84e2-b40f291bec65",
+			"id": "61d33157-b6e2-407f-9d6e-488378e70741",
 			"key": "controlAuth",
 			"value": ""
 		},
 		{
-			"id": "10f7a1bf-d1d9-4376-94dc-7926d92f7a14",
+			"id": "20e7ea78-e4ff-489c-aeea-1964a1a6a1f1",
 			"key": "payloadEngine",
 			"value": ""
 		},
 		{
-			"id": "3b1028b4-2ed9-4183-b234-eb600fd44dd8",
+			"id": "047a1527-f92f-4e66-b5cb-d29a334946e2",
 			"key": "tc_identifierPainel_fieldEngineType",
 			"value": ""
 		},
 		{
-			"id": "7c369841-e60a-430b-b55a-6968198905c7",
+			"id": "b8ebd5cb-a09d-4218-9833-482df658cab0",
 			"key": "tc_identifierPainel_fieldLine",
 			"value": ""
 		},
 		{
-			"id": "aed4e1aa-4bef-4a05-b0fd-0db043569015",
+			"id": "b807cee0-6648-4b8e-bd90-232d1a30f712",
 			"key": "tc_identifierPainel_fieldStartDate",
 			"value": ""
 		},
 		{
-			"id": "a880be91-067d-425c-97f0-7d764c8e3fd8",
+			"id": "136f21ce-b1ff-4260-8b69-b4000b1422de",
 			"key": "tc_identifierPainel_fieldEndDate",
 			"value": ""
 		},
 		{
-			"id": "31b18df4-0c67-410b-bf9c-8d75a233992e",
+			"id": "322c9f33-9510-4ea9-9fac-ce764d9badc9",
 			"key": "tc_identifierPainel_fieldPaymentPlanCategoryIds",
 			"value": ""
 		},
 		{
-			"id": "2463deab-44ef-4402-9008-92b1f1063207",
+			"id": "65e693ff-7393-404e-8cd4-0f273a3da171",
 			"key": "tc_identifierPainel_fieldCallCondition",
 			"value": ""
 		},
 		{
-			"id": "3b33dde8-88e4-4b79-8c7d-a3ae48ad1b4d",
+			"id": "342780bb-2f44-4770-80d6-2572c6963872",
 			"key": "tc_identifierPainel_fieldIntegrationChannelIds",
 			"value": ""
 		}
