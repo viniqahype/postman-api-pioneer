@@ -4579,13 +4579,7 @@
 								"header": []
 							},
 							"response": []
-						}
-					],
-					"id": "ba17796b-d376-4a4f-aeaa-103b123b5580"
-				},
-				{
-					"name": "Reviewing Pre-requests",
-					"item": [
+						},
 						{
 							"name": "Check insurancePanel_fields",
 							"event": [
@@ -4665,6 +4659,11 @@
 							"response": []
 						}
 					],
+					"id": "ba17796b-d376-4a4f-aeaa-103b123b5580"
+				},
+				{
+					"name": "Reviewing Pre-requests",
+					"item": [],
 					"id": "550949b1-3683-414d-a0cf-5b9763ce6c0f"
 				},
 				{
@@ -4675,8 +4674,8 @@
 							"script": {
 								"id": "78b5c77b-e2cd-4a74-a896-44b42056542e",
 								"exec": [
-									"/* Declaring array variable with tests cases for Engines_CrmListPanel: Field Cpf Cnpj */\r",
-									"pm.collectionVariables.set('tc_crmListPanel_fieldCpfCnpj', JSON.stringify(['inexistent_extension','no_crmList', 'crmListNull']));\r",
+									"/* Declaring array variable with tests cases for Engines_CrmListPanel: Field CpfCnpj */\r",
+									"pm.collectionVariables.set('tc_crmListPanel_fieldCpfCnpj', JSON.stringify(['invalidExtension','no_crmList', 'crmListNull']));\r",
 									""
 								],
 								"type": "text/javascript"
@@ -6718,63 +6717,63 @@
 	],
 	"variable": [
 		{
-			"id": "82cfdb50-343c-40ef-bf5d-6a65121f7d86",
+			"id": "32b038e0-882f-40a1-80ac-739bb0a4a864",
 			"key": "domain",
 			"value": "/financing/offer/v1"
 		},
 		{
-			"id": "679371bd-55df-4f82-a4cf-175868ea9f7a",
+			"id": "dba94bcc-4045-4231-a2e5-f169f9462b2f",
 			"key": "ignore_collectionScript",
 			"value": ""
 		},
 		{
-			"id": "a8486930-49ef-47b8-99ff-45300511758c",
+			"id": "35b3b1de-4ad9-4b2f-a571-3138c34a2d27",
 			"key": "count",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "0293e749-92d8-4c31-bf63-8ea3ad9b36c5",
+			"id": "cd55c575-6263-4ab2-8af9-7c614a05da42",
 			"key": "controlAuth",
 			"value": ""
 		},
 		{
-			"id": "ec8643ca-8843-47ac-8683-fda65ba3a5ea",
+			"id": "e8698ca8-3c15-4c52-84cd-698f525b94c2",
 			"key": "payloadEngine",
 			"value": ""
 		},
 		{
-			"id": "72db8ef0-6156-4f21-9747-55904f3cfc90",
+			"id": "d65231ad-253e-4ed6-bfc6-f2a6de2d8c98",
 			"key": "tc_identifierPainel_fieldEngineType",
 			"value": ""
 		},
 		{
-			"id": "c0b8b6cf-35df-4d61-bdb3-220584d15ecd",
+			"id": "49eb06f8-43b0-4b05-b701-1301ddd555de",
 			"key": "tc_identifierPainel_fieldLine",
 			"value": ""
 		},
 		{
-			"id": "d17a5139-770f-416c-ab99-d3980a5d5537",
+			"id": "bf3fc5f0-a77d-4439-bdfd-07474b46e25e",
 			"key": "tc_identifierPainel_fieldStartDate",
 			"value": ""
 		},
 		{
-			"id": "ef80077d-b41c-4105-be6f-90cc34f9e5dc",
+			"id": "b7efb1b7-5f3a-4555-a025-21fdeb86777a",
 			"key": "tc_identifierPainel_fieldEndDate",
 			"value": ""
 		},
 		{
-			"id": "8680ed9e-4168-4860-98a2-da017fedeb14",
+			"id": "ce934cc8-7c13-45a6-ae36-29f4b89e09f1",
 			"key": "tc_identifierPainel_fieldPaymentPlanCategoryIds",
 			"value": ""
 		},
 		{
-			"id": "d96e88c8-599b-47f9-9607-d4ebd30a83aa",
+			"id": "fdc488b4-b79e-4c55-b708-498ad8671e02",
 			"key": "tc_identifierPainel_fieldCallCondition",
 			"value": ""
 		},
 		{
-			"id": "7c7ad275-7b48-418f-9d9e-d1b810c269fb",
+			"id": "86c76322-b74a-45c7-87c9-74819c10c62c",
 			"key": "tc_identifierPainel_fieldIntegrationChannelIds",
 			"value": ""
 		}
