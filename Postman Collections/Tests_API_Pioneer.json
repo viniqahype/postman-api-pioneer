@@ -3926,16 +3926,16 @@
 											"pm.collectionVariables.set('tc_generalCriteriaPanel_fieldComissions', JSON.stringify(['inexistentId', 'string', 'only_space', 'empty', 'no_comissions', 'comissionsNull', 'engineComissions', 'difEngineComissions', 'inactiveId', 'notPublished', 'repeatedMultiplesOptions', 'multiplesOptions']));\r",
 											"\r",
 											"/* Declaring array variable with tests cases for Engines_GeneralCriteriaPanel: Field MinDownPaymentPercent */\r",
-											"pm.collectionVariables.set('tc_generalCriteriaPanel_fieldMinDownPaymentPercent', JSON.stringify(['intNumber', 'floatNumber_5digits', 'negativeNumber', 'string', 'zero', 'only_space', 'empty', 'biggerThenMaxDownPaymentPercent', 'no_min_no_max', 'only_min', 'minDownPaymentPercentNull', 'min_max_equal']));\r",
+											"pm.collectionVariables.set('tc_generalCriteriaPanel_fieldMinDownPaymentPercent', JSON.stringify(['intNumber', 'floatNumber_5digits', 'negativeNumber', 'string', 'zero', 'only_space', 'empty', 'limit', 'biggerThenMaxDownPaymentPercent', 'no_min_no_max', 'only_min', 'minDownPaymentPercentNull', 'min_max_equal']));\r",
 											"\r",
 											"/* Declaring array variable with tests cases for Engines_GeneralCriteriaPanel: Field MaxDownPaymentPercent */\r",
-											"pm.collectionVariables.set('tc_generalCriteriaPanel_fieldMaxDownPaymentPercent', JSON.stringify(['intNumber', 'floatNumber_5digits', 'negativeNumber', 'string', 'zero', 'only_space', 'empty', 'only_max', 'maxDownPaymentPercentNull']));\r",
+											"pm.collectionVariables.set('tc_generalCriteriaPanel_fieldMaxDownPaymentPercent', JSON.stringify(['intNumber', 'floatNumber_5digits', 'negativeNumber', 'string', 'zero', 'only_space', 'empty', 'limit', 'only_max', 'maxDownPaymentPercentNull']));\r",
 											"\r",
 											"/* Declaring array variable with tests cases for Engines_GeneralCriteriaPanel: Field MinLoanAmount */\r",
-											"pm.collectionVariables.set('tc_generalCriteriaPanel_fieldMinLoanAmount', JSON.stringify(['intNumber', 'floatNumber_3digits', 'floatNumber_1digit', 'negativeNumber', 'string', 'zero', 'only_space', 'empty', '>999.999.999,99', 'biggerThenMaxLoanAmount', 'no_min_no_max', 'only_min', 'minLoanAmountNull', 'min_max_equal']));\r",
+											"pm.collectionVariables.set('tc_generalCriteriaPanel_fieldMinLoanAmount', JSON.stringify(['intNumber', 'floatNumber_3digits', 'floatNumber_1digit', 'negativeNumber', 'string', 'zero', 'only_space', 'empty', 'limit', '>999.999.999,99', 'biggerThenMaxLoanAmount', 'no_min_no_max', 'only_min', 'minLoanAmountNull', 'min_max_equal']));\r",
 											"\r",
 											"/* Declaring array variable with tests cases for Engines_GeneralCriteriaPanel: Field MaxLoanAmount  */\r",
-											"pm.collectionVariables.set('tc_generalCriteriaPanel_fieldMaxLoanAmount', JSON.stringify(['intNumber', 'floatNumber_3digits', 'floatNumber_1digit', 'negativeNumber', 'string', 'zero', 'only_space', 'empty', '>999.999.999,99', 'only_max', 'maxLoanAmountNull']));\r",
+											"pm.collectionVariables.set('tc_generalCriteriaPanel_fieldMaxLoanAmount', JSON.stringify(['intNumber', 'floatNumber_3digits', 'floatNumber_1digit', 'negativeNumber', 'string', 'zero', 'only_space', 'empty', 'limit', '>999.999.999,99', 'only_max', 'maxLoanAmountNull']));\r",
 											"\r",
 											"/* Declaring array variable with tests cases for Engines_GeneralCriteriaPanel: Field MinModelRate */\r",
 											"pm.collectionVariables.set('tc_generalCriteriaPanel_fieldMinModelRate', JSON.stringify(['number_3digits', 'floatNumber', 'negativeNumber', 'string', 'zero', 'only_space', 'empty', 'biggerThenMaxModelRate', 'no_min_no_max', 'only_min', 'minModelRateNull', 'min_max_equal']));\r",
@@ -3956,10 +3956,10 @@
 											"pm.collectionVariables.set('tc_generalCriteriaPanel_fieldMaxTerm', JSON.stringify(['number_3digits', 'floatNumber', 'negativeNumber', 'string', 'zero', 'only_space', 'empty', 'only_max', 'maxTermNull']));\r",
 											"\r",
 											"/* Declaring array variable with tests cases for Engines_GeneralCriteriaPanel: Field MinVehiclePrice */\r",
-											"pm.collectionVariables.set('tc_generalCriteriaPanel_fieldMinVehiclePrice', JSON.stringify(['intNumber', 'floatNumber_3digits', 'floatNumber_1digit', 'negativeNumber', 'string', 'zero', 'only_space', 'empty', '>999.999.999,99', 'biggerThenMaxVehiclePrice', 'no_min_no_max', 'only_min', 'minVehiclePriceNull', 'min_max_equal']));\r",
+											"pm.collectionVariables.set('tc_generalCriteriaPanel_fieldMinVehiclePrice', JSON.stringify(['intNumber', 'floatNumber_3digits', 'floatNumber_1digit', 'negativeNumber', 'string', 'zero', 'only_space', 'empty', 'limit', '>999.999.999,99', 'biggerThenMaxVehiclePrice', 'no_min_no_max', 'only_min', 'minVehiclePriceNull', 'min_max_equal']));\r",
 											"\r",
 											"/* Declaring array variable with tests cases for Engines_GeneralCriteriaPanel: Field MaxVehiclePrice */\r",
-											"pm.collectionVariables.set('tc_generalCriteriaPanel_fieldMaxVehiclePrice', JSON.stringify(['intNumber', 'floatNumber_3digits', 'floatNumber_1digit', 'negativeNumber', 'string', 'zero', 'only_space', 'empty', '>999.999.999,99', 'only_max', 'maxVehiclePriceNull']));\r",
+											"pm.collectionVariables.set('tc_generalCriteriaPanel_fieldMaxVehiclePrice', JSON.stringify(['intNumber', 'floatNumber_3digits', 'floatNumber_1digit', 'negativeNumber', 'string', 'zero', 'only_space', 'empty', 'limit', '>999.999.999,99', 'only_max', 'maxVehiclePriceNull']));\r",
 											"\r",
 											"/* Declaring array variable with tests cases for Engines_GeneralCriteriaPanel: Field MinManufactoryVehicleAge */\r",
 											"pm.collectionVariables.set('tc_generalCriteriaPanel_fieldMinManufactoryVehicleAges', JSON.stringify(['number_3digits', 'floatNumber', 'negativeNumber', 'string', 'zero', 'only_space', 'empty', 'biggerThenMaxManufactoryVehicleAge', 'no_min_no_max', 'only_min', 'minManufactoryVehicleAgeNull', 'min_max_equal']));\r",
@@ -6739,63 +6739,63 @@
 	],
 	"variable": [
 		{
-			"id": "ab2a261e-45c6-49a5-b5d9-c8108b47ca3c",
+			"id": "168ba209-4fd7-4e22-86c4-5fc6eab9141d",
 			"key": "domain",
 			"value": "/financing/offer/v1"
 		},
 		{
-			"id": "dc9c89f2-bf95-43e3-8fc5-677bd4626697",
+			"id": "1c6af888-36be-4a0e-9b5c-9edc8f55fe87",
 			"key": "ignore_collectionScript",
 			"value": ""
 		},
 		{
-			"id": "81c3423d-bf62-4661-a04c-014be587f663",
+			"id": "a19a1cd1-8d75-4dd0-8508-a576fa5944e2",
 			"key": "count",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "61d33157-b6e2-407f-9d6e-488378e70741",
+			"id": "83d50a41-8e6e-42ba-b508-e700f0c19505",
 			"key": "controlAuth",
 			"value": ""
 		},
 		{
-			"id": "20e7ea78-e4ff-489c-aeea-1964a1a6a1f1",
+			"id": "f503100b-accb-4863-8665-7d0930866bd7",
 			"key": "payloadEngine",
 			"value": ""
 		},
 		{
-			"id": "047a1527-f92f-4e66-b5cb-d29a334946e2",
+			"id": "e1066e2d-72f5-40be-ac2b-457874220900",
 			"key": "tc_identifierPainel_fieldEngineType",
 			"value": ""
 		},
 		{
-			"id": "b8ebd5cb-a09d-4218-9833-482df658cab0",
+			"id": "f0c6c013-d84d-4f32-8c00-9afc1c1fd62e",
 			"key": "tc_identifierPainel_fieldLine",
 			"value": ""
 		},
 		{
-			"id": "b807cee0-6648-4b8e-bd90-232d1a30f712",
+			"id": "c9daee15-3148-4d45-ab7e-833495b6dcef",
 			"key": "tc_identifierPainel_fieldStartDate",
 			"value": ""
 		},
 		{
-			"id": "136f21ce-b1ff-4260-8b69-b4000b1422de",
+			"id": "7da8fef7-139a-4b75-a304-721fac44345f",
 			"key": "tc_identifierPainel_fieldEndDate",
 			"value": ""
 		},
 		{
-			"id": "322c9f33-9510-4ea9-9fac-ce764d9badc9",
+			"id": "dd7102b0-a80b-4cc2-b141-0d8dcfe4875a",
 			"key": "tc_identifierPainel_fieldPaymentPlanCategoryIds",
 			"value": ""
 		},
 		{
-			"id": "65e693ff-7393-404e-8cd4-0f273a3da171",
+			"id": "461f60af-3d23-4116-a464-c6aba0ed182c",
 			"key": "tc_identifierPainel_fieldCallCondition",
 			"value": ""
 		},
 		{
-			"id": "342780bb-2f44-4770-80d6-2572c6963872",
+			"id": "d2ef41eb-d3a3-48c2-b699-7724bfeeb979",
 			"key": "tc_identifierPainel_fieldIntegrationChannelIds",
 			"value": ""
 		}
