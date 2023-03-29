@@ -4959,79 +4959,6 @@
 					"id": "550949b1-3683-414d-a0cf-5b9763ce6c0f"
 				},
 				{
-					"name": "Check delaysPanel_fields",
-					"event": [
-						{
-							"listen": "prerequest",
-							"script": {
-								"id": "78b5c77b-e2cd-4a74-a896-44b42056542e",
-								"exec": [
-									"/* Declaring array variable with tests cases for Engines_DelaysPanel: Field Delays */\r",
-									"pm.collectionVariables.set('tc_delaysPanel_fieldDelays', JSON.stringify(['inexistent', 'string','negativeNumber', 'only_space', 'empty', 'no_delays', 'delaysNull']));\r",
-									"\r",
-									""
-								],
-								"type": "text/javascript"
-							}
-						},
-						{
-							"listen": "test",
-							"script": {
-								"id": "673fc56d-15b3-4824-abfe-abbf6d336e74",
-								"exec": [
-									"/* Importing variables and functions */\r",
-									"var payloadEngine = JSON.parse(pm.collectionVariables.get('payloadEngine'));\r",
-									"var i = pm.collectionVariables.get('count')\r",
-									"var changeSubFields = eval(pm.globals.get('bodyChangeSubField'))\r",
-									"var changeMoreFields = eval(pm.globals.get('bodyChangeMoreFields'))\r",
-									"var changeOneFields = eval(pm.globals.get('bodyChangeOneField'))\r",
-									"var headerComplete = eval(pm.globals.get('setHeader'))()\r",
-									"var lodash = require('lodash')\r",
-									"/* Validating positive scenarios to create an engine */\r",
-									"//Default validation: 1. Status code, 2. response header. 3. creation in database , 4. Response time\r",
-									"/* 1 */\r",
-									"pm.test('Status code 201 to create an engine', () => {\r",
-									"    pm.response.to.have.status(201);\r",
-									"})\r",
-									"/* 2 */\r",
-									"pm.test('Response header contains location with id', () => {\r",
-									"    let id = pm.response.headers.get('Location').split('/policies/')[1]\r",
-									"    pm.response.to.be.header('Location', `/policies/${id}`);\r",
-									"})\r",
-									"/* 3 */\r",
-									"let id = pm.response.headers.get('Location').split('/policies/')[1]\r",
-									"let url_get = pm.environment.get('baseUrl') + pm.collectionVariables.get('domain') + `${id}`\r",
-									"let options = {\r",
-									"    method: 'GET',\r",
-									"    url: url_get,\r",
-									"    header: headerComplete\r",
-									"}\r",
-									"pm.sendRequest(options, (err, res) => {\r",
-									"    pm.test('Engine has been created in the database'), () => {\r",
-									"       pm.expect(res).to.have.status(200)\r",
-									"        pm.expect(res.engineId).to.eql(id)\r",
-									"    }\r",
-									"})\r",
-									"/* 4 */\r",
-									"pm.test(\"Response time is less than 5000ms\", () => {\r",
-									"    pm.expect(pm.response.responseTime).to.be.below(5000);\r",
-									"});"
-								],
-								"type": "text/javascript"
-							}
-						}
-					],
-					"id": "090e9a73-9272-4fd2-a58d-f821fa15c1be",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "POST",
-						"header": []
-					},
-					"response": []
-				},
-				{
 					"name": "Check paymentPlansPanel_fields",
 					"event": [
 						{
@@ -6717,63 +6644,63 @@
 	],
 	"variable": [
 		{
-			"id": "1bc0e0b2-2946-4251-b75e-f245e374264a",
+			"id": "237a6405-d6a7-4b1e-aa42-4a31317a0d81",
 			"key": "domain",
 			"value": "/financing/offer/v1"
 		},
 		{
-			"id": "441391c1-70cf-4c99-bf1b-b37f85389dd0",
+			"id": "f4dbf6d5-2047-4622-9c87-6e2c8bcd28d7",
 			"key": "ignore_collectionScript",
 			"value": ""
 		},
 		{
-			"id": "163feb67-937e-4470-89a8-626ec8e5f3ff",
+			"id": "7cdb71a8-e9aa-4d03-8452-826f15952d7d",
 			"key": "count",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "cd2e31cd-17cf-4865-8e79-1ebb9e228db2",
+			"id": "e17df0e9-68e6-4e54-b6a0-d0c6677c5998",
 			"key": "controlAuth",
 			"value": ""
 		},
 		{
-			"id": "2879493b-44a8-4221-9b90-d36ba39ab730",
+			"id": "b7ff1a87-bc7a-4ac6-b917-cdfb146a4ccd",
 			"key": "payloadEngine",
 			"value": ""
 		},
 		{
-			"id": "34c4cf6c-ab2f-46c2-b804-df742ae300f5",
+			"id": "1308900f-199e-4937-bfd8-c23b4d64b3dd",
 			"key": "tc_identifierPainel_fieldEngineType",
 			"value": ""
 		},
 		{
-			"id": "f438f5b7-4ef0-4235-9f61-50d8c5991550",
+			"id": "08097acb-950a-4b95-bb7e-ccb70ceb4e9c",
 			"key": "tc_identifierPainel_fieldLine",
 			"value": ""
 		},
 		{
-			"id": "cb2b920a-c734-473e-83c2-08acd10eb2d5",
+			"id": "8b84d548-3a44-4cde-be1a-9e90deca64b5",
 			"key": "tc_identifierPainel_fieldStartDate",
 			"value": ""
 		},
 		{
-			"id": "75ed8899-72f2-4683-bba5-9ad580fe374a",
+			"id": "a87f3a8e-d94a-4159-accc-c8af563e97ee",
 			"key": "tc_identifierPainel_fieldEndDate",
 			"value": ""
 		},
 		{
-			"id": "06d1f346-a0e0-4cec-9a8a-77c20ca4207c",
+			"id": "953f5042-d82c-4026-bc89-cf61581edcc5",
 			"key": "tc_identifierPainel_fieldPaymentPlanCategoryIds",
 			"value": ""
 		},
 		{
-			"id": "e6d088b5-c6b4-4db1-a9bf-1f7623ae2dff",
+			"id": "d9e97fb2-bd7a-4e2f-bc47-667c40d65eac",
 			"key": "tc_identifierPainel_fieldCallCondition",
 			"value": ""
 		},
 		{
-			"id": "ab836597-4d1a-4d45-870e-0e311bcc9f5c",
+			"id": "2d4c17af-7c19-49dd-948e-437f75464345",
 			"key": "tc_identifierPainel_fieldIntegrationChannelIds",
 			"value": ""
 		}
