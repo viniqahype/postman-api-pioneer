@@ -4642,7 +4642,50 @@
 											"/* 4 */\r",
 											"pm.test(\"Response time is less than 5000ms\", () => {\r",
 											"    pm.expect(pm.response.responseTime).to.be.below(5000);\r",
-											"});"
+											"});\r",
+											"\r",
+											"\r",
+											"/* Validating insurancePanel.productId */\r",
+											"\r",
+											"var tc_fieldProductId = JSON.parse(pm.collectionVariables.get('tc_insurancePanel_fieldProductId'))\r",
+											"\r",
+											"/* 'inexistentId', 'string', 'empty', 'only_space', 'no_productId', 'productIdNull', 'inactiveId', 'multiplesOptions' */\r",
+											"\r",
+											"switch (tc_fieldProductId[i]) {\r",
+											"\r",
+											"    case 'inexistentId':\r",
+											"    case 'string' :\r",
+											"    case 'empty' :\r",
+											"    case 'only_space' :\r",
+											"    case 'no_productId' :\r",
+											"    case 'productIdNull' :\r",
+											"    case 'inactiveId' :\r",
+											"    case 'multiplesOptions' :\r",
+											"\r",
+											"\r",
+											"}\r",
+											"\r",
+											"/* Validating insurancePanel.subProductId */\r",
+											"\r",
+											"var tc_fieldSubProductId = JSON.parse(pm.collectionVariables.get('tc_insurancePanel_fieldSubProductId'))\r",
+											"\r",
+											"/* 'inexistentId', 'string', 'only_space', 'empty', 'no_subProduct', 'subProductNull', 'only_subProduct', 'subProductFromAnotherProduct', 'inactiveId', 'multiplesOptions' */\r",
+											"\r",
+											"switch (tc_fieldProductId[i]) {\r",
+											"\r",
+											"    case 'inexistentId':\r",
+											"    case 'string':\r",
+											"    case 'only_space':\r",
+											"    case 'empty':\r",
+											"    case 'no_productId':\r",
+											"    case 'subProductNull':\r",
+											"    case 'only_subProduct':\r",
+											"    case 'subProductFromAnotherProduct':\r",
+											"    case 'inactiveId':\r",
+											"    case 'multiplesOptions':\r",
+											"\r",
+											"\r",
+											"}"
 										],
 										"type": "text/javascript"
 									}
@@ -6652,63 +6695,63 @@
 	],
 	"variable": [
 		{
-			"id": "8cf36ea3-94df-41e7-a961-02d83e40520a",
+			"id": "f9251577-8f11-40cd-ae5a-7136b1213d93",
 			"key": "domain",
 			"value": "/financing/offer/v1"
 		},
 		{
-			"id": "778d8436-7c28-47a2-8250-91224ed5b2a4",
+			"id": "1197b38c-8dbf-4c90-b6c2-b3c4bd0f693e",
 			"key": "ignore_collectionScript",
 			"value": ""
 		},
 		{
-			"id": "db4aadba-c529-433a-a87b-70a87cd6f813",
+			"id": "ab9dac53-d3da-4658-b515-7d42e9de0d27",
 			"key": "count",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "f648a9d5-f1ca-45d0-ae2c-52dec10ea5af",
+			"id": "7407bce5-083a-4936-842e-079bbb355a2b",
 			"key": "controlAuth",
 			"value": ""
 		},
 		{
-			"id": "6d25640c-5a3d-434d-b015-90958dc4b670",
+			"id": "af18218b-6b4d-41d9-9720-490209a83b24",
 			"key": "payloadEngine",
 			"value": ""
 		},
 		{
-			"id": "4d82bb97-33e5-4cb1-a09e-c6d840714a39",
+			"id": "be0d2888-3ee5-4245-810d-e861728b8efb",
 			"key": "tc_identifierPainel_fieldEngineType",
 			"value": ""
 		},
 		{
-			"id": "fcb3b687-7a55-4bea-99cb-5859379beafe",
+			"id": "e0880feb-52c7-4ba9-9d32-fb5926743325",
 			"key": "tc_identifierPainel_fieldLine",
 			"value": ""
 		},
 		{
-			"id": "3e6bb34b-cb4f-411a-a7ef-389f58eb211d",
+			"id": "288bacd6-19d1-4091-891f-7cc761945c01",
 			"key": "tc_identifierPainel_fieldStartDate",
 			"value": ""
 		},
 		{
-			"id": "41cbb29d-0ab2-4486-bee0-5b9c5c1a6e6a",
+			"id": "61f2bea3-50d7-4b90-ac80-ce2baf7fb54d",
 			"key": "tc_identifierPainel_fieldEndDate",
 			"value": ""
 		},
 		{
-			"id": "b5d649e7-95d2-4427-95ce-b163ace1d7f6",
+			"id": "205a420a-ad25-4f9b-a65d-b7ad869951b5",
 			"key": "tc_identifierPainel_fieldPaymentPlanCategoryIds",
 			"value": ""
 		},
 		{
-			"id": "ba1ecda3-3e21-4100-a674-d00bfbe4a88d",
+			"id": "df85c3b5-c510-451f-a3e9-991a55afdb25",
 			"key": "tc_identifierPainel_fieldCallCondition",
 			"value": ""
 		},
 		{
-			"id": "ebedc43c-18b1-40ca-960d-26058586a9fd",
+			"id": "875f9ed2-3efc-4b30-962d-09c278606f01",
 			"key": "tc_identifierPainel_fieldIntegrationChannelIds",
 			"value": ""
 		}
