@@ -4594,15 +4594,14 @@
 									"script": {
 										"id": "78b5c77b-e2cd-4a74-a896-44b42056542e",
 										"exec": [
-											"/* Declaring array variable with tests cases for Engines_InsurancePanel: Field Product Id */\r",
-											"pm.collectionVariables.set('tc_insurancePanel_fieldProductId', JSON.stringify(['inexistent', 'only_space', 'empty', 'only_space', 'no_productId', 'productIdNull']));\r",
+											"/* Declaring array variable with tests cases for Engines_InsurancePanel: Field ProductId*/\r",
+											"pm.collectionVariables.set('tc_insurancePanel_fieldProductId', JSON.stringify(['inexistentId', 'string', 'empty', 'only_space', 'no_productId', 'productIdNull', 'inactiveId', 'multiplesOptions']));\r",
 											"\r",
-											"/* Declaring array variable with tests cases for Engines_InsurancePanel: Field SubProduct Id */\r",
-											"pm.collectionVariables.set('tc_insurancePanel_fieldSubProductId', JSON.stringify(['productId_obligatory','inexistent', 'only_space', 'empty', 'only_space', 'no_subProductId', 'subProductIdNull']));\r",
+											"/* Declaring array variable with tests cases for Engines_InsurancePanel: Field SubProductId */\r",
+											"pm.collectionVariables.set('tc_insurancePanel_fieldSubProductId', JSON.stringify(['inexistentId', 'string', 'only_space', 'empty', 'no_subProduct', 'subProductNull', 'only_subProduct', 'subProductFromAnotherProduct', 'inactiveId', 'multiplesOptions']));\r",
 											"\r",
-											"/* Declaring array variable with tests cases for Engines_InsurancePanel: Field Period In Months */\r",
-											"pm.collectionVariables.set('tc_insurancePanel_fieldPeriodInMonths', JSON.stringify(['productId_obligatory','inexistent', 'only_space', 'empty', 'only_space', 'no_periodInMonths', 'periodInMonthsNull']));\r",
-											"\r",
+											"/* Declaring array variable with tests cases for Engines_InsurancePanel: Field PeriodInMonths */\r",
+											"pm.collectionVariables.set('tc_insurancePanel_fieldPeriodInMonths', JSON.stringify(['inexistent', 'string', 'only_space', 'empty', 'no_periodInMonths', 'periodInMonthsNull', 'periodFromAnotherSubproduct', 'periodFromAnotherProduct', 'only_period', 'multiplesOptions']));\r",
 											""
 										],
 										"type": "text/javascript"
@@ -6719,63 +6718,63 @@
 	],
 	"variable": [
 		{
-			"id": "8c7dbf8d-3b12-4838-a2e0-a2f3fe7626a6",
+			"id": "82cfdb50-343c-40ef-bf5d-6a65121f7d86",
 			"key": "domain",
 			"value": "/financing/offer/v1"
 		},
 		{
-			"id": "c21521af-a430-4d04-bdb3-463b2e800956",
+			"id": "679371bd-55df-4f82-a4cf-175868ea9f7a",
 			"key": "ignore_collectionScript",
 			"value": ""
 		},
 		{
-			"id": "1ec60756-98eb-4446-8776-ee2168476a81",
+			"id": "a8486930-49ef-47b8-99ff-45300511758c",
 			"key": "count",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "448b574e-cc0f-4b23-b650-4cc7f556f156",
+			"id": "0293e749-92d8-4c31-bf63-8ea3ad9b36c5",
 			"key": "controlAuth",
 			"value": ""
 		},
 		{
-			"id": "3a8f9c28-28aa-4622-a721-4b6a0917e569",
+			"id": "ec8643ca-8843-47ac-8683-fda65ba3a5ea",
 			"key": "payloadEngine",
 			"value": ""
 		},
 		{
-			"id": "829f553b-d1a3-4897-8b77-d8605f6d84d8",
+			"id": "72db8ef0-6156-4f21-9747-55904f3cfc90",
 			"key": "tc_identifierPainel_fieldEngineType",
 			"value": ""
 		},
 		{
-			"id": "b554a544-78a8-4d77-bce4-d3fbce7aed9f",
+			"id": "c0b8b6cf-35df-4d61-bdb3-220584d15ecd",
 			"key": "tc_identifierPainel_fieldLine",
 			"value": ""
 		},
 		{
-			"id": "3474267e-f133-4267-99fc-d958aca21cc8",
+			"id": "d17a5139-770f-416c-ab99-d3980a5d5537",
 			"key": "tc_identifierPainel_fieldStartDate",
 			"value": ""
 		},
 		{
-			"id": "d60d19db-19fd-48d8-9540-dd30bae56075",
+			"id": "ef80077d-b41c-4105-be6f-90cc34f9e5dc",
 			"key": "tc_identifierPainel_fieldEndDate",
 			"value": ""
 		},
 		{
-			"id": "2e47ed37-deea-42fa-b852-a4a5f1e96571",
+			"id": "8680ed9e-4168-4860-98a2-da017fedeb14",
 			"key": "tc_identifierPainel_fieldPaymentPlanCategoryIds",
 			"value": ""
 		},
 		{
-			"id": "2d027dc3-f0bb-4b39-8947-6ae006909992",
+			"id": "d96e88c8-599b-47f9-9607-d4ebd30a83aa",
 			"key": "tc_identifierPainel_fieldCallCondition",
 			"value": ""
 		},
 		{
-			"id": "f97aaedb-8585-433c-85fa-1854cc4aa7de",
+			"id": "7c7ad275-7b48-418f-9d9e-d1b810c269fb",
 			"key": "tc_identifierPainel_fieldIntegrationChannelIds",
 			"value": ""
 		}
