@@ -8122,7 +8122,7 @@
 											"                //VALIDAR MENSAGEM\r",
 											"            })\r",
 											"        })\r",
-											"                i = 0;\r",
+											"        i = 0;\r",
 											"        pm.collectionVariables.set('count', i);\r",
 											"\r",
 											"    default:\r",
@@ -8132,7 +8132,7 @@
 											"\r",
 											"/* Validating insurancePanel.subProductId */\r",
 											"var tc_fieldSubProductId = JSON.parse(pm.collectionVariables.get('tc_insurancePanel_fieldSubProductId'))\r",
-											"/* 'inexistentId', 'string', 'only_space', 'empty', 'no_subProduct', 'subProductNull', 'only_subProduct', 'subProductFromAnotherProduct', 'inactiveId', 'multiplesOptions' */\r",
+											"/* 'inexistentId', 'string', 'only_space', 'negativeNumber', 'empty', 'no_subProduct', 'subProductNull', 'only_subProduct', 'subProductFromAnotherProduct', 'inactiveId', 'multiplesOptions' */\r",
 											"\r",
 											"switch (tc_fieldSubProductId[i]) {\r",
 											"\r",
@@ -8184,6 +8184,22 @@
 											"        i++;\r",
 											"        pm.collectionVariables.set('count', i);\r",
 											"\r",
+											"        case 'negativeNumber':\r",
+											"        let negativeNumber = -_.random(0, 100)\r",
+											"        pm.sendRequest({\r",
+											"           method: pm.request.method.toString(),\r",
+											"           url: pm.request.url.toString(),\r",
+											"           headers: headerComplete,\r",
+											"           body: changeSubSubFields(payloadEngine, \"engineCriteria\", \"insuranceProducts\", \"productId\", negativeNumber)\r",
+											"        }, (err, res) => {\r",
+											"           pm.test('Status 400 for negative number subProdutoId', () => {\r",
+											"               pm.expect(res).to.be.equal(400);\r",
+											"               //VALIDAR MENSAGEM\r",
+											"           })\r",
+											"        })\r",
+											"        i++;\r",
+											"        pm.collectionVariables.set('count', i);\r",
+											"\r",
 											"    case 'no_subProductId' :\r",
 											"        delete payloadEngine.engineRemunerations.rateType\r",
 											"        pm.sendRequest({\r",
@@ -8227,17 +8243,14 @@
 											"                //VALIDAR MENSAGEM\r",
 											"            })\r",
 											"        })\r",
-											"        i++;\r",
-											"        pm.collectionVariables.set('count', i);\r",
-											"  \r",
-											"\r",
+											"        default:\r",
+											"        console.error('Error in TEST script - Insurance Panel');\r",
+											"        break;\r",
 											"}\r",
 											"\r",
 											"\r",
 											"/* Validating insurancePanel.periodInMonths */\r",
-											"\r",
 											"var tc_fieldPeriodInMonths = JSON.parse(pm.collectionVariables.get('tc_insurancePanel_fieldPeriodInMonths'))\r",
-											"\r",
 											"/* 'inexistent', 'string', 'only_space', 'empty', 'no_periodInMonths', 'periodInMonthsNull', 'periodFromAnotherSubproduct', 'periodFromAnotherProduct', 'only_period' */\r",
 											"\r",
 											"switch (tc_fieldPeriodInMonthsId[i]) {\r",
@@ -8290,6 +8303,24 @@
 											"        i++;\r",
 											"        pm.collectionVariables.set('count', i);\r",
 											"\r",
+											"    case 'negativeNumber':\r",
+											"        let negativeNumber = -_.random(0, 100)\r",
+											"        pm.sendRequest({\r",
+											"           method: pm.request.method.toString(),\r",
+											"           url: pm.request.url.toString(),\r",
+											"           headers: headerComplete,\r",
+											"           body: changeSubSubFields(payloadEngine, \"engineCriteria\", \"insuranceProducts\", \"productId\", negativeNumber)\r",
+											"        }, (err, res) => {\r",
+											"           pm.test('Status 400 for negative number PeriodInMonthsId', () => {\r",
+											"               pm.expect(res).to.be.equal(400);\r",
+											"               //VALIDAR MENSAGEM\r",
+											"           })\r",
+											"        })\r",
+											"        i++;\r",
+											"        pm.collectionVariables.set('count', i);\r",
+											"\r",
+											"    \r",
+											"\r",
 											"    case 'no_periodInMonths' :\r",
 											"        let negativeNumber = -_.random(0, 100)\r",
 											"        pm.sendRequest({\r",
@@ -8339,10 +8370,10 @@
 											"pm.collectionVariables.set('tc_insurancePanel_fieldProductId', JSON.stringify(['inexistentId', 'string', 'empty', 'only_space', 'negativeNumber', 'floatNumber','no_productId', 'productIdNull', 'inactiveId']));\r",
 											"\r",
 											"/* Declaring array variable with tests cases for Engines_InsurancePanel: Field SubProductId */\r",
-											"pm.collectionVariables.set('tc_insurancePanel_fieldSubProductId', JSON.stringify(['inexistentId', 'string', 'only_space', 'empty', 'no_subProduct', 'subProductNull', 'only_subProduct', 'subProductFromAnotherProduct', 'inactiveId', ]));\r",
+											"pm.collectionVariables.set('tc_insurancePanel_fieldSubProductId', JSON.stringify(['inexistentId', 'string', 'only_space', 'negativeNumber', 'empty', 'no_subProduct', 'subProductNull', 'only_subProduct', 'subProductFromAnotherProduct', 'inactiveId', ]));\r",
 											"\r",
 											"/* Declaring array variable with tests cases for Engines_InsurancePanel: Field PeriodInMonths */\r",
-											"pm.collectionVariables.set('tc_insurancePanel_fieldPeriodInMonthsId', JSON.stringify(['inexistent', 'string', 'only_space', 'empty', 'no_periodInMonthsId', 'periodInMonthsIdNull', 'periodFromAnotherSubproduct', 'periodFromAnotherProduct', 'only_period']));\r",
+											"pm.collectionVariables.set('tc_insurancePanel_fieldPeriodInMonthsId', JSON.stringify(['inexistent', 'string', 'only_space', 'negativeNumber', 'empty', 'no_periodInMonthsId', 'periodInMonthsIdNull', 'periodFromAnotherSubproduct', 'periodFromAnotherProduct', 'only_period']));\r",
 											""
 										],
 										"type": "text/javascript"
@@ -11355,63 +11386,63 @@
 	],
 	"variable": [
 		{
-			"id": "0abaea9f-fa5b-4846-8c90-98a5e22ca2b4",
+			"id": "7667dae7-25d6-4485-ac32-9dfe68711172",
 			"key": "domain",
 			"value": "/financing/offer/v1"
 		},
 		{
-			"id": "17fb6c76-c4c3-4da8-82fa-384e78192be8",
+			"id": "c406873c-d564-4efe-83fc-4a75fb9f57b3",
 			"key": "ignore_collectionScript",
 			"value": ""
 		},
 		{
-			"id": "db7a4713-9b8b-4a78-8aad-e3aad2592648",
+			"id": "e46d3e68-67ab-43f5-a988-0e518d6c19b9",
 			"key": "count",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "fee6cf3f-0afa-4535-9876-92e9fea6266c",
+			"id": "b451f7f3-a4d4-4af5-a345-9d2edb815db8",
 			"key": "controlAuth",
 			"value": ""
 		},
 		{
-			"id": "5b507f93-2405-4b4c-b18c-88328eace8dd",
+			"id": "60c8bc01-3aa5-4a96-8c2d-47165930677e",
 			"key": "payloadEngine",
 			"value": ""
 		},
 		{
-			"id": "6919d701-f7b8-4995-bbdc-b194159726fb",
+			"id": "c18f86d8-0adc-43fb-ac38-d13ca6b64fbe",
 			"key": "tc_identifierPainel_fieldEngineType",
 			"value": ""
 		},
 		{
-			"id": "fed1923c-a604-4d44-b872-049b80fd82df",
+			"id": "0ea3b79f-d3fe-4813-ac43-d331f2d0b810",
 			"key": "tc_identifierPainel_fieldLine",
 			"value": ""
 		},
 		{
-			"id": "6a11b0e6-442d-443f-a06e-f5aa380b5b27",
+			"id": "ba55794c-2d6b-41d9-85ce-e935058727e5",
 			"key": "tc_identifierPainel_fieldStartDate",
 			"value": ""
 		},
 		{
-			"id": "f3f5e721-2768-4ef0-8646-2d0b557a4f0b",
+			"id": "0ee0fb4a-2b39-49d9-858c-63cb06fcd4e1",
 			"key": "tc_identifierPainel_fieldEndDate",
 			"value": ""
 		},
 		{
-			"id": "c5998991-4bfd-40b6-86cb-a13c6b0c2a09",
+			"id": "b8f6b8ef-8399-4de1-ae8e-fac41df93321",
 			"key": "tc_identifierPainel_fieldPaymentPlanCategoryIds",
 			"value": ""
 		},
 		{
-			"id": "e7648d28-5ade-4eff-ac6c-44092f631b36",
+			"id": "c8c9601e-6296-4622-9db6-4e77312cc0d6",
 			"key": "tc_identifierPainel_fieldCallCondition",
 			"value": ""
 		},
 		{
-			"id": "ed6f4e74-eb03-45a5-bdf6-6cf731dfe4d6",
+			"id": "764d6f39-29f9-43c6-bd56-ddad56b5c290",
 			"key": "tc_identifierPainel_fieldIntegrationChannelIds",
 			"value": ""
 		}
