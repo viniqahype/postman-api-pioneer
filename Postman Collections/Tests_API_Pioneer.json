@@ -1610,25 +1610,15 @@
 											"/* tc_fieldIntegrationChannel = ['inexistentId', 'string', 'specialCharacter', 'only_space', 'empty', 'no_integrationChannelIds', 'integrationChannelIdsNull', ' inactiveId', 'repeatedMultiplesOptions', 'multiplesOptions']*/\r",
 											"switch (tc_fieldIntegrationChannel[i]) {\r",
 											"    case 'inexistentId':\r",
-											"        /* Consulting all existent ids */\r",
 											"        pm.sendRequest({\r",
-											"            method: 'GET',\r",
-											"            url: pm.environment.get('baseUrl') + '/dominio/subdominio/integrationChannel',\r",
-											"            header: headerComplete\r",
-											"        }, (err, resGet) => {\r",
-											"            let id = resGet.json()[0].id\r",
-											"            let inexistentId = eval(pm.globals.get('generateRandomNumberWithout'))(id)\r",
-											"\r",
-											"            pm.sendRequest({\r",
-											"                method: pm.request.method.toString(),\r",
-											"                url: pm.request.url.toString(),\r",
-											"                headers: headerComplete,\r",
-											"                body: payloadEngine.integrationChannels[0].channelId = inexistentId\r",
-											"            }, (err, res) => {\r",
-											"                pm.test('Status 400 for inexistentId integrationChannel', () => {\r",
-											"                    pm.expect(res).to.be.equal(400);\r",
-											"                    //VALIDAR MENSAGEM\r",
-											"                })\r",
+											"            method: pm.request.method.toString(),\r",
+											"            url: pm.request.url.toString(),\r",
+											"            headers: headerComplete,\r",
+											"            body: payloadEngine.integrationChannels[0].channelId = _.random(10000, 11000)\r",
+											"        }, (err, res) => {\r",
+											"            pm.test('Status 400 for inexistentId integrationChannel', () => {\r",
+											"                pm.expect(res).to.be.equal(400);\r",
+											"                //VALIDAR MENSAGEM\r",
 											"            })\r",
 											"        })\r",
 											"        i++;\r",
@@ -10396,63 +10386,63 @@
 	],
 	"variable": [
 		{
-			"id": "762a8a69-c4a9-4f47-8770-7a6e9a40476d",
+			"id": "8bae7ecc-baa9-45c5-8e72-5bd05abda0be",
 			"key": "domain",
 			"value": "/financing/offer/v1"
 		},
 		{
-			"id": "feecf2a5-b227-4dac-b5e2-b548903ea8a1",
+			"id": "048e3025-bb29-44d0-82cc-c148b62cd8fe",
 			"key": "ignore_collectionScript",
 			"value": ""
 		},
 		{
-			"id": "8931557c-ad56-4b43-983e-4286abf138c8",
+			"id": "4370e624-7570-4e0c-baee-1722d9e1c742",
 			"key": "count",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "2dc3826e-1883-4659-bad6-2764fb340f8e",
+			"id": "e8c2ef4d-660c-4d0f-82a9-e21c09a1eed0",
 			"key": "controlAuth",
 			"value": ""
 		},
 		{
-			"id": "fe0d8fea-c3d0-42ef-bbbc-d09f9fde9cfb",
+			"id": "1816abef-e83e-458d-b0f9-0a01c7feeef7",
 			"key": "payloadEngine",
 			"value": ""
 		},
 		{
-			"id": "3fcae80f-0941-484a-b9b8-0aa71817574d",
+			"id": "4c358684-9733-43be-9470-eae77ffe00e1",
 			"key": "tc_identifierPainel_fieldEngineType",
 			"value": ""
 		},
 		{
-			"id": "1676bc26-087d-41f6-9c3c-c084d0a44c50",
+			"id": "a488a0fb-d825-45ad-9436-d528b97ae2a2",
 			"key": "tc_identifierPainel_fieldLine",
 			"value": ""
 		},
 		{
-			"id": "7f66395d-47ed-4f84-a727-99cc6bb904fb",
+			"id": "b2927f1a-88f4-49fb-9eb8-4da08c275295",
 			"key": "tc_identifierPainel_fieldStartDate",
 			"value": ""
 		},
 		{
-			"id": "c02e8cab-db80-4828-ae91-0f3b45ca2c80",
+			"id": "fc4a7e28-8662-4bfa-9ffa-124d9e93d59f",
 			"key": "tc_identifierPainel_fieldEndDate",
 			"value": ""
 		},
 		{
-			"id": "56302040-a397-42e1-bbc7-62b5d250dfe6",
+			"id": "ea1e5cad-30f9-456d-a9c2-4f0fbe35dacb",
 			"key": "tc_identifierPainel_fieldPaymentPlanCategoryIds",
 			"value": ""
 		},
 		{
-			"id": "eb09c9df-7ed6-4be9-a730-42a8d3679d0b",
+			"id": "26d21d85-2103-4d83-b234-48e6e8a196d9",
 			"key": "tc_identifierPainel_fieldCallCondition",
 			"value": ""
 		},
 		{
-			"id": "89433c39-d7e6-475a-a93a-a35a895ee465",
+			"id": "8ddd9d75-e44f-4883-b623-1872c9c8c939",
 			"key": "tc_identifierPainel_fieldIntegrationChannelIds",
 			"value": ""
 		}
