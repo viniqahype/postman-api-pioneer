@@ -1904,7 +1904,7 @@
 											"/* Importing variables and functions */\r",
 											"var payloadEngine = JSON.parse(pm.collectionVariables.get('payloadEngine'));\r",
 											"var i = pm.collectionVariables.get('count')\r",
-											"var ChangeSubSubFields = eval(pm.globals.get('bodyChangeSubSubFields'))\r",
+											"var changeSubSubFields = eval(pm.globals.get('bodyChangeSubSubFields'))\r",
 											"var headerComplete = eval(pm.globals.get('setHeader'))()\r",
 											"var lodash = require('lodash')\r",
 											"/* Validating positive scenarios to create an engine */\r",
@@ -1939,14 +1939,16 @@
 											"\r",
 											"/* Validating classifiersPanel.classifierId */\r",
 											"var tc_fieldClassifierId = JSON.parse(pm.collectionVariables.get('tc_classifiersPanel_fieldClassifierId'))\r",
-											"/* 'string', 'only_space', 'empty', 'negativeNumber', 'floatNumber', 'no_remunerationsId', 'remunerationsIdNull'*/\r",
+											"/* 'inexistentId', 'string', 'only_space', 'empty', 'negativeNumber', 'floatNumber', 'no_remunerationsId', 'remunerationsIdNull'*/\r",
 											"switch (tc_fieldClassifierId[i]) {\r",
+											"    case 'inexistentId':\r",
+											"\r",
 											"    case 'string':\r",
 											"       pm.sendRequest({\r",
 											"            method: pm.request.method.toString(),\r",
 											"            url: pm.request.url.toString(),\r",
 											"            headers: headerComplete,\r",
-											"            body: ChangeSubSubFields(payloadEngine, \"engineReturns\", \"classifiers\", \"classifierId\", pm.variables.replaceIn('{{$randomWord}}'))\r",
+											"            body: changeSubSubFields(payloadEngine, \"engineReturns\", \"classifiers\", \"classifierId\", pm.variables.replaceIn('{{$randomWord}}'))\r",
 											"        }, (err, res) => {\r",
 											"            pm.test('Status 400 for string classifierId', () => {\r",
 											"                pm.expect(res).to.be.equal(400);\r",
@@ -1961,7 +1963,7 @@
 											"            method: pm.request.method.toString(),\r",
 											"            url: pm.request.url.toString(),\r",
 											"            headers: headerComplete,\r",
-											"            body: ChangeSubSubFields(payloadEngine, \"engineReturns\", \"classifiers\", \"classifierId\", pm.variables.replaceIn('   '))\r",
+											"            body: changeSubSubFields(payloadEngine, \"engineReturns\", \"classifiers\", \"classifierId\", pm.variables.replaceIn('   '))\r",
 											"        }, (err, res) => {\r",
 											"            pm.test('Status 400 for classifierId with only_space', () => {\r",
 											"                pm.expect(res).to.be.equal(400);\r",
@@ -1976,7 +1978,7 @@
 											"            method: pm.request.method.toString(),\r",
 											"            url: pm.request.url.toString(),\r",
 											"            headers: headerComplete,\r",
-											"            body: ChangeSubSubFields(payloadEngine, \"engineReturns\", \"classifiers\", \"classifierId\", pm.variables.replaceIn(''))\r",
+											"            body: changeSubSubFields(payloadEngine, \"engineReturns\", \"classifiers\", \"classifierId\", pm.variables.replaceIn(''))\r",
 											"        }, (err, res) => {\r",
 											"            pm.test('Status 400 for empty classifierId', () => {\r",
 											"                pm.expect(res).to.be.equal(400);\r",
@@ -1992,7 +1994,7 @@
 											"           method: pm.request.method.toString(),\r",
 											"           url: pm.request.url.toString(),\r",
 											"           headers: headerComplete,\r",
-											"           body: ChangeSubSubFields(payloadEngine, \"engineReturns\", \"classifiers\", \"classifierId\", negativeNumber)\r",
+											"           body: changeSubSubFields(payloadEngine, \"engineReturns\", \"classifiers\", \"classifierId\", negativeNumber)\r",
 											"       }, (err, res) => {\r",
 											"           pm.test('Status 400 for negative number classifierId', () => {\r",
 											"               pm.expect(res).to.be.equal(400);\r",
@@ -2008,7 +2010,7 @@
 											"           method: pm.request.method.toString(),\r",
 											"           url: pm.request.url.toString(),\r",
 											"           headers: headerComplete,\r",
-											"           body: ChangeSubSubFields(payloadEngine, \"engineReturns\", \"classifiers\", \"classifierId\", parseFloat(floatNumber))\r",
+											"           body: changeSubSubFields(payloadEngine, \"engineReturns\", \"classifiers\", \"classifierId\", parseFloat(floatNumber))\r",
 											"       }, (err, res) => {\r",
 											"           pm.test('Status 400 for float number classifierId', () => {\r",
 											"               pm.expect(res).to.be.equal(400);\r",
@@ -2039,14 +2041,14 @@
 											"            method: pm.request.method.toString(),\r",
 											"            url: pm.request.url.toString(),\r",
 											"            headers: headerComplete,\r",
-											"            body: ChangeSubSubFields(payloadEngine, \"engineReturns\", \"classifiers\", \"classifierId\", null)\r",
+											"            body: changeSubSubFields(payloadEngine, \"engineReturns\", \"classifiers\", \"classifierId\", null)\r",
 											"        }, (err, res) => {\r",
 											"            pm.test('Status 400 for null classifierId', () => {\r",
 											"                pm.expect(res).to.be.equal(400);\r",
 											"                //VALIDAR MENSAGEM\r",
 											"            })\r",
 											"        })\r",
-											"        i++;\r",
+											"        i=0;\r",
 											"        pm.collectionVariables.set('count', i); \r",
 											"\r",
 											"}\r",
@@ -10312,63 +10314,63 @@
 	],
 	"variable": [
 		{
-			"id": "34976647-5dc2-4bb8-8eca-ad3053696c5b",
+			"id": "8bbe05b3-7dd3-4386-8bc4-5b617a00a89a",
 			"key": "domain",
 			"value": "/financing/offer/v1"
 		},
 		{
-			"id": "5792bb84-481b-4301-9d50-52594b9cfa67",
+			"id": "7f61c73c-fa73-49a9-82cf-cd6114b192b2",
 			"key": "ignore_collectionScript",
 			"value": ""
 		},
 		{
-			"id": "7e52147e-ad15-4033-a7f4-26fa06a023da",
+			"id": "adae7f23-de78-4085-8aa3-d6cfbaa0fa75",
 			"key": "count",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "8afe786f-28dc-42a3-870b-756d30dd6932",
+			"id": "e8e7abac-832a-4f23-afd5-f3a2297b23cd",
 			"key": "controlAuth",
 			"value": ""
 		},
 		{
-			"id": "e035b0a0-05ff-48ca-bf21-bd331af01f02",
+			"id": "558ad44c-7f4f-4284-abe8-c66859272fb5",
 			"key": "payloadEngine",
 			"value": ""
 		},
 		{
-			"id": "4c251d24-dc18-444e-b18b-c7cdf556703f",
+			"id": "2000b0fa-3161-44fa-8489-efd314967d7e",
 			"key": "tc_identifierPainel_fieldEngineType",
 			"value": ""
 		},
 		{
-			"id": "3be2cd21-986c-4de4-acf2-317f9c2590c9",
+			"id": "76682757-55d9-41a6-a8c1-bfaa0083d086",
 			"key": "tc_identifierPainel_fieldLine",
 			"value": ""
 		},
 		{
-			"id": "d13eb087-f591-4b1e-aad4-fdc1b9606556",
+			"id": "406994a2-e679-49a1-b776-8bbcab19afd0",
 			"key": "tc_identifierPainel_fieldStartDate",
 			"value": ""
 		},
 		{
-			"id": "5ac7603d-19be-42ab-b06b-011c22d2dc46",
+			"id": "c0433399-1884-4260-984f-21d959d7d5b8",
 			"key": "tc_identifierPainel_fieldEndDate",
 			"value": ""
 		},
 		{
-			"id": "f731a228-1515-4701-9d5b-a07a32ca8337",
+			"id": "101a9d00-b541-4680-a968-e41c554e31dc",
 			"key": "tc_identifierPainel_fieldPaymentPlanCategoryIds",
 			"value": ""
 		},
 		{
-			"id": "a2b0d744-07ff-40a2-9425-36e894a294ac",
+			"id": "94f8c3dd-c911-4350-8c8f-d92182c24c5c",
 			"key": "tc_identifierPainel_fieldCallCondition",
 			"value": ""
 		},
 		{
-			"id": "e282d433-10f2-474f-a8c2-61390cd79e0c",
+			"id": "a8686359-6235-415a-80d0-b7d1c5ad0a6d",
 			"key": "tc_identifierPainel_fieldIntegrationChannelIds",
 			"value": ""
 		}
