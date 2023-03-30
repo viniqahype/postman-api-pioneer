@@ -7965,27 +7965,9 @@
 							"name": "[Ana] Check insurancePanel_fields",
 							"event": [
 								{
-									"listen": "prerequest",
-									"script": {
-										"id": "78b5c77b-e2cd-4a74-a896-44b42056542e",
-										"exec": [
-											"/* Declaring array variable with tests cases for Engines_InsurancePanel: Field ProductId*/\r",
-											"pm.collectionVariables.set('tc_insurancePanel_fieldProductId', JSON.stringify(['inexistentId', 'string', 'empty', 'only_space', 'negativeNumber', 'floatNumber','no_productId', 'productIdNull', 'inactiveId']));\r",
-											"\r",
-											"/* Declaring array variable with tests cases for Engines_InsurancePanel: Field SubProductId */\r",
-											"pm.collectionVariables.set('tc_insurancePanel_fieldSubProductId', JSON.stringify(['inexistentId', 'string', 'only_space', 'empty', 'no_subProduct', 'subProductNull', 'only_subProduct', 'subProductFromAnotherProduct', 'inactiveId', ]));\r",
-											"\r",
-											"/* Declaring array variable with tests cases for Engines_InsurancePanel: Field PeriodInMonths */\r",
-											"pm.collectionVariables.set('tc_insurancePanel_fieldPeriodInMonthsId', JSON.stringify(['inexistent', 'string', 'only_space', 'empty', 'no_periodInMonthsId', 'periodInMonthsIdNull', 'periodFromAnotherSubproduct', 'periodFromAnotherProduct', 'only_period']));\r",
-											""
-										],
-										"type": "text/javascript"
-									}
-								},
-								{
 									"listen": "test",
 									"script": {
-										"id": "202a9979-25da-4ce8-8b0d-12ce4a8f5901",
+										"id": "c1b8b5c9-475c-4f23-ac79-ca98e5a6b77d",
 										"exec": [
 											"/* Importing variables and functions */\r",
 											"var payloadEngine = JSON.parse(pm.collectionVariables.get('payloadEngine'));\r",
@@ -8140,16 +8122,16 @@
 											"                //VALIDAR MENSAGEM\r",
 											"            })\r",
 											"        })\r",
-											"        i++;\r",
+											"                i = 0;\r",
 											"        pm.collectionVariables.set('count', i);\r",
-											"  \r",
 											"\r",
+											"    default:\r",
+											"        console.error('Error in TEST script - Insurance Panel');\r",
+											"        break;\r",
 											"}\r",
 											"\r",
 											"/* Validating insurancePanel.subProductId */\r",
-											"\r",
 											"var tc_fieldSubProductId = JSON.parse(pm.collectionVariables.get('tc_insurancePanel_fieldSubProductId'))\r",
-											"\r",
 											"/* 'inexistentId', 'string', 'only_space', 'empty', 'no_subProduct', 'subProductNull', 'only_subProduct', 'subProductFromAnotherProduct', 'inactiveId', 'multiplesOptions' */\r",
 											"\r",
 											"switch (tc_fieldSubProductId[i]) {\r",
@@ -8162,7 +8144,8 @@
 											"            method: pm.request.method.toString(),\r",
 											"            url: pm.request.url.toString(),\r",
 											"            headers: headerComplete,\r",
-											"            body: changeMoreFields(payloadEngine, [\"engineCriteria\", \"insuranceProducts\", \"productId\", pm.variables.replaceIn('{{$randomWord}}'), \"engineCriteria\", \"insuranceProducts\", \"subProductId\", pm.variables.replaceIn('{{$randomWord}}')])\r",
+											"            body: changeMoreFields(payloadEngine, [{\"productId\": pm.variables.replaceIn('{{$randomWord}}')}, {\"subProductId\": pm.variables.replaceIn('{{$randomWord}}')}])\r",
+											"\r",
 											"        }, (err, res) => {\r",
 											"            pm.test('Status 400 for string SubProductId', () => {\r",
 											"                pm.expect(res).to.be.equal(400);\r",
@@ -8177,7 +8160,7 @@
 											"            method: pm.request.method.toString(),\r",
 											"            url: pm.request.url.toString(),\r",
 											"            headers: headerComplete,\r",
-											"            body: changeMoreFields(payloadEngine, [\"engineCriteria\", \"insuranceProducts\", \"productId\", pm.variables.replaceIn('{{$randomWord}}'), \"engineCriteria\", \"insuranceProducts\", \"subProductId\", ''])\r",
+											"            body: changeMoreFields(payloadEngine, [{\"productId\": pm.variables.replaceIn('{{$randomWord}}')}, {\"subProductId\": ''}])\r",
 											"        }, (err, res) => {\r",
 											"            pm.test('Status 400 for empty SubProductId', () => {\r",
 											"                pm.expect(res).to.be.equal(400);\r",
@@ -8191,7 +8174,7 @@
 											"            method: pm.request.method.toString(),\r",
 											"            url: pm.request.url.toString(),\r",
 											"            headers: headerComplete,\r",
-											"            body: changeMoreFields(payloadEngine, [\"engineCriteria\", \"insuranceProducts\", \"productId\", pm.variables.replaceIn('{{$randomWord}}'), \"engineCriteria\", \"insuranceProducts\", \"subProductId\", '   '])\r",
+											"            body: changeMoreFields(payloadEngine, [{\"productId\": pm.variables.replaceIn('{{$randomWord}}')}, {\"subProductId\": '   '}])\r",
 											"        }, (err, res) => {\r",
 											"            pm.test('Status 400 for string SubProductId', () => {\r",
 											"                pm.expect(res).to.be.equal(400);\r",
@@ -8202,14 +8185,14 @@
 											"        pm.collectionVariables.set('count', i);\r",
 											"\r",
 											"    case 'no_subProductId' :\r",
-											"        let negativeNumber = -_.random(0, 100)\r",
+											"        delete payloadEngine.engineRemunerations.rateType\r",
 											"        pm.sendRequest({\r",
 											"            method: pm.request.method.toString(),\r",
 											"            url: pm.request.url.toString(),\r",
 											"            headers: headerComplete,\r",
-											"            body: changeSubSubFields(payloadEngine, \"engineCriteria\", \"insuranceProducts\", \"subProductId\", negativeNumber)\r",
+											"            body: payloadEngine\r",
 											"        }, (err, res) => {\r",
-											"            pm.test('Status 400 for negative number SubProductId', () => {\r",
+											"            pm.test('Status 400 for no_subProductId', () => {\r",
 											"                pm.expect(res).to.be.equal(400);\r",
 											"                //VALIDAR MENSAGEM\r",
 											"            })\r",
@@ -8222,7 +8205,7 @@
 											"            method: pm.request.method.toString(),\r",
 											"            url: pm.request.url.toString(),\r",
 											"            headers: headerComplete,\r",
-											"            body: changeSubSubFields(payloadEngine, \"engineCriteria\", \"insuranceProducts\", \"subProductId\", null)\r",
+											"            body: changeMoreFields(payloadEngine, [{\"productId\": pm.variables.replaceIn('{{$randomWord}}')}, {\"subProductId\": null}])\r",
 											"        }, (err, res) => {\r",
 											"            pm.test('Status 400 for ProductId null', () => {\r",
 											"                pm.expect(res).to.be.equal(400);\r",
@@ -8237,7 +8220,7 @@
 											"            method: pm.request.method.toString(),\r",
 											"            url: pm.request.url.toString(),\r",
 											"            headers: headerComplete,\r",
-											"            body: changeSubSubFields(payloadEngine, \"engineCriteria\", \"insuranceProducts\", \"productId\", pm.variables.replaceIn('{{$randomWord}}'))\r",
+											"            body: changeMoreFields(payloadEngine, [{\"productId\": pm.variables.replaceIn('{{$randomWord}}')}, {\"subProductId\": pm.variables.replaceIn('{{$randomWord}}')}])\r",
 											"        }, (err, res) => {\r",
 											"            pm.test('Status 400 for string ProductId', () => {\r",
 											"                pm.expect(res).to.be.equal(400);\r",
@@ -8260,29 +8243,7 @@
 											"switch (tc_fieldPeriodInMonthsId[i]) {\r",
 											"\r",
 											"    case 'inexistentId':\r",
-											"       /* Consulting all existent ids */\r",
-											"        pm.sendRequest({\r",
-											"            method: 'GET',\r",
-											"            url: pm.environment.get('baseUrl') + '/dominio/subdominio/integrationChannel',\r",
-											"            header: headerComplete\r",
-											"        }, (err, resGet) => {\r",
-											"            let id = resGet.json()[0].id\r",
-											"            let inexistentId = eval(pm.globals.get('generateRandomNumberWithout'))(id)\r",
 											"\r",
-											"            pm.sendRequest({\r",
-											"                method: pm.request.method.toString(),\r",
-											"                url: pm.request.url.toString(),\r",
-											"                headers: headerComplete,\r",
-											"                body: payloadEngine.insuranceProducts[0].PeriodInMonthsId = inexistentId /* VERIFICAR POSIÇÃO*/\r",
-											"            }, (err, res) => {\r",
-											"                pm.test('Status 400 for inexistentId ProductId', () => {\r",
-											"                    pm.expect(res).to.be.equal(400);\r",
-											"                    //VALIDAR MENSAGEM\r",
-											"                })\r",
-											"            })\r",
-											"        })\r",
-											"        i++;\r",
-											"        pm.collectionVariables.set('count', i);\r",
 											"\r",
 											"    case 'string' :\r",
 											"        pm.sendRequest({\r",
@@ -8313,6 +8274,7 @@
 											"        })\r",
 											"        i++;\r",
 											"        pm.collectionVariables.set('count', i);\r",
+											"\r",
 											"    case 'only_space' :\r",
 											"        pm.sendRequest({\r",
 											"            method: pm.request.method.toString(),\r",
@@ -8328,7 +8290,7 @@
 											"        i++;\r",
 											"        pm.collectionVariables.set('count', i);\r",
 											"\r",
-											"    case 'no_subProductId' :\r",
+											"    case 'no_periodInMonths' :\r",
 											"        let negativeNumber = -_.random(0, 100)\r",
 											"        pm.sendRequest({\r",
 											"            method: pm.request.method.toString(),\r",
@@ -8336,7 +8298,7 @@
 											"            headers: headerComplete,\r",
 											"            body: changeSubSubFields(payloadEngine, \"engineCriteria\", \"insuranceProducts\", \"periodInMonthsId\", negativeNumber)\r",
 											"        }, (err, res) => {\r",
-											"            pm.test('Status 400 for negative number PeriodInMonthsId', () => {\r",
+											"            pm.test('Status 400 for negative number SubProductId', () => {\r",
 											"                pm.expect(res).to.be.equal(400);\r",
 											"                //VALIDAR MENSAGEM\r",
 											"            })\r",
@@ -8364,6 +8326,24 @@
 											"    case 'only_period':\r",
 											"\r",
 											"}"
+										],
+										"type": "text/javascript"
+									}
+								},
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "75716b34-ee4d-4e88-a152-763e1c401aca",
+										"exec": [
+											"/* Declaring array variable with tests cases for Engines_InsurancePanel: Field ProductId*/\r",
+											"pm.collectionVariables.set('tc_insurancePanel_fieldProductId', JSON.stringify(['inexistentId', 'string', 'empty', 'only_space', 'negativeNumber', 'floatNumber','no_productId', 'productIdNull', 'inactiveId']));\r",
+											"\r",
+											"/* Declaring array variable with tests cases for Engines_InsurancePanel: Field SubProductId */\r",
+											"pm.collectionVariables.set('tc_insurancePanel_fieldSubProductId', JSON.stringify(['inexistentId', 'string', 'only_space', 'empty', 'no_subProduct', 'subProductNull', 'only_subProduct', 'subProductFromAnotherProduct', 'inactiveId', ]));\r",
+											"\r",
+											"/* Declaring array variable with tests cases for Engines_InsurancePanel: Field PeriodInMonths */\r",
+											"pm.collectionVariables.set('tc_insurancePanel_fieldPeriodInMonthsId', JSON.stringify(['inexistent', 'string', 'only_space', 'empty', 'no_periodInMonthsId', 'periodInMonthsIdNull', 'periodFromAnotherSubproduct', 'periodFromAnotherProduct', 'only_period']));\r",
+											""
 										],
 										"type": "text/javascript"
 									}
@@ -11375,63 +11355,63 @@
 	],
 	"variable": [
 		{
-			"id": "c77b37ec-f4b1-4c94-af3e-49641f3a9c9a",
+			"id": "0abaea9f-fa5b-4846-8c90-98a5e22ca2b4",
 			"key": "domain",
 			"value": "/financing/offer/v1"
 		},
 		{
-			"id": "7cfc6d02-648c-4d93-89a5-1e41574d48ae",
+			"id": "17fb6c76-c4c3-4da8-82fa-384e78192be8",
 			"key": "ignore_collectionScript",
 			"value": ""
 		},
 		{
-			"id": "634ada35-25f4-4132-8d18-eafaa84f7704",
+			"id": "db7a4713-9b8b-4a78-8aad-e3aad2592648",
 			"key": "count",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "4b91c3cb-9b88-43d4-90f6-dc9133f8be95",
+			"id": "fee6cf3f-0afa-4535-9876-92e9fea6266c",
 			"key": "controlAuth",
 			"value": ""
 		},
 		{
-			"id": "5a64d41c-3742-4483-a798-37356904305a",
+			"id": "5b507f93-2405-4b4c-b18c-88328eace8dd",
 			"key": "payloadEngine",
 			"value": ""
 		},
 		{
-			"id": "2abcf11b-00a1-461b-9fd0-efc5a9242efa",
+			"id": "6919d701-f7b8-4995-bbdc-b194159726fb",
 			"key": "tc_identifierPainel_fieldEngineType",
 			"value": ""
 		},
 		{
-			"id": "8a7176c2-9f18-4b08-95c9-b6c903e55188",
+			"id": "fed1923c-a604-4d44-b872-049b80fd82df",
 			"key": "tc_identifierPainel_fieldLine",
 			"value": ""
 		},
 		{
-			"id": "aff8440c-420a-417a-85fb-c48594e9ed41",
+			"id": "6a11b0e6-442d-443f-a06e-f5aa380b5b27",
 			"key": "tc_identifierPainel_fieldStartDate",
 			"value": ""
 		},
 		{
-			"id": "abc67a14-1bfe-416a-ad6e-5add553db31d",
+			"id": "f3f5e721-2768-4ef0-8646-2d0b557a4f0b",
 			"key": "tc_identifierPainel_fieldEndDate",
 			"value": ""
 		},
 		{
-			"id": "ff93498b-4861-4dc1-8a36-53f3e97fa02c",
+			"id": "c5998991-4bfd-40b6-86cb-a13c6b0c2a09",
 			"key": "tc_identifierPainel_fieldPaymentPlanCategoryIds",
 			"value": ""
 		},
 		{
-			"id": "d24545bf-b02e-45b9-b00f-74984467d108",
+			"id": "e7648d28-5ade-4eff-ac6c-44092f631b36",
 			"key": "tc_identifierPainel_fieldCallCondition",
 			"value": ""
 		},
 		{
-			"id": "1c79f59c-1f80-46a9-be05-1522b28552de",
+			"id": "ed6f4e74-eb03-45a5-bdf6-6cf731dfe4d6",
 			"key": "tc_identifierPainel_fieldIntegrationChannelIds",
 			"value": ""
 		}
