@@ -601,7 +601,7 @@
 											"                //VALIDAR MENSAGEM\r",
 											"            })\r",
 											"        })\r",
-											"        i = 0;\r",
+											"        i++;\r",
 											"        pm.collectionVariables.set('count', i);\r",
 											"\r",
 											"    case 'difDraft':\r",
@@ -615,18 +615,19 @@
 											"                pm.expect(res).to.be.equal(400);\r",
 											"                //VALIDAR MENSAGEM\r",
 											"            })\r",
-											"        }),\r",
-											"            pm.sendRequest({\r",
-											"                method: pm.request.method.toString(),\r",
-											"                url: pm.request.url.toString(),\r",
-											"                headers: headerComplete,\r",
-											"                body: changeOneFields(payloadEngine, \"engineStatus\", 'INCLUSION_APPROVED')\r",
-											"            }, (err, res) => {\r",
-											"                pm.test('Status 400 for create engine with status INCLUSION_APPROVED', () => {\r",
-											"                    pm.expect(res).to.be.equal(400);\r",
-											"                    //VALIDAR MENSAGEM\r",
-											"                })\r",
+											"        })\r",
+											"\r",
+											"        pm.sendRequest({\r",
+											"            method: pm.request.method.toString(),\r",
+											"            url: pm.request.url.toString(),\r",
+											"            headers: headerComplete,\r",
+											"            body: changeOneFields(payloadEngine, \"engineStatus\", 'INCLUSION_APPROVED')\r",
+											"        }, (err, res) => {\r",
+											"            pm.test('Status 400 for create engine with status INCLUSION_APPROVED', () => {\r",
+											"                pm.expect(res).to.be.equal(400);\r",
+											"                //VALIDAR MENSAGEM\r",
 											"            })\r",
+											"        })\r",
 											"        pm.sendRequest({\r",
 											"            method: pm.request.method.toString(),\r",
 											"            url: pm.request.url.toString(),\r",
@@ -11223,63 +11224,63 @@
 	],
 	"variable": [
 		{
-			"id": "b581c54d-354c-4452-8893-92bdd8a69aeb",
+			"id": "9ec943c4-6e5d-4f41-9085-26a430f1401c",
 			"key": "domain",
 			"value": "/financing/offer/v1"
 		},
 		{
-			"id": "53e7c8f2-4481-45d2-96e2-1121a0246029",
+			"id": "4859e25c-650b-4795-8e46-39b0647aa353",
 			"key": "ignore_collectionScript",
 			"value": ""
 		},
 		{
-			"id": "78bbe3b8-a6cd-497d-9678-105b3a40105a",
+			"id": "851f2903-6ddf-4630-8a64-eed921b7bcab",
 			"key": "count",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "81fce03d-93de-49f1-9db9-54c1c7444aff",
+			"id": "afc4dc2e-7b05-4829-aa08-1402c73b5c82",
 			"key": "controlAuth",
 			"value": ""
 		},
 		{
-			"id": "091280a7-4bb0-4389-b202-bef224ec663d",
+			"id": "e11890b8-5a71-44c1-943b-164978394fae",
 			"key": "payloadEngine",
 			"value": ""
 		},
 		{
-			"id": "f9e82a5e-8277-4805-965b-a58a0ba17056",
+			"id": "160e1fab-2e68-4b6c-8c45-fd6507b60ed9",
 			"key": "tc_identifierPainel_fieldEngineType",
 			"value": ""
 		},
 		{
-			"id": "c440adff-93db-420b-b6ac-a7bbd652af89",
+			"id": "27b2afe9-21f0-4053-a5f2-2bcf6b4185d9",
 			"key": "tc_identifierPainel_fieldLine",
 			"value": ""
 		},
 		{
-			"id": "4f659d94-47b3-457b-87bf-064c8a622066",
+			"id": "46a40b6d-834a-4bd8-a2b7-89328e6c8f32",
 			"key": "tc_identifierPainel_fieldStartDate",
 			"value": ""
 		},
 		{
-			"id": "077c428f-eaca-4995-a103-a8fb900c597c",
+			"id": "004f64b0-d697-4a46-9a50-9c72ed97ba00",
 			"key": "tc_identifierPainel_fieldEndDate",
 			"value": ""
 		},
 		{
-			"id": "9a4b60c5-6c0c-4c89-a637-6693c91d51b7",
+			"id": "0acbed07-1002-48b6-b699-2859d89ec0c8",
 			"key": "tc_identifierPainel_fieldPaymentPlanCategoryIds",
 			"value": ""
 		},
 		{
-			"id": "1547d47f-ad8d-4a92-8c6f-c2b8b8cb16f4",
+			"id": "8fbb4afa-e553-425c-a8a8-99981beb78e2",
 			"key": "tc_identifierPainel_fieldCallCondition",
 			"value": ""
 		},
 		{
-			"id": "c356c8df-5faf-4477-b559-b0f95be51bff",
+			"id": "b3b89e9a-0810-4be9-a4b1-5bf2de23584f",
 			"key": "tc_identifierPainel_fieldIntegrationChannelIds",
 			"value": ""
 		}
