@@ -1947,7 +1947,7 @@
 											"            method: pm.request.method.toString(),\r",
 											"            url: pm.request.url.toString(),\r",
 											"            headers: headerComplete,\r",
-											"            body: ChangeSubSubFields(payloadEngine, \"engineReturns\", \"remunerationsId\", pm.variables.replaceIn('{{$randomWord}}'))\r",
+											"            body: ChangeSubSubFields(payloadEngine, \"engineReturns\", \"remunerations\", \"remunerationsId\", pm.variables.replaceIn('{{$randomWord}}'))\r",
 											"        }, (err, res) => {\r",
 											"            pm.test('Status 400 for string remunerationsId', () => {\r",
 											"                pm.expect(res).to.be.equal(400);\r",
@@ -1962,7 +1962,7 @@
 											"            method: pm.request.method.toString(),\r",
 											"            url: pm.request.url.toString(),\r",
 											"            headers: headerComplete,\r",
-											"            body: ChangeSubSubFields(payloadEngine, \"engineReturns\", \"remunerationsId\", pm.variables.replaceIn('   '))\r",
+											"            body: ChangeSubSubFields(payloadEngine, \"engineReturns\", \"remunerations\", \"remunerationsId\", pm.variables.replaceIn('   '))\r",
 											"        }, (err, res) => {\r",
 											"            pm.test('Status 400 for remunerationsId with only_space', () => {\r",
 											"                pm.expect(res).to.be.equal(400);\r",
@@ -1977,7 +1977,7 @@
 											"            method: pm.request.method.toString(),\r",
 											"            url: pm.request.url.toString(),\r",
 											"            headers: headerComplete,\r",
-											"            body: ChangeSubSubFields(payloadEngine, \"engineReturns\", \"remunerationsId\", pm.variables.replaceIn(''))\r",
+											"            body: ChangeSubSubFields(payloadEngine, \"engineReturns\", \"remunerations\", \"remunerationsId\", pm.variables.replaceIn(''))\r",
 											"        }, (err, res) => {\r",
 											"            pm.test('Status 400 for empty remunerationsId', () => {\r",
 											"                pm.expect(res).to.be.equal(400);\r",
@@ -1993,7 +1993,7 @@
 											"           method: pm.request.method.toString(),\r",
 											"           url: pm.request.url.toString(),\r",
 											"           headers: headerComplete,\r",
-											"           body: ChangeSubSubFields(payloadEngine, \"engineReturns\", \"remunerationsId\", negativeNumber)\r",
+											"           body: ChangeSubSubFields(payloadEngine, \"engineReturns\", \"remunerations\", \"remunerationsId\", negativeNumber)\r",
 											"       }, (err, res) => {\r",
 											"           pm.test('Status 400 for negative number remunerationsId', () => {\r",
 											"               pm.expect(res).to.be.equal(400);\r",
@@ -2009,7 +2009,7 @@
 											"           method: pm.request.method.toString(),\r",
 											"           url: pm.request.url.toString(),\r",
 											"           headers: headerComplete,\r",
-											"           body: ChangeSubSubFields(payloadEngine, \"engineReturns\", \"remunerationsId\", parseFloat(floatNumber))\r",
+											"           body: ChangeSubSubFields(payloadEngine, \"engineReturns\", \"remunerations\", \"remunerationsId\", parseFloat(floatNumber))\r",
 											"       }, (err, res) => {\r",
 											"           pm.test('Status 400 for float number remunerationsId', () => {\r",
 											"               pm.expect(res).to.be.equal(400);\r",
@@ -2040,7 +2040,7 @@
 											"            method: pm.request.method.toString(),\r",
 											"            url: pm.request.url.toString(),\r",
 											"            headers: headerComplete,\r",
-											"            body: ChangeSubSubFields(payloadEngine, \"engineReturns\", \"remunerationsId\", null)\r",
+											"            body: ChangeSubSubFields(payloadEngine, \"engineReturns\", \"remunerations\", \"remunerationsId\", null)\r",
 											"        }, (err, res) => {\r",
 											"            pm.test('Status 400 for empty remunerationsId', () => {\r",
 											"                pm.expect(res).to.be.equal(400);\r",
@@ -9165,63 +9165,63 @@
 	],
 	"variable": [
 		{
-			"id": "a3af944a-d2a7-4113-bca0-a2faee10ef8b",
+			"id": "6efdac01-7266-4fbb-9337-56f8c354bc16",
 			"key": "domain",
 			"value": "/financing/offer/v1"
 		},
 		{
-			"id": "7cefb733-7784-4aad-9ba5-6b018e06ba30",
+			"id": "d620e3fa-ad25-4b8c-948f-084e36eb94b9",
 			"key": "ignore_collectionScript",
 			"value": ""
 		},
 		{
-			"id": "59ec96dc-d6ec-4ed1-a273-fd8a08f12868",
+			"id": "5acac60f-7002-4fdf-a6a3-6f77039630ab",
 			"key": "count",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "7c389a3f-41f9-476c-a26c-5bc5c06b5ae3",
+			"id": "02a3a325-5b69-466a-bce8-ffeb7822d30e",
 			"key": "controlAuth",
 			"value": ""
 		},
 		{
-			"id": "b779d0f8-09fe-4dca-ab9d-52fb43ab8bf6",
+			"id": "7667a42d-94da-4639-bad9-7eaa0fa9e524",
 			"key": "payloadEngine",
 			"value": ""
 		},
 		{
-			"id": "cbcac04a-65c1-4891-a164-912ed79b9096",
+			"id": "ef06e194-1f77-42ad-941e-ad393f92aaff",
 			"key": "tc_identifierPainel_fieldEngineType",
 			"value": ""
 		},
 		{
-			"id": "398d11bd-f088-49f9-80e0-64ce486e594a",
+			"id": "3a15a8c3-fb82-44bb-a544-3d8bce5d88b0",
 			"key": "tc_identifierPainel_fieldLine",
 			"value": ""
 		},
 		{
-			"id": "b1698fff-129c-4259-9782-bb8d282c2193",
+			"id": "c097ba5d-9379-4763-9c58-d9d929f8edfd",
 			"key": "tc_identifierPainel_fieldStartDate",
 			"value": ""
 		},
 		{
-			"id": "a9d39f46-48fe-497f-9ddf-17b3e7fb1be9",
+			"id": "f50433f1-6283-4ac0-960f-138cf0dad2ee",
 			"key": "tc_identifierPainel_fieldEndDate",
 			"value": ""
 		},
 		{
-			"id": "0cb8cf7b-c63f-4a0c-9c8f-d07bbb33de43",
+			"id": "afa02de8-d1b4-4eb4-bb4f-683eb4c1e51f",
 			"key": "tc_identifierPainel_fieldPaymentPlanCategoryIds",
 			"value": ""
 		},
 		{
-			"id": "a601f2be-c943-47e1-b979-1bed182d13a1",
+			"id": "f47f250f-7347-4120-b434-8f0a666ed27d",
 			"key": "tc_identifierPainel_fieldCallCondition",
 			"value": ""
 		},
 		{
-			"id": "6896bc5a-f595-482b-98cf-a9c39133fdb4",
+			"id": "c1fdc95a-f0b2-4f2a-b1ad-47c7de02290d",
 			"key": "tc_identifierPainel_fieldIntegrationChannelIds",
 			"value": ""
 		}
