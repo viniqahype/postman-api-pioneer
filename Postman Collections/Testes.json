@@ -405,11 +405,21 @@
 							"var payloadEngine = JSON.parse(pm.collectionVariables.get('payloadEngine'))\r",
 							"var changeSubSubFields = eval(pm.globals.get('bodyChangeSubSubFields'))\r",
 							"\r",
-							"delete payloadEngine.engineCriteria.vehicles[0].brandId\r",
+							"/* delete payloadEngine.engineCriteria.vehicles[0].brandId\r",
 							"delete payloadEngine.engineCriteria.vehicles[0].modelId\r",
 							"payloadEngine.engineCriteria.vehicles[0].brandId = null\r",
 							"payloadEngine.engineCriteria.vehicles[0].modelId = null\r",
-							"console.log(payloadEngine.engineCriteria.vehicles[0])"
+							"console.log(payloadEngine.engineCriteria.vehicles[0]) */"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "0f09514d-2232-410c-a6c5-c68b582dfcef",
+						"exec": [
+							"console.log(pm.response.json())"
 						],
 						"type": "text/javascript"
 					}
@@ -421,7 +431,18 @@
 			},
 			"request": {
 				"method": "GET",
-				"header": [],
+				"header": [
+					{
+						"key": "client_id",
+						"value": "{{client_id}}",
+						"type": "text"
+					},
+					{
+						"key": "access_token",
+						"value": "{{access_token}}",
+						"type": "text"
+					}
+				],
 				"url": {
 					"raw": "https://api-rci-qa.bancorcibrasil.com.br/product/financing-offer/v1/financing-offers?_offset=0&_limit=100&_sort=description",
 					"protocol": "https",
@@ -480,12 +501,12 @@
 	],
 	"variable": [
 		{
-			"id": "8da58646-ee8e-4041-bc6c-74782d8b5496",
+			"id": "a8e89fcc-0d43-47b5-a103-62901ad4104a",
 			"key": "payloadEngine",
 			"value": ""
 		},
 		{
-			"id": "ad2b2bda-5d2b-49a3-838a-f8afbfc1a6c8",
+			"id": "f79ba5a0-bb3e-4784-a944-692dcdc4ef26",
 			"key": "payloadTest",
 			"value": ""
 		}
