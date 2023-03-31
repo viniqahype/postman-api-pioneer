@@ -420,7 +420,15 @@
 					"script": {
 						"id": "0f09514d-2232-410c-a6c5-c68b582dfcef",
 						"exec": [
-							"console.log(pm.response.json())"
+							"var json = pm.response.json()\r",
+							"var idsDiferentesDe3 = []\r",
+							"\r",
+							"for (let id in json){\r",
+							"    if (json[id].offerId !== 553372) {\r",
+							"    idsDiferentesDe3.push(pessoas[pessoa].id);\r",
+							"  }\r",
+							"}\r",
+							"console.log(idsDiferentesDe3)"
 						],
 						"type": "text/javascript"
 					}
@@ -445,7 +453,7 @@
 					}
 				],
 				"url": {
-					"raw": "https://api-rci-qa.bancorcibrasil.com.br/product/financing-offer/v1/financing-offers?_offset=0&_limit=100&_sort=description",
+					"raw": "https://api-rci-qa.bancorcibrasil.com.br/product/financing-offer/v1/financing-offers?_offset=0&_limit=10&_sort=description",
 					"protocol": "https",
 					"host": [
 						"api-rci-qa",
@@ -466,7 +474,7 @@
 						},
 						{
 							"key": "_limit",
-							"value": "100"
+							"value": "10"
 						},
 						{
 							"key": "_sort",
@@ -502,12 +510,12 @@
 	],
 	"variable": [
 		{
-			"id": "1b0cd510-ec5b-4b11-bd40-b0c71df11630",
+			"id": "e13920a7-472e-4043-80e5-7874c6dd3168",
 			"key": "payloadEngine",
 			"value": ""
 		},
 		{
-			"id": "c7cc8040-5d5d-4350-925a-598fb9d6d5ac",
+			"id": "933c7dae-0ad2-424b-990d-e4252865421c",
 			"key": "payloadTest",
 			"value": ""
 		}
