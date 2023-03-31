@@ -13,29 +13,29 @@
 					"script": {
 						"id": "1d8bdb3e-6c85-4565-958d-7e31242ae7cf",
 						"exec": [
-							"/* muda o payload alterando somente 1 valor */\r",
-							"var bodyChangeOneField = (json, key, value) => {\r",
+							"/* Edit a value in object access first level */\r",
+							"var editBody_masterKey = (json, key, value) => {\r",
 							"    let payload = json;\r",
 							"    payload[key] = value\r",
 							"    return payload \r",
 							"}\r",
 							"\r",
 							"/* muda o payload alterando objetos dentro de objetos */\r",
-							"var bodyChangeSubField = (json,keyFather,keyChild,value) => {\r",
+							"var editBody_childKey = (json,keyFather,keyChild,value) => {\r",
 							"    let payload = json;\r",
 							"    payload[keyFather][keyChild] = value\r",
 							"    return payload\r",
 							"}\r",
 							"\r",
 							"/* muda o payload alterando objetos dentro de objetos que estão dentro de objetos */\r",
-							"var bodyChangeSubSubFields = (json,keyFather,keyChild1,keyChild2,value) => {\r",
+							"var editBody_grandchildKey = (json,keyFather,keyChild1,keyChild2,value) => {\r",
 							"    let payload = json;\r",
 							"    payload[keyFather][keyChild1][keyChild2] = value\r",
 							"    return payload    \r",
 							"}\r",
 							"\r",
 							"/* muda o payload alterando mais de valor ao mesmo tempo - Não está funcionando no posmtan */\r",
-							"var bodyChangeMoreFields = (json, arrOfObjects) => {\r",
+							"var editBody_manyFields = (json, arrOfObjects) => {\r",
 							"    let payload = json;\r",
 							"    arrOfObjects.map((element) => {\r",
 							"        payload[Object.keys(element)[0]] = Object.values(element)[0]\r",
@@ -43,10 +43,10 @@
 							"    return payload\r",
 							"}\r",
 							"\r",
-							"pm.globals.set('bodyChangeOneField', bodyChangeOneField.toString());\r",
-							"pm.globals.set('bodyChangeSubField', bodyChangeSubField.toString());\r",
-							"pm.globals.set('bodyChangeSubSubFields', bodyChangeSubSubFields.toString());\r",
-							"pm.globals.set('bodyChangeMoreFields', bodyChangeMoreFields.toString());"
+							"pm.globals.set('editBody_masterKey', editBody_masterKey.toString());\r",
+							"pm.globals.set('editBody_childKey', editBody_childKey.toString());\r",
+							"pm.globals.set('editBody_grandchildKey', editBody_grandchildKey.toString());\r",
+							"pm.globals.set('editBody_manyFields', editBody_manyFields.toString());"
 						],
 						"type": "text/javascript"
 					}
@@ -506,12 +506,12 @@
 	],
 	"variable": [
 		{
-			"id": "f38d8c70-1c6a-4348-bb66-695290b985c0",
+			"id": "7dd55549-8946-4a39-9fc7-32c3dfc42b3f",
 			"key": "payloadEngine",
 			"value": ""
 		},
 		{
-			"id": "8ad62ab4-368b-4d2d-9b0c-31f820ac146a",
+			"id": "8a31b262-152d-47ca-a13c-77a091186b50",
 			"key": "payloadTest",
 			"value": ""
 		}
