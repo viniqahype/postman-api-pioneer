@@ -2964,7 +2964,7 @@
 					"name": "Fazendo SwitchCases",
 					"item": [
 						{
-							"name": "[Ana] Check insurancePanel_fields",
+							"name": "[Ana] Check insuranceProducts_fields",
 							"event": [
 								{
 									"listen": "test",
@@ -13130,63 +13130,63 @@
 	],
 	"variable": [
 		{
-			"id": "80974f32-b741-4eed-a8f7-0fc6bc4c9cfa",
+			"id": "f907eab4-3989-46cb-b9b5-342ca103d3d2",
 			"key": "domain",
 			"value": "/financing/offer/v1"
 		},
 		{
-			"id": "99d99ac5-f422-45af-b766-4d0096dc42a1",
+			"id": "65f1df3d-cd92-44f6-964c-f73593503055",
 			"key": "ignore_collectionScript",
 			"value": ""
 		},
 		{
-			"id": "3997e34b-39aa-42ff-b902-3e3f6d0d6fe2",
+			"id": "fae868e0-d475-46c7-970c-773c7794af0f",
 			"key": "count",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "f07b0eeb-0926-43a6-ac5e-d932be1fe4d4",
+			"id": "a96b4321-0fc9-4858-9e5b-a1f946b57e5d",
 			"key": "controlAuth",
 			"value": ""
 		},
 		{
-			"id": "40032823-b5aa-4b79-9cf5-8e90933df089",
+			"id": "be8ade08-986b-47eb-8245-c9cbd0fdf7bd",
 			"key": "payloadEngine",
 			"value": ""
 		},
 		{
-			"id": "ca7edf79-76dc-4862-8acf-6239a20d629c",
+			"id": "ff883b22-af7a-417f-b9c2-0c246a7a453d",
 			"key": "tc_identifierPainel_fieldEngineType",
 			"value": ""
 		},
 		{
-			"id": "2d6aa67a-d305-4fbe-9f6d-de816fd38c77",
+			"id": "d193f1d1-4950-44ae-b1eb-609687dfac4b",
 			"key": "tc_identifierPainel_fieldLine",
 			"value": ""
 		},
 		{
-			"id": "2b755215-4a96-462d-8813-ad9bf729763b",
+			"id": "353a3750-6959-46b0-bf6e-11aa9a499f50",
 			"key": "tc_identifierPainel_fieldStartDate",
 			"value": ""
 		},
 		{
-			"id": "06b4369f-63c4-483b-adbe-ac08524d4d12",
+			"id": "0cd8367f-8aac-464f-9a96-217a64015aee",
 			"key": "tc_identifierPainel_fieldEndDate",
 			"value": ""
 		},
 		{
-			"id": "2adbc182-1dc5-41f1-9876-212b1f790761",
+			"id": "8ef29fb9-36cc-4120-b4e6-3b658c91d8ff",
 			"key": "tc_identifierPainel_fieldPaymentPlanCategoryIds",
 			"value": ""
 		},
 		{
-			"id": "8556722e-3b82-42c4-9f0c-2cbfb84c6721",
+			"id": "fa1e4680-57ec-4eaa-8e9b-3275417a175d",
 			"key": "tc_identifierPainel_fieldCallCondition",
 			"value": ""
 		},
 		{
-			"id": "7a1db94a-485c-4083-98f7-a174728d7515",
+			"id": "50a29ed7-351e-488d-abfc-e7b23ba99dd0",
 			"key": "tc_identifierPainel_fieldIntegrationChannelIds",
 			"value": ""
 		}
