@@ -402,11 +402,11 @@
 					"script": {
 						"id": "48d9084f-a914-4741-bb3b-6a236ab5ba7c",
 						"exec": [
-							"var payloadEngine = pm.collectionVariables\r",
-							"var changeOneFields = eval(pm.globals.get('bodyChangeOneField'))\r",
+							"var payloadEngine = JSON.parse(pm.collectionVariables.get('payloadEngine'))\r",
+							"var changeSubSubFields = eval(pm.globals.get('bodyChangeSubSubFields'))\r",
 							"\r",
 							"\r",
-							"changeOneFields(payloadEngine, \"filterCategory\", pm.variables.replaceIn('{{$randomWord}}'))\r",
+							"changeOneFields(payloadEngine, \"vehicles\", \"filterCategory\", pm.variables.replaceIn('{{$randomWord}}'))\r",
 							"\r",
 							"console.log(payloadEngine)"
 						],
@@ -479,12 +479,12 @@
 	],
 	"variable": [
 		{
-			"id": "dd822adb-6cb3-4f14-8966-a4c8273a0b10",
+			"id": "bad37d9c-6f0d-49b1-ad19-e37a9a9ef55a",
 			"key": "payloadEngine",
 			"value": ""
 		},
 		{
-			"id": "9d54d31e-4867-4538-87f2-3e20da154c82",
+			"id": "2fab5ccd-5f41-452d-8ec2-c34d6c2f1c54",
 			"key": "payloadTest",
 			"value": ""
 		}
