@@ -403,7 +403,8 @@
 						"id": "48d9084f-a914-4741-bb3b-6a236ab5ba7c",
 						"exec": [
 							"var payloadEngine = JSON.parse(pm.collectionVariables.get('payloadEngine'))\r",
-							"var changeSubSubFields = eval(pm.globals.get('bodyChangeSubSubFields'))\r",
+							"var changeSubSubFields = eval(pm.globals.get('bodyChangeSubSubFields')\r",
+							"var getToken = eval(pm.globals.get('getToken'))()\r",
 							"\r",
 							"/* delete payloadEngine.engineCriteria.vehicles[0].brandId\r",
 							"delete payloadEngine.engineCriteria.vehicles[0].modelId\r",
@@ -501,12 +502,12 @@
 	],
 	"variable": [
 		{
-			"id": "a8e89fcc-0d43-47b5-a103-62901ad4104a",
+			"id": "78e5ef76-22de-483e-aa29-8eef2396d185",
 			"key": "payloadEngine",
 			"value": ""
 		},
 		{
-			"id": "f79ba5a0-bb3e-4784-a944-692dcdc4ef26",
+			"id": "d96bccf0-5593-42d8-800f-8b02b0e2760f",
 			"key": "payloadTest",
 			"value": ""
 		}
