@@ -13,28 +13,28 @@
 					"script": {
 						"id": "1d8bdb3e-6c85-4565-958d-7e31242ae7cf",
 						"exec": [
-							"/* Edit a value in object access first level */\r",
+							"/* Edit the value in object access first level */\r",
 							"var editBody_masterKey = (json, key, value) => {\r",
 							"    let payload = json;\r",
 							"    payload[key] = value\r",
 							"    return payload \r",
 							"}\r",
 							"\r",
-							"/* muda o payload alterando objetos dentro de objetos */\r",
+							"/* Edit the value of a child key within an object */\r",
 							"var editBody_childKey = (json,keyFather,keyChild,value) => {\r",
 							"    let payload = json;\r",
 							"    payload[keyFather][keyChild] = value\r",
 							"    return payload\r",
 							"}\r",
 							"\r",
-							"/* muda o payload alterando objetos dentro de objetos que estão dentro de objetos */\r",
+							"/* Edit the value of a grandchild key of an object within an object */\r",
 							"var editBody_grandchildKey = (json,keyFather,keyChild1,keyChild2,value) => {\r",
 							"    let payload = json;\r",
 							"    payload[keyFather][keyChild1][keyChild2] = value\r",
 							"    return payload    \r",
 							"}\r",
 							"\r",
-							"/* muda o payload alterando mais de valor ao mesmo tempo - Não está funcionando no posmtan */\r",
+							"/* Edit more than one key and value at the same time */\r",
 							"var editBody_manyFields = (json, arrOfObjects) => {\r",
 							"    let payload = json;\r",
 							"    arrOfObjects.map((element) => {\r",
@@ -506,12 +506,12 @@
 	],
 	"variable": [
 		{
-			"id": "7dd55549-8946-4a39-9fc7-32c3dfc42b3f",
+			"id": "6fe8e59d-2cd1-4d62-9ce6-37fef9d5e7e6",
 			"key": "payloadEngine",
 			"value": ""
 		},
 		{
-			"id": "8a31b262-152d-47ca-a13c-77a091186b50",
+			"id": "0ad89fc8-61dc-4797-ae6f-736d59815291",
 			"key": "payloadTest",
 			"value": ""
 		}
