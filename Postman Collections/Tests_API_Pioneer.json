@@ -4177,13 +4177,7 @@
 								"header": []
 							},
 							"response": []
-						}
-					],
-					"id": "ba17796b-d376-4a4f-aeaa-103b123b5580"
-				},
-				{
-					"name": "Para validar",
-					"item": [
+						},
 						{
 							"name": "[Ana] Check remunerationsPanel_fields",
 							"event": [
@@ -4249,7 +4243,7 @@
 											"            method: pm.request.method.toString(),\r",
 											"            url: pm.request.url.toString(),\r",
 											"            headers: headerComplete,\r",
-											"                body: payloadEngine.engineCriteria.classifiers[0].classifierId =_.random(10000,11000)\r",
+											"            body: payloadEngine.engineCriteria.classifiers[0].classifierId =_.random(10000,11000)\r",
 											"            }, (err, res) => {\r",
 											"            pm.test('Status 400 for inexistentId classifierId', () => {\r",
 											"                pm.expect(res).to.be.equal(400);\r",
@@ -4258,13 +4252,13 @@
 											"            })\r",
 											"        i++;\r",
 											"        pm.collectionVariables.set('count', i);\r",
-											"        \r",
+											"\r",
 											"    case 'string':\r",
 											"       pm.sendRequest({\r",
 											"            method: pm.request.method.toString(),\r",
 											"            url: pm.request.url.toString(),\r",
 											"            headers: headerComplete,\r",
-											"            body: changeSubSubFields(payloadEngine, \"engineReturns\", \"remunerations\", \"remunerationsId\", pm.variables.replaceIn('{{$randomWord}}'))\r",
+											"            body: payloadEngine.engineCriteria.classifiers[0].classifierId = pm.variables.replaceIn('{{$randomWord}}')\r",
 											"        }, (err, res) => {\r",
 											"            pm.test('Status 400 for string remunerationsId', () => {\r",
 											"                pm.expect(res).to.be.equal(400);\r",
@@ -4279,7 +4273,7 @@
 											"            method: pm.request.method.toString(),\r",
 											"            url: pm.request.url.toString(),\r",
 											"            headers: headerComplete,\r",
-											"            body: changeSubSubFields(payloadEngine, \"engineReturns\", \"remunerations\", \"remunerationsId\", pm.variables.replaceIn('   '))\r",
+											"            body: payloadEngine.engineCriteria.classifiers[0].classifierId = pm.variables.replaceIn('   ')\r",
 											"        }, (err, res) => {\r",
 											"            pm.test('Status 400 for remunerationsId with only_space', () => {\r",
 											"                pm.expect(res).to.be.equal(400);\r",
@@ -4294,7 +4288,7 @@
 											"            method: pm.request.method.toString(),\r",
 											"            url: pm.request.url.toString(),\r",
 											"            headers: headerComplete,\r",
-											"            body: changeSubSubFields(payloadEngine, \"engineReturns\", \"remunerations\", \"remunerationsId\", pm.variables.replaceIn(''))\r",
+											"            body: cpayloadEngine.engineCriteria.classifiers[0].classifierId = pm.variables.replaceIn('')\r",
 											"        }, (err, res) => {\r",
 											"            pm.test('Status 400 for empty remunerationsId', () => {\r",
 											"                pm.expect(res).to.be.equal(400);\r",
@@ -4310,7 +4304,7 @@
 											"           method: pm.request.method.toString(),\r",
 											"           url: pm.request.url.toString(),\r",
 											"           headers: headerComplete,\r",
-											"           body: changeSubSubFields(payloadEngine, \"engineReturns\", \"remunerations\", \"remunerationsId\", negativeNumber)\r",
+											"           body: payloadEngine.engineCriteria.classifiers[0].classifierId = negativeNumber\r",
 											"       }, (err, res) => {\r",
 											"           pm.test('Status 400 for negative number remunerationsId', () => {\r",
 											"               pm.expect(res).to.be.equal(400);\r",
@@ -4326,7 +4320,7 @@
 											"           method: pm.request.method.toString(),\r",
 											"           url: pm.request.url.toString(),\r",
 											"           headers: headerComplete,\r",
-											"           body: changeSubSubFields(payloadEngine, \"engineReturns\", \"remunerations\", \"remunerationsId\", parseFloat(floatNumber))\r",
+											"           body: payloadEngine.engineCriteria.classifiers[0].classifierId = parseFloat(floatNumber)\r",
 											"       }, (err, res) => {\r",
 											"           pm.test('Status 400 for float number remunerationsId', () => {\r",
 											"               pm.expect(res).to.be.equal(400);\r",
@@ -4357,7 +4351,7 @@
 											"            method: pm.request.method.toString(),\r",
 											"            url: pm.request.url.toString(),\r",
 											"            headers: headerComplete,\r",
-											"            body: changeSubSubFields(payloadEngine, \"engineReturns\", \"remunerations\", \"remunerationsId\", null)\r",
+											"            body: payloadEngine.engineCriteria.classifiers[0].classifierId = null\r",
 											"        }, (err, res) => {\r",
 											"            pm.test('Status 400 for null remunerationsId', () => {\r",
 											"                pm.expect(res).to.be.equal(400);\r",
@@ -4367,6 +4361,9 @@
 											"        i=0;\r",
 											"        pm.collectionVariables.set('count', i); \r",
 											"\r",
+											"    default:\r",
+											"        console.error('Error in TEST script - Classifiers Panel');\r",
+											"        break;\r",
 											"}\r",
 											"\r",
 											""
@@ -4384,7 +4381,13 @@
 								"header": []
 							},
 							"response": []
-						},
+						}
+					],
+					"id": "ba17796b-d376-4a4f-aeaa-103b123b5580"
+				},
+				{
+					"name": "Para validar",
+					"item": [
 						{
 							"name": "[validar] Check classifiersPanel_fields",
 							"event": [
@@ -13135,63 +13138,63 @@
 	],
 	"variable": [
 		{
-			"id": "3aea04b9-8f5b-4f67-b5d0-f1a5e8e73215",
+			"id": "42694085-94e2-45f2-af5d-4de7d4add101",
 			"key": "domain",
 			"value": "/financing/offer/v1"
 		},
 		{
-			"id": "90b37bae-3720-41af-b55f-989cdf4ad4ac",
+			"id": "0ebd4a39-2aa5-48fc-b1a6-b14969fb0c6a",
 			"key": "ignore_collectionScript",
 			"value": ""
 		},
 		{
-			"id": "94c78a19-6d00-4ecb-a593-373dcceebeed",
+			"id": "9a967748-9a12-42b3-9f9f-a31057d07b64",
 			"key": "count",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "a3b31a36-4105-4e78-85ab-55b5b456a6e2",
+			"id": "9de41247-54e1-4844-b310-5cf2d1f4120a",
 			"key": "controlAuth",
 			"value": ""
 		},
 		{
-			"id": "a8ef1cc5-18c0-41fb-a778-d1efadfcb7fe",
+			"id": "7dd6f245-feb1-4b3a-bc28-f52e537d2302",
 			"key": "payloadEngine",
 			"value": ""
 		},
 		{
-			"id": "3c410430-7d5a-4c11-ad5d-617728fce0fa",
+			"id": "11051dac-3d62-4c9d-b243-b9808d087242",
 			"key": "tc_identifierPainel_fieldEngineType",
 			"value": ""
 		},
 		{
-			"id": "f3218cb6-57f6-496b-82f1-2d972552596d",
+			"id": "9652b2d1-0d71-4539-b78a-6131017e12c0",
 			"key": "tc_identifierPainel_fieldLine",
 			"value": ""
 		},
 		{
-			"id": "e3af65bb-101a-45fe-bd41-5680153fc50e",
+			"id": "ec36b4e3-a480-4378-b083-8c9fa71c7d07",
 			"key": "tc_identifierPainel_fieldStartDate",
 			"value": ""
 		},
 		{
-			"id": "e1287992-9789-47af-89b9-a7907401edb4",
+			"id": "b963179d-be55-4a18-8a2f-dfd9d011ece7",
 			"key": "tc_identifierPainel_fieldEndDate",
 			"value": ""
 		},
 		{
-			"id": "523b0aa1-041a-4e24-8ee0-322225f14f83",
+			"id": "8fa7007c-553b-4e8e-bf75-c2016207c177",
 			"key": "tc_identifierPainel_fieldPaymentPlanCategoryIds",
 			"value": ""
 		},
 		{
-			"id": "c1018d37-dd7b-4150-958b-4c6a18a37fef",
+			"id": "864fa9b7-3a68-4d53-8779-15bd692de1de",
 			"key": "tc_identifierPainel_fieldCallCondition",
 			"value": ""
 		},
 		{
-			"id": "b073ff93-87ee-4595-b9f5-b29e5e04696c",
+			"id": "5b9b1d4e-0723-4f5d-8253-27f417cb7ab9",
 			"key": "tc_identifierPainel_fieldIntegrationChannelIds",
 			"value": ""
 		}
