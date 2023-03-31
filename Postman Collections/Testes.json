@@ -425,10 +425,12 @@
 							"\r",
 							"for (let id in json){\r",
 							"    if (json[id].offerId !== 553372) {\r",
-							"    idsDiferentesDe3.push(json[id].offerId);\r",
+							"    let teste = json[id].offerId\r",
+							"    console.log(teste)\r",
+							"    //idsDiferentesDe3.push(json[id].offerId);\r",
 							"  }\r",
 							"}\r",
-							"console.log(idsDiferentesDe3)"
+							""
 						],
 						"type": "text/javascript"
 					}
@@ -510,12 +512,12 @@
 	],
 	"variable": [
 		{
-			"id": "448492fd-9afb-4014-b1c6-dd1aad8669dd",
+			"id": "dac6cc30-c5e5-4ffa-bd93-86877834960c",
 			"key": "payloadEngine",
 			"value": ""
 		},
 		{
-			"id": "cd9b59e3-2548-4ee8-9314-7bc81fa75d38",
+			"id": "e30fd8b7-b01e-49df-b8c2-b00ce994677a",
 			"key": "payloadTest",
 			"value": ""
 		}
