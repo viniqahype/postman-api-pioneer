@@ -11316,6 +11316,20 @@
 											"        pm.collectionVariables.set('count', i);\r",
 											"        \r",
 											"    case 'only_subProduct':\r",
+											"        delete payloadEngine.productId\r",
+											"        pm.sendRequest({\r",
+											"            method: pm.request.method.toString(),\r",
+											"            url: pm.request.url.toString(),\r",
+											"            headers: headerComplete,\r",
+											"            body: payloadEngine.engineCriteria.serviceProducts[0].subProductId = pm.variables.replaceIn('{{$randomInt}}')\r",
+											"        }, (err, res) => {\r",
+											"            pm.test('Status 400 for no_subProduct', () => {\r",
+											"                pm.expect(res).to.be.equal(400);\r",
+											"                //VALIDAR MENSAGEM\r",
+											"            })\r",
+											"        })\r",
+											"        i++;\r",
+											"        pm.collectionVariables.set('count', i);  \r",
 											"\r",
 											"    case 'subProductFromAnotherProduct':\r",
 											"\r",
@@ -11349,8 +11363,8 @@
 											"} \r",
 											"\r",
 											"/* Validating identifierPanel.subProductId */ \r",
-											"var tc_fieldSubProductId = JSON.parse(pm.collectionVariables.get('tc_serviceProductsPanel_fieldSubProductId'))\r",
-											"/* tc_fieldSubProductId = ['inexistentId', 'string', 'only_space', 'empty', 'no_subProduct', 'subProductNull', 'only_subProduct', 'subProductFromAnotherProduct', 'inactiveId', 'multiplesOptions'] */\r",
+											"var tc_fieldPeriodInMonths = JSON.parse(pm.collectionVariables.get('tc_serviceProductsPanel_fieldPeriodInMonths'))\r",
+											"/* 'inexistent', 'string', 'only_space', 'empty', 'no_periodInMonths', 'periodInMonthsNull', 'periodFromAnotherSubproduct', 'periodFromAnotherProduct', 'only_period', 'multiplesOptions'])); */\r",
 											"switch (tc_fieldSubProductId[i]) {\r",
 											"    case 'inexistentId':\r",
 											"        /* Consulting all existent ids */\r",
@@ -13141,63 +13155,63 @@
 	],
 	"variable": [
 		{
-			"id": "354ee190-015e-4ddf-88cc-c729bf53ebe6",
+			"id": "1d17afe7-09e5-4a7d-b498-6a2d193140c3",
 			"key": "domain",
 			"value": "/financing/offer/v1"
 		},
 		{
-			"id": "e3d2dd6d-118d-4038-8c1d-0c9a7dba0c05",
+			"id": "9a5e5206-6e07-4ae5-ae9d-0f48badbbce8",
 			"key": "ignore_collectionScript",
 			"value": ""
 		},
 		{
-			"id": "ab2461f2-9f10-415c-879c-a94fb8be4b25",
+			"id": "6332bd14-99f2-41c1-92c3-854c454609e1",
 			"key": "count",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "6997961f-87bb-4d84-b64e-9e2de77b7cdc",
+			"id": "0c41abeb-c67a-4514-856d-9247140953f2",
 			"key": "controlAuth",
 			"value": ""
 		},
 		{
-			"id": "dc6003b2-84ed-4313-a6f7-e325aa5e3a16",
+			"id": "75302149-113c-4089-99ce-2a23b05dbc0b",
 			"key": "payloadEngine",
 			"value": ""
 		},
 		{
-			"id": "ae499659-998d-4508-8797-d94da3cf78e7",
+			"id": "65ad109f-e6bf-4105-a2b3-f023e803d5cb",
 			"key": "tc_identifierPainel_fieldEngineType",
 			"value": ""
 		},
 		{
-			"id": "28acecbc-78fd-43ca-85b5-954ccaab99eb",
+			"id": "afb397cd-251d-45ca-81b9-2279d8cee133",
 			"key": "tc_identifierPainel_fieldLine",
 			"value": ""
 		},
 		{
-			"id": "77a1ea35-5bc8-4419-9dea-d2dc6a02b7c3",
+			"id": "bb118e4e-71bd-4d03-b2a0-c100a5bad6b5",
 			"key": "tc_identifierPainel_fieldStartDate",
 			"value": ""
 		},
 		{
-			"id": "67177cce-d67f-45cb-99ac-044645ef3993",
+			"id": "8bcc6181-4364-46c6-a305-62482cfa8843",
 			"key": "tc_identifierPainel_fieldEndDate",
 			"value": ""
 		},
 		{
-			"id": "e16a6e63-f079-4a16-ba58-0d77ce0a2b43",
+			"id": "4a6ea770-65f2-424e-9391-1b976872db68",
 			"key": "tc_identifierPainel_fieldPaymentPlanCategoryIds",
 			"value": ""
 		},
 		{
-			"id": "8599efca-37c8-4b58-949f-bb37b2b1202c",
+			"id": "ab8cca30-6a88-4179-b90e-708d04eda3b8",
 			"key": "tc_identifierPainel_fieldCallCondition",
 			"value": ""
 		},
 		{
-			"id": "460cd894-9952-4d6d-b24b-04cc2bf5c30f",
+			"id": "abac6a52-a4ed-4a31-8b94-248bb5eabef0",
 			"key": "tc_identifierPainel_fieldIntegrationChannelIds",
 			"value": ""
 		}
