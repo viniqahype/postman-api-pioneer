@@ -409,8 +409,6 @@
 							"delete payloadEngine.engineCriteria.vehicles[0].modelId\r",
 							"payloadEngine.engineCriteria.vehicles[0].brandId = null\r",
 							"payloadEngine.engineCriteria.vehicles[0].modelId = null\r",
-							"\r",
-							"payloadEngine.engineCriteria.vehicles[0].brandId = 123\r",
 							"console.log(payloadEngine.engineCriteria.vehicles[0])"
 						],
 						"type": "text/javascript"
@@ -482,12 +480,12 @@
 	],
 	"variable": [
 		{
-			"id": "19f290ff-ac31-439a-bad3-b27ccd7b426b",
+			"id": "8da58646-ee8e-4041-bc6c-74782d8b5496",
 			"key": "payloadEngine",
 			"value": ""
 		},
 		{
-			"id": "8908712f-4922-40f7-a27f-e47c5d095108",
+			"id": "ad2b2bda-5d2b-49a3-838a-f8afbfc1a6c8",
 			"key": "payloadTest",
 			"value": ""
 		}
