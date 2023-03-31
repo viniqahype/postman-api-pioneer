@@ -10081,7 +10081,7 @@
 											"            method: pm.request.method.toString(),\r",
 											"            url: pm.request.url.toString(),\r",
 											"            headers: headerComplete,\r",
-											"            body: changeSubSubFields(payloadEngine, \"engineReturns\", \"classifiers\", \"classifierId\", _.random (10000, 11000))\r",
+											"            body: payloadEngine.engineCriteria.classifiers[0].classifierId =_.random(10000,11000)\r",
 											"        }, (err, res) => {\r",
 											"            pm.test('Status 400 for inexistentId classifierId', () => {\r",
 											"                pm.expect(res).to.be.equal(400);\r",
@@ -10096,7 +10096,7 @@
 											"            method: pm.request.method.toString(),\r",
 											"            url: pm.request.url.toString(),\r",
 											"            headers: headerComplete,\r",
-											"            body: changeSubSubFields(payloadEngine, \"engineReturns\", \"classifiers\", \"classifierId\", pm.variables.replaceIn('{{$randomWord}}'))\r",
+											"            body: payloadEngine.engineCriteria.classifiers[0].classifierId = pm.variables.replaceIn('{{$randomWord}}')            \r",
 											"        }, (err, res) => {\r",
 											"            pm.test('Status 400 for string classifierId', () => {\r",
 											"                pm.expect(res).to.be.equal(400);\r",
@@ -10111,7 +10111,7 @@
 											"            method: pm.request.method.toString(),\r",
 											"            url: pm.request.url.toString(),\r",
 											"            headers: headerComplete,\r",
-											"            body: changeSubSubFields(payloadEngine, \"engineReturns\", \"classifiers\", \"classifierId\", pm.variables.replaceIn('   '))\r",
+											"            body: payloadEngine.engineCriteria.classifiers[0].classifierId = pm.variables.replaceIn('   ')\r",
 											"        }, (err, res) => {\r",
 											"            pm.test('Status 400 for classifierId with only_space', () => {\r",
 											"                pm.expect(res).to.be.equal(400);\r",
@@ -10126,7 +10126,7 @@
 											"            method: pm.request.method.toString(),\r",
 											"            url: pm.request.url.toString(),\r",
 											"            headers: headerComplete,\r",
-											"            body: changeSubSubFields(payloadEngine, \"engineReturns\", \"classifiers\", \"classifierId\", pm.variables.replaceIn(''))\r",
+											"            body: payloadEngine.engineCriteria.classifiers[0].classifierId = pm.variables.replaceIn('')\r",
 											"        }, (err, res) => {\r",
 											"            pm.test('Status 400 for empty classifierId', () => {\r",
 											"                pm.expect(res).to.be.equal(400);\r",
@@ -10142,7 +10142,7 @@
 											"           method: pm.request.method.toString(),\r",
 											"           url: pm.request.url.toString(),\r",
 											"           headers: headerComplete,\r",
-											"           body: changeSubSubFields(payloadEngine, \"engineReturns\", \"classifiers\", \"classifierId\", negativeNumber)\r",
+											"           body: payloadEngine.engineCriteria.classifiers[0].classifierId = negativeNumber\r",
 											"       }, (err, res) => {\r",
 											"           pm.test('Status 400 for negative number classifierId', () => {\r",
 											"               pm.expect(res).to.be.equal(400);\r",
@@ -10158,7 +10158,7 @@
 											"           method: pm.request.method.toString(),\r",
 											"           url: pm.request.url.toString(),\r",
 											"           headers: headerComplete,\r",
-											"           body: changeSubSubFields(payloadEngine, \"engineReturns\", \"classifiers\", \"classifierId\", parseFloat(floatNumber))\r",
+											"           body: payloadEngine.engineCriteria.classifiers[0].classifierId = parseFloat(floatNumber)\r",
 											"       }, (err, res) => {\r",
 											"           pm.test('Status 400 for float number classifierId', () => {\r",
 											"               pm.expect(res).to.be.equal(400);\r",
@@ -10189,7 +10189,7 @@
 											"            method: pm.request.method.toString(),\r",
 											"            url: pm.request.url.toString(),\r",
 											"            headers: headerComplete,\r",
-											"            body: changeSubSubFields(payloadEngine, \"engineReturns\", \"classifiers\", \"classifierId\", null)\r",
+											"            body: payloadEngine.engineCriteria.classifiers[0].classifierId = null\r",
 											"        }, (err, res) => {\r",
 											"            pm.test('Status 400 for null classifierId', () => {\r",
 											"                pm.expect(res).to.be.equal(400);\r",
@@ -12871,63 +12871,63 @@
 	],
 	"variable": [
 		{
-			"id": "128945e2-72e1-48d3-8c77-154820303674",
+			"id": "43ab1e2d-da88-4b9c-8815-213cb4bc4b4f",
 			"key": "domain",
 			"value": "/financing/offer/v1"
 		},
 		{
-			"id": "bed9c7d0-6914-4aed-a682-3fa88de7f74c",
+			"id": "e1aef52d-fe81-4868-8dd1-1f23eccef0c3",
 			"key": "ignore_collectionScript",
 			"value": ""
 		},
 		{
-			"id": "bcac175b-d6b6-4650-b7c2-27ab7e4fb0af",
+			"id": "c4a150c0-6a7b-4fbc-956c-d20a086f017a",
 			"key": "count",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "66293e1f-a2d8-4eb6-88cb-c220101775b3",
+			"id": "b12c3138-fef7-4cbb-9207-f0900f96d4eb",
 			"key": "controlAuth",
 			"value": ""
 		},
 		{
-			"id": "d87785d7-a310-4031-bbdc-31e5dad367ae",
+			"id": "97306ee3-6f4a-45d1-96c1-73235044b4b9",
 			"key": "payloadEngine",
 			"value": ""
 		},
 		{
-			"id": "4b94d649-7cf4-455d-93e3-f6ef7259fee1",
+			"id": "c63742cb-bc47-4433-878a-c5d550f89a9c",
 			"key": "tc_identifierPainel_fieldEngineType",
 			"value": ""
 		},
 		{
-			"id": "75aea4b4-e069-4f90-8222-a09a5d453ff5",
+			"id": "530f45d0-62b7-4b7b-ac85-a4cb942b4611",
 			"key": "tc_identifierPainel_fieldLine",
 			"value": ""
 		},
 		{
-			"id": "54114402-d72c-4671-98d4-195c6a333c70",
+			"id": "cfcc2b9b-2806-4627-8eaf-4cda75fd9242",
 			"key": "tc_identifierPainel_fieldStartDate",
 			"value": ""
 		},
 		{
-			"id": "25d927ea-3a39-44f6-9518-87739b0e657b",
+			"id": "ef23b257-53b6-4288-9d13-4260ba6bbfa2",
 			"key": "tc_identifierPainel_fieldEndDate",
 			"value": ""
 		},
 		{
-			"id": "ab4ac3d7-111b-4c62-bebd-f105b3a1e8b6",
+			"id": "6bdd66b9-8ab9-4af0-9946-f351f7c5910a",
 			"key": "tc_identifierPainel_fieldPaymentPlanCategoryIds",
 			"value": ""
 		},
 		{
-			"id": "63bdef1e-3dd9-40eb-8e6e-cd2af7c8913f",
+			"id": "27db71c9-9c47-4f14-a332-b3fc9285f462",
 			"key": "tc_identifierPainel_fieldCallCondition",
 			"value": ""
 		},
 		{
-			"id": "854462cc-3e2e-479d-b1b9-a37fbdf42949",
+			"id": "b0643847-58a9-4006-9dfb-3e9f3fe8fbf9",
 			"key": "tc_identifierPainel_fieldIntegrationChannelIds",
 			"value": ""
 		}
