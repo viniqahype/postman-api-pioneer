@@ -406,8 +406,14 @@
 							"var changeSubSubFields = eval(pm.globals.get('bodyChangeSubSubFields'))\r",
 							"\r",
 							"\r",
-							"payloadEngine.engineCriteria.vehicles[0].filterCategory = parseInt(pm.variables.replaceIn('{{$randomInt}}'))\r",
-							"console.log(payloadEngine.engineCriteria.vehicles[0].filterCategory)"
+							"payloadEngine.engineCriteria.vehicles[0].brandId = [\r",
+							"    {\r",
+							"        \"channelId\": 123\r",
+							"    },\r",
+							"    {\r",
+							"        \"channelId\": 123\r",
+							"    }]\r",
+							"console.log(payloadEngine.engineCriteria.vehicles[0])"
 						],
 						"type": "text/javascript"
 					}
@@ -478,12 +484,12 @@
 	],
 	"variable": [
 		{
-			"id": "e56e7085-681d-4ad9-be4b-a4ebbbfdcea3",
+			"id": "d6200ffb-8a9b-4328-a7fc-c8edd56dd0d1",
 			"key": "payloadEngine",
 			"value": ""
 		},
 		{
-			"id": "fb9a7c11-cd46-4e23-bad3-ba5b1ab86247",
+			"id": "ee8402e4-2885-4acc-b644-9effd65b3ba4",
 			"key": "payloadTest",
 			"value": ""
 		}
