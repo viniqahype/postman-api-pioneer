@@ -406,9 +406,8 @@
 							"var changeSubSubFields = eval(pm.globals.get('bodyChangeSubSubFields'))\r",
 							"\r",
 							"\r",
-							"payloadEngine.engineCriteria.vehicles[0].filterCategory = pm.variables.replaceIn('{{$randomWord}}')\r",
-							"\r",
-							"console.log(payloadEngine)"
+							"payloadEngine.engineCriteria.vehicles[0].filterCategory = parseInt(pm.variables.replaceIn('{{$randomInt}}'))\r",
+							"console.log(payloadEngine.engineCriteria.vehicles[0].filterCategory)"
 						],
 						"type": "text/javascript"
 					}
@@ -479,12 +478,12 @@
 	],
 	"variable": [
 		{
-			"id": "32b7943d-50a2-46c1-8af2-685dc7fd2902",
+			"id": "e56e7085-681d-4ad9-be4b-a4ebbbfdcea3",
 			"key": "payloadEngine",
 			"value": ""
 		},
 		{
-			"id": "fae4a265-4879-4afc-88a2-6ca743181590",
+			"id": "fb9a7c11-cd46-4e23-bad3-ba5b1ab86247",
 			"key": "payloadTest",
 			"value": ""
 		}
