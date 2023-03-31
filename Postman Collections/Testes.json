@@ -410,7 +410,10 @@
 							"delete payloadEngine.engineCriteria.vehicles[0].modelId\r",
 							"payloadEngine.engineCriteria.vehicles[0].brandId = null\r",
 							"payloadEngine.engineCriteria.vehicles[0].modelId = null\r",
-							"console.log(payloadEngine.engineCriteria.vehicles[0]) */"
+							"console.log(payloadEngine.engineCriteria.vehicles[0]) */\r",
+							"\r",
+							"payloadEngine.engineCriteria.classifiers[0].classifierId =_.random(10000,11000)\r",
+							"console.log(payloadEngine)"
 						],
 						"type": "text/javascript"
 					}
@@ -420,17 +423,7 @@
 					"script": {
 						"id": "0f09514d-2232-410c-a6c5-c68b582dfcef",
 						"exec": [
-							"var json = pm.response.json()\r",
-							"var idsDiferentesDe3 = []\r",
 							"\r",
-							"for (let id in json){\r",
-							"    if (json[id].offerId !== 553372) {\r",
-							"    let teste = json[id].offerId\r",
-							"    console.log(teste)\r",
-							"    break\r",
-							"       //idsDiferentesDe3.push(json[id].offerId);\r",
-							"  }\r",
-							"}\r",
 							""
 						],
 						"type": "text/javascript"
@@ -513,12 +506,12 @@
 	],
 	"variable": [
 		{
-			"id": "0eef98b2-3416-47fc-9e0e-d570b3397d53",
+			"id": "f38d8c70-1c6a-4348-bb66-695290b985c0",
 			"key": "payloadEngine",
 			"value": ""
 		},
 		{
-			"id": "1bd73bb0-a6c6-40ec-a00d-15f79b857fba",
+			"id": "8ad62ab4-368b-4d2d-9b0c-31f820ac146a",
 			"key": "payloadTest",
 			"value": ""
 		}
