@@ -405,14 +405,12 @@
 							"var payloadEngine = JSON.parse(pm.collectionVariables.get('payloadEngine'))\r",
 							"var changeSubSubFields = eval(pm.globals.get('bodyChangeSubSubFields'))\r",
 							"\r",
+							"delete payloadEngine.engineCriteria.vehicles[0].brandId\r",
+							"delete payloadEngine.engineCriteria.vehicles[0].modelId\r",
+							"payloadEngine.engineCriteria.vehicles[0].brandId = null\r",
+							"payloadEngine.engineCriteria.vehicles[0].modelId = null\r",
 							"\r",
-							"payloadEngine.engineCriteria.vehicles[0].brandId = [\r",
-							"    {\r",
-							"        \"channelId\": 123\r",
-							"    },\r",
-							"    {\r",
-							"        \"channelId\": 123\r",
-							"    }]\r",
+							"payloadEngine.engineCriteria.vehicles[0].brandId = 123\r",
 							"console.log(payloadEngine.engineCriteria.vehicles[0])"
 						],
 						"type": "text/javascript"
@@ -484,12 +482,12 @@
 	],
 	"variable": [
 		{
-			"id": "d6200ffb-8a9b-4328-a7fc-c8edd56dd0d1",
+			"id": "19f290ff-ac31-439a-bad3-b27ccd7b426b",
 			"key": "payloadEngine",
 			"value": ""
 		},
 		{
-			"id": "ee8402e4-2885-4acc-b644-9effd65b3ba4",
+			"id": "8908712f-4922-40f7-a27f-e47c5d095108",
 			"key": "payloadTest",
 			"value": ""
 		}
