@@ -9135,13 +9135,7 @@
 								"url": "{{baseUrl}}{{domain}}/policies"
 							},
 							"response": []
-						}
-					],
-					"id": "c5e97f08-f756-40b2-95dc-c569bbcbb0eb"
-				},
-				{
-					"name": "Doing Tests Scripts | Pre-request OK",
-					"item": [
+						},
 						{
 							"name": "[validar] Check classifiersPanel_fields",
 							"event": [
@@ -9202,6 +9196,19 @@
 											"/* 'inexistentId', 'string', 'only_space', 'empty', 'negativeNumber', 'floatNumber', 'no_remunerationsId', 'remunerationsIdNull'*/\r",
 											"switch (tc_fieldClassifierId[i]) {\r",
 											"    case 'inexistentId':\r",
+											"       pm.sendRequest({\r",
+											"            method: pm.request.method.toString(),\r",
+											"            url: pm.request.url.toString(),\r",
+											"            headers: headerComplete,\r",
+											"            body: changeSubSubFields(payloadEngine, \"engineReturns\", \"classifiers\", \"classifierId\", pm.variables.replaceIn(\"randomNum\", _.random (1000, 3000))\r",
+											"        }, (err, res) => {\r",
+											"            pm.test('Status 400 for string classifierId', () => {\r",
+											"                pm.expect(res).to.be.equal(400);\r",
+											"                //VALIDAR MENSAGEM\r",
+											"            })\r",
+											"        })\r",
+											"        i++;\r",
+											"        pm.collectionVariables.set('count', i);\r",
 											"\r",
 											"    case 'string':\r",
 											"       pm.sendRequest({\r",
@@ -9308,7 +9315,7 @@
 											"                //VALIDAR MENSAGEM\r",
 											"            })\r",
 											"        })\r",
-											"               i = 0;\r",
+											"        i = 0;\r",
 											"        pm.collectionVariables.set('count', i);\r",
 											"\r",
 											"    default:\r",
@@ -9330,7 +9337,13 @@
 								"header": []
 							},
 							"response": []
-						},
+						}
+					],
+					"id": "c5e97f08-f756-40b2-95dc-c569bbcbb0eb"
+				},
+				{
+					"name": "Doing Tests Scripts | Pre-request OK",
+					"item": [
 						{
 							"name": "[Validar] Check remunerationsPanel_fields",
 							"event": [
@@ -12765,63 +12778,63 @@
 	],
 	"variable": [
 		{
-			"id": "c025e5bf-933b-4bb3-8843-7db0a42e851b",
+			"id": "065c18df-7ea1-4fc0-9f22-74b22f639af2",
 			"key": "domain",
 			"value": "/financing/offer/v1"
 		},
 		{
-			"id": "5fbfc34c-0127-4e8e-96b7-a4ebf3cb637d",
+			"id": "5b8a5457-5dde-4c1e-84b0-5677dba59e73",
 			"key": "ignore_collectionScript",
 			"value": ""
 		},
 		{
-			"id": "1b33b681-d088-4edc-bd17-07af722f2d21",
+			"id": "e9cb6747-ed6b-4a77-8c9f-68303b5e82f6",
 			"key": "count",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "4a71a6da-2131-46a4-b161-088ade2663be",
+			"id": "1ea9f623-5e3f-49c8-a695-7183bef5bd7c",
 			"key": "controlAuth",
 			"value": ""
 		},
 		{
-			"id": "f39b217d-8b48-4ae8-a977-9d37597ef42d",
+			"id": "d7b9fdf4-fad3-4d71-8653-8a132f27eacc",
 			"key": "payloadEngine",
 			"value": ""
 		},
 		{
-			"id": "e79f8806-13cd-426e-aa63-a8b2c84cde33",
+			"id": "8fddb16e-6f60-44b7-b6b6-e47a9d4ac5b5",
 			"key": "tc_identifierPainel_fieldEngineType",
 			"value": ""
 		},
 		{
-			"id": "0a986148-4731-4b58-ab3d-014c853dcf32",
+			"id": "d2a4cb8e-7c36-40a9-b19f-05a82f597f1c",
 			"key": "tc_identifierPainel_fieldLine",
 			"value": ""
 		},
 		{
-			"id": "b250072a-f7ae-4f57-a4b6-921f08248f37",
+			"id": "d31e7d75-1874-429a-8958-931ab879cfbf",
 			"key": "tc_identifierPainel_fieldStartDate",
 			"value": ""
 		},
 		{
-			"id": "4852b1b7-1ebf-4684-b312-825847b7639b",
+			"id": "6bd9d6b0-bf71-4eb6-b4bd-f8bb3888939e",
 			"key": "tc_identifierPainel_fieldEndDate",
 			"value": ""
 		},
 		{
-			"id": "87a3671d-90ed-4bb6-8c49-be20fbbaab58",
+			"id": "242f1930-6fe2-42bf-9329-50f97575daa4",
 			"key": "tc_identifierPainel_fieldPaymentPlanCategoryIds",
 			"value": ""
 		},
 		{
-			"id": "28d6e4d6-10ae-431e-a7e7-4cc9ee13c7a3",
+			"id": "63394140-7f5e-48b9-be6b-63e6222d3840",
 			"key": "tc_identifierPainel_fieldCallCondition",
 			"value": ""
 		},
 		{
-			"id": "ab4e9ae6-2e56-4115-a1ab-462e21b63476",
+			"id": "8be50b5e-dcf5-4605-aab1-2c7862b5ea79",
 			"key": "tc_identifierPainel_fieldIntegrationChannelIds",
 			"value": ""
 		}
