@@ -425,7 +425,7 @@
 							"\r",
 							"for (let id in json){\r",
 							"    if (json[id].offerId !== 553372) {\r",
-							"    idsDiferentesDe3.push(pessoas[pessoa].id);\r",
+							"    idsDiferentesDe3.push(json[id].offerId);\r",
 							"  }\r",
 							"}\r",
 							"console.log(idsDiferentesDe3)"
@@ -510,12 +510,12 @@
 	],
 	"variable": [
 		{
-			"id": "e13920a7-472e-4043-80e5-7874c6dd3168",
+			"id": "448492fd-9afb-4014-b1c6-dd1aad8669dd",
 			"key": "payloadEngine",
 			"value": ""
 		},
 		{
-			"id": "933c7dae-0ad2-424b-990d-e4252865421c",
+			"id": "cd9b59e3-2548-4ee8-9314-7bc81fa75d38",
 			"key": "payloadTest",
 			"value": ""
 		}
