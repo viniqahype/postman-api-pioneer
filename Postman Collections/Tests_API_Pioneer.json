@@ -4251,7 +4251,7 @@
 											"                    \r",
 											"    \r",
 											"    default:\r",
-											"            console.error('Error in TEST script - kilometrage');\r",
+											"            console.error('Error in TEST script - CCC panel');\r",
 											"            break;      \r",
 											"} \r",
 											"\r",
@@ -4388,7 +4388,7 @@
 											"                    \r",
 											"    \r",
 											"    default:\r",
-											"            console.error('Error in TEST script - kilometrage');\r",
+											"            console.error('Error in TEST script - CCC panel');\r",
 											"            break;      \r",
 											"} \r",
 											""
@@ -14321,63 +14321,63 @@
 	],
 	"variable": [
 		{
-			"id": "8d81a284-6510-44de-895c-ee4e34c8c880",
+			"id": "101566df-5412-4253-a1b0-52bc2f0e8e61",
 			"key": "domain",
 			"value": "/financing/offer/v1"
 		},
 		{
-			"id": "272b8388-b720-4d27-aed9-63127398f6ac",
+			"id": "f764e637-f35a-4cf8-bb28-d765e910a36c",
 			"key": "ignore_collectionScript",
 			"value": ""
 		},
 		{
-			"id": "048e5864-afd3-432e-b498-80ac5d26d2c0",
+			"id": "42d2aa43-dda1-4ed5-948f-091bbc6d5d01",
 			"key": "count",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "23a18db4-1dd4-4f2f-89c3-da49a9c0c6e8",
+			"id": "623b36ed-b1bc-475f-a76c-e0adeaf1df21",
 			"key": "controlAuth",
 			"value": ""
 		},
 		{
-			"id": "afe54571-e8b8-42ff-bdfe-fa26da4d057d",
+			"id": "b6b0c077-404f-4702-8808-3f0d900375a5",
 			"key": "payloadEngine",
 			"value": ""
 		},
 		{
-			"id": "c154daf1-da24-4a4f-a655-00468462fec2",
+			"id": "8bcf9ec5-1708-487d-be5f-efc6713fe3a6",
 			"key": "tc_identifierPainel_fieldEngineType",
 			"value": ""
 		},
 		{
-			"id": "bb1d5eb6-9030-40f2-829e-e0496cb51a8b",
+			"id": "405e0f82-1560-40a6-b931-0d42e5af0081",
 			"key": "tc_identifierPainel_fieldLine",
 			"value": ""
 		},
 		{
-			"id": "b1a0d437-c5cc-4d4f-9948-d101d573245f",
+			"id": "1ff5431b-e219-4150-9f3e-462eca9153fc",
 			"key": "tc_identifierPainel_fieldStartDate",
 			"value": ""
 		},
 		{
-			"id": "f921efba-5583-4d2c-94de-de1f943a30c5",
+			"id": "3b032161-6420-4b16-9afa-118c586a88d2",
 			"key": "tc_identifierPainel_fieldEndDate",
 			"value": ""
 		},
 		{
-			"id": "c6f358ce-e456-4f70-b537-853693816b29",
+			"id": "f72bc9ca-86a5-4239-bcec-f1e7dd5d0ee3",
 			"key": "tc_identifierPainel_fieldPaymentPlanCategoryIds",
 			"value": ""
 		},
 		{
-			"id": "007ef858-2b88-458a-9269-70cd0f6bfa11",
+			"id": "6846d932-b175-4772-9e80-7a98b272f50d",
 			"key": "tc_identifierPainel_fieldCallCondition",
 			"value": ""
 		},
 		{
-			"id": "37aa61bd-683e-43d0-8a06-55e2bced39b1",
+			"id": "6f78ce78-9a9c-4560-91ae-6b4854b1c9e1",
 			"key": "tc_identifierPainel_fieldIntegrationChannelIds",
 			"value": ""
 		}
