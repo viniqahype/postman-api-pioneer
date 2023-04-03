@@ -13585,6 +13585,83 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "[Test_Filipe] Consulta Criterios de Taxa",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "ca32f32b-afa7-4391-a90c-b9c301a95836",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "48c6323a-ecd6-4e34-b6b9-8252ea426b1e",
+						"exec": [
+							"var payloadEngine = JSON.parse(pm.collectionVariables.get('payloadEngine'))\r",
+							"\r",
+							"payloadEngine.engineReturns.paymentPlans[0].paymentPlanName = pm.variables.replaceIn(\"{{$randomWord}}\")\r",
+							"\r",
+							"console.log(payloadEngine)"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"id": "df115429-7d5c-42b6-83a9-92f816bdb75d",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api-rci-qa.bancorcibrasil.com.br/product/financing-offer/v1/financing-offers?_offset=0&_limit=10&_sort=description",
+					"protocol": "https",
+					"host": [
+						"api-rci-qa",
+						"bancorcibrasil",
+						"com",
+						"br"
+					],
+					"path": [
+						"product",
+						"financing-offer",
+						"v1",
+						"financing-offers"
+					],
+					"query": [
+						{
+							"key": "_offset",
+							"value": "0"
+						},
+						{
+							"key": "_limit",
+							"value": "10"
+						},
+						{
+							"key": "_sort",
+							"value": "description"
+						}
+					]
+				}
+			},
+			"response": []
 		}
 	],
 	"event": [
@@ -13720,63 +13797,63 @@
 	],
 	"variable": [
 		{
-			"id": "79a6ebee-fe70-4ca6-ab99-04bb28c50aad",
+			"id": "d954c68f-c83c-462f-af08-7aa7bd46df42",
 			"key": "domain",
 			"value": "/financing/offer/v1"
 		},
 		{
-			"id": "25c023ad-7fc6-4ef3-91f5-6514dd01306c",
+			"id": "e53ed444-bcf9-4f16-91e9-c71a719113a3",
 			"key": "ignore_collectionScript",
 			"value": ""
 		},
 		{
-			"id": "b2c7968d-95fd-41e6-8796-14353bc99e98",
+			"id": "adca93cf-be30-4b82-8049-c82b76cc7837",
 			"key": "count",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "b0951c46-52a7-4dcf-8774-b50efeaa9082",
+			"id": "fea2cda4-60d0-4f1c-a9f6-8f508ebf871b",
 			"key": "controlAuth",
 			"value": ""
 		},
 		{
-			"id": "3107a40e-1c7e-459a-8689-1bd57503e331",
+			"id": "0e79362f-2448-4ee0-a501-2c49350c2f9f",
 			"key": "payloadEngine",
 			"value": ""
 		},
 		{
-			"id": "cdc5b755-9b3b-4395-b898-38b6c28c984a",
+			"id": "899a426a-c77c-4bf4-a9e8-f9940937f177",
 			"key": "tc_identifierPainel_fieldEngineType",
 			"value": ""
 		},
 		{
-			"id": "e61a9da5-faab-44eb-9151-2bb97a042772",
+			"id": "c3c2c15f-2c4a-4958-ae06-da43192ed45e",
 			"key": "tc_identifierPainel_fieldLine",
 			"value": ""
 		},
 		{
-			"id": "22ed1f03-59d4-42f4-a795-d7d663bb0965",
+			"id": "ae6f8ca6-bb42-45d8-aad3-080929a98455",
 			"key": "tc_identifierPainel_fieldStartDate",
 			"value": ""
 		},
 		{
-			"id": "7f942f73-f786-40f8-9d68-019826e18620",
+			"id": "d4f96407-fc9a-4b85-9a03-bf652799a92a",
 			"key": "tc_identifierPainel_fieldEndDate",
 			"value": ""
 		},
 		{
-			"id": "5a54fa41-9a05-4d9e-a271-251260c5e712",
+			"id": "79b478ea-792a-4801-a9ca-8e42c9bfea17",
 			"key": "tc_identifierPainel_fieldPaymentPlanCategoryIds",
 			"value": ""
 		},
 		{
-			"id": "a817a556-c87a-4f91-8c31-5b285861215f",
+			"id": "e47a9393-b235-4e85-ba19-d4aa39297f70",
 			"key": "tc_identifierPainel_fieldCallCondition",
 			"value": ""
 		},
 		{
-			"id": "d53326b1-d894-4beb-bc33-07b5606ca0e3",
+			"id": "b359c0b3-47d4-4fca-9b90-a760520b412f",
 			"key": "tc_identifierPainel_fieldIntegrationChannelIds",
 			"value": ""
 		}
