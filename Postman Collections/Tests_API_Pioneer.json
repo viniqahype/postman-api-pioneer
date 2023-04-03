@@ -3256,9 +3256,7 @@
 											"\r",
 											"\r",
 											"/* Validating marketingPanel.BusinessActionAmount */\r",
-											"\r",
 											"var tc_fieldbusinessActionAmount = JSON.parse(pm.collectionVariables.get('tc_cddPanel_fieldBusinessActionAmount'))\r",
-											"\r",
 											"/* 'intNumber', 'floatNumber_3digits', 'floatNumber_1digit', 'negativeNumber', 'string', 'zero', 'only_space', 'empty', 'limit', '>999.999.999,99', 'no_businessAmount', 'businessAmountNull', 'difEngineMarketing' */\r",
 											"\r",
 											"switch (tc_fieldBusinessActionAmount[i]) {\r",
@@ -3418,6 +3416,11 @@
 											"        i++;\r",
 											"        pm.collectionVariables.set('count', i);\r",
 											"    case 'difEngineMarketing':\r",
+											"\r",
+											"    default:\r",
+											"            console.error('Error in TEST script - kilometrage');\r",
+											"            break; \r",
+											"\r",
 											"}\r",
 											"\r",
 											"/* Validating marketingPanel.BusinessActionPercent */\r",
@@ -3892,13 +3895,10 @@
 											"        })\r",
 											"        i++;\r",
 											"        pm.collectionVariables.set('count', i);\r",
-											"\r",
-											"\r",
-											"\r",
 											"        \r",
 											"    case 'limit':\r",
 											"    case 'no_fundingCost':\r",
-											"        delete payloadEngine.contractCostAmount\r",
+											"        delete payloadEngine.fundingCost\r",
 											"        pm.sendRequest({\r",
 											"            method: pm.request.method.toString(),\r",
 											"            url: pm.request.url.toString(),\r",
@@ -3914,6 +3914,21 @@
 											"        pm.collectionVariables.set('count', i);\r",
 											"\r",
 											"    case 'fundingCostNull':\r",
+											"        pm.sendRequest({\r",
+											"            method: pm.request.method.toString(),\r",
+											"            url: pm.request.url.toString(),\r",
+											"            headers: headerComplete,\r",
+											"            body: payloadEngine.engineCriteria.remunerations[0].fundingCostPercent = null\r",
+											"        }, (err, res) => {\r",
+											"            pm.test('Status 400 for null fundingCostPercent', () => {\r",
+											"                pm.expect(res).to.be.equal(400);\r",
+											"                //VALIDAR MENSAGEM\r",
+											"            })\r",
+											"        })\r",
+											"        i++;\r",
+											"        pm.collectionVariables.set('count', i);\r",
+											"\r",
+											"\r",
 											"    case 'difEngineMarketing':\r",
 											"\r",
 											"    default:\r",
@@ -4073,9 +4088,9 @@
 											"            method: pm.request.method.toString(),\r",
 											"            url: pm.request.url.toString(),\r",
 											"            headers: headerComplete,\r",
-											"            body: payloadEngine.engineCriteria.remunerations[0].registrationFeeAmount = null\r",
+											"            body: payloadEngine.engineCriteria.remunerations[0].operationAveragePercent = null\r",
 											"        }, (err, res) => {\r",
-											"            pm.test('Status 400 for null registrationFeeAmount', () => {\r",
+											"            pm.test('Status 400 for null operationAveragePercent', () => {\r",
 											"                pm.expect(res).to.be.equal(400);\r",
 											"                //VALIDAR MENSAGEM\r",
 											"            })\r",
@@ -14139,63 +14154,63 @@
 	],
 	"variable": [
 		{
-			"id": "21f7d2ad-0783-4619-8599-191b9e61c70d",
+			"id": "2f72aaff-af49-49b9-bbac-1da456ad5288",
 			"key": "domain",
 			"value": "/financing/offer/v1"
 		},
 		{
-			"id": "f9b33d19-ee02-4e12-9303-18366813f0e9",
+			"id": "b3eab779-dca2-486e-9368-706ad33d3f37",
 			"key": "ignore_collectionScript",
 			"value": ""
 		},
 		{
-			"id": "9d5f24be-9f36-4cf8-a95b-3b52380de733",
+			"id": "abbe1524-03be-48d2-b71b-1c27742221c9",
 			"key": "count",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "938bad4e-8d03-486a-9bde-d6028330b700",
+			"id": "e56e98e7-db22-4a97-a554-8c6af1353b42",
 			"key": "controlAuth",
 			"value": ""
 		},
 		{
-			"id": "beb8e273-2af4-4b47-8282-351a06f7fe50",
+			"id": "021569e4-9531-489b-a9d7-8162ae1d1e09",
 			"key": "payloadEngine",
 			"value": ""
 		},
 		{
-			"id": "79df0fff-39dd-4c90-bd83-c1b1c1bac42a",
+			"id": "de4b4d48-a57c-43d6-9e6f-00dc80ff08cd",
 			"key": "tc_identifierPainel_fieldEngineType",
 			"value": ""
 		},
 		{
-			"id": "0952cc1e-e300-4b0c-9a89-8eb07ee89090",
+			"id": "09c1de84-72ce-46d0-a669-d006f6c8b4b6",
 			"key": "tc_identifierPainel_fieldLine",
 			"value": ""
 		},
 		{
-			"id": "cac4af03-683b-41a9-8ee2-349bf83b07bf",
+			"id": "680f9c79-796a-46e9-8fd8-005abfc10336",
 			"key": "tc_identifierPainel_fieldStartDate",
 			"value": ""
 		},
 		{
-			"id": "f3356e52-8950-42c5-94cb-9a9207461e06",
+			"id": "73883bb0-7516-4ef4-9776-04424bb74f65",
 			"key": "tc_identifierPainel_fieldEndDate",
 			"value": ""
 		},
 		{
-			"id": "d948b71b-3e85-428e-bc45-e63c4edc9f5c",
+			"id": "7adb72de-2e17-452f-9398-847a540da3bb",
 			"key": "tc_identifierPainel_fieldPaymentPlanCategoryIds",
 			"value": ""
 		},
 		{
-			"id": "1105cd5a-03ef-4379-9315-e958904c3d91",
+			"id": "c534ea5d-9317-4877-97f5-65c010c9ae5f",
 			"key": "tc_identifierPainel_fieldCallCondition",
 			"value": ""
 		},
 		{
-			"id": "215c7552-895b-4606-ba9e-ac0bc3be2cdb",
+			"id": "402459cc-6285-4e71-b173-00469ed710af",
 			"key": "tc_identifierPainel_fieldIntegrationChannelIds",
 			"value": ""
 		}
