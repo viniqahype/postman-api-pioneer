@@ -4050,11 +4050,9 @@
 											"        i++;\r",
 											"        pm.collectionVariables.set('count', i);\r",
 											"\r",
-											"\r",
-											"\r",
 											"        \r",
 											"    case 'limit':\r",
-											"    case 'no_fundingCost':\r",
+											"    case 'no_operationAveragePercent':\r",
 											"     delete payloadEngine.operationAveragePercent\r",
 											"        pm.sendRequest({\r",
 											"            method: pm.request.method.toString(),\r",
@@ -4070,7 +4068,20 @@
 											"        i++;\r",
 											"        pm.collectionVariables.set('count', i);\r",
 											"\r",
-											"    case 'fundingCostNull':\r",
+											"    case 'operationAveragePercentll':\r",
+											"       pm.sendRequest({\r",
+											"            method: pm.request.method.toString(),\r",
+											"            url: pm.request.url.toString(),\r",
+											"            headers: headerComplete,\r",
+											"            body: payloadEngine.engineCriteria.remunerations[0].registrationFeeAmount = null\r",
+											"        }, (err, res) => {\r",
+											"            pm.test('Status 400 for null registrationFeeAmount', () => {\r",
+											"                pm.expect(res).to.be.equal(400);\r",
+											"                //VALIDAR MENSAGEM\r",
+											"            })\r",
+											"        })\r",
+											"        i++;\r",
+											"        pm.collectionVariables.set('count', i);\r",
 											"    case 'difEngineMarketing':\r",
 											"\r",
 											"    default:\r",
@@ -4243,6 +4254,12 @@
 											"\r",
 											"    case 'difEngineMarketing':\r",
 											"\r",
+											"        i=0;\r",
+											"        pm.collectionVariables.set('count', i); \r",
+											"\r",
+											"    default:\r",
+											"        console.error('Error in TEST script - Classifiers Panel');\r",
+											"        break;\r",
 											"\r",
 											"\r",
 											"}"
@@ -14122,63 +14139,63 @@
 	],
 	"variable": [
 		{
-			"id": "bfdac1b8-4a90-40c3-9371-0756cf6ef083",
+			"id": "2b39c641-fdcc-493d-8bd9-cf358bded88a",
 			"key": "domain",
 			"value": "/financing/offer/v1"
 		},
 		{
-			"id": "9c532c71-6cd2-4778-a635-73a8ace15731",
+			"id": "fac1fbc4-9cc4-4f27-9a9b-0ee44250e774",
 			"key": "ignore_collectionScript",
 			"value": ""
 		},
 		{
-			"id": "ac6f90d2-4e67-4560-bc01-e7c0e7bde241",
+			"id": "d0e59320-6119-4331-a275-8e948a45dc46",
 			"key": "count",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "73b43940-f999-4c6d-b75c-0281ad2cbaa5",
+			"id": "071e854a-9caf-449f-94cd-3e4464b2bcfd",
 			"key": "controlAuth",
 			"value": ""
 		},
 		{
-			"id": "e2e3be17-38c8-407f-a8cf-c526ff2adbc9",
+			"id": "732ac416-c11d-4484-bc63-7fa7ac6294a6",
 			"key": "payloadEngine",
 			"value": ""
 		},
 		{
-			"id": "8ff47e53-4fba-46ab-b9e4-deb3987fd6d2",
+			"id": "181855d4-d89e-4a24-bc36-8466abdb49ef",
 			"key": "tc_identifierPainel_fieldEngineType",
 			"value": ""
 		},
 		{
-			"id": "85e2a974-9b0d-455f-967b-1dd3ead0e0ea",
+			"id": "9b8be217-4ba9-4861-9051-0d1946bdc8fb",
 			"key": "tc_identifierPainel_fieldLine",
 			"value": ""
 		},
 		{
-			"id": "2c6a1f22-08eb-4436-9493-e0cd0ba4ca12",
+			"id": "3b6f7e55-27bf-463b-bec2-eec2a05dce84",
 			"key": "tc_identifierPainel_fieldStartDate",
 			"value": ""
 		},
 		{
-			"id": "b4c9eb63-0c85-4811-abf0-f30e1c5a9632",
+			"id": "63bd327d-b6ed-404e-a01b-4980cb95ca10",
 			"key": "tc_identifierPainel_fieldEndDate",
 			"value": ""
 		},
 		{
-			"id": "85cc959c-33bf-4b96-9b80-a8172f664e4c",
+			"id": "4ab4e5b5-1423-4b24-9293-c563f51a117d",
 			"key": "tc_identifierPainel_fieldPaymentPlanCategoryIds",
 			"value": ""
 		},
 		{
-			"id": "ecda4f22-f51e-4f38-9eda-618432c96e8b",
+			"id": "e9c9616d-cdd3-48c5-a099-bb03fe3dc5c2",
 			"key": "tc_identifierPainel_fieldCallCondition",
 			"value": ""
 		},
 		{
-			"id": "01f5c7d2-d9fa-443a-8cbf-fadb2cdbeddc",
+			"id": "9fcd16dc-9e4c-47f6-8117-ef31762970e9",
 			"key": "tc_identifierPainel_fieldIntegrationChannelIds",
 			"value": ""
 		}
