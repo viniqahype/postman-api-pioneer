@@ -4901,7 +4901,7 @@
 							"response": []
 						},
 						{
-							"name": "[Validar] Check remunerationsPanel_fields",
+							"name": "[Vini_validando] Check remunerationsPanel_fields",
 							"event": [
 								{
 									"listen": "prerequest",
@@ -15526,63 +15526,63 @@
 	],
 	"variable": [
 		{
-			"id": "84083a40-f844-45e4-ba16-f3ca6d5d0316",
+			"id": "f97af2b5-17fc-41b4-95ab-a9b4402b5e3b",
 			"key": "domain",
 			"value": "/financing/offer/v1"
 		},
 		{
-			"id": "89163e85-dead-43da-8608-1f1e5ed433ce",
+			"id": "ac49bbd6-e891-46bb-893f-17f8cc63c536",
 			"key": "ignore_collectionScript",
 			"value": ""
 		},
 		{
-			"id": "d4646089-8365-479e-ba12-4efb55bfb284",
+			"id": "aac907e5-ff20-4c47-83d8-2b2f7583087f",
 			"key": "count",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "c2be7232-be04-4f00-891e-4b1acd81a666",
+			"id": "03bcd585-1c06-42d5-82b2-36ef827b27e1",
 			"key": "controlAuth",
 			"value": ""
 		},
 		{
-			"id": "d14a03b9-c7c4-492b-b6ad-327a161b562f",
+			"id": "4e628b4b-8aa7-4c36-81d7-124b7ee95408",
 			"key": "payloadEngine",
 			"value": ""
 		},
 		{
-			"id": "1cdc32dd-cdae-402f-aaef-8bc44fcb8802",
+			"id": "36066ef4-777b-4220-bf59-a06e3d0b6e4a",
 			"key": "tc_identifierPainel_fieldEngineType",
 			"value": ""
 		},
 		{
-			"id": "aa65bf4e-6be5-453a-a52f-ce47fb7f8b6b",
+			"id": "580c1fca-973e-4f36-bc71-de7b52cc67c3",
 			"key": "tc_identifierPainel_fieldLine",
 			"value": ""
 		},
 		{
-			"id": "5bfd7f4d-e9c1-44c9-8ae0-74a3f2d3a5e6",
+			"id": "65744378-10c1-4edb-854d-15689b2a8a7f",
 			"key": "tc_identifierPainel_fieldStartDate",
 			"value": ""
 		},
 		{
-			"id": "bc262525-3ff0-41cc-ae2b-a21687094ce4",
+			"id": "29ec5a57-ebe2-497c-9e0c-0714f78cc7b1",
 			"key": "tc_identifierPainel_fieldEndDate",
 			"value": ""
 		},
 		{
-			"id": "f0566fdc-11e9-4ead-aa51-93dd2abca87f",
+			"id": "3ed96efe-83c4-4ee4-8ba3-14dee51dcb6f",
 			"key": "tc_identifierPainel_fieldPaymentPlanCategoryIds",
 			"value": ""
 		},
 		{
-			"id": "d5e26c52-d59c-44e2-bb1b-6ab381d1bf02",
+			"id": "8bf87b65-9ef5-4fb4-8530-52d3c1d84ca4",
 			"key": "tc_identifierPainel_fieldCallCondition",
 			"value": ""
 		},
 		{
-			"id": "6a915a16-1192-46e2-9475-2036f2b31bcf",
+			"id": "f0fe64c8-7dc9-4fdd-b33f-ea3d3b5afbd1",
 			"key": "tc_identifierPainel_fieldIntegrationChannelIds",
 			"value": ""
 		}
