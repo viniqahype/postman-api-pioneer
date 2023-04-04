@@ -5192,7 +5192,7 @@
 											"        pm.sendRequest({\r",
 											"            method: pm.request.method.toString(),\r",
 											"            url: pm.request.url.toString(),\r",
-											"            headers: headerComplete,\r",
+											"            header: headerComplete,\r",
 											"            body: payloadEngine.engineCriteria.classifiers[0].classifierId = _.random(10000, 11000)\r",
 											"        }, (err, res) => {\r",
 											"            pm.test('Status 400 for inexistentId ClassifierId ', () => {\r",
@@ -5207,7 +5207,7 @@
 											"        pm.sendRequest({\r",
 											"            method: pm.request.method.toString(),\r",
 											"            url: pm.request.url.toString(),\r",
-											"            headers: headerComplete,\r",
+											"            header: headerComplete,\r",
 											"            body: payloadEngine.engineCriteria.classifiers[0].classifierId = pm.variables.replaceIn('{{$randomWord}}')\r",
 											"        }, (err, res) => {\r",
 											"            pm.test('Status 400 for ClassifierId type string', () => {\r",
@@ -5222,7 +5222,7 @@
 											"        pm.sendRequest({\r",
 											"            method: pm.request.method.toString(),\r",
 											"            url: pm.request.url.toString(),\r",
-											"            headers: headerComplete,\r",
+											"            header: headerComplete,\r",
 											"            body: payloadEngine.engineCriteria.classifiers[0].classifierId = \"  \"\r",
 											"        }, (err, res) => {\r",
 											"            pm.test('Status 400 for ClassifierId with only_space', () => {\r",
@@ -5237,7 +5237,7 @@
 											"        pm.sendRequest({\r",
 											"            method: pm.request.method.toString(),\r",
 											"            url: pm.request.url.toString(),\r",
-											"            headers: headerComplete,\r",
+											"            header: headerComplete,\r",
 											"            body: payloadEngine.engineCriteria.classifiers[0].classifierId = \"\"\r",
 											"        }, (err, res) => {\r",
 											"            pm.test('Status 400 for empty ClassifierId', () => {\r",
@@ -5253,7 +5253,7 @@
 											"        pm.sendRequest({\r",
 											"            method: pm.request.method.toString(),\r",
 											"            url: pm.request.url.toString(),\r",
-											"            headers: headerComplete,\r",
+											"            header: headerComplete,\r",
 											"            body: payloadEngine\r",
 											"        }, (err, res) => {\r",
 											"            pm.test('Status 400 for no_classifierId', () => {\r",
@@ -5268,7 +5268,7 @@
 											"        pm.sendRequest({\r",
 											"            method: pm.request.method.toString(),\r",
 											"            url: pm.request.url.toString(),\r",
-											"            headers: headerComplete,\r",
+											"            header: headerComplete,\r",
 											"            body: payloadEngine.engineCriteria.classifiers[0].classifierId = null\r",
 											"        }, (err, res) => {\r",
 											"            pm.test('Status 400 for ClassifierId null', () => {\r",
@@ -5285,7 +5285,7 @@
 											"            pm.sendRequest({\r",
 											"                method: pm.request.method.toString(),\r",
 											"                url: pm.request.url.toString(),\r",
-											"                headers: headerComplete,\r",
+											"                header: headerComplete,\r",
 											"                body: payloadEngine.engineCriteria.classifiers[0].classifierId = classifierInactive\r",
 											"            }, (err, res) => {\r",
 											"                pm.test('Status 400 for ClassifierId inactive', () => {\r",
@@ -5304,7 +5304,7 @@
 											"            pm.sendRequest({\r",
 											"                method: pm.request.method.toString(),\r",
 											"                url: pm.request.url.toString(),\r",
-											"                headers: headerComplete,\r",
+											"                header: headerComplete,\r",
 											"                body: payloadEngine.engineCriteria.classifiers[0].classifierId = [classifierId1, classifierId2]\r",
 											"            }, (err, res) => {\r",
 											"                pm.test('Status 400 for ClassifierId with multiplesOptions', () => {\r",
@@ -15541,63 +15541,63 @@
 	],
 	"variable": [
 		{
-			"id": "9f502fb1-c868-4fb2-a0ff-0138e7a18439",
+			"id": "b3762d65-0ea0-46a9-94c7-047acf0eb9fd",
 			"key": "domain",
 			"value": "/financing/offer/v1"
 		},
 		{
-			"id": "0cbbe90e-3202-40a7-a864-f8f638516008",
+			"id": "e8c269a9-16aa-4aee-bab9-5c61a2ae205a",
 			"key": "ignore_collectionScript",
 			"value": ""
 		},
 		{
-			"id": "608b7165-fc11-4367-9dd0-1c7ae9930b07",
+			"id": "1916eefa-e546-4146-85d3-e940cd65ed9b",
 			"key": "count",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "141750ea-df8d-4452-b652-9e7196947608",
+			"id": "4437dde8-76f4-4733-aed0-fc5836602479",
 			"key": "controlAuth",
 			"value": ""
 		},
 		{
-			"id": "a5a7f7d5-aaaa-43af-a833-62da98f30eaf",
+			"id": "346f8536-43c0-4cd8-8f32-38341b570c79",
 			"key": "payloadEngine",
 			"value": ""
 		},
 		{
-			"id": "5cee033f-aae8-4923-bcf1-e61e38c838b5",
+			"id": "608c54cd-b0f5-44c6-9692-276dad33023b",
 			"key": "tc_identifierPainel_fieldEngineType",
 			"value": ""
 		},
 		{
-			"id": "175794db-8688-4499-a942-f152c5283648",
+			"id": "19418cbb-1828-4727-882b-38b221b5201e",
 			"key": "tc_identifierPainel_fieldLine",
 			"value": ""
 		},
 		{
-			"id": "8a97bf87-1240-4d39-8e59-702e9b57ed8c",
+			"id": "f0ce79dc-2853-4b1f-8355-3cba591c8f66",
 			"key": "tc_identifierPainel_fieldStartDate",
 			"value": ""
 		},
 		{
-			"id": "c7d69c3b-72a1-45c9-bf75-be65629a8eb9",
+			"id": "0b312c5b-5b3a-4504-a534-ee22968f2efe",
 			"key": "tc_identifierPainel_fieldEndDate",
 			"value": ""
 		},
 		{
-			"id": "b255056e-b4ca-4fca-9e6c-3c9ae98f4532",
+			"id": "9493739d-0cf2-49f7-aef1-37eb89b0ce58",
 			"key": "tc_identifierPainel_fieldPaymentPlanCategoryIds",
 			"value": ""
 		},
 		{
-			"id": "bfe983c1-7462-4e59-b36b-f2068d4acde9",
+			"id": "e8540eed-631e-431b-9839-8dbfc2c8e5d1",
 			"key": "tc_identifierPainel_fieldCallCondition",
 			"value": ""
 		},
 		{
-			"id": "96fc311e-d73b-4387-9dda-f3a9c8d7f9c1",
+			"id": "a5531c11-f2f9-43bc-922e-8657f8f1c51b",
 			"key": "tc_identifierPainel_fieldIntegrationChannelIds",
 			"value": ""
 		}
