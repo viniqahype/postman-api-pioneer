@@ -302,6 +302,70 @@
 			"response": []
 		},
 		{
+			"name": "Global Function for CPF//CNPJ",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "1d8bdb3e-6c85-4565-958d-7e31242ae7cf",
+						"exec": [
+							"var generateRandomNumberWithout = (number) => {\r",
+							"\r",
+							"    let random = _.random(1, 1000000); // gera um número aleatório entre 1 e 100\r",
+							"\r",
+							"    while (random === number) { // loop até gerar um número diferente do número especificado\r",
+							"        random = _.random(1, 1000000);\r",
+							"    }\r",
+							"    return random;\r",
+							"}\r",
+							"\r",
+							"pm.globals.set('generateRandomNumberWithout', generateRandomNumberWithout.toString());\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "70785c0e-1e62-4e2e-81d5-124e766cd5ac",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"id": "e40893f4-a0b9-4150-9a91-c12dfa512151",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "client_id",
+						"value": "{{client_id}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"32458031099\",\r\n    \"password\": \"Blade@123\",\r\n    \"remember\": null\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{baseUrl}}/core/authentication/v1/login"
+			},
+			"response": []
+		},
+		{
 			"name": "[Test] Generate Payloads",
 			"event": [
 				{
@@ -506,12 +570,12 @@
 	],
 	"variable": [
 		{
-			"id": "6fe8e59d-2cd1-4d62-9ce6-37fef9d5e7e6",
+			"id": "d7ff30bc-239b-4c27-97d5-9e12aca0aff4",
 			"key": "payloadEngine",
 			"value": ""
 		},
 		{
-			"id": "0ad89fc8-61dc-4797-ae6f-736d59815291",
+			"id": "aa838eef-a65f-49f4-b87e-5dd3fadd1368",
 			"key": "payloadTest",
 			"value": ""
 		}
