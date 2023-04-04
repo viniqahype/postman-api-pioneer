@@ -309,18 +309,49 @@
 					"script": {
 						"id": "1d8bdb3e-6c85-4565-958d-7e31242ae7cf",
 						"exec": [
-							"var generateRandomNumberWithout = (number) => {\r",
+							"var cpf = () => {\r",
+							"    const CryptoJS = require('crypto-js');\r",
 							"\r",
-							"    let random = _.random(1, 1000000); // gera um número aleatório entre 1 e 100\r",
+							"    // Gera um número aleatório com 9 dígitos\r",
+							"    const cpfBase = Math.floor(Math.random() * 900000000) + 100000000;\r",
 							"\r",
-							"    while (random === number) { // loop até gerar um número diferente do número especificado\r",
-							"        random = _.random(1, 1000000);\r",
+							"    // Calcula os dígitos verificadores do CPF\r",
+							"    const cpfDigitos = [0, 0];\r",
+							"    for (let i = 0; i < 9; i++) {\r",
+							"        cpfDigitos[0] += cpfBase.toString()[i] * (i < 8 ? 10 - i : 0);\r",
+							"        cpfDigitos[1] += cpfBase.toString()[i] * (9 - i);\r",
 							"    }\r",
-							"    return random;\r",
+							"    cpfDigitos[0] = cpfDigitos[0] % 11 < 2 ? 0 : 11 - cpfDigitos[0] % 11;\r",
+							"    cpfDigitos[1] = cpfDigitos[1] % 11 < 2 ? 0 : 11 - cpfDigitos[1] % 11;\r",
+							"\r",
+							"    // Formata o CPF\r",
+							"    const cpf = `${cpfBase.toString().substr(0, 3)}.${cpfBase.toString().substr(3, 3)}.${cpfBase.toString().substr(6, 3)}-${cpfDigitos.join('')}`;\r",
 							"}\r",
 							"\r",
-							"pm.globals.set('generateRandomNumberWithout', generateRandomNumberWithout.toString());\r",
-							""
+							"\r",
+							"var cnpj = () => {\r",
+							"    const CryptoJS = require('crypto-js');\r",
+							"\r",
+							"    // Gera um número aleatório com 8 dígitos\r",
+							"    const cnpjBase = Math.floor(Math.random() * 90000000) + 10000000;\r",
+							"\r",
+							"    // Calcula os dígitos verificadores do CNPJ\r",
+							"    const cnpjDigitos = [0, 0];\r",
+							"    for (let i = 0; i < 8; i++) {\r",
+							"        cnpjDigitos[0] += cnpjBase.toString()[i] * (i < 4 ? 5 - i : 13 - i);\r",
+							"        cnpjDigitos[1] += cnpjBase.toString()[i] * (9 - i);\r",
+							"    }\r",
+							"    cnpjDigitos[0] = cnpjDigitos[0] % 11 < 2 ? 0 : 11 - cnpjDigitos[0] % 11;\r",
+							"    cnpjDigitos[1] = cnpjDigitos[1] % 11 < 2 ? 0 : 11 - cnpjDigitos[1] % 11;\r",
+							"\r",
+							"    // Formata o CNPJ\r",
+							"    const cnpj = `${cnpjBase.toString().substr(0, 2)}.${cnpjBase.toString().substr(2, 3)}.${cnpjBase.toString().substr(5, 3)}/${cnpjDigitos[0].toString()}${cnpjDigitos[1].toString()}-00`;\r",
+							"}\r",
+							"\r",
+							"\r",
+							"// Define o CPF como uma variável global para ser utilizada na requisição\r",
+							"pm.globals.set('cpf', cpf.toString());\r",
+							"pm.globals.set('cnpj', cnpj.toString());"
 						],
 						"type": "text/javascript"
 					}
@@ -570,12 +601,12 @@
 	],
 	"variable": [
 		{
-			"id": "d7ff30bc-239b-4c27-97d5-9e12aca0aff4",
+			"id": "5d2b3803-c527-4836-bced-a2218ab25843",
 			"key": "payloadEngine",
 			"value": ""
 		},
 		{
-			"id": "aa838eef-a65f-49f4-b87e-5dd3fadd1368",
+			"id": "828ac1c3-715a-4dd1-bbba-4586a3ff656e",
 			"key": "payloadTest",
 			"value": ""
 		}
