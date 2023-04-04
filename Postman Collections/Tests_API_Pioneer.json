@@ -4653,7 +4653,7 @@
 											"            headers: headerComplete,\r",
 											"            body: editBody_masterKey(payloadEngine, \"PaymentPlanName\", parseInt(pm.variables.replaceIn('{{$randomInt}}')))\r",
 											"        }, (err, res) => {\r",
-											"            pm.test('Status 400 for PaymentPlanName number type', () => {\r",
+											"            pm.test('Status 400 for PaymentPlanName number', () => {\r",
 											"                pm.expect(res).to.be.equal(400);\r",
 											"                //VALIDAR MENSAGEM\r",
 											"            })\r",
@@ -4668,7 +4668,22 @@
 											"            headers: headerComplete,\r",
 											"            body: editBody_masterKey(payloadEngine, \"PaymentPlanName\", pm.variables.replaceIn('{{$randomLoremParagraphs}}'))\r",
 											"        }, (err, res) => {\r",
-											"            pm.test('Status 200 for >_1milCharacter PaymentPlanName', () => {\r",
+											"            pm.test('Status 200 for PaymentPlanName  >_1milCharacter', () => {\r",
+											"                pm.expect(res).to.be.equal(200);\r",
+											"                //VALIDAR MENSAGEM\r",
+											"            })\r",
+											"        })\r",
+											"        i++;\r",
+											"        pm.collectionVariables.set('count', i);\r",
+											"\r",
+											"    case 'no_name':\r",
+											"        pm.sendRequest({\r",
+											"            method: pm.request.method.toString(),\r",
+											"            url: pm.request.url.toString(),\r",
+											"            headers: headerComplete,\r",
+											"            body: editBody_masterKey(payloadEngine, \"PaymentPlanName\", pm.variables.replaceIn(''))\r",
+											"        }, (err, res) => {\r",
+											"            pm.test('Status 400 for PaymentPlanName no_name', () => {\r",
 											"                pm.expect(res).to.be.equal(400);\r",
 											"                //VALIDAR MENSAGEM\r",
 											"            })\r",
@@ -4676,6 +4691,44 @@
 											"        i++;\r",
 											"        pm.collectionVariables.set('count', i);\r",
 											"        \r",
+											"    case 'name_null':\r",
+											"        pm.sendRequest({\r",
+											"            method: pm.request.method.toString(),\r",
+											"            url: pm.request.url.toString(),\r",
+											"            headers: headerComplete,\r",
+											"            body: editBody_masterKey(payloadEngine, \"PaymentPlanName\", pm.variables.replaceIn('Null'))\r",
+											"        }, (err, res) => {\r",
+											"            pm.test('Status 400 for PaymentPlanName name_null', () => {\r",
+											"                pm.expect(res).to.be.equal(400);\r",
+											"                //VALIDAR MENSAGEM\r",
+											"            })\r",
+											"        })\r",
+											"        i++;\r",
+											"        pm.collectionVariables.set('count', i);\r",
+											"\r",
+											"    case 'difEnginePaymentPlan':\r",
+											"        payloadEngine.engineType = \"VME\"\r",
+											"        pm.sendRequest({\r",
+											"            method: pm.request.method.toString(),\r",
+											"            url: pm.request.url.toString(),\r",
+											"            headers: headerComplete,\r",
+											"            body: editBody_masterKey(payloadEngine.engineReturns.paymentPlans[0].paymentPlanName = \"{{$randomNameSuffix}}\")\r",
+											"        }, (err, res) => {\r",
+											"            pm.test('Status 400 for PaymentPlanName difEnginePaymentPlan', () => {\r",
+											"                pm.expect(res).to.be.equal(400);\r",
+											"                //VALIDAR MENSAGEM\r",
+											"            })\r",
+											"        })\r",
+											"        i++;\r",
+											"        pm.collectionVariables.set('count', i);\r",
+											"\r",
+											"        /* Declaring array variable with tests cases for Engines_PaymentPlansPanel: Field DownPayment */\r",
+											"pm.collectionVariables.set('tc_engines_PaymentPlansPanel_fieldDownPayment', JSON.stringify(['inexistent', 'number', 'only_space', 'empty', 'no_downPayment', 'downPaymentNull', 'multiplesOptions', 'difEnginePaymentPlan']));\r",
+											"\r",
+											"/* ---------------------------------------- */\r",
+											"\r",
+											"switch (tc_fieldPaymentPlanName[i]) {\r",
+											"    \r",
 											""
 										],
 										"type": "text/javascript"
@@ -15350,63 +15403,63 @@
 	],
 	"variable": [
 		{
-			"id": "4f30b7f3-c693-4416-9674-b60b6451497f",
+			"id": "af4fb382-764a-43f7-b7ba-2ee7f70680e5",
 			"key": "domain",
 			"value": "/financing/offer/v1"
 		},
 		{
-			"id": "c9668863-ea12-45e0-ba39-69799562c7ea",
+			"id": "e8cb1504-a6d0-4dc3-9165-9a8102f7cfe7",
 			"key": "ignore_collectionScript",
 			"value": ""
 		},
 		{
-			"id": "203f3047-b952-4507-899b-bbb7204212f7",
+			"id": "66d5699b-9622-4843-875e-4400768a6d31",
 			"key": "count",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "bf2004dc-aa10-42b5-b3dd-0e2ca683d889",
+			"id": "c8c0bca6-3747-4eaf-b812-5d7f7b2c0557",
 			"key": "controlAuth",
 			"value": ""
 		},
 		{
-			"id": "9a755459-eb00-4860-9e1e-e9ebe58673cf",
+			"id": "406c3eeb-a9ea-4cac-8c9a-c7fd9657c538",
 			"key": "payloadEngine",
 			"value": ""
 		},
 		{
-			"id": "a0e187b0-c0cb-4071-8b17-c7bc4ec450f5",
+			"id": "a9c2a4ac-7068-48da-9ae6-c1f74c52c177",
 			"key": "tc_identifierPainel_fieldEngineType",
 			"value": ""
 		},
 		{
-			"id": "24dc03c1-ca42-4bd3-bbb8-c97aec8588f2",
+			"id": "c82a8f3b-5584-4db4-869b-61a7ba2e6bae",
 			"key": "tc_identifierPainel_fieldLine",
 			"value": ""
 		},
 		{
-			"id": "b1c3e52a-82e9-4472-8cde-95bc3325250f",
+			"id": "a52faad2-12c8-4c5a-988b-65aa48b32be6",
 			"key": "tc_identifierPainel_fieldStartDate",
 			"value": ""
 		},
 		{
-			"id": "4ec15fa4-3a7e-46ca-9ad4-62b613bd7d0f",
+			"id": "fc409e0a-001e-4600-a82a-cf5dd81da626",
 			"key": "tc_identifierPainel_fieldEndDate",
 			"value": ""
 		},
 		{
-			"id": "b1d8ea9f-e316-4329-bea5-9028b6e46f35",
+			"id": "0e499283-9bab-44d3-ab13-75812afa1c36",
 			"key": "tc_identifierPainel_fieldPaymentPlanCategoryIds",
 			"value": ""
 		},
 		{
-			"id": "b7061d70-c8fe-4160-89af-998bd5b4bf8a",
+			"id": "08803f8e-b2a5-40f7-b6db-934f298df29d",
 			"key": "tc_identifierPainel_fieldCallCondition",
 			"value": ""
 		},
 		{
-			"id": "af0ff35a-1893-4964-bff6-079a00154f3d",
+			"id": "9a6a28fc-12ca-4427-a912-9dfdb2328ed9",
 			"key": "tc_identifierPainel_fieldIntegrationChannelIds",
 			"value": ""
 		}
