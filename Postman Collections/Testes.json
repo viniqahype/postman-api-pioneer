@@ -339,7 +339,7 @@
 							"    } else {\r",
 							"        cpf += (11 - mod).toString();\r",
 							"    }\r",
-							"\r",
+							"    cpf.replace(/(\\d{3})(\\d{3})(\\d{3})(\\d{2})/, \"$1.$2.$3-$4\");\r",
 							"    pm.environment.set('cpf', cpf);\r",
 							"\r",
 							"    return pm.environment.get('cpf');\r",
@@ -620,12 +620,12 @@
 	],
 	"variable": [
 		{
-			"id": "20fd7e09-8789-4a4a-95a4-085a9e02f5fe",
+			"id": "e259fd28-04aa-40f8-be65-b6fdf5d7a4a9",
 			"key": "payloadEngine",
 			"value": ""
 		},
 		{
-			"id": "0b9f9c31-0499-4532-aaaf-d501df5f73f0",
+			"id": "2d9f0e45-dd8e-44e6-a354-09cb79b56918",
 			"key": "payloadTest",
 			"value": ""
 		}
