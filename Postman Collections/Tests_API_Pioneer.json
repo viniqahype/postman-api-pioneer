@@ -8574,7 +8574,7 @@
 											"            method: pm.request.method.toString(),\r",
 											"            url: pm.request.url.toString(),\r",
 											"            headers: headerComplete,\r",
-											"            body: editBody_childKey(payloadEngine, \"engineCriteria\", \"personType\", pm.variables.replaceIn('{{$randomWord}}'))\r",
+											"            body: payloadEngine.engineCriteria.personType = pm.variables.replaceIn('{{$randomWord}}')\r",
 											"        }, (err, res) => {\r",
 											"            pm.test('Status 400 for inexistent personType', () => {\r",
 											"                pm.expect(res).to.be.equal(400);\r",
@@ -8589,7 +8589,7 @@
 											"            method: pm.request.method.toString(),\r",
 											"            url: pm.request.url.toString(),\r",
 											"            headers: headerComplete,\r",
-											"            body: editBody_childKey(payloadEngine, \"engineCriteria\", \"personType\", parseInt(pm.variables.replaceIn('{{$randomInt}}')))\r",
+											"            body: payloadEngine.engineCriteria.personType = parseInt(pm.variables.replaceIn('{{$randomInt}}'))\r",
 											"        }, (err, res) => {\r",
 											"            pm.test('Status 400 for personType number type', () => {\r",
 											"                pm.expect(res).to.be.equal(400);\r",
@@ -8604,7 +8604,7 @@
 											"            method: pm.request.method.toString(),\r",
 											"            url: pm.request.url.toString(),\r",
 											"            headers: headerComplete,\r",
-											"            body: editBody_childKey(payloadEngine, \"engineCriteria\", \"personType\", \"  \")\r",
+											"            body: payloadEngine.engineCriteria.personType = \"  \"\r",
 											"        }, (err, res) => {\r",
 											"            pm.test('Status 400 for personType with only_space', () => {\r",
 											"                pm.expect(res).to.be.equal(400);\r",
@@ -8619,7 +8619,7 @@
 											"            method: pm.request.method.toString(),\r",
 											"            url: pm.request.url.toString(),\r",
 											"            headers: headerComplete,\r",
-											"            body: editBody_childKey(payloadEngine, \"engineCriteria\", \"personType\", \"\")\r",
+											"            body: payloadEngine.engineCriteria.personType = \"\"\r",
 											"        }, (err, res) => {\r",
 											"            pm.test('Status 400 for empty personType', () => {\r",
 											"                pm.expect(res).to.be.equal(400);\r",
@@ -8650,7 +8650,7 @@
 											"            method: pm.request.method.toString(),\r",
 											"            url: pm.request.url.toString(),\r",
 											"            headers: headerComplete,\r",
-											"            body: editBody_childKey(payloadEngine, \"engineCriteria\", \"personType\", null)\r",
+											"            body: payloadEngine.engineCriteria.personType = null\r",
 											"        }, (err, res) => {\r",
 											"            pm.test('Status 400 for null personType', () => {\r",
 											"                pm.expect(res).to.be.equal(400);\r",
@@ -8665,7 +8665,7 @@
 											"            method: pm.request.method.toString(),\r",
 											"            url: pm.request.url.toString(),\r",
 											"            headers: headerComplete,\r",
-											"            body: editBody_childKey(payloadEngine, \"engineCriteria\", \"personType\", ['PF', 'PJ'])\r",
+											"            body: payloadEngine.engineCriteria.personType = ['PF', 'PJ']\r",
 											"        }, (err, res) => {\r",
 											"            pm.test('Status 201 for multiples personType', () => {\r",
 											"                pm.expect(res).to.be.equal(201);\r",
@@ -15467,63 +15467,63 @@
 	],
 	"variable": [
 		{
-			"id": "89eee1e2-eea1-40e2-804c-3f2ba39072b3",
+			"id": "ae273a34-5cde-49c9-9852-aa2f84f08ced",
 			"key": "domain",
 			"value": "/financing/offer/v1"
 		},
 		{
-			"id": "ec8d0088-d8b4-44ba-8b95-80ce5a17b4cc",
+			"id": "d4e2b1f5-c337-41ed-8768-8af59c18cc03",
 			"key": "ignore_collectionScript",
 			"value": ""
 		},
 		{
-			"id": "e21100c7-09b1-4523-91ff-b78a1445de19",
+			"id": "c7033bb9-a59d-4779-bed8-8788c6cc971b",
 			"key": "count",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "ca3b3f09-374b-4a9f-8d3d-5616ad5db9b0",
+			"id": "8f319897-47d5-41fd-bd2f-d55aa5f20f4f",
 			"key": "controlAuth",
 			"value": ""
 		},
 		{
-			"id": "974b70c0-5808-421a-95cc-8994542667e3",
+			"id": "1defe186-baf1-4b6c-a551-e27f1303e429",
 			"key": "payloadEngine",
 			"value": ""
 		},
 		{
-			"id": "35557289-28f6-4a51-a9a1-1a9bb372a256",
+			"id": "0a660731-bf63-484f-94b3-340db371e3db",
 			"key": "tc_identifierPainel_fieldEngineType",
 			"value": ""
 		},
 		{
-			"id": "2389adb9-c7fe-4469-ab7e-c5ccc9d37196",
+			"id": "6b3188cd-a33f-4e06-b804-0f56b178cf95",
 			"key": "tc_identifierPainel_fieldLine",
 			"value": ""
 		},
 		{
-			"id": "797b3bc4-4859-4d8f-8124-0ba0f208b196",
+			"id": "b8aa7440-f40c-47ee-8f5a-27e8fa5b0824",
 			"key": "tc_identifierPainel_fieldStartDate",
 			"value": ""
 		},
 		{
-			"id": "af59d519-65e9-4c89-8b82-4bf4311486c7",
+			"id": "ec269dd2-231a-48e3-a74f-97e074023674",
 			"key": "tc_identifierPainel_fieldEndDate",
 			"value": ""
 		},
 		{
-			"id": "a34310c2-cada-4268-83c0-05092814d1fb",
+			"id": "bca1f5b8-9f7a-4ca9-a2e4-bd1f3281fc4c",
 			"key": "tc_identifierPainel_fieldPaymentPlanCategoryIds",
 			"value": ""
 		},
 		{
-			"id": "39d616d0-5033-4899-9ff4-daefc8ce9de4",
+			"id": "bf147f29-636c-423c-99ab-95661388f4eb",
 			"key": "tc_identifierPainel_fieldCallCondition",
 			"value": ""
 		},
 		{
-			"id": "76bf8d87-0e0c-4004-b4fc-8a0916a29e84",
+			"id": "aac0c297-1a0b-450e-9c7f-68c86db8e521",
 			"key": "tc_identifierPainel_fieldIntegrationChannelIds",
 			"value": ""
 		}
