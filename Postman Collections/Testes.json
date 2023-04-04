@@ -349,12 +349,10 @@
 							"var cnpj = () => {\r",
 							"    let cnpj = '';\r",
 							"\r",
-							"    // Gera os primeiros 12 números aleatórios\r",
 							"    for (let i = 0; i < 12; i++) {\r",
 							"        cnpj += Math.floor(Math.random() * 10);\r",
 							"    }\r",
 							"\r",
-							"    // Calcula o primeiro dígito verificador\r",
 							"    let sum = 0;\r",
 							"    let weight = [5, 4, 3, 2, 9, 8, 7, 6, 5, 4, 3, 2];\r",
 							"    for (let i = 0; i < 12; i++) {\r",
@@ -364,7 +362,6 @@
 							"    let digit = mod < 2 ? 0 : 11 - mod;\r",
 							"    cnpj += digit;\r",
 							"\r",
-							"    // Calcula o segundo dígito verificador\r",
 							"    sum = 0;\r",
 							"    weight = [6, 5, 4, 3, 2, 9, 8, 7, 6, 5, 4, 3, 2];\r",
 							"    for (let i = 0; i < 13; i++) {\r",
@@ -379,7 +376,6 @@
 							"    return pm.environment.get('cnpj');\r",
 							"}\r",
 							"\r",
-							"// Define o CPF como uma variável global para ser utilizada na requisição\r",
 							"pm.globals.set('cpf', cpf.toString());\r",
 							"pm.globals.set('cnpj', cnpj.toString());"
 						],
@@ -631,12 +627,12 @@
 	],
 	"variable": [
 		{
-			"id": "a32f4349-2688-472c-a59d-926af19c3cfb",
+			"id": "8f1dc1d4-0c64-47a5-9305-23ab09e3b7f7",
 			"key": "payloadEngine",
 			"value": ""
 		},
 		{
-			"id": "95af6235-c226-44f0-9414-2a986ec2f45c",
+			"id": "429b18e6-252a-4b59-a577-3ac3ba1960bf",
 			"key": "payloadTest",
 			"value": ""
 		}
