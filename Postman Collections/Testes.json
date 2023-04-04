@@ -326,6 +326,10 @@
 							"\r",
 							"    // Formata o CPF\r",
 							"    const cpf = `${cpfBase.toString().substr(0, 3)}.${cpfBase.toString().substr(3, 3)}.${cpfBase.toString().substr(6, 3)}-${cpfDigitos.join('')}`;\r",
+							"\r",
+							"     pm.environment.set('cpf', cpf);\r",
+							"    \r",
+							"    return pm.environment.get('cpf');\r",
 							"}\r",
 							"\r",
 							"\r",
@@ -346,8 +350,10 @@
 							"\r",
 							"    // Formata o CNPJ\r",
 							"    const cnpj = `${cnpjBase.toString().substr(0, 2)}.${cnpjBase.toString().substr(2, 3)}.${cnpjBase.toString().substr(5, 3)}/${cnpjDigitos[0].toString()}${cnpjDigitos[1].toString()}-00`;\r",
-							"}\r",
+							"    pm.environment.set('cnpj', cnpj);\r",
 							"\r",
+							"    return pm.environment.get('cnpj');\r",
+							"}\r",
 							"\r",
 							"// Define o CPF como uma variável global para ser utilizada na requisição\r",
 							"pm.globals.set('cpf', cpf.toString());\r",
@@ -601,12 +607,12 @@
 	],
 	"variable": [
 		{
-			"id": "5d2b3803-c527-4836-bced-a2218ab25843",
+			"id": "83791062-0688-4f82-bd2c-f2519dd04bf0",
 			"key": "payloadEngine",
 			"value": ""
 		},
 		{
-			"id": "828ac1c3-715a-4dd1-bbba-4586a3ff656e",
+			"id": "57ba4c91-48b4-4139-9528-85e0bc40d49b",
 			"key": "payloadTest",
 			"value": ""
 		}
