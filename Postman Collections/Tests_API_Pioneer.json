@@ -2954,7 +2954,8 @@
 							},
 							"request": {
 								"method": "POST",
-								"header": []
+								"header": [],
+								"url": "{{baseUrl}}{{domain}}/policies"
 							},
 							"response": []
 						},
@@ -3829,7 +3830,8 @@
 							},
 							"request": {
 								"method": "POST",
-								"header": []
+								"header": [],
+								"url": "{{baseUrl}}{{domain}}/policies"
 							},
 							"response": []
 						},
@@ -4163,7 +4165,8 @@
 							},
 							"request": {
 								"method": "POST",
-								"header": []
+								"header": [],
+								"url": "{{baseUrl}}{{domain}}/policies"
 							},
 							"response": []
 						},
@@ -5166,7 +5169,8 @@
 							},
 							"request": {
 								"method": "POST",
-								"header": []
+								"header": [],
+								"url": "{{baseUrl}}{{domain}}/policies"
 							},
 							"response": []
 						},
@@ -15592,63 +15596,63 @@
 	],
 	"variable": [
 		{
-			"id": "095b5be5-dd11-4869-9d27-54c1cfa9d43a",
+			"id": "7d260a3d-1115-4b96-b44d-343be8e07e22",
 			"key": "domain",
 			"value": "/financing/offer/v1"
 		},
 		{
-			"id": "2f80d95a-a895-43d8-9ea9-e22594479eb7",
+			"id": "8e89095f-1f2c-4bae-aae7-103fadfadd18",
 			"key": "ignore_collectionScript",
 			"value": ""
 		},
 		{
-			"id": "254acfd0-a7d5-4ed6-8405-eeec7ec4a8c9",
+			"id": "b8a98cf5-7279-4c07-a55c-8ff6d7f3c2ca",
 			"key": "count",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "71465ac3-2966-47b8-bdfa-7fce71623c94",
+			"id": "15d101ed-b7d0-4a5d-91ad-1a094454c6aa",
 			"key": "controlAuth",
 			"value": ""
 		},
 		{
-			"id": "a7148cfb-65d4-4a07-b6c1-8e08dc473a55",
+			"id": "6500e00d-c71b-4b8f-9aca-571794610b66",
 			"key": "payloadEngine",
 			"value": ""
 		},
 		{
-			"id": "d28fcda8-8d64-45bb-8dee-30180814a35c",
+			"id": "a136af91-9366-4518-9466-17c9b5e8f802",
 			"key": "tc_identifierPainel_fieldEngineType",
 			"value": ""
 		},
 		{
-			"id": "69dc009b-4111-4811-90aa-4d6ac29f7fe6",
+			"id": "d5574d23-4087-407f-9f70-1780034dc01a",
 			"key": "tc_identifierPainel_fieldLine",
 			"value": ""
 		},
 		{
-			"id": "857d713a-107b-4509-8aee-5bacf0995a78",
+			"id": "3cd44bf1-a91a-469e-91a6-10c27952b3a6",
 			"key": "tc_identifierPainel_fieldStartDate",
 			"value": ""
 		},
 		{
-			"id": "bda6cad0-86ec-4e68-97af-4ff2ab84410e",
+			"id": "d9ce6c9c-a795-4181-971a-7521854b6205",
 			"key": "tc_identifierPainel_fieldEndDate",
 			"value": ""
 		},
 		{
-			"id": "5699d629-a9c9-431f-8cfb-ed52c275f3df",
+			"id": "059fdcf4-6efa-4f59-93f4-65a299add4f6",
 			"key": "tc_identifierPainel_fieldPaymentPlanCategoryIds",
 			"value": ""
 		},
 		{
-			"id": "92d82461-a76f-42e6-a42e-b46de3841049",
+			"id": "468ca578-55a7-4b76-a3f3-5260de3e26c3",
 			"key": "tc_identifierPainel_fieldCallCondition",
 			"value": ""
 		},
 		{
-			"id": "da76ac9c-2686-4749-9004-d4d31a488a00",
+			"id": "ed2681fc-f3f9-4c51-b34e-61cdbd39bc8a",
 			"key": "tc_identifierPainel_fieldIntegrationChannelIds",
 			"value": ""
 		}
