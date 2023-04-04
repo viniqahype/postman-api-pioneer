@@ -4243,7 +4243,7 @@
 											"        pm.sendRequest({\r",
 											"            method: pm.request.method.toString(),\r",
 											"            url: pm.request.url.toString(),\r",
-											"            headers: headerComplete,\r",
+											"            header: headerComplete,\r",
 											"            body: payloadEngine.engineCriteria.customers[0].cpfCnpj = _.random(10 ** 11, 9999999999999)\r",
 											"        }, (err, res) => {\r",
 											"            pm.test('Status 400 for cpfCnpj >_11character_and_<_14character', () => {\r",
@@ -4258,7 +4258,7 @@
 											"        pm.sendRequest({\r",
 											"            method: pm.request.method.toString(),\r",
 											"            url: pm.request.url.toString(),\r",
-											"            headers: headerComplete,\r",
+											"            header: headerComplete,\r",
 											"            body: payloadEngine.engineCriteria.customers[0].cpfCnpj = _.random(1, 99999999999)\r",
 											"        }, (err, res) => {\r",
 											"            pm.test('Status 400 for cpfCnpj <_11character', () => {\r",
@@ -4273,7 +4273,7 @@
 											"        pm.sendRequest({\r",
 											"            method: pm.request.method.toString(),\r",
 											"            url: pm.request.url.toString(),\r",
-											"            headers: headerComplete,\r",
+											"            header: headerComplete,\r",
 											"            body: payloadEngine.engineCriteria.customers[0].cpfCnpj = _.random(10 ** 14, 999999999999999)\r",
 											"        }, (err, res) => {\r",
 											"            pm.test('Status 400 for cpfCnpj >_14character', () => {\r",
@@ -4288,7 +4288,7 @@
 											"        pm.sendRequest({\r",
 											"            method: pm.request.method.toString(),\r",
 											"            url: pm.request.url.toString(),\r",
-											"            headers: headerComplete,\r",
+											"            header: headerComplete,\r",
 											"            body: payloadEngine.engineCriteria.customers[0].cpfCnpj = parseInt(pm.variables.replaceIn('{{$randomInt}}'))\r",
 											"        }, (err, res) => {\r",
 											"            pm.test('Status 400 for cpfCnpj number type', () => {\r",
@@ -4304,7 +4304,7 @@
 											"        pm.sendRequest({\r",
 											"            method: pm.request.method.toString(),\r",
 											"            url: pm.request.url.toString(),\r",
-											"            headers: headerComplete,\r",
+											"            header: headerComplete,\r",
 											"            body: payloadEngine\r",
 											"        }, (err, res) => {\r",
 											"            pm.test('Status 400 for no_cpfCnpj', () => {\r",
@@ -4319,7 +4319,7 @@
 											"        pm.sendRequest({\r",
 											"            method: pm.request.method.toString(),\r",
 											"            url: pm.request.url.toString(),\r",
-											"            headers: headerComplete,\r",
+											"            header: headerComplete,\r",
 											"            body: payloadEngine.engineCriteria.customers[0].cpfCnpj = null\r",
 											"        }, (err, res) => {\r",
 											"            pm.test('Status 400 for null cpfCnpj', () => {\r",
@@ -4334,7 +4334,7 @@
 											"        pm.sendRequest({\r",
 											"            method: pm.request.method.toString(),\r",
 											"            url: pm.request.url.toString(),\r",
-											"            headers: headerComplete,\r",
+											"            header: headerComplete,\r",
 											"            body: payloadEngine.engineCriteria.customers[0].cpfCnpj = cnpj()\r",
 											"        }, (err, res) => {\r",
 											"            pm.test('Status 400 for null cpfCnpj', () => {\r",
@@ -4358,7 +4358,7 @@
 											"        pm.sendRequest({\r",
 											"            method: pm.request.method.toString(),\r",
 											"            url: pm.request.url.toString(),\r",
-											"            headers: headerComplete,\r",
+											"            header: headerComplete,\r",
 											"            body: payloadEngine.engineCriteria.customers[0].origin = 'file.' + pm.variables.replaceIn('{{$randomCommonFileExt}}')\r",
 											"        }, (err, res) => {\r",
 											"            pm.test('Status 400 for origin with invalidExtension', () => {\r",
@@ -4373,7 +4373,7 @@
 											"        pm.sendRequest({\r",
 											"            method: pm.request.method.toString(),\r",
 											"            url: pm.request.url.toString(),\r",
-											"            headers: headerComplete,\r",
+											"            header: headerComplete,\r",
 											"            body: payloadEngine.engineCriteria.customers[0].origin = parseInt(pm.variables.replaceIn('{{$randomInt}}'))\r",
 											"        }, (err, res) => {\r",
 											"            pm.test('Status 400 for origin number type', () => {\r",
@@ -4389,7 +4389,7 @@
 											"        pm.sendRequest({\r",
 											"            method: pm.request.method.toString(),\r",
 											"            url: pm.request.url.toString(),\r",
-											"            headers: headerComplete,\r",
+											"            header: headerComplete,\r",
 											"            body: payloadEngine\r",
 											"        }, (err, res) => {\r",
 											"            pm.test('Status 400 for no_origin', () => {\r",
@@ -4404,7 +4404,7 @@
 											"        pm.sendRequest({\r",
 											"            method: pm.request.method.toString(),\r",
 											"            url: pm.request.url.toString(),\r",
-											"            headers: headerComplete,\r",
+											"            header: headerComplete,\r",
 											"            body: payloadEngine.engineCriteria.customers[0].origin = null\r",
 											"        }, (err, res) => {\r",
 											"            pm.test('Status 400 for null origin', () => {\r",
@@ -15541,63 +15541,63 @@
 	],
 	"variable": [
 		{
-			"id": "bbe458e6-3cd3-42b1-bf4c-cb2706459ea0",
+			"id": "e6ceed13-4282-4c2a-94d3-5d6ae53c1efe",
 			"key": "domain",
 			"value": "/financing/offer/v1"
 		},
 		{
-			"id": "8bed0887-8724-484a-b933-cd63d82bcabb",
+			"id": "69356eb5-f567-48cc-8ecb-d820ce40f121",
 			"key": "ignore_collectionScript",
 			"value": ""
 		},
 		{
-			"id": "02586d52-214b-46ef-8291-1c1f646490ed",
+			"id": "1f6b45ca-1861-4db9-b232-bab72aa902c9",
 			"key": "count",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "86739fce-5896-47c0-8f75-4900cb56c1e6",
+			"id": "3cc332b1-5817-4548-b657-baba5252ed5a",
 			"key": "controlAuth",
 			"value": ""
 		},
 		{
-			"id": "a69acbe3-7877-40d7-9cda-5f38f14f33e9",
+			"id": "8131c845-7fdf-4c07-916f-94c4bf72b6a6",
 			"key": "payloadEngine",
 			"value": ""
 		},
 		{
-			"id": "c67fc1fc-08e1-41d5-8575-b1623c8b31e0",
+			"id": "94d0e4de-b302-41b0-b5c1-0ca34f029fad",
 			"key": "tc_identifierPainel_fieldEngineType",
 			"value": ""
 		},
 		{
-			"id": "bc2d4397-89f0-4d82-88fe-d2dbee67f3ae",
+			"id": "6e90551d-34a7-4673-ad0a-aceb1bd1941f",
 			"key": "tc_identifierPainel_fieldLine",
 			"value": ""
 		},
 		{
-			"id": "86552e95-e174-47e8-853c-55ea6ce3099e",
+			"id": "ed5281c3-50ec-45ac-bff0-7e80d92267ef",
 			"key": "tc_identifierPainel_fieldStartDate",
 			"value": ""
 		},
 		{
-			"id": "3b7b8f05-7f1f-4dad-8d83-532cb72370f0",
+			"id": "8f33a924-2ed2-4eba-bf06-34379f19d737",
 			"key": "tc_identifierPainel_fieldEndDate",
 			"value": ""
 		},
 		{
-			"id": "78f0e4f5-47b6-4082-8f70-f5114fec0089",
+			"id": "f3a5f258-3b9a-47d1-b6ac-500cc259c353",
 			"key": "tc_identifierPainel_fieldPaymentPlanCategoryIds",
 			"value": ""
 		},
 		{
-			"id": "52b868ca-32c7-489f-9b46-ae2f4039ea95",
+			"id": "ef4ea6ec-888f-45c0-b9ec-071e6074b8fb",
 			"key": "tc_identifierPainel_fieldCallCondition",
 			"value": ""
 		},
 		{
-			"id": "25239258-7910-449a-ab08-66f24807f8cb",
+			"id": "3f8f2f88-09ae-4165-a1fe-b13035557246",
 			"key": "tc_identifierPainel_fieldIntegrationChannelIds",
 			"value": ""
 		}
