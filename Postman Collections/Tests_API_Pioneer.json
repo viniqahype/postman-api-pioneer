@@ -2965,7 +2965,7 @@
 					"name": "Fazendo SwitchCases",
 					"item": [
 						{
-							"name": "[Ana] Check vmePanel_fields",
+							"name": "[Validar] Check vmePanel_fields",
 							"event": [
 								{
 									"listen": "test",
@@ -15053,63 +15053,63 @@
 	],
 	"variable": [
 		{
-			"id": "88bfb87e-6626-4e40-98c6-7da93581c3a8",
+			"id": "fe216f27-d925-4016-a738-74417705f8bf",
 			"key": "domain",
 			"value": "/financing/offer/v1"
 		},
 		{
-			"id": "6003deeb-193d-45b6-bf58-ae017a1ba446",
+			"id": "37973ef2-7cfb-48ec-954d-5a5532578240",
 			"key": "ignore_collectionScript",
 			"value": ""
 		},
 		{
-			"id": "bf02e348-7e1b-4f6a-ad48-55623daca666",
+			"id": "3c4b0fdf-e1b7-4b35-8413-6eef84ce2966",
 			"key": "count",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "c7bbd647-aa74-4083-b855-b49212e22c0b",
+			"id": "9aaf6260-86eb-4320-9e95-9ccb555146e1",
 			"key": "controlAuth",
 			"value": ""
 		},
 		{
-			"id": "065db0ef-5702-46f1-991d-09b4bcf88fa6",
+			"id": "fe6beaa9-4163-404e-89b6-9fe66337c479",
 			"key": "payloadEngine",
 			"value": ""
 		},
 		{
-			"id": "4c76fe9b-f8b9-4a0f-96fa-b8bbd314b6bd",
+			"id": "c74d9ef1-c0cb-4fb1-af98-50c7c5e6abf2",
 			"key": "tc_identifierPainel_fieldEngineType",
 			"value": ""
 		},
 		{
-			"id": "5bf0b8d7-c46c-46df-b2d5-77131ad1b21c",
+			"id": "7f49aca0-678b-4ef4-bc79-7c410fcdcf93",
 			"key": "tc_identifierPainel_fieldLine",
 			"value": ""
 		},
 		{
-			"id": "c51bbe9a-86e9-4832-aeb8-23c25ff902a3",
+			"id": "d9e590f5-dcda-4b7e-8bda-6c9bfaae44bc",
 			"key": "tc_identifierPainel_fieldStartDate",
 			"value": ""
 		},
 		{
-			"id": "14a3850e-e12c-46d7-ae8e-5d6d177a13f1",
+			"id": "4a9e3fc2-099b-4083-a105-8ef8e12a829a",
 			"key": "tc_identifierPainel_fieldEndDate",
 			"value": ""
 		},
 		{
-			"id": "90a187ca-671e-4ed4-9bf0-3da234b56f01",
+			"id": "b7ef3114-dccf-4b4a-a300-1ead2b27367c",
 			"key": "tc_identifierPainel_fieldPaymentPlanCategoryIds",
 			"value": ""
 		},
 		{
-			"id": "68011873-ff5b-43bb-a4f3-32479fef6830",
+			"id": "ec85f224-7229-4c74-8852-c47c0b12d4ca",
 			"key": "tc_identifierPainel_fieldCallCondition",
 			"value": ""
 		},
 		{
-			"id": "f469c48a-e13e-4671-8709-35c1115703ad",
+			"id": "f6cc8262-9da4-461e-bf31-185c332c6d3f",
 			"key": "tc_identifierPainel_fieldIntegrationChannelIds",
 			"value": ""
 		}
