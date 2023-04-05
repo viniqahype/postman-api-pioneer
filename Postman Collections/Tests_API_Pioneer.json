@@ -8156,7 +8156,7 @@
 											"            method: pm.request.method.toString(),\r",
 											"            url: pm.request.url.toString(),\r",
 											"            header: headerComplete,\r",
-											"            body: payloadEngine.engineReturns.vme.factorySubsidy = parseFloat(-_.random(0, 1, true).toFixed(4))\r",
+											"            body: payloadEngine.engineReturns.vme.factorySubsidy = parseFloat(-_.random(0, 1, true).toFixed(2))\r",
 											"        }, (err, res) => {\r",
 											"            pm.test('Status 400 for factorySubsidyMONETARY with negative number', () => {\r",
 											"                pm.expect(res).to.be.equal(400);\r",
@@ -8362,7 +8362,7 @@
 											"            method: pm.request.method.toString(),\r",
 											"            url: pm.request.url.toString(),\r",
 											"            header: headerComplete,\r",
-											"            body: payloadEngine.engineReturns.vme.vendorSubsidy = parseFloat(-_.random(0, 1, true).toFixed(4))\r",
+											"            body: payloadEngine.engineReturns.vme.vendorSubsidy = parseFloat(-_.random(0, 1, true).toFixed(2))\r",
 											"        }, (err, res) => {\r",
 											"            pm.test('Status 400 for vendorSubsidyMONETARY with negative number', () => {\r",
 											"                pm.expect(res).to.be.equal(400);\r",
@@ -8568,7 +8568,7 @@
 											"            method: pm.request.method.toString(),\r",
 											"            url: pm.request.url.toString(),\r",
 											"            header: headerComplete,\r",
-											"            body: payloadEngine.engineReturns.vme.thirdPartySubsidy = parseFloat(-_.random(0, 1, true).toFixed(4))\r",
+											"            body: payloadEngine.engineReturns.vme.thirdPartySubsidy = parseFloat(-_.random(0, 1, true).toFixed(2))\r",
 											"        }, (err, res) => {\r",
 											"            pm.test('Status 400 for thirdPartySubsidyMONETARY with negative number', () => {\r",
 											"                pm.expect(res).to.be.equal(400);\r",
@@ -17293,63 +17293,63 @@
 	],
 	"variable": [
 		{
-			"id": "8cb1f45d-5c3d-4ee7-961c-c471c79ee21e",
+			"id": "81ee1e4a-a640-438d-bfca-ee9c3a30966a",
 			"key": "domain",
 			"value": "/financing/offer/v1"
 		},
 		{
-			"id": "342aa13f-198c-4201-8045-9c20517c53b6",
+			"id": "095a1c41-09dd-4fdb-bdab-5c41b04393c9",
 			"key": "ignore_collectionScript",
 			"value": ""
 		},
 		{
-			"id": "6213d6f6-8b03-49f5-9f2d-d78bde572d4b",
+			"id": "40c7a408-6c61-4a3b-af98-4f910211cf14",
 			"key": "count",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "34f547e8-03dc-4923-b8b5-8bc521e2f28b",
+			"id": "a78b030a-9928-400b-a122-40486e5d852a",
 			"key": "controlAuth",
 			"value": ""
 		},
 		{
-			"id": "ac75da74-ad3b-42c7-8b14-9f2cefb3017d",
+			"id": "9b62468d-bdbe-460e-ba51-171eb72eebce",
 			"key": "payloadEngine",
 			"value": ""
 		},
 		{
-			"id": "118dd996-4a20-4fa9-8de8-c4158b953b3d",
+			"id": "4eb77348-3600-4dca-871d-54a5c46d6d5c",
 			"key": "tc_identifierPainel_fieldEngineType",
 			"value": ""
 		},
 		{
-			"id": "2638899b-76b5-43a0-ae2c-447b97550636",
+			"id": "253df349-8f0d-4665-bf7d-347ce8ae9c51",
 			"key": "tc_identifierPainel_fieldLine",
 			"value": ""
 		},
 		{
-			"id": "b254f359-04c7-4001-86cd-5e8ef504525d",
+			"id": "5e91e953-7e62-4142-a49d-8910b4a29704",
 			"key": "tc_identifierPainel_fieldStartDate",
 			"value": ""
 		},
 		{
-			"id": "564c5bc0-3f0d-4687-a91b-68cc384f8e1d",
+			"id": "1a77dec9-5892-4c79-a360-acada37e17d2",
 			"key": "tc_identifierPainel_fieldEndDate",
 			"value": ""
 		},
 		{
-			"id": "1f5e0631-a49d-4316-8ebf-81293e1bcb05",
+			"id": "4f17a438-a7f5-45d0-bccc-54582eb11dca",
 			"key": "tc_identifierPainel_fieldPaymentPlanCategoryIds",
 			"value": ""
 		},
 		{
-			"id": "b8c7c0f8-bfde-4ddc-b89d-e41bb59a5e03",
+			"id": "cbd2ea28-0a1c-4776-b38c-de5bf6cc51d5",
 			"key": "tc_identifierPainel_fieldCallCondition",
 			"value": ""
 		},
 		{
-			"id": "b1f6a3d6-c697-4eb1-8f9f-1998ae33deb1",
+			"id": "66d0908e-241a-4227-8fe4-f074bda0c49a",
 			"key": "tc_identifierPainel_fieldIntegrationChannelIds",
 			"value": ""
 		}
