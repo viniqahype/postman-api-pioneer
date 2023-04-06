@@ -1,7 +1,7 @@
 {
 	"info": {
 		"_postman_id": "6a491717-80a1-449f-ae05-5b4731e0416f",
-		"name": "Financial Offer Core APIs_Policies",
+		"name": "Financial Offer Core APIs_policies",
 		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
 	},
 	"item": [
@@ -18789,63 +18789,63 @@
 	],
 	"variable": [
 		{
-			"id": "e73e68f3-50fc-43d6-8632-16134ff7afac",
+			"id": "e2de0cec-ef6e-424e-a468-c5cc4ba935fb",
 			"key": "domain",
 			"value": "/financing/offer/v1"
 		},
 		{
-			"id": "015fdbd1-da5a-4e73-b5c0-9584338044c0",
+			"id": "421bb208-128a-4ff6-b549-d263b8176358",
 			"key": "ignore_collectionScript",
 			"value": ""
 		},
 		{
-			"id": "7a999ef7-fa35-4d1b-b0dc-596c9bb1e69e",
+			"id": "0537e099-36f4-4a2e-9e20-0f23732dd555",
 			"key": "count",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "5e9ec251-c31b-406a-9a9a-378a9f450ca7",
+			"id": "fd86277a-5b9d-4388-8d2e-922a2234ce6b",
 			"key": "controlAuth",
 			"value": ""
 		},
 		{
-			"id": "b5142e48-f6bb-4350-9858-712fd682a490",
+			"id": "d0797666-eb75-4d35-b11b-284bb72c610a",
 			"key": "payloadEngine",
 			"value": ""
 		},
 		{
-			"id": "297a6529-4366-462e-84d2-1e2276b203ff",
+			"id": "934a3be1-6259-4a7a-a8bd-7162ff848632",
 			"key": "tc_identifierPainel_fieldEngineType",
 			"value": ""
 		},
 		{
-			"id": "9d4d38ef-7cec-464e-93c2-c30f3306c5c2",
+			"id": "6ca66e51-e423-428a-a5de-a0fdeb026fc0",
 			"key": "tc_identifierPainel_fieldLine",
 			"value": ""
 		},
 		{
-			"id": "aa64f8d4-b61c-41fc-a032-bc1848683929",
+			"id": "8fa4adda-b3ab-4b78-82f6-45c1e2afa41f",
 			"key": "tc_identifierPainel_fieldStartDate",
 			"value": ""
 		},
 		{
-			"id": "36ba1d68-6c77-40d2-b7a1-62f4a97e7e4b",
+			"id": "b2b667fd-1ff1-460e-b133-75e1a3a69491",
 			"key": "tc_identifierPainel_fieldEndDate",
 			"value": ""
 		},
 		{
-			"id": "d0f3428c-f710-4c27-9a81-a3a04af69152",
+			"id": "2555ccd8-97ac-419e-aab7-f282022009e9",
 			"key": "tc_identifierPainel_fieldPaymentPlanCategoryIds",
 			"value": ""
 		},
 		{
-			"id": "08faf2ad-415f-4986-849d-87c2e7a8e73c",
+			"id": "5bfbe286-b547-41a7-87d9-47491aa7c5b4",
 			"key": "tc_identifierPainel_fieldCallCondition",
 			"value": ""
 		},
 		{
-			"id": "eac6e95b-5123-4605-b6c8-977eb0181e06",
+			"id": "c795b33e-817a-49d7-83f9-1e204c67ff17",
 			"key": "tc_identifierPainel_fieldIntegrationChannelIds",
 			"value": ""
 		}
