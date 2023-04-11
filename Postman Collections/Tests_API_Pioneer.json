@@ -2871,14 +2871,14 @@
 									"script": {
 										"id": "75716b34-ee4d-4e88-a152-763e1c401aca",
 										"exec": [
-											"/* Declaring array variable with tests cases for Engines_InsurancePanel: Field ProductId */\r",
-											"pm.collectionVariables.set('tc_insuranceProducts_fieldProductId', JSON.stringify(['inexistentId', 'string', 'empty', 'only_space', 'negativeNumber', 'floatNumber','no_productId', 'productIdNull', 'inactiveId']));\r",
+											"/* Declaring array variable with tests cases for Engines_InsurancePanel: Field ProductId*/\r",
+											"pm.collectionVariables.set('tc_insurancePanel_fieldProductId', JSON.stringify(['inexistentId', 'string', 'only_space', 'empty', 'negativeNumber', 'floatNumber','no_productId', 'productIdNull', 'inactiveId', 'multiplesOptions']));\r",
 											"\r",
 											"/* Declaring array variable with tests cases for Engines_InsurancePanel: Field SubProductId */\r",
-											"pm.collectionVariables.set('tc_insuranceProducts_fieldSubProductId', JSON.stringify(['inexistentId', 'string', 'only_space', 'negativeNumber', 'empty', 'no_subProduct', 'subProductNull', 'only_subProduct', 'subProductFromAnotherProduct', 'inactiveId', ]));\r",
+											"pm.collectionVariables.set('tc_insurancePanel_fieldSubProductId', JSON.stringify(['inexistentId', 'string', 'only_space', 'empty', 'negativeNumber', 'no_subProductId', 'subProductIdNull', 'only_subProduct', 'subProductFromAnotherProduct', 'inactiveId', 'multiplesOptions']));\r",
 											"\r",
 											"/* Declaring array variable with tests cases for Engines_InsurancePanel: Field PeriodInMonths */\r",
-											"pm.collectionVariables.set('tc_insuranceProducts_fieldPeriodInMonthsId', JSON.stringify(['inexistent', 'string', 'only_space', 'negativeNumber', 'empty', 'no_periodInMonthsId', 'periodInMonthsIdNull', 'periodFromAnotherSubproduct', 'periodFromAnotherProduct', 'only_period']));\r",
+											"pm.collectionVariables.set('tc_insurancePanel_fieldPeriodInMonths', JSON.stringify(['inexistent', 'string', 'only_space', 'empty', 'negativeNumber', 'no_periodInMonthsId', 'periodInMonthsIdNull', 'periodFromAnotherSubproduct', 'periodFromAnotherProduct', 'only_PeriodInMonths']));\r",
 											""
 										],
 										"type": "text/javascript"
@@ -20790,69 +20790,69 @@
 	],
 	"variable": [
 		{
-			"id": "fd6436c2-ca7d-4cfa-8209-68fb842efe1d",
+			"id": "1a9516b8-795e-45da-9349-c59742474665",
 			"key": "domain",
 			"value": "/financing/offer/v1"
 		},
 		{
-			"id": "52e1f5a8-c27e-4cd0-9a7a-92579d8f567c",
+			"id": "9f5d2af3-8c18-491d-9904-1236722a33e9",
 			"key": "execution",
 			"value": "/financing/execution",
 			"type": "string"
 		},
 		{
-			"id": "a7eda42b-ff39-4454-8678-7bb7c27106bf",
+			"id": "db8d455c-c61d-4af2-b3ad-90a89af1a1f0",
 			"key": "ignore_collectionScript",
 			"value": ""
 		},
 		{
-			"id": "0b4f76f2-6e31-42dd-9ef2-9a80ed609c7f",
+			"id": "3b30b6d2-018c-4da6-9ab4-cf1c17d39465",
 			"key": "count",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "e380754c-44df-4ff3-bf96-9c2d042cc449",
+			"id": "694f96ec-20d9-40d7-b2ca-e37b97f2e1fd",
 			"key": "controlAuth",
 			"value": ""
 		},
 		{
-			"id": "82c617e5-973a-48ad-8f35-57b5c99b63c9",
+			"id": "e23b8062-37ae-4711-baba-3ee3c63cf216",
 			"key": "payloadEngine",
 			"value": ""
 		},
 		{
-			"id": "08ecb479-1b4c-4124-a01a-dff341cbb08b",
+			"id": "ff47d9ec-6ea0-445b-9fe3-4c7c973348dd",
 			"key": "tc_identifierPainel_fieldEngineType",
 			"value": ""
 		},
 		{
-			"id": "5127e64b-55dd-4b11-8a3d-42ce49cbda83",
+			"id": "825efdf2-16a0-494c-a933-92d624d8ed86",
 			"key": "tc_identifierPainel_fieldLine",
 			"value": ""
 		},
 		{
-			"id": "6aa46bc7-651c-429f-8ff7-3c95c036c1d7",
+			"id": "60eec231-56f1-4de5-bd33-0a94560a560c",
 			"key": "tc_identifierPainel_fieldStartDate",
 			"value": ""
 		},
 		{
-			"id": "a63920dc-7ea5-4b57-848e-e89d0048e856",
+			"id": "9a1c0f7f-4f3e-478b-92ad-e79d657cb4ff",
 			"key": "tc_identifierPainel_fieldEndDate",
 			"value": ""
 		},
 		{
-			"id": "112dce69-5af8-4a78-9cbb-7e3acdac3d27",
+			"id": "24279cf0-cdbc-43ba-81af-43d7274d01c0",
 			"key": "tc_identifierPainel_fieldPaymentPlanCategoryIds",
 			"value": ""
 		},
 		{
-			"id": "c39d0c3e-4740-4459-a6d9-f1f523569957",
+			"id": "4fc1a615-7b16-4440-97da-403d2cc51fc8",
 			"key": "tc_identifierPainel_fieldCallCondition",
 			"value": ""
 		},
 		{
-			"id": "08e45859-7b4c-4c10-bf46-e6c6f42f25b1",
+			"id": "3a5ce17d-fb26-4c50-81f9-8fbcc462c7ef",
 			"key": "tc_identifierPainel_fieldIntegrationChannelIds",
 			"value": ""
 		}
