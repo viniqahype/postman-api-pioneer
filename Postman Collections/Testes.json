@@ -429,15 +429,20 @@
 					"script": {
 						"id": "1d8bdb3e-6c85-4565-958d-7e31242ae7cf",
 						"exec": [
-							"var waitingReturn = () => {\r",
+							"var waitForIt = (waitForIt) => {\r",
 							"    return new Promise((resolve, reject) => {\r",
-							"        setTimeout(() => {\r",
-							"            resolve(\"Operação concluída com sucesso!\");\r",
-							"        }, 5000);\r",
-							"    });\r",
+							"        waitForIt\r",
+							"    }, (err, res) => {\r",
+							"        if (err) {\r",
+							"            reject(err);\r",
+							"\r",
+							"        } else {\r",
+							"            resolve(res);\r",
+							"        }\r",
+							"    })\r",
 							"}\r",
 							"\r",
-							"pm.globals.set('waitingReturn', waitingReturn.toString())"
+							"pm.globals.set('waitForIt', waitForIt.toString())"
 						],
 						"type": "text/javascript"
 					}
@@ -687,17 +692,17 @@
 	],
 	"variable": [
 		{
-			"id": "25f5a8e1-1102-4bac-ae08-64d02cce7416",
+			"id": "9bc115ac-3b6d-4625-a96b-beb56ac01d80",
 			"key": "payloadEngine",
 			"value": ""
 		},
 		{
-			"id": "2dc08703-8752-4609-8878-76e6091090fb",
+			"id": "9afc717f-7bb3-497b-aa58-6d385fcd535d",
 			"key": "payloadTest",
 			"value": ""
 		},
 		{
-			"id": "3797e909-60f5-4645-93d1-d58c358421cf",
+			"id": "6b494bc2-8311-4404-bf3a-27e238b39b95",
 			"key": "ignore_collectionScript",
 			"value": ""
 		}
