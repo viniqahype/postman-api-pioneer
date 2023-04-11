@@ -423,6 +423,127 @@
 			"response": []
 		},
 		{
+			"name": "Global Wait Functions Returns",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "1d8bdb3e-6c85-4565-958d-7e31242ae7cf",
+						"exec": [
+							"var cpf = () => {\r",
+							"    let cpf = '';\r",
+							"    for (let i = 0; i < 9; i++) {\r",
+							"        cpf += Math.floor(Math.random() * 9);\r",
+							"    }\r",
+							"\r",
+							"    let sum = 0;\r",
+							"    let mod = 0;\r",
+							"    for (let i = 0, j = 10; i < cpf.length; i++ , j--) {\r",
+							"        sum += cpf[i] * j;\r",
+							"    }\r",
+							"\r",
+							"    mod = sum % 11;\r",
+							"    if (mod < 2) {\r",
+							"        cpf += '0';\r",
+							"    } else {\r",
+							"        cpf += (11 - mod).toString();\r",
+							"    }\r",
+							"\r",
+							"    sum = 0;\r",
+							"    for (let i = 0, j = 11; i < cpf.length; i++ , j--) {\r",
+							"        sum += cpf[i] * j;\r",
+							"    }\r",
+							"\r",
+							"    mod = sum % 11;\r",
+							"    if (mod < 2) {\r",
+							"        cpf += '0';\r",
+							"    } else {\r",
+							"        cpf += (11 - mod).toString();\r",
+							"    }\r",
+							"\r",
+							"    pm.environment.set('cpf', cpf.replace(/(\\d{3})(\\d{3})(\\d{3})(\\d{2})/, \"$1.$2.$3-$4\"));\r",
+							"\r",
+							"    return pm.environment.get('cpf');\r",
+							"}\r",
+							"\r",
+							"\r",
+							"var cnpj = () => {\r",
+							"    let cnpj = '';\r",
+							"\r",
+							"    for (let i = 0; i < 12; i++) {\r",
+							"        cnpj += Math.floor(Math.random() * 10);\r",
+							"    }\r",
+							"\r",
+							"    let sum = 0;\r",
+							"    let weight = [5, 4, 3, 2, 9, 8, 7, 6, 5, 4, 3, 2];\r",
+							"    for (let i = 0; i < 12; i++) {\r",
+							"        sum += parseInt(cnpj[i]) * weight[i];\r",
+							"    }\r",
+							"    let mod = sum % 11;\r",
+							"    let digit = mod < 2 ? 0 : 11 - mod;\r",
+							"    cnpj += digit;\r",
+							"\r",
+							"    sum = 0;\r",
+							"    weight = [6, 5, 4, 3, 2, 9, 8, 7, 6, 5, 4, 3, 2];\r",
+							"    for (let i = 0; i < 13; i++) {\r",
+							"        sum += parseInt(cnpj[i]) * weight[i];\r",
+							"    }\r",
+							"    mod = sum % 11;\r",
+							"    digit = mod < 2 ? 0 : 11 - mod;\r",
+							"    cnpj += digit;\r",
+							"\r",
+							"    pm.environment.set('cnpj', cnpj.replace(/^(\\d{2})(\\d{3})(\\d{3})(\\d{4})(\\d{2})$/, '$1.$2.$3/$4-$5'));\r",
+							"\r",
+							"    return pm.environment.get('cnpj');\r",
+							"}\r",
+							"\r",
+							"pm.globals.set('cpf', cpf.toString());\r",
+							"pm.globals.set('cnpj', cnpj.toString());"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "70785c0e-1e62-4e2e-81d5-124e766cd5ac",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"id": "ec24a368-3f66-4e89-bd4b-39e8e08bd7ca",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "client_id",
+						"value": "{{client_id}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"32458031099\",\r\n    \"password\": \"Blade@123\",\r\n    \"remember\": null\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{baseUrl}}/core/authentication/v1/login"
+			},
+			"response": []
+		},
+		{
 			"name": "[Test] Generate Payloads",
 			"event": [
 				{
@@ -627,17 +748,17 @@
 	],
 	"variable": [
 		{
-			"id": "02fd2e3c-f840-4af8-a4a1-a319994c07db",
+			"id": "76c3730f-dc30-4a90-95fb-80ec8f604374",
 			"key": "payloadEngine",
 			"value": ""
 		},
 		{
-			"id": "a32884fa-a9ca-413c-8074-7de55b8b8c17",
+			"id": "0859a982-f74a-4c5d-98e6-7ec87d0b9cd9",
 			"key": "payloadTest",
 			"value": ""
 		},
 		{
-			"id": "84db1393-ff55-4dc3-a806-c77966332ff4",
+			"id": "5313cb96-e3bf-4f16-a3e8-8cf82dbc096c",
 			"key": "ignore_collectionScript",
 			"value": ""
 		}
