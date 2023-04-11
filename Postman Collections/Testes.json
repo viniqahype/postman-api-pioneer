@@ -181,7 +181,7 @@
 						"id": "1d8bdb3e-6c85-4565-958d-7e31242ae7cf",
 						"exec": [
 							"var setHeader = () => {\r",
-							"    eval(pm.globals.get('waitingReturn'))\r",
+							"    var waitingReturn = eval(pm.globals.get('waitingReturn'))\r",
 							"    /* Environment variable 'header' will be used as a parameter in pm.sendRequest */\r",
 							"    eval(pm.globals.get(\"getToken\"))()\r",
 							"    waitingReturn().then()\r",
@@ -688,17 +688,17 @@
 	],
 	"variable": [
 		{
-			"id": "53cb0353-a444-4c5f-b545-28e4a649d7d9",
+			"id": "78ba3034-a606-4381-9bc1-19beb4fb16fe",
 			"key": "payloadEngine",
 			"value": ""
 		},
 		{
-			"id": "9910835f-8eb7-4f1d-bce1-7a7f629dff37",
+			"id": "9840908d-2f24-4f0c-a7d7-ace666888547",
 			"key": "payloadTest",
 			"value": ""
 		},
 		{
-			"id": "739cb7be-b2dc-4b60-b566-7e0b4b3f733b",
+			"id": "9fb4792c-f1b3-479d-a044-176578bf7514",
 			"key": "ignore_collectionScript",
 			"value": ""
 		}
