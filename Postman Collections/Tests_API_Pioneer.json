@@ -5606,7 +5606,7 @@
 											"var headerComplete = eval(pm.globals.get('setHeader'))()\r",
 											"\r",
 											"/* Validating positive scenarios to create an engine */\r",
-											"//Default validation: 1. Status code, 2. response header. 3. creation in database , 4. Response time\r",
+											"//Default validation: 1. Status code, 2. Response header, 3. Creation in database, 4. Response time\r",
 											"pm.test('Status code 201 to create an engine', () => {\r",
 											"    pm.response.to.have.status(201);\r",
 											"})\r",
@@ -5636,6 +5636,7 @@
 											"\r",
 											"\r",
 											"payloadEngine.engineType = 'MARKETING'\r",
+											"payloadEngine.engineReturns.marketing.businessActionPercent = null\r",
 											"/* Validating engineReturns.marketingPanel.businessActionAmount */\r",
 											"var tc_fieldBusinessActionAmount = JSON.parse(pm.collectionVariables.get('tc_marketingPanel_fieldBusinessActionAmount'))\r",
 											"/* tc_fieldBusinessActionAmount = ['intNumber', 'floatNumber_3digits', 'floatNumber_1digit', 'negativeNumber', 'string', 'zero', 'only_space', 'empty', 'limit', '>999.999.999,99', 'no_businessAmount', 'businessAmountNull', 'difEngineMarketing'] */\r",
@@ -5843,6 +5844,7 @@
 											"}\r",
 											"\r",
 											"payloadEngine.engineType = 'MARKETING'\r",
+											"payloadEngine.engineReturns.marketing.businessActionAmount = null\r",
 											"/* Validating engineReturns.marketingPanel.businessActionPercent */\r",
 											"var tc_fieldBusinessActionPercent = JSON.parse(pm.collectionVariables.get('tc_marketingPanel_fieldBusinessActionPercent'))\r",
 											"/* tc_fieldBusinessActionPercent = ['intNumber', 'floatNumber_5digits', 'negativeNumber', 'string', 'zero', 'only_space', 'empty', 'limit', 'no_businessPercent', 'businessPercentNull', 'difEngineMarketing'] */\r",
@@ -6834,7 +6836,17 @@
 							},
 							"request": {
 								"method": "POST",
-								"header": []
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "/* Valid Payload to create an engine: DELAY, PAYMENT_PLAN_CATEGORY, CDD, INCREASE_DECREASE, RBP_MARGIN, MARKETING, PAYMENT_PLAN, TERM, REMUNERATION, RETURN, RISK, MINIMUM_BANK_RATE, MAX_CLIENT_RATE, MINIMUM_RBP_RATE, VME, FIXED_RATES, PROMOTIONS */",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{baseUrl}}{{domain}}/policies"
 							},
 							"response": []
 						},
@@ -20893,69 +20905,69 @@
 	],
 	"variable": [
 		{
-			"id": "6554d8db-c1aa-490e-a865-3bbf45c792e6",
+			"id": "7551d1e5-c431-4ca6-af23-081c662aa593",
 			"key": "domain",
 			"value": "/financing/offer/v1"
 		},
 		{
-			"id": "d325c9a9-d2ab-495a-a16c-8256bf90b09f",
+			"id": "163d5786-d041-4337-8a13-8659135b491a",
 			"key": "execution",
 			"value": "/financing/execution",
 			"type": "string"
 		},
 		{
-			"id": "2d0524c4-96bf-48bd-9e3a-3f9d2f60132f",
+			"id": "6193a3f3-688f-4939-89a2-b3ec2de3c84a",
 			"key": "ignore_collectionScript",
 			"value": ""
 		},
 		{
-			"id": "9ec023cd-b28f-4b4a-a342-33ff436e6864",
+			"id": "a0ecf813-2c4c-4fc0-9352-cefc88a3ea8c",
 			"key": "count",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "2d6d6233-6883-4614-b4cf-660fe2c20091",
+			"id": "70d3b039-f591-43ec-8b8c-bef3e77dd5db",
 			"key": "controlAuth",
 			"value": ""
 		},
 		{
-			"id": "9621a4f1-329c-4db7-83bc-f4704b4a1bd8",
+			"id": "5a2c1d73-c85d-440a-bbf3-e2dbd60469f5",
 			"key": "payloadEngine",
 			"value": ""
 		},
 		{
-			"id": "3d82caa9-4a40-4424-a83e-f6fec460bc39",
+			"id": "11eb0685-d1bc-4fce-bde0-a85a99acff39",
 			"key": "tc_identifierPainel_fieldEngineType",
 			"value": ""
 		},
 		{
-			"id": "f83c8ada-d41e-4048-aa04-372da3d63c04",
+			"id": "3c4b8722-8588-42a3-8ead-0c14caaca156",
 			"key": "tc_identifierPainel_fieldLine",
 			"value": ""
 		},
 		{
-			"id": "728c7d37-0956-4f66-a19f-ce72f6d0274b",
+			"id": "c1106042-8c85-40ae-b414-c3a116bdfb60",
 			"key": "tc_identifierPainel_fieldStartDate",
 			"value": ""
 		},
 		{
-			"id": "7f4aa2a0-d8e0-46cf-9dd7-92aa2957f3e2",
+			"id": "cc9068f1-158c-4133-9250-f6e707b934a4",
 			"key": "tc_identifierPainel_fieldEndDate",
 			"value": ""
 		},
 		{
-			"id": "634b67c5-bfe6-4134-81cd-2098c057b1e6",
+			"id": "1f4cfb38-bc5b-4867-9fe5-a65e0cd71861",
 			"key": "tc_identifierPainel_fieldPaymentPlanCategoryIds",
 			"value": ""
 		},
 		{
-			"id": "3cecb90e-a97c-411e-b74d-392a91bb05eb",
+			"id": "24214b6c-8be0-4e30-8abc-d22d2acd3417",
 			"key": "tc_identifierPainel_fieldCallCondition",
 			"value": ""
 		},
 		{
-			"id": "bace87f7-9acf-4bdc-9507-341f501fd160",
+			"id": "5fe8b761-f0ad-4892-82bb-de905c021c17",
 			"key": "tc_identifierPainel_fieldIntegrationChannelIds",
 			"value": ""
 		}
