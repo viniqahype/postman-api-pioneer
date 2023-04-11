@@ -183,7 +183,7 @@
 							"var setHeader = () => {\r",
 							"    var waitForIt = eval(pm.globals.get('waitForIt'))\r",
 							"    /* Environment variable 'header' will be used as a parameter in pm.sendRequest */\r",
-							"    waitForIt(eval(pm.globals.get(\"getToken\"))()).then(() => { pm.environment.set(\"header\", JSON.stringify({ access_token: pm.environment.get('access_token'), client_id: pm.environment.get('client_id') })) })\r",
+							"    waitForIt(eval(pm.globals.get(\"getToken\"))()).then((res) => { pm.environment.set(\"header\", JSON.stringify({ access_token: pm.environment.get('access_token'), client_id: pm.environment.get('client_id') })) })\r",
 							"    /* Wait getToken() to create a header */\r",
 							"    /* setTimeout(() => { pm.environment.set(\"header\", JSON.stringify({ access_token: pm.environment.get('access_token'), client_id: pm.environment.get('client_id') })) }, 4000);\r",
 							" */\r",
@@ -692,17 +692,17 @@
 	],
 	"variable": [
 		{
-			"id": "fc19cbf5-da90-426d-b39b-c80dbea43ba3",
+			"id": "390a2a64-797d-441d-af59-0c8773388e63",
 			"key": "payloadEngine",
 			"value": ""
 		},
 		{
-			"id": "7a0dbc04-54c2-4679-9d79-95629e8beb2b",
+			"id": "2e38d003-3b24-421b-8328-b3aa541669b5",
 			"key": "payloadTest",
 			"value": ""
 		},
 		{
-			"id": "6d1ada02-bd87-4bc9-9e67-6a0c78c8afa7",
+			"id": "3d39d42f-cb8b-4db4-b982-e0f40c445b0e",
 			"key": "ignore_collectionScript",
 			"value": ""
 		}
