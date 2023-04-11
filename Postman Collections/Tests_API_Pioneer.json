@@ -2845,7 +2845,7 @@
 											"pm.collectionVariables.set('tc_crmListPanel_fieldCpfCnpj', JSON.stringify(['>_11character_and_<_14character', '<_11character', '>_14character', 'number', 'no_cpfCnpj', 'cpfCnpjNull', 'valid_cpfCnpj']));\r",
 											"\r",
 											"/* Declaring array variable with tests cases for Engines_CrmListPanel: Field Origin */\r",
-											"pm.collectionVariables.set('tc_crmListPanel_fieldOrigin', JSON.stringify(['invalidExtension', 'number', 'no_origin', 'originNull']));\r",
+											"pm.collectionVariables.set('tc_crmListPanel_fieldOriigin', JSON.stringify(['invalidExtension', 'number', 'no_origin', 'originNull']));\r",
 											""
 										],
 										"type": "text/javascript"
@@ -2860,10 +2860,11 @@
 											"var payloadEngine = JSON.parse(pm.collectionVariables.get('payloadEngine'));\r",
 											"var i = pm.collectionVariables.get('count')\r",
 											"var cnpj = eval(pm.globals.get('cnpj'))\r",
+											"var cpf = eval(pm.globals.get('cpf'))\r",
 											"var headerComplete = eval(pm.globals.get('setHeader'))()\r",
 											"\r",
-											"/* Validating positive scenarios to create an engine */\r",
-											"//Default validation: 1. Status code, 2. Response header. 3. Creation in database , 4. Response time\r",
+											"/* Validating positive scenarios to create an engine */\r",
+											"//Default validation: 1. Status code, 2. Response header. 3. Creation in database , 4. Response time\r",
 											"/* 1 */\r",
 											"pm.test('Status code 201 to create an engine', () => {\r",
 											"    pm.response.to.have.status(201);\r",
@@ -2898,6 +2899,7 @@
 											"\r",
 											"/* Validating negative/exception scenario to create an engine */\r",
 											"\r",
+											"payloadEngine.engineCriteria.customers[0].origin = \"file.csv\"\r",
 											"/* Validating engineCriteriaPanel.customers.cpfCnpj */\r",
 											"var tc_fieldCpfCnpj = JSON.parse(pm.collectionVariables.get('tc_crmListPanel_fieldCpfCnpj'))\r",
 											"/* tc_fieldCpfCnpj = ['>_11character_and_<_14character', '<_11character', '>_14character', 'number', 'no_cpfCnpj', 'cpfCnpjNull', 'valid_cpfCnpj'] */\r",
@@ -3000,8 +3002,8 @@
 											"            header: headerComplete,\r",
 											"            body: payloadEngine.engineCriteria.customers[0].cpfCnpj = cnpj()\r",
 											"        }, (err, res) => {\r",
-											"            pm.test('Status 400 for null cpfCnpj', () => {\r",
-											"                pm.expect(res).to.be.equal(400);\r",
+											"            pm.test('Status 201 for null cpfCnpj', () => {\r",
+											"                pm.expect(res).to.be.equal(201);\r",
 											"                //VALIDAR MENSAGEM\r",
 											"            })\r",
 											"        })\r",
@@ -3013,6 +3015,7 @@
 											"        break;\r",
 											"}\r",
 											"\r",
+											"payloadEngine.engineCriteria.customers[0].cpfCnpj = cpf()\r",
 											"/* Validating engineCriteriaPanel.customers.origin */\r",
 											"var tc_fieldOrigin = JSON.parse(pm.collectionVariables.get('tc_cddPanel_fieldOrigin'))\r",
 											"/* tc_fieldOrigin = ['invalidExtension', 'number', 'no_origin', 'originNull'] */\r",
@@ -3055,8 +3058,8 @@
 											"            header: headerComplete,\r",
 											"            body: payloadEngine\r",
 											"        }, (err, res) => {\r",
-											"            pm.test('Status 400 for no_origin', () => {\r",
-											"                pm.expect(res).to.be.equal(400);\r",
+											"            pm.test('Status 201 for no_origin', () => {\r",
+											"                pm.expect(res).to.be.equal(201);\r",
 											"                //VALIDAR MENSAGEM\r",
 											"            })\r",
 											"        })\r",
@@ -3070,8 +3073,8 @@
 											"            header: headerComplete,\r",
 											"            body: payloadEngine.engineCriteria.customers[0].origin = null\r",
 											"        }, (err, res) => {\r",
-											"            pm.test('Status 400 for null origin', () => {\r",
-											"                pm.expect(res).to.be.equal(400);\r",
+											"            pm.test('Status 201 for null origin', () => {\r",
+											"                pm.expect(res).to.be.equal(201);\r",
 											"                //VALIDAR MENSAGEM\r",
 											"            })\r",
 											"        })\r",
@@ -20727,69 +20730,69 @@
 	],
 	"variable": [
 		{
-			"id": "9859cbbe-00f2-4c09-9516-a9c484be17a7",
+			"id": "0659ad3a-d92f-4931-bfa6-427b9df2ddd8",
 			"key": "domain",
 			"value": "/financing/offer/v1"
 		},
 		{
-			"id": "0cccfd6f-8152-4d59-8e2a-1892b9a28746",
+			"id": "dade548c-a08f-4ff9-9623-cd9dc708ee72",
 			"key": "execution",
 			"value": "/financing/execution",
 			"type": "string"
 		},
 		{
-			"id": "a30f8817-40b3-446e-84c1-4f9b8508eff1",
+			"id": "fa48da7e-9e9e-458f-a016-1b247890259d",
 			"key": "ignore_collectionScript",
 			"value": ""
 		},
 		{
-			"id": "ec3f4742-455e-4500-962f-380d909d8118",
+			"id": "92737e06-2898-4b94-87ae-542a039dd10d",
 			"key": "count",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "ed36bfe4-cb4a-42b0-8452-99240a640242",
+			"id": "ab98b11c-9e6e-449f-a35a-0ce3f77b16dd",
 			"key": "controlAuth",
 			"value": ""
 		},
 		{
-			"id": "883844fd-a7d6-4d8e-97e7-1ec49b9bdf75",
+			"id": "be8da59a-803b-42df-949f-e62ed85012df",
 			"key": "payloadEngine",
 			"value": ""
 		},
 		{
-			"id": "e0a2165e-5a4f-4f07-97ed-cbec3ea0aaf7",
+			"id": "b0a19df3-053a-4fcb-9433-1564e9df668e",
 			"key": "tc_identifierPainel_fieldEngineType",
 			"value": ""
 		},
 		{
-			"id": "7fb0902e-3330-4e80-9223-c77b39684e28",
+			"id": "bac98b17-03eb-473e-83f9-8b26990ef82a",
 			"key": "tc_identifierPainel_fieldLine",
 			"value": ""
 		},
 		{
-			"id": "94fda97c-e6a2-44ed-adb5-048eb6c90486",
+			"id": "f3747028-7995-433c-91ff-796cc89c31cf",
 			"key": "tc_identifierPainel_fieldStartDate",
 			"value": ""
 		},
 		{
-			"id": "64ec4e95-b717-4e1e-8d4b-9a6dee3b4491",
+			"id": "60f53e8d-8722-4ab6-b46b-595e0c3bac8d",
 			"key": "tc_identifierPainel_fieldEndDate",
 			"value": ""
 		},
 		{
-			"id": "8cbe4a78-e23f-45ed-8fe4-c10e300797ab",
+			"id": "ad083301-f5be-4e8a-bf38-4f475ff96ced",
 			"key": "tc_identifierPainel_fieldPaymentPlanCategoryIds",
 			"value": ""
 		},
 		{
-			"id": "3decf484-e585-44ed-a74e-4af7a77c8999",
+			"id": "e9e26b91-1ea0-4f83-90ca-99a9b6076399",
 			"key": "tc_identifierPainel_fieldCallCondition",
 			"value": ""
 		},
 		{
-			"id": "6e45e113-1661-4fc2-8940-1b64e9f33625",
+			"id": "eaab7774-37be-490e-9f51-69f5922c50f2",
 			"key": "tc_identifierPainel_fieldIntegrationChannelIds",
 			"value": ""
 		}
