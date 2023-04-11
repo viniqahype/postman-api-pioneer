@@ -187,10 +187,10 @@
 							"    /* Wait getToken() to create a header */\r",
 							"    setTimeout(() => { pm.environment.set(\"header\", JSON.stringify({ access_token: pm.environment.get('access_token'), client_id: pm.environment.get('client_id') })) }, 2000);\r",
 							"\r",
-							"    return JSON.parse(pm.environment.get('header'));\r",
+							"    return JSON.parse(pm.environment.get(\"header\"));\r",
 							"}\r",
 							"\r",
-							"pm.globals.set('setHeader', setHeader.toString());\r",
+							"pm.globals.set(\"setHeader\", setHeader.toString());\r",
 							""
 						],
 						"type": "text/javascript"
@@ -692,17 +692,17 @@
 	],
 	"variable": [
 		{
-			"id": "4bd3f186-d6c0-4ed7-8ef7-146bcb2b9ea2",
+			"id": "7e3f1dcc-eece-4e0b-9647-8990e9093103",
 			"key": "payloadEngine",
 			"value": ""
 		},
 		{
-			"id": "a781e83d-bb35-4460-8351-a10e33fb18ed",
+			"id": "71976465-cccc-454b-b922-27306d8029f0",
 			"key": "payloadTest",
 			"value": ""
 		},
 		{
-			"id": "ee180538-0589-40d1-a33a-b5b52aafe833",
+			"id": "dfebc00a-a543-4d3a-a57c-95ad3dde43f8",
 			"key": "ignore_collectionScript",
 			"value": ""
 		}
