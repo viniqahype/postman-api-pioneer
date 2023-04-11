@@ -183,7 +183,7 @@
 							"var setHeader = () => {\r",
 							"\r",
 							"    /* Environment variable 'header' will be used as a parameter in pm.sendRequest */\r",
-							"    eval(pm.globals.get(\"getToken\"))()\r",
+							"    //eval(pm.globals.get(\"getToken\"))()\r",
 							"\r",
 							"    /* Wait getToken() to create a header */\r",
 							"    setTimeout(() => { pm.environment.set(\"header\", JSON.stringify({ access_token: pm.environment.get('access_token'), client_id: pm.environment.get('client_id') })) }, 3000);\r",
@@ -627,17 +627,17 @@
 	],
 	"variable": [
 		{
-			"id": "e638efdb-beb0-4903-a1e0-a4c6d1c8d062",
+			"id": "02fd2e3c-f840-4af8-a4a1-a319994c07db",
 			"key": "payloadEngine",
 			"value": ""
 		},
 		{
-			"id": "c3a8c5da-4386-45d0-aba0-49d65e135ea1",
+			"id": "a32884fa-a9ca-413c-8074-7de55b8b8c17",
 			"key": "payloadTest",
 			"value": ""
 		},
 		{
-			"id": "16fb10b5-a8a6-47b1-afb2-ed10fc2f1b09",
+			"id": "84db1393-ff55-4dc3-a806-c77966332ff4",
 			"key": "ignore_collectionScript",
 			"value": ""
 		}
