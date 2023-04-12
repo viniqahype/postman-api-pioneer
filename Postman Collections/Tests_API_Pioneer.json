@@ -12847,10 +12847,10 @@
 											"pm.collectionVariables.set('tc_generalCriteriaPanel_fieldMax6Or7CpfDigits', JSON.stringify(['number_3digits', 'flotNumber', 'negativeNumber', 'string', 'zero', 'only_space', 'empty', 'only_max', 'max6Or7CpfDigitsNull']));\r",
 											"\r",
 											"/* Declaring array variable with tests cases for Engines_GeneralCriteriaPanel: Field MinTerm */\r",
-											"pm.collectionVariables.set('tc_generalCriteriaPanel_fieldMinTerm', JSON.stringify(['number_3digits', 'floatNumber', 'negativeNumber', 'string', 'zero', 'only_space', 'empty', 'limit','biggerThenMaxTerm', 'no_min_no_max', 'only_min', 'minTermNull', 'min_max_equal']));\r",
+											"pm.collectionVariables.set('tc_generalCriteriaPanel_fieldMinTerm', JSON.stringify(['number_4digits', 'floatNumber', 'negativeNumber', 'string', 'zero', 'only_space', 'empty', 'limit','biggerThenMaxTerm', 'no_min_no_max', 'only_min', 'minTermNull', 'min_max_equal']));\r",
 											"\r",
 											"/* Declaring array variable with tests cases for Engines_GeneralCriteriaPanel: Field MaxTerm */\r",
-											"pm.collectionVariables.set('tc_generalCriteriaPanel_fieldMaxTerm', JSON.stringify(['number_3digits', 'floatNumber', 'negativeNumber', 'string', 'zero', 'only_space', 'empty', 'only_max', 'maxTermNull']));\r",
+											"pm.collectionVariables.set('tc_generalCriteriaPanel_fieldMaxTerm', JSON.stringify(['number_4digits', 'floatNumber', 'negativeNumber', 'string', 'zero', 'only_space', 'empty', 'only_max', 'maxTermNull']));\r",
 											"\r",
 											"/* Declaring array variable with tests cases for Engines_GeneralCriteriaPanel: Field MinVehiclePrice */\r",
 											"pm.collectionVariables.set('tc_generalCriteriaPanel_fieldMinVehiclePrice', JSON.stringify(['intNumber', 'floatNumber_3digits', 'floatNumber_1digit', 'negativeNumber', 'string', 'zero', 'only_space', 'empty', 'limit', '>999.999.999,99', 'biggerThenMaxVehiclePrice', 'no_min_no_max', 'only_min', 'minVehiclePriceNull', 'min_max_equal']));\r",
@@ -21092,69 +21092,69 @@
 	],
 	"variable": [
 		{
-			"id": "06617e99-f1fa-448a-b212-0068cd29edf5",
+			"id": "8dc76ad3-875c-47e8-94e1-b64aae9d84a0",
 			"key": "domain",
 			"value": "/financing/offer/v1"
 		},
 		{
-			"id": "316fd548-27d7-4bf4-9bf7-861c568d8d1a",
+			"id": "94d9c2e3-3378-40b1-bf05-01693ebaaaec",
 			"key": "execution",
 			"value": "/financing/execution",
 			"type": "string"
 		},
 		{
-			"id": "afe0b298-3e36-401b-ab41-132e6786cd79",
+			"id": "068fc8a0-1ae5-4e28-940b-f4f3044ed0c7",
 			"key": "ignore_collectionScript",
 			"value": ""
 		},
 		{
-			"id": "4ab93a2e-f801-4004-999b-2acf6366a391",
+			"id": "f4f7ebb4-e966-441e-a340-fb234a29bff7",
 			"key": "count",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "5babd058-08bf-4a91-9075-45d8ae69fe40",
+			"id": "49e5af89-9f23-43c7-945e-efff10e9e82b",
 			"key": "controlAuth",
 			"value": ""
 		},
 		{
-			"id": "ace37b0d-7a4d-43c9-9d18-ee11284bf2c8",
+			"id": "5e2d3b0c-8f19-4885-8207-49d6d9f7b2f6",
 			"key": "payloadEngine",
 			"value": ""
 		},
 		{
-			"id": "8ac910d7-cfb9-4d3c-af99-0fd82406fb9d",
+			"id": "2ba8ec4c-9839-451d-893c-745a8c2981ae",
 			"key": "tc_identifierPainel_fieldEngineType",
 			"value": ""
 		},
 		{
-			"id": "47d4503c-119a-4ce7-9c77-22800726d7da",
+			"id": "67e8efec-c255-4f64-ae3d-74af4bbb5106",
 			"key": "tc_identifierPainel_fieldLine",
 			"value": ""
 		},
 		{
-			"id": "2e6972b7-ad21-4f41-bf1a-51906a526c5c",
+			"id": "f5d8c460-0e9a-4864-8f46-eb8299118530",
 			"key": "tc_identifierPainel_fieldStartDate",
 			"value": ""
 		},
 		{
-			"id": "de82ecc4-1e57-4a96-9480-1114c5917cc8",
+			"id": "cfb46a58-875a-4d26-93d2-9bcab33c1ff7",
 			"key": "tc_identifierPainel_fieldEndDate",
 			"value": ""
 		},
 		{
-			"id": "34ea80e8-32d5-4a9e-87fa-0ec909894760",
+			"id": "94f4a725-e455-4338-9925-29c29917c346",
 			"key": "tc_identifierPainel_fieldPaymentPlanCategoryIds",
 			"value": ""
 		},
 		{
-			"id": "a91ee28a-ddee-47f4-8bd2-87cbba540558",
+			"id": "cf34b23a-7f65-4f06-b6e6-0888385ea7bb",
 			"key": "tc_identifierPainel_fieldCallCondition",
 			"value": ""
 		},
 		{
-			"id": "829aabbe-6baa-45d9-bced-78a85141cbc0",
+			"id": "bf5b7427-0abc-4e0c-94c3-249fd25d875f",
 			"key": "tc_identifierPainel_fieldIntegrationChannelIds",
 			"value": ""
 		}
