@@ -1608,7 +1608,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "/* Valid Payload to create an engine: DELAY, PAYMENT_PLAN_CATEGORY, CDD, INCREASE_DECREASE, RBP_MARGIN, MARKETING, PAYMENT_PLAN, TERM, REMUNERATION, RETURN, RISK, MINIMUM_BANK_RATE, MAX_CLIENT_RATE, MINIMUM_RBP_RATE, VME, FIXED_RATES, PROMOTIONS */",
+									"raw": "/* Valid Payload to create an engine: Delay, Payment Plan Category, CDD, Increase and Decrease, RBP Margin, Marketing, Payment Plan, Term, Remuneration, Return, Risk, Minimum Bank Rate, Max Client Rate, Minimum RBP Rate, VME */\r\n{\r\n    \"line\": 1,\r\n    \"startDate\": \"2023-04-05\",\r\n    \"endDate\": \"2023-04-05\",\r\n    \"engineType\": \"VME\",\r\n    \"engineStatus\": \"DRAFT\",\r\n    \"integrationChannels\": [\r\n        {\r\n            \"channelId\": 1\r\n        }\r\n    ],\r\n    \"paymentPlanCategories\": [\r\n        {\r\n            \"paymentPlanCategoryName\": \"name1\"\r\n        }\r\n    ],\r\n    \"engineCriteria\": {\r\n        \"promoName\": \"string\",\r\n        \"personType\": \"PF\",\r\n        \"saleTypes\": [\r\n            {\r\n                \"saleTypeId\": 1\r\n            }\r\n        ],\r\n        \"saleSubtypes\": [\r\n            {\r\n                \"saleSubTypeId\": 4\r\n            }\r\n        ],\r\n        \"financingBrands\": [\r\n            {\r\n                \"financingBrandId\": 1\r\n            }\r\n        ],\r\n        \"callCondition\": true,\r\n        \"rateType\": \"FIXED\",\r\n        \"factorySubsidy\": true,\r\n        \"vendorSubsidy\": true,\r\n        \"thirdPartiesSubsidy\": true,\r\n        \"remunerations\": [\r\n            {\r\n                \"remunerationId\": 1\r\n            }\r\n        ],\r\n        \"delays\": [\r\n            1\r\n        ],\r\n        \"commissions\": [\r\n            {\r\n                \"commissionId\": 1\r\n            }\r\n        ],\r\n        \"minDownPaymentPercent\": 0.9999,\r\n        \"maxDownPaymentPercent\": 0.9999,\r\n        \"minLoanAmount\": 999999999.99,\r\n        \"maxLoanAmount\": 999999999.99,\r\n        \"minModelRate\": 1,\r\n        \"maxModelRate\": 99,\r\n        \"min6Or7CpfDigits\": 1,\r\n        \"max6Or7CpfDigits\": 99,\r\n        \"minTerm\": 99,\r\n        \"maxTerm\": 99,\r\n        \"minVehiclePrice\": 999999999.99,\r\n        \"maxVehiclePrice\": 999999999.99,\r\n        \"minManufactoryVehicleAge\": 20,\r\n        \"maxManufactoryVehicleAge\": 23,\r\n        \"minModelVehicleAge\": 20,\r\n        \"maxModelVehicleAge\": 23,\r\n        \"maxProposalValidity\": 99,\r\n        \"provinces\": [\r\n            {\r\n                \"provinceId\": 1\r\n            }\r\n        ],\r\n        \"ratingsAbc\": [\r\n            {\r\n                \"abcRateId\": 1\r\n            }\r\n        ],\r\n        \"regionals\": [\r\n            {\r\n                \"regionalId\": 1\r\n            }\r\n        ],\r\n        \"dealerships\": [\r\n            {\r\n                \"filterCategory\": \"ELEGIBLE\",\r\n                \"dealershipBondType\": \"DEALERSHIP\",\r\n                \"dealershipId\": 1,\r\n                \"dealershipGroupId\": 1\r\n            }\r\n        ],\r\n        \"vehicles\": [\r\n            {\r\n                \"filterCategory\": \"ELEGIBLE\",\r\n                \"brandId\": 3,\r\n                \"modelId\": 2,\r\n                \"versionId\": 13,\r\n                \"situation\": \"NEW\"\r\n            }\r\n        ],\r\n        \"serviceProducts\": [\r\n            {\r\n                \"productId\": 1,\r\n                \"subProductId\": 1,\r\n                \"periodInMonths\": 24,\r\n                \"kilometrage\": 1\r\n            }\r\n        ],\r\n        \"insuranceProducts\": [\r\n            {\r\n                \"productId\": 1,\r\n                \"subProductId\": 1,\r\n                \"periodInMonths\": 24\r\n            }\r\n        ],\r\n        \"renovaction\": true,\r\n        \"customers\": [\r\n            {\r\n                \"cpfCnpj\": \"121.412.112-01\",\r\n                \"origin\": \"file\"\r\n            }\r\n        ],\r\n        \"classifiers\": [\r\n            {\r\n                \"classifierId\": 1\r\n            }\r\n        ]\r\n    },\r\n    \"engineReturns\": {\r\n        \"terms\": [\r\n            1\r\n        ],\r\n        \"delays\": [\r\n            1\r\n        ],\r\n        \"commissions\": [\r\n            {\r\n                \"commissionId\": 1\r\n            }\r\n        ],\r\n        \"remunerations\": [\r\n            {\r\n                \"remunerationId\": 1\r\n            }\r\n        ],\r\n        \"minMonthlyBankRatePercent\": null,\r\n        \"maxMonthlyClientRatePercent\": 0.9999,\r\n        \"increaseDecreasePercent\": 0.9999,\r\n        \"paymentPlanCategory\": 1,\r\n        \"paymentPlans\": [\r\n            {\r\n                \"paymentPlanName\": \"Safra 1\",\r\n                \"downPayment\": \"PERCENT\",\r\n                \"minDownPayment\": 0.9999,\r\n                \"maxDownPayment\": 0.9999,\r\n                \"defaultDownPayment\": 0.9999,\r\n                \"occurrencies\": true,\r\n                \"occurrenceType\": \"INSTALLMENT_OCCURRENCIES\",\r\n                \"installmentOccurrencies\": [\r\n                    5\r\n                ],\r\n                \"monthOccurrencies\": [\r\n                    \"Janeiro\"\r\n                ],\r\n                \"frequencyOccurrencies\": 12,\r\n                \"reducedInstallmentAmount\": 999999999.99,\r\n                \"installmentOccurrency\": \"PERCENT\",\r\n                \"minFixedPayment\": 0.9999,\r\n                \"maxFixedPayment\": 0.9999,\r\n                \"defaultFixedPayment\": 0.9999,\r\n                \"balloonPayment\": true,\r\n                \"balloonPaymentType\": \"PERCENT\",\r\n                \"minBalloonPayment\": 0.9999,\r\n                \"maxBalloonPayment\": 0.9999,\r\n                \"defaultBalloonPayment\": 0.9999,\r\n                \"increaseDecreaseInstallment\": true,\r\n                \"installmentType\": \"INCREASE\",\r\n                \"increaseDecreaseinstallmentPercent\": 0.9999\r\n            }\r\n        ],\r\n        \"vme\": {\r\n            \"vmeReturnType\": \"PERCENT\",\r\n            \"factorySubsidy\": 0.9999,\r\n            \"vendorSubsidy\": 0.9999,\r\n            \"thirdPartySubsidy\": 0.9999\r\n        },\r\n        \"cdd\": [],\r\n        \"rbpMarginPercent\": 0.9999,\r\n        \"minRbpFeePercent\": 0.9999,\r\n        \"marketing\": {\r\n            \"businessActionAmount\": 999999999.99,\r\n            \"businessActionPercent\": 0.9999,\r\n            \"contractCostAmount\": 999999999.99,\r\n            \"fundingCostPercent\": 0.9999,\r\n            \"operationAveragePercent\": 0.9999,\r\n            \"registrationFeeAmount\": 999999999.99\r\n        },\r\n        \"riskRatePercent\": 0.9999,\r\n        \"fixedRates\": [],\r\n        \"promotions\": []\r\n    }\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -21092,69 +21092,69 @@
 	],
 	"variable": [
 		{
-			"id": "2267b8cb-5718-4e92-9cd5-47a4574f9e23",
+			"id": "c40eed5f-f5ab-4f97-935f-f07261b3b146",
 			"key": "domain",
 			"value": "/financing/offer/v1"
 		},
 		{
-			"id": "daff8e88-83b6-413a-9d1c-bc9828d65d36",
+			"id": "554d3fe2-cf3f-4515-9f48-c95e82f1591c",
 			"key": "execution",
 			"value": "/financing/execution",
 			"type": "string"
 		},
 		{
-			"id": "194b4ae5-6d08-4db8-9f3b-5eab11f4fb30",
+			"id": "5bbd553d-690b-434e-9cff-8785e587b0f8",
 			"key": "ignore_collectionScript",
 			"value": ""
 		},
 		{
-			"id": "a97c4653-8662-4ba9-9cf7-5c8416061a1c",
+			"id": "85f417f3-f691-4f1f-bd0b-750ce1cda802",
 			"key": "count",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "5e246816-854d-4b53-a0e6-600dbcaaf97a",
+			"id": "2a6c8288-0b4f-4593-a854-6f2a46bb9130",
 			"key": "controlAuth",
 			"value": ""
 		},
 		{
-			"id": "6b242aca-80ae-4b21-9561-e2c961d2d986",
+			"id": "bbe3be41-b4e0-47eb-bdaa-930a0fa3b037",
 			"key": "payloadEngine",
 			"value": ""
 		},
 		{
-			"id": "da48b446-d1cb-4ec5-8e17-67ea9bc32721",
+			"id": "766ce825-bd81-44a8-9073-638ad0df3569",
 			"key": "tc_identifierPainel_fieldEngineType",
 			"value": ""
 		},
 		{
-			"id": "409ea1cc-d2eb-4893-896d-b55f2c6f2351",
+			"id": "81cda44e-c5f7-4a65-84c4-c34b49489fda",
 			"key": "tc_identifierPainel_fieldLine",
 			"value": ""
 		},
 		{
-			"id": "2469023f-ecf5-4732-a8d3-459362abaffa",
+			"id": "160dd53c-86ad-4737-9096-8d0bf7e6ad44",
 			"key": "tc_identifierPainel_fieldStartDate",
 			"value": ""
 		},
 		{
-			"id": "da9d106a-6ab6-46e7-a120-0b9abe225bab",
+			"id": "3bdf4c7f-35e5-4b6a-9d14-552d598b5e8c",
 			"key": "tc_identifierPainel_fieldEndDate",
 			"value": ""
 		},
 		{
-			"id": "1c65160c-128e-400d-a184-a4ec758c8b75",
+			"id": "ea028f09-3847-4dd5-ba6f-156e8588e46a",
 			"key": "tc_identifierPainel_fieldPaymentPlanCategoryIds",
 			"value": ""
 		},
 		{
-			"id": "6b740b1b-fc2d-4d59-93c2-901c38e97abb",
+			"id": "c459eedb-d6c4-404f-9dbe-8432ba72ae34",
 			"key": "tc_identifierPainel_fieldCallCondition",
 			"value": ""
 		},
 		{
-			"id": "41eba276-5af5-4191-a203-9d0c3fd44cd2",
+			"id": "8eaa8c32-3f79-494a-bbd1-3ae725077844",
 			"key": "tc_identifierPainel_fieldIntegrationChannelIds",
 			"value": ""
 		}
