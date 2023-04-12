@@ -8892,7 +8892,17 @@
 							},
 							"request": {
 								"method": "POST",
-								"header": []
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "/* Valid Payload to create an engine: DELAY, PAYMENT_PLAN_CATEGORY, CDD, INCREASE_DECREASE, RBP_MARGIN, MARKETING, PAYMENT_PLAN, TERM, REMUNERATION, RETURN, RISK, MINIMUM_BANK_RATE, MAX_CLIENT_RATE, MINIMUM_RBP_RATE, VME, FIXED_RATES, PROMOTIONS */",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{baseUrl}}{{domain}}/policies"
 							},
 							"response": []
 						},
@@ -20922,69 +20932,69 @@
 	],
 	"variable": [
 		{
-			"id": "e7e51a43-b16d-4d49-93e1-db45d879e169",
+			"id": "c96aa77e-1d7e-47c5-b73d-a0088e2df0ef",
 			"key": "domain",
 			"value": "/financing/offer/v1"
 		},
 		{
-			"id": "4d5704ab-b6b9-46cb-982f-ea2b9949c93c",
+			"id": "d12cf964-f994-4cf4-94d8-d605432f95b6",
 			"key": "execution",
 			"value": "/financing/execution",
 			"type": "string"
 		},
 		{
-			"id": "155325d4-ff53-4778-9860-76d962b95621",
+			"id": "9a4b44e0-2e59-4302-8785-40dd1fdad255",
 			"key": "ignore_collectionScript",
 			"value": ""
 		},
 		{
-			"id": "4d1155f7-b5bc-4e8a-b7fb-c9ae20afb4eb",
+			"id": "125be6e7-110c-4a48-b6ff-d0f1f9bd58d6",
 			"key": "count",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "40b64582-06f0-48a4-9954-617532bdef4a",
+			"id": "8c17e8ba-70f2-4cea-867d-bfd27ac75bc4",
 			"key": "controlAuth",
 			"value": ""
 		},
 		{
-			"id": "1ab2c49a-4711-4648-b749-8c09a541ab85",
+			"id": "90586268-6e7e-498a-a1e5-1577f0f3458e",
 			"key": "payloadEngine",
 			"value": ""
 		},
 		{
-			"id": "d90c868d-1a4a-43f6-88ef-8e36dce614bd",
+			"id": "f0ce12c0-f7c7-4824-8273-e13fd3be855b",
 			"key": "tc_identifierPainel_fieldEngineType",
 			"value": ""
 		},
 		{
-			"id": "77f84236-f9de-4841-a786-466c41ed98c0",
+			"id": "838c2b02-387c-413d-8ba1-1323419dfbae",
 			"key": "tc_identifierPainel_fieldLine",
 			"value": ""
 		},
 		{
-			"id": "eaa8c3ad-8d53-4f37-ab5d-d57bc439cc96",
+			"id": "044b7938-df5c-4f7b-842c-d9b85140a4a6",
 			"key": "tc_identifierPainel_fieldStartDate",
 			"value": ""
 		},
 		{
-			"id": "9864306d-382a-42f8-bd3a-aca7871bd278",
+			"id": "ebcf2318-302e-4b21-9c59-37658569e896",
 			"key": "tc_identifierPainel_fieldEndDate",
 			"value": ""
 		},
 		{
-			"id": "e782bf49-0768-4b59-9ed2-f1e7e7f19811",
+			"id": "d749fbd8-03ab-4dfb-bd34-7c4b136c4936",
 			"key": "tc_identifierPainel_fieldPaymentPlanCategoryIds",
 			"value": ""
 		},
 		{
-			"id": "c8fc3fcb-813a-4910-8240-5205aa4669b0",
+			"id": "a388967a-5e5c-4d86-a11d-c95fc03f3045",
 			"key": "tc_identifierPainel_fieldCallCondition",
 			"value": ""
 		},
 		{
-			"id": "8d002ca3-6b9a-477a-a469-5b38c59530da",
+			"id": "5764e077-66be-43b8-9e25-21e7feee7f3b",
 			"key": "tc_identifierPainel_fieldIntegrationChannelIds",
 			"value": ""
 		}
