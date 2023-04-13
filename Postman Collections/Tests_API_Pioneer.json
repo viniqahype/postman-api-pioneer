@@ -16583,7 +16583,7 @@
 					"name": "Fazendo SwitchCases",
 					"item": [
 						{
-							"name": "[Filipe] Check paymentPlansPanel_fields",
+							"name": "[Ed_validando] Check paymentPlansPanel_fields",
 							"event": [
 								{
 									"listen": "test",
@@ -22619,69 +22619,69 @@
 	],
 	"variable": [
 		{
-			"id": "4d5cb1d6-9c80-45d5-85c6-8904380a3d3b",
+			"id": "51cf1448-0a63-4c23-ac7e-627142310cd6",
 			"key": "domain",
 			"value": "/financing/offer/v1"
 		},
 		{
-			"id": "9337c344-85f1-4e85-900b-f0ce7ae08078",
+			"id": "dc277a0a-906e-4d1a-b8ed-aeab96d0faa9",
 			"key": "execution",
 			"value": "/financing/execution",
 			"type": "string"
 		},
 		{
-			"id": "2614c60d-be07-4178-9ccd-0c7a475bea34",
+			"id": "c817ed8c-44ad-4f4f-af11-510cee3b9988",
 			"key": "ignore_collectionScript",
 			"value": ""
 		},
 		{
-			"id": "717785b4-65c5-40b5-b242-4fe631ab01f0",
+			"id": "e5e59e95-1f3d-4a78-bd63-49e291c193b0",
 			"key": "count",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "f313119f-e0c7-4b67-9cb3-e59968885d45",
+			"id": "eaa95030-8947-4aca-9f5d-1407fdab6a18",
 			"key": "controlAuth",
 			"value": ""
 		},
 		{
-			"id": "7d2a79db-4227-418e-b92d-4f491787dd84",
+			"id": "96d9a6c9-1536-4936-99da-6cc912df1c6a",
 			"key": "payloadEngine",
 			"value": ""
 		},
 		{
-			"id": "012bcbfc-ff73-4eca-b648-a1ad5c7ac10e",
+			"id": "48bc47cd-c461-4ce3-8a0a-715310f2668e",
 			"key": "tc_identifierPainel_fieldEngineType",
 			"value": ""
 		},
 		{
-			"id": "6ec9976a-d238-434d-acd0-a03ae9d06f96",
+			"id": "fef05424-3d4c-41cf-a3a9-ecb33879ae9a",
 			"key": "tc_identifierPainel_fieldLine",
 			"value": ""
 		},
 		{
-			"id": "7beb9b84-c95d-4f0c-88b8-82f1297562fa",
+			"id": "6f1233a0-8fec-4e72-bbce-4ecc67860683",
 			"key": "tc_identifierPainel_fieldStartDate",
 			"value": ""
 		},
 		{
-			"id": "4b7f8912-f66e-40fd-88f5-5b6d6e4e5b99",
+			"id": "e432866b-5cd5-40d2-8f35-1d821dd9ffb5",
 			"key": "tc_identifierPainel_fieldEndDate",
 			"value": ""
 		},
 		{
-			"id": "544a9c64-f411-44f2-932d-1ac022c7cf8d",
+			"id": "93baacdd-a111-4812-b778-ac31aa60aeb2",
 			"key": "tc_identifierPainel_fieldPaymentPlanCategoryIds",
 			"value": ""
 		},
 		{
-			"id": "beed529e-5c3e-43ee-a182-6ab185bcde41",
+			"id": "9b6fa23f-2e49-4468-8e18-7aaca800564a",
 			"key": "tc_identifierPainel_fieldCallCondition",
 			"value": ""
 		},
 		{
-			"id": "600c8c28-59e9-49b8-8db8-b4a13a11b5a0",
+			"id": "30d91b03-e544-4e8e-afc6-d6b6fcd9289b",
 			"key": "tc_identifierPainel_fieldIntegrationChannelIds",
 			"value": ""
 		}
