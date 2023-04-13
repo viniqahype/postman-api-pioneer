@@ -156,7 +156,7 @@
 				"auth": {
 					"type": "noauth"
 				},
-				"method": "POST",
+				"method": "GET",
 				"header": [
 					{
 						"key": "client_id",
@@ -702,17 +702,17 @@
 	],
 	"variable": [
 		{
-			"id": "9693e313-3938-43e0-bd04-41f5abf54b1f",
+			"id": "06382501-2d36-4335-b116-a1c0eb31c5b5",
 			"key": "payloadEngine",
 			"value": ""
 		},
 		{
-			"id": "53a6fddb-0bb0-490d-9787-594141e517ed",
+			"id": "a09b20d2-cb85-4a3e-880f-9f0858068068",
 			"key": "payloadTest",
 			"value": ""
 		},
 		{
-			"id": "e2b55599-1099-4194-8568-992a06016707",
+			"id": "1046908f-a2b9-46c6-8cb7-ab7fd33124af",
 			"key": "ignore_collectionScript",
 			"value": ""
 		}
