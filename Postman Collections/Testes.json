@@ -294,11 +294,16 @@
 				"auth": {
 					"type": "noauth"
 				},
-				"method": "POST",
+				"method": "GET",
 				"header": [
 					{
 						"key": "client_id",
 						"value": "{{client_id}}",
+						"type": "text"
+					},
+					{
+						"key": "access_token",
+						"value": "{{access_token}}",
 						"type": "text"
 					}
 				],
@@ -311,7 +316,7 @@
 						}
 					}
 				},
-				"url": "{{baseUrl}}/core/authentication/v1/login"
+				"url": "{{baseUrl}}/financing/offer/v1/policies"
 			},
 			"response": []
 		},
@@ -707,17 +712,17 @@
 	],
 	"variable": [
 		{
-			"id": "3daffb09-f90c-41c5-88ed-a7d0dbf4f4bb",
+			"id": "9bc5b4e4-7989-427c-aab7-6711096c4609",
 			"key": "payloadEngine",
 			"value": ""
 		},
 		{
-			"id": "48b239d5-1d69-4449-aaad-04d85fee83a2",
+			"id": "048c5914-ce87-4151-ac3d-b677a136c2e0",
 			"key": "payloadTest",
 			"value": ""
 		},
 		{
-			"id": "e6eefbdb-ff2e-4408-8b18-25c7df173073",
+			"id": "713d104c-78d9-4d73-b02b-3d6fc4353067",
 			"key": "ignore_collectionScript",
 			"value": ""
 		}
