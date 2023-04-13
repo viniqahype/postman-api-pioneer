@@ -491,11 +491,16 @@
 				"auth": {
 					"type": "noauth"
 				},
-				"method": "POST",
+				"method": "GET",
 				"header": [
 					{
 						"key": "client_id",
 						"value": "{{client_id}}",
+						"type": "text"
+					},
+					{
+						"key": "access_token",
+						"value": "{{access_token}}",
 						"type": "text"
 					}
 				],
@@ -717,17 +722,17 @@
 	],
 	"variable": [
 		{
-			"id": "db1405c8-b68b-4f6e-8480-4a9134521e9d",
+			"id": "b61bbbe4-1364-4e87-9c65-494598fcd325",
 			"key": "payloadEngine",
 			"value": ""
 		},
 		{
-			"id": "4941cdd8-3546-45da-a079-a7192fae2dce",
+			"id": "7d55c017-2b56-4931-97b2-4505ddf6c880",
 			"key": "payloadTest",
 			"value": ""
 		},
 		{
-			"id": "1fb374a2-59c1-4082-8b9a-f9952c5e5825",
+			"id": "675479fd-c7f2-4c95-ac47-53c6349616f1",
 			"key": "ignore_collectionScript",
 			"value": ""
 		}
