@@ -518,99 +518,6 @@
 			"response": []
 		},
 		{
-			"name": "[Test] Generate Payloads",
-			"event": [
-				{
-					"listen": "test",
-					"script": {
-						"id": "a0581c3d-5333-4444-ae1b-a540350af915",
-						"exec": [
-							""
-						],
-						"type": "text/javascript"
-					}
-				},
-				{
-					"listen": "prerequest",
-					"script": {
-						"id": "afb9b652-a33e-4d7e-830a-8a9aed21603f",
-						"exec": [
-							"pm.collectionVariables.set('payloadTest', JSON.stringify(\r",
-							"    {\r",
-							"        \"productName\": 123,\r",
-							"        \"subproductName\": \"\",\r",
-							"        \"productActive\": true,\r",
-							"        \"productDscription\": \"\",\r",
-							"        \"productAcronym\": \"\",\r",
-							"        \"acronym\": \"\",\r",
-							"        \"codPartner\": \"\",\r",
-							"        \"iof\": \"\"\r",
-							"    }\r",
-							"))\r",
-							"\r",
-							"var payloadTest = JSON.parse(pm.collectionVariables.get('payloadTest'))\r",
-							"\r",
-							"var changeMoreFields = eval(pm.globals.get(\"bodyChangeMoreFields\"))\r",
-							"var array = [{\r",
-							"    \"productName\": \"QWE\"\r",
-							"}, {\r",
-							"    \"subproductName\": \"QWE\"\r",
-							"}, {\r",
-							"    \"productActive\": \"QWE\"\r",
-							"}, {\r",
-							"    \"productDscription\": \"QWE\"\r",
-							"}, {\r",
-							"    \"productAcronym\": \"QWE\"\r",
-							"}, {\r",
-							"    \"acronym\": \"QWE\"\r",
-							"}, {\r",
-							"    \"codPartner\": \"QWE\"\r",
-							"}, {\r",
-							"    \"iof\": \"QWE\"\r",
-							"}\r",
-							"]\r",
-							"changeMoreFields(payloadTest, array);\r",
-							"\r",
-							"setTimeout(() => {console.log(payloadTest)}, 5000) \r",
-							"\r",
-							"\r",
-							"\r",
-							""
-						],
-						"type": "text/javascript"
-					}
-				}
-			],
-			"id": "a55930d3-872e-4e3f-b0a8-90a12744f68f",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
-			"request": {
-				"auth": {
-					"type": "noauth"
-				},
-				"method": "POST",
-				"header": [
-					{
-						"key": "client_id",
-						"value": "{{client_id}}",
-						"type": "text"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n    \"username\": \"32458031099\",\r\n    \"password\": \"Blade@123\",\r\n    \"remember\": null\r\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": "{{baseUrl}}/core/authentication/v1/login"
-			},
-			"response": []
-		},
-		{
 			"name": "[Test] Consulta Criterios de Taxa Copy",
 			"event": [
 				{
@@ -722,17 +629,17 @@
 	],
 	"variable": [
 		{
-			"id": "b61bbbe4-1364-4e87-9c65-494598fcd325",
+			"id": "4ac3e723-0c7d-42e5-a852-08f80a0082be",
 			"key": "payloadEngine",
 			"value": ""
 		},
 		{
-			"id": "7d55c017-2b56-4931-97b2-4505ddf6c880",
+			"id": "83516433-1223-4e6c-8ab4-8ce97e3efe37",
 			"key": "payloadTest",
 			"value": ""
 		},
 		{
-			"id": "675479fd-c7f2-4c95-ac47-53c6349616f1",
+			"id": "a4ffbeed-ba7d-45aa-916d-1a0207260fea",
 			"key": "ignore_collectionScript",
 			"value": ""
 		}
