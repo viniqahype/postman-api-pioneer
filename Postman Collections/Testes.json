@@ -508,7 +508,7 @@
 						}
 					}
 				},
-				"url": "{{baseUrl}}/core/authentication/v1/login"
+				"url": "{{baseUrl}}/financing/offer/v1/policies"
 			},
 			"response": []
 		},
@@ -717,17 +717,17 @@
 	],
 	"variable": [
 		{
-			"id": "39b6f868-6a57-4b7d-af61-ac177c293ce1",
+			"id": "db1405c8-b68b-4f6e-8480-4a9134521e9d",
 			"key": "payloadEngine",
 			"value": ""
 		},
 		{
-			"id": "a5071bee-9f0d-4f1c-9ef5-033650bce751",
+			"id": "4941cdd8-3546-45da-a079-a7192fae2dce",
 			"key": "payloadTest",
 			"value": ""
 		},
 		{
-			"id": "86edf8dc-6365-48f1-a982-d2ed461b5292",
+			"id": "1fb374a2-59c1-4082-8b9a-f9952c5e5825",
 			"key": "ignore_collectionScript",
 			"value": ""
 		}
