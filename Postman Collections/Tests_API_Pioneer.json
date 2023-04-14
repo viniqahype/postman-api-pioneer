@@ -16019,7 +16019,8 @@
 											"            url: pm.environment.get('baseUrl') + '/policies?engineType=PAYMENT_PLAN_CATEGORY?', header: headerComplete\r",
 											"        }, (err, resGet) => {\r",
 											"            /* Get a random object inside response and filter by name */\r",
-											"            let name = resGet.json()[Math.floor(Math.random() * resGet.length)].name\r",
+											"            let name = resGet.json()[Math.floor(Math.random() * resGet.json().length)].name\r",
+											"\r",
 											"            pm.sendRequest({\r",
 											"                method: pm.request.method.toString(),\r",
 											"                url: pm.request.url.toString(),\r",
@@ -16043,7 +16044,7 @@
 											"            header: headerComplete\r",
 											"        }, (err, resEngine) => {\r",
 											"            /* Get a random object inside response and filter by name */\r",
-											"            let name = resEngine.json()[Math.floor(Math.random() * resEngine.length)].name\r",
+											"            let name = resEngine.json()[Math.floor(Math.random() * resEngine.json().length)].name\r",
 											"            pm.sendRequest({\r",
 											"                method: pm.request.method.toString(),\r",
 											"                url: pm.request.url.toString(),\r",
@@ -16067,8 +16068,8 @@
 											"            header: headerComplete\r",
 											"        }, (err, resEngine) => {\r",
 											"            /* Get a random object inside response and filter by name */\r",
-											"            let name1 = resEngine.json()[Math.floor(Math.random() * resEngine.length)].name\r",
-											"            let name2 = resEngine.json()[Math.floor(Math.random() * resEngine.length)].name\r",
+											"            let name1 = resEngine.json()[Math.floor(Math.random() * resEngine.json().length)].name\r",
+											"            let name2 = resEngine.json()[Math.floor(Math.random() * resEngine.json().length)].name\r",
 											"            pm.sendRequest({\r",
 											"                method: pm.request.method.toString(),\r",
 											"                url: pm.request.url.toString(),\r",
@@ -22710,94 +22711,94 @@
 	],
 	"variable": [
 		{
-			"id": "987f9c03-31b1-4ec3-b6c6-b2b9042180bf",
+			"id": "8c8eaf61-3b79-44fe-bc87-3aea081d36b0",
 			"key": "domain",
 			"value": "/financing/offer/v1"
 		},
 		{
-			"id": "82abb8d2-73fe-45c2-8264-94c77e8e7165",
+			"id": "2170b720-6d43-4997-b865-8b44881bccb1",
 			"key": "execution",
 			"value": "/financing/execution",
 			"type": "string"
 		},
 		{
-			"id": "7ee6f410-c0ec-4920-9ccf-119af203c35b",
+			"id": "47cae42e-f585-4f80-b72a-b7030063a55c",
 			"key": "ignore_collectionScript",
 			"value": ""
 		},
 		{
-			"id": "7bf30992-ff68-409c-b754-3a144f0a374b",
+			"id": "df0dd270-f9e3-4945-9b76-c6ad38029fd3",
 			"key": "count",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "0bcdb789-0e2c-46c9-adaa-cde735c2c4c4",
+			"id": "76974d3b-9cb3-4476-8421-e19e514d7907",
 			"key": "controlAuth",
 			"value": ""
 		},
 		{
-			"id": "2dd337fc-5a48-455a-af8a-9022c5721ecf",
+			"id": "13477d17-9327-4f09-8c53-de4571cc3a55",
 			"key": "payloadEngine",
 			"value": ""
 		},
 		{
-			"id": "fbfadf64-06b3-4911-9879-a55ef297fd2a",
+			"id": "1de5dda9-74bc-4ace-9366-ab7f81cd937b",
 			"key": "tc_identifierPainel_fieldEngineType",
 			"value": ""
 		},
 		{
-			"id": "84258e16-1f2e-450e-99c2-86847967f4c8",
+			"id": "925fadae-93a9-4236-9eb0-a3ce75b0a024",
 			"key": "tc_identifierPainel_fieldLine",
 			"value": ""
 		},
 		{
-			"id": "d926c8e9-0545-48f8-ae0b-e1f6efd43436",
+			"id": "e6e9c07b-8f64-48ab-85d5-b5484f0cdfe7",
 			"key": "tc_identifierPainel_fieldStartDate",
 			"value": ""
 		},
 		{
-			"id": "8931bb8f-f064-44c8-bcb6-b7500a7be7d4",
+			"id": "45e38270-1440-4705-8627-2e8c904d4423",
 			"key": "tc_identifierPainel_fieldEndDate",
 			"value": ""
 		},
 		{
-			"id": "804159b0-c0db-4f77-8e0a-d02342c5f841",
+			"id": "33a567dd-d985-40c2-bce5-99d82cbb9f61",
 			"key": "tc_identifierPainel_fieldPaymentPlanCategoryIds",
 			"value": ""
 		},
 		{
-			"id": "3b6a5052-b285-41c4-aae1-7925ceceb324",
+			"id": "d3188119-2af0-44c1-b125-2e596e4262ec",
 			"key": "tc_identifierPainel_fieldCallCondition",
 			"value": ""
 		},
 		{
-			"id": "64383bdf-eb83-485c-8aef-87697ce9c40b",
+			"id": "ca6baacd-a259-4bed-89ec-18de3cfb2cc2",
 			"key": "tc_identifierPainel_fieldIntegrationChannelIds",
 			"value": ""
 		},
 		{
-			"id": "9c618287-9593-45a3-8069-55be8d77e3c5",
+			"id": "d304a8f4-0660-419a-9fd8-a35ade80c617",
 			"key": "tc_vehiclesPanel_attributeFilterCategory",
 			"value": ""
 		},
 		{
-			"id": "06b8d11f-e5cb-43f0-82ea-78b9a8c6171f",
+			"id": "703e9551-758b-44c3-bace-f93c451ac1a0",
 			"key": "tc_vehiclesPanel_fieldBrandId",
 			"value": ""
 		},
 		{
-			"id": "b67e5b29-1c89-4964-a2f6-1e185fbb7e68",
+			"id": "ecdece13-f45c-4d65-8ba2-8d3236f883ab",
 			"key": "tc_vehiclesPanel_fieldModelId",
 			"value": ""
 		},
 		{
-			"id": "773230ef-c260-4218-bf9c-1d54a61228a2",
+			"id": "6dd5402f-f04e-4b9f-9b3e-4e25288139ba",
 			"key": "tc_vehiclesPanel_fieldVersionId",
 			"value": ""
 		},
 		{
-			"id": "161c160f-b8c9-4d13-bdb0-45c83d53ded2",
+			"id": "7e167df2-7da1-4558-aa39-50432942941a",
 			"key": "tc_vehiclesPanel_fieldSituation",
 			"value": ""
 		}
