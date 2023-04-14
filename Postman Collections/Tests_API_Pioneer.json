@@ -16675,7 +16675,7 @@
 					"name": "Fazendo SwitchCases",
 					"item": [
 						{
-							"name": "[Ed_validando] Check paymentPlansPanel_fields",
+							"name": "[Validado] Check paymentPlansPanel_fields",
 							"event": [
 								{
 									"listen": "test",
@@ -22599,94 +22599,94 @@
 	],
 	"variable": [
 		{
-			"id": "c412e170-3b60-44a6-a20c-4d7f987d858e",
+			"id": "bd745f53-0dc9-4605-a9cc-de4ae120c6fd",
 			"key": "domain",
 			"value": "/financing/offer/v1"
 		},
 		{
-			"id": "6ec4599f-abeb-46b1-b830-e341b2254e3a",
+			"id": "cb46cc52-7daa-450c-b688-12b5e53a0160",
 			"key": "execution",
 			"value": "/financing/execution",
 			"type": "string"
 		},
 		{
-			"id": "41d2436e-4296-406d-a19b-4c4602778a4f",
+			"id": "a985592d-0e30-4e0c-9c29-047249b92eb9",
 			"key": "ignore_collectionScript",
 			"value": ""
 		},
 		{
-			"id": "47eed188-67dc-499d-8a0b-b5776ce32c7e",
+			"id": "8cc6b683-08ef-43bd-bb16-66f0e1a740d9",
 			"key": "count",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "f4cd2940-8032-4979-a567-f1ddcceaa7cf",
+			"id": "b3a77a65-fbad-4420-9ee8-9b804dd8bbd4",
 			"key": "controlAuth",
 			"value": ""
 		},
 		{
-			"id": "9780b8cd-ae98-4d0a-b269-c0beef0fc331",
+			"id": "bcbfbc02-95ce-4ada-99a1-3c2b938634c1",
 			"key": "payloadEngine",
 			"value": ""
 		},
 		{
-			"id": "78df9864-6708-48bc-a393-ffc773a8a767",
+			"id": "9b3411b9-c137-4092-8789-9208e37059fc",
 			"key": "tc_identifierPainel_fieldEngineType",
 			"value": ""
 		},
 		{
-			"id": "b9a6ad53-cded-4f7b-98b6-b8ad587845a1",
+			"id": "47a393e6-ef42-42e3-8a10-3e81046c9b76",
 			"key": "tc_identifierPainel_fieldLine",
 			"value": ""
 		},
 		{
-			"id": "6dfa4354-3758-43b9-9353-d3b01a501a4d",
+			"id": "7796b9ba-4fe1-42fc-acd8-4a8978315d4a",
 			"key": "tc_identifierPainel_fieldStartDate",
 			"value": ""
 		},
 		{
-			"id": "7ac19a3c-3943-46e9-b0a3-f0b056c13ef4",
+			"id": "0603a9b6-af48-4ef3-91e6-cf08b722483c",
 			"key": "tc_identifierPainel_fieldEndDate",
 			"value": ""
 		},
 		{
-			"id": "949fc8fb-2544-4997-9a21-a76ffa051a4e",
+			"id": "89fe75d3-13ec-4cbe-adcc-04954e095e4b",
 			"key": "tc_identifierPainel_fieldPaymentPlanCategoryIds",
 			"value": ""
 		},
 		{
-			"id": "c8acf039-1440-46c4-a1b0-a22b65794593",
+			"id": "7ea433cf-ece1-4a73-b7f1-c2735fb1fdc1",
 			"key": "tc_identifierPainel_fieldCallCondition",
 			"value": ""
 		},
 		{
-			"id": "5c706344-91e4-417c-a2fd-ba82f737aaec",
+			"id": "094cab2c-36d4-4858-bfcb-b4ca012b6889",
 			"key": "tc_identifierPainel_fieldIntegrationChannelIds",
 			"value": ""
 		},
 		{
-			"id": "89bc7b03-1f3d-49d6-b1bd-03e2e6a742c5",
+			"id": "5af435b1-b7d2-4440-99fc-266d8a2b2574",
 			"key": "tc_vehiclesPanel_attributeFilterCategory",
 			"value": ""
 		},
 		{
-			"id": "6b890db2-a514-401c-bb04-28b1520d714c",
+			"id": "c08782d9-6485-4771-9c79-058e984ab6e7",
 			"key": "tc_vehiclesPanel_fieldBrandId",
 			"value": ""
 		},
 		{
-			"id": "b47283f8-a419-4eb8-bd98-5ea17b12d2ad",
+			"id": "3cfc3b1e-83f6-4f56-aeb1-74fc7e54a206",
 			"key": "tc_vehiclesPanel_fieldModelId",
 			"value": ""
 		},
 		{
-			"id": "eb24bd93-9b90-4a96-a9c2-6b90e997efa9",
+			"id": "a336551a-10fe-4773-b5b6-bd2f84d77847",
 			"key": "tc_vehiclesPanel_fieldVersionId",
 			"value": ""
 		},
 		{
-			"id": "36e24edd-4306-44e3-9931-f2e498853beb",
+			"id": "30224b5a-db71-4eef-8274-165659db17a2",
 			"key": "tc_vehiclesPanel_fieldSituation",
 			"value": ""
 		}
