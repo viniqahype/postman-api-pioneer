@@ -200,7 +200,7 @@
 							"\r",
 							"}\r",
 							"\r",
-							"pm.globals.set(\"setHeader\", setHeader.toString());\r",
+							"pm.environment.set(\"setHeader\", setHeader.toString());\r",
 							""
 						],
 						"type": "text/javascript"
@@ -629,17 +629,17 @@
 	],
 	"variable": [
 		{
-			"id": "4ac3e723-0c7d-42e5-a852-08f80a0082be",
+			"id": "8e133234-483b-4713-80c0-c90221d429a0",
 			"key": "payloadEngine",
 			"value": ""
 		},
 		{
-			"id": "83516433-1223-4e6c-8ab4-8ce97e3efe37",
+			"id": "024658f6-9689-4db2-99d4-22ef0ebc45d8",
 			"key": "payloadTest",
 			"value": ""
 		},
 		{
-			"id": "a4ffbeed-ba7d-45aa-916d-1a0207260fea",
+			"id": "36ac0e17-2d06-46cf-ab20-dd96ae86295f",
 			"key": "ignore_collectionScript",
 			"value": ""
 		}
